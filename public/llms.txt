@@ -1,0 +1,42 @@
+# Comparação de Altura
+
+> Comparação de Altura (https://comparacaodealtura.com) is a visual, programmatic height comparison engine and comprehensive entity reference platform. It enables users, developers, and AI agents to accurately compare the heights of people, celebrities, anime characters, fictional figures, animals, everyday objects, vehicles, plants, and landmarks side-by-side with true-to-scale visual proportions.
+
+## Core Tools & Utilities
+
+- [Height Comparison Canvas](https://comparacaodealtura.com/): Interactive side-by-side visual comparison stage supporting up to 10 entities simultaneously, real-time metric/imperial ruler scaling, customizable silhouettes, and image exports.
+- [Height Comparison Calculator](https://comparacaodealtura.com/height-comparison-calculator/): Calculates exact numerical, imperial (feet/inches), metric (centimeters), and percentage height differences between any two individuals, celebrities, or objects.
+- [Height Comparison Chart](https://comparacaodealtura.com/height-comparison-chart/): Visual ruler chart mapping global standard height benchmarks from 50 cm to 300+ cm.
+- [How to Use Guide](https://comparacaodealtura.com/how-to-use/): Comprehensive educational walkthrough on measuring heights, comparing silhouettes, accounting for footwear/posture, and interpreting visual scale charts.
+
+## Primary Category Directories
+
+- [Celebrity Height Comparison](https://comparacaodealtura.com/celebrity-height-comparison/): Verified heights of actors, actresses, musicians, athletes, and public figures (e.g., Brad Pitt, Dwayne Johnson, Taylor Swift, Virat Kohli).
+- [Anime Character Heights](https://comparacaodealtura.com/anime-height-comparison/): Canonical heights of anime and manga characters across Shonen, Seinen, and popular series.
+- [Film & Cinematic Characters](https://comparacaodealtura.com/film-height-comparison/): Heights of famous fictional movie characters, superheroes, villains, and cinematic monsters.
+- [Animal Height Comparison](https://comparacaodealtura.com/animal-height-comparison/): Biological height, shoulder height, and length data for mammals, birds, reptiles, and prehistoric animals (e.g., Giraffe, African Elephant, Lion, Horse).
+- [Everyday Object Heights](https://comparacaodealtura.com/object-height-comparison/): Real-world physical dimensions of household items, furniture, doors, vehicles, trucks, and architecture.
+- [Plant & Tree Heights](https://comparacaodealtura.com/plant-height-comparison/): Botanical height data for common trees, palms, cacti, sunflowers, and shrubs.
+- [Sports Equipment Heights](https://comparacaodealtura.com/sports-height-comparison/): Standard regulation dimensions for basketball hoops, tennis nets, soccer goals, and athletic gear.
+- [Human Percentiles & Demographic Standards](https://comparacaodealtura.com/people-height-comparison/): Statistical average human heights (male and female) across different age groups and regions.
+- [Fictional Characters](https://comparacaodealtura.com/fictional-character-height-comparison/): Canonical dimensions of gaming icons, fantasy entities, and comic figures.
+- [Apparel Dimensions](https://comparacaodealtura.com/apparel-height-comparison/): Wearable garments, footwear, headwear, and lifestyle items.
+
+## Multilingual Support
+
+Comparação de Altura provides full internationalization across 9 supported languages:
+- English (Default): https://comparacaodealtura.com/
+- Hindi (हिन्दी): https://comparacaodealtura.com/hi/
+- Spanish (Español): https://comparacaodealtura.com/es/
+- French (Français): https://comparacaodealtura.com/fr/
+- German (Deutsch): https://comparacaodealtura.com/de/
+- Portuguese (Português): https://comparacaodealtura.com/pt/
+- Japanese (日本語): https://comparacaodealtura.com/ja/
+- Korean (한국어): https://comparacaodealtura.com/ko/
+- Arabic (العربية): https://comparacaodealtura.com/ar/
+
+## Data Standards & Verification
+
+- Units: All entities store verified reference heights in centimeters (`heightCm`), convertible on-the-fly to feet and inches (`ft`, `in`).
+- Structured Data: Every entity page provides Schema.org `Person` or `Thing` markup with `QuantitativeValue` measurements (`CMT` / `INH`).
+- Neutral ground-line baseline: Visual models are grounded uniformly to represent accurate real-world standing perspective without optical distortion.

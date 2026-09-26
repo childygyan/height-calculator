@@ -1,0 +1,168 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE } from '../config/site';
+import { getCanonicalUrl } from '../lib/seo/site';
+import { getLocaleFromUrl, getAlternateLocaleLinks, isRTL, t, LOCALES } from '../i18n';
+import type { Locale } from '../i18n/locales';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  locale?: Locale;
+  noindex?: boolean;
+  type?: 'website' | 'article';
+  suppressDefaultSchema?: boolean;
+}
+
+const currentPath = Astro.url.pathname;
+const resolvedLocale = Astro.props.locale || getLocaleFromUrl(Astro.url);
+const localeInfo = LOCALES[resolvedLocale] || LOCALES.en;
+
+const defaultCanonical = getCanonicalUrl(currentPath, resolvedLocale);
+const {
+  title = t(resolvedLocale, 'meta.defaultTitle'),
+  description = t(resolvedLocale, 'meta.defaultDesc'),
+  noindex = false,
+  canonicalUrl = noindex ? undefined : defaultCanonical,
+  ogImage = SITE.defaultOgImage,
+  locale = resolvedLocale,
+  type = 'website',
+  suppressDefaultSchema = false,
+} = Astro.props;
+
+// Alternate hreflang tags for all supported languages + x-default (omit on private noindex pages)
+const alternateLinks = noindex ? [] : getAlternateLocaleLinks(currentPath);
+
+// JSON-LD Structured Data: Only emit appropriate schemas for indexable content
+const isHome = currentPath === '/' || currentPath === `/${resolvedLocale}` || currentPath === `/${resolvedLocale}/`;
+
+const siteSchema = isHome && !noindex && !suppressDefaultSchema ? {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  'name': SITE.name,
+  'url': SITE.siteUrl,
+  'description': SITE.defaultDescription,
+  'publisher': {
+    '@type': 'Organization',
+    'name': SITE.name,
+    'url': SITE.siteUrl,
+    'logo': {
+      '@type': 'ImageObject',
+      'url': `${SITE.siteUrl}/favicon.svg`,
+    },
+  },
+} : null;
+
+const shouldEmitWebApp = !noindex && !suppressDefaultSchema && type !== 'article';
+const webAppSchema = shouldEmitWebApp ? {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  'name': SITE.name,
+  'url': canonicalUrl || defaultCanonical,
+  'description': description,
+  'applicationCategory': 'UtilityApplication',
+  'operatingSystem': 'All modern web browsers',
+  'browserRequirements': 'Requires JavaScript enabled for interactive visual scaling',
+  'offers': {
+    '@type': 'Offer',
+    'price': '0',
+    'priceCurrency': 'USD',
+  },
+} : null;
+---
+
+<!doctype html>
+<html lang={localeInfo.hreflang} dir={isRTL(locale) ? 'rtl' : 'ltr'} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Hostname-Aware Environment Control: Non-production preview protection -->
+    <script is:inline>
+      (function () {
+        var h = window.location.hostname;
+        if (h && (h === 'comparacaodealtura.pages.dev' || h.endsWith('.pages.dev'))) {
+          var m = document.createElement('meta');
+          m.name = 'robots';
+          m.content = 'noindex, nofollow';
+          document.head.appendChild(m);
+        }
+      })();
+    </script>
+    <meta name="google-site-verification" content="p9fcyt7e535QpafRqct5b2LZ_RUGUVSViapPgsKCJA0" />
+    <meta name="msvalidate.01" content="2A730A2FAF8DA672C0BDBCC548BEB4FA" />
+    <meta name="yandex-verification" content="3130af4a5ddbefa4" />
+    <meta name="p:domain_verify" content="9b40ed9ae8e1414903ce72ef19d6007f" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BNEEVVXP3R" is:inline></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BNEEVVXP3R');
+    </script>
+
+    <!-- Alternate Hreflang Tags (Official Internationalization SEO) -->
+    {alternateLinks.map((alt) => (
+      <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+    ))}
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:locale" content={localeInfo.ogLocale} />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+
+    <!-- Dark mode initializer -->
+    <script is:inline>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+
+    <!-- JSON-LD Structured Data -->
+    {siteSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(siteSchema)} />
+    )}
+    {webAppSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(webAppSchema)} />
+    )}
+    <slot name="head" />
+  </head>
+  <body class="bg-slate-50 dark:bg-slate-900 font-sans text-slate-900 dark:text-slate-100 antialiased selection:bg-brand-600 selection:text-white flex flex-col min-h-screen transition-colors duration-200">
+    <Header locale={locale} />
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <Footer locale={locale} />
+  </body>
+</html>
