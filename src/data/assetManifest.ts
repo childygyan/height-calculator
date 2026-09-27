@@ -8364,29 +8364,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_4.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_4.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_4.svg",
-    "name": "Apparel 004",
+    "name": "Evening Gown (Profile)",
     "slug": "apparel-004",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 169,
+    "referenceHeightCm": 169,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1301,
-      "measurementY": 83
+      "groundY": 1392.0,
+      "measurementY": 96.0
     },
-    "viewBox": "106 83 838 1218",
-    "aspectRatio": 0.688,
-    "fileSize": 55285,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "324 96 650 1296",
+    "aspectRatio": 0.502,
+    "fileSize": 33616,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-004",
       "apparel_svg_4"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-005",
@@ -8394,29 +8395,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_5.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_5.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_5.svg",
-    "name": "Apparel 005",
+    "name": "White Strapless Ballgown",
     "slug": "apparel-005",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 168,
+    "referenceHeightCm": 168,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1217.95,
-      "measurementY": 263.23
+      "groundY": 1426.0,
+      "measurementY": 124.0
     },
-    "viewBox": "295.01 263.23 433.7 954.72",
-    "aspectRatio": 0.454,
-    "fileSize": 4466,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "50 124 936 1302",
+    "aspectRatio": 0.719,
+    "fileSize": 170322,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-005",
       "apparel_svg_5"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-006",
@@ -8424,29 +8426,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_6.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_6.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_6.svg",
-    "name": "Apparel 006",
+    "name": "Evening Gown with Shawl",
     "slug": "apparel-006",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 169,
+    "referenceHeightCm": 169,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1223.24,
-      "measurementY": 283.81
+      "groundY": 1378.0,
+      "measurementY": 122.0
     },
-    "viewBox": "306.64 283.81 410.71 939.43",
-    "aspectRatio": 0.437,
-    "fileSize": 3122,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "200 122 672 1256",
+    "aspectRatio": 0.535,
+    "fileSize": 87034,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-006",
       "apparel_svg_6"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-007",
@@ -8454,29 +8457,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_7.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_7.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_7.svg",
-    "name": "Apparel 007",
+    "name": "Qipao Evening Dress",
     "slug": "apparel-007",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 166,
+    "referenceHeightCm": 166,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 859.34,
-      "measurementY": 94.9
+      "groundY": 1392.0,
+      "measurementY": 116.0
     },
-    "viewBox": "212.35 94.9 1109.22 764.44",
-    "aspectRatio": 1.451,
-    "fileSize": 6348,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "320 116 472 1276",
+    "aspectRatio": 0.37,
+    "fileSize": 65924,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-007",
       "apparel_svg_7"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-008",
@@ -8484,29 +8488,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_8.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_8.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_8.svg",
-    "name": "Apparel 008",
+    "name": "One-Shoulder Evening Gown",
     "slug": "apparel-008",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 169,
+    "referenceHeightCm": 169,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1259.08,
-      "measurementY": 232.29
+      "groundY": 1370.0,
+      "measurementY": 110.0
     },
-    "viewBox": "0.29 232.29 1023.43 1026.79",
-    "aspectRatio": 0.997,
-    "fileSize": 19827,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "186 110 652 1260",
+    "aspectRatio": 0.517,
+    "fileSize": 71475,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-008",
       "apparel_svg_8"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-009",
@@ -8514,29 +8519,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_9.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_9.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_9.svg",
-    "name": "Apparel 009",
+    "name": "Puff-Sleeve Evening Gown",
     "slug": "apparel-009",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 168,
+    "referenceHeightCm": 168,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1291.97,
-      "measurementY": 227.91
+      "groundY": 1384.0,
+      "measurementY": 116.0
     },
-    "viewBox": "375.77 227.91 272.7 1064.06",
-    "aspectRatio": 0.256,
-    "fileSize": 5041,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "282 116 512 1268",
+    "aspectRatio": 0.404,
+    "fileSize": 66195,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-009",
       "apparel_svg_9"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-010",
@@ -8544,29 +8550,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_10.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_10.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_10.svg",
-    "name": "Apparel 010",
+    "name": "Lace Evening Gown",
     "slug": "apparel-010",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 168,
+    "referenceHeightCm": 168,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1200.51,
-      "measurementY": 176.18
+      "groundY": 1354.0,
+      "measurementY": 66.0
     },
-    "viewBox": "141.77 176.18 740.55 1024.33",
-    "aspectRatio": 0.723,
-    "fileSize": 39742,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "216 66 608 1288",
+    "aspectRatio": 0.472,
+    "fileSize": 107249,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-010",
       "apparel_svg_10"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-011",
@@ -8574,29 +8581,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_11.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_11.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_11.svg",
-    "name": "Apparel 011",
+    "name": "Cocktail Dress",
     "slug": "apparel-011",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 165,
+    "referenceHeightCm": 165,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1311.77,
-      "measurementY": 127.71
+      "groundY": 1426.0,
+      "measurementY": 66.0
     },
-    "viewBox": "99.56 127.71 836.09 1184.06",
-    "aspectRatio": 0.706,
-    "fileSize": 114009,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "296 66 430 1360",
+    "aspectRatio": 0.316,
+    "fileSize": 50194,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-011",
       "apparel_svg_11"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-012",
@@ -8604,29 +8612,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_12.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_12.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_12.svg",
-    "name": "Apparel 012",
+    "name": "Evening Jumpsuit",
     "slug": "apparel-012",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 170,
+    "referenceHeightCm": 170,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1302.11,
-      "measurementY": 224.75
+      "groundY": 1424.0,
+      "measurementY": 66.0
     },
-    "viewBox": "360.13 224.75 303.18 1077.36",
-    "aspectRatio": 0.281,
-    "fileSize": 5018,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "308 66 444 1358",
+    "aspectRatio": 0.327,
+    "fileSize": 41045,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-012",
       "apparel_svg_12"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-013",
@@ -8634,29 +8643,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_13.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_13.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_13.svg",
-    "name": "Apparel 013",
+    "name": "Mermaid Gown",
     "slug": "apparel-013",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 172,
+    "referenceHeightCm": 172,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1263.26,
-      "measurementY": 257.8
+      "groundY": 1402.0,
+      "measurementY": 64.0
     },
-    "viewBox": "309.69 257.8 404.21 1005.46",
-    "aspectRatio": 0.402,
-    "fileSize": 17158,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "212 64 636 1338",
+    "aspectRatio": 0.475,
+    "fileSize": 47716,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-013",
       "apparel_svg_13"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-014",
@@ -8664,29 +8674,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_14.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_14.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_14.svg",
-    "name": "Apparel 014",
+    "name": "Ruffled Ball Gown",
     "slug": "apparel-014",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 168,
+    "referenceHeightCm": 168,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1237.87,
-      "measurementY": 281.95
+      "groundY": 1340.0,
+      "measurementY": 64.0
     },
-    "viewBox": "263.12 281.95 497.77 955.92",
-    "aspectRatio": 0.521,
-    "fileSize": 4999,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "32 64 958 1276",
+    "aspectRatio": 0.751,
+    "fileSize": 62748,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-014",
       "apparel_svg_14"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-015",
@@ -8694,29 +8705,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_15.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_15.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_15.svg",
-    "name": "Apparel 015",
+    "name": "Strapless Ball Gown",
     "slug": "apparel-015",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 170,
+    "referenceHeightCm": 170,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1171.03,
-      "measurementY": 321.33
+      "groundY": 1360.0,
+      "measurementY": 96.0
     },
-    "viewBox": "201.04 321.33 624.12 849.7",
-    "aspectRatio": 0.735,
-    "fileSize": 2891,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "34 96 954 1264",
+    "aspectRatio": 0.755,
+    "fileSize": 107502,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-015",
       "apparel_svg_15"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-016",
@@ -8724,29 +8736,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_16.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_16.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_16.svg",
-    "name": "Apparel 016",
+    "name": "Classic Tuxedo",
     "slug": "apparel-016",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 182,
+    "referenceHeightCm": 182,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1326.49,
-      "measurementY": 192.41
+      "groundY": 1446.0,
+      "measurementY": 54.0
     },
-    "viewBox": "160.65 192.41 704.89 1134.08",
-    "aspectRatio": 0.622,
-    "fileSize": 41501,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "310 54 398 1392",
+    "aspectRatio": 0.286,
+    "fileSize": 28847,
+    "status": "verified",
+    "subgroup": "[B] Suits & Tuxedos",
     "tags": [
-      "apparel"
+      "apparel",
+      "[b] suits & tuxedos"
     ],
     "aliases": [
       "apparel-016",
       "apparel_svg_16"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-017",
@@ -8754,29 +8767,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_17.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_17.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_17.svg",
-    "name": "Apparel 017",
+    "name": "Business Suit",
     "slug": "apparel-017",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 180,
+    "referenceHeightCm": 180,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1154.1000000000001,
-      "measurementY": 244.15
+      "groundY": 1444.0,
+      "measurementY": 56.0
     },
-    "viewBox": "0.29 244.15 1023.43 909.95",
-    "aspectRatio": 1.125,
-    "fileSize": 6036,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "310 56 398 1388",
+    "aspectRatio": 0.287,
+    "fileSize": 22623,
+    "status": "verified",
+    "subgroup": "[B] Suits & Tuxedos",
     "tags": [
-      "apparel"
+      "apparel",
+      "[b] suits & tuxedos"
     ],
     "aliases": [
       "apparel-017",
       "apparel_svg_17"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-018",
@@ -8784,29 +8798,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_18.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_18.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_18.svg",
-    "name": "Apparel 018",
+    "name": "Tailored Suit",
     "slug": "apparel-018",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 181,
+    "referenceHeightCm": 181,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 878.6400000000001,
-      "measurementY": 112.44
+      "groundY": 1444.0,
+      "measurementY": 56.0
     },
-    "viewBox": "170.55 112.44 1214.06 766.2",
-    "aspectRatio": 1.585,
-    "fileSize": 46214,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "308 56 410 1388",
+    "aspectRatio": 0.295,
+    "fileSize": 24966,
+    "status": "verified",
+    "subgroup": "[B] Suits & Tuxedos",
     "tags": [
-      "apparel"
+      "apparel",
+      "[b] suits & tuxedos"
     ],
     "aliases": [
       "apparel-018",
       "apparel_svg_18"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-019",
@@ -8814,29 +8829,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_19.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_19.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_19.svg",
-    "name": "Apparel 019",
+    "name": "Long Overcoat",
     "slug": "apparel-019",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 183,
+    "referenceHeightCm": 183,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1138.87,
-      "measurementY": 303.87
+      "groundY": 1456.0,
+      "measurementY": 62.0
     },
-    "viewBox": "200.86 303.87 624.43 835",
-    "aspectRatio": 0.748,
-    "fileSize": 25011,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "370 62 328 1394",
+    "aspectRatio": 0.235,
+    "fileSize": 22628,
+    "status": "verified",
+    "subgroup": "[B] Suits & Tuxedos",
     "tags": [
-      "apparel"
+      "apparel",
+      "[b] suits & tuxedos"
     ],
     "aliases": [
       "apparel-019",
       "apparel_svg_19"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-020",
@@ -8844,29 +8860,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_20.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_20.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_20.svg",
-    "name": "Apparel 020",
+    "name": "Wedding Suit",
     "slug": "apparel-020",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 182,
+    "referenceHeightCm": 182,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1202.31,
-      "measurementY": 299.78
+      "groundY": 1444.0,
+      "measurementY": 58.0
     },
-    "viewBox": "264.38 299.78 524.47 902.53",
-    "aspectRatio": 0.581,
-    "fileSize": 4502,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "310 58 400 1386",
+    "aspectRatio": 0.289,
+    "fileSize": 28516,
+    "status": "verified",
+    "subgroup": "[B] Suits & Tuxedos",
     "tags": [
-      "apparel"
+      "apparel",
+      "[b] suits & tuxedos"
     ],
     "aliases": [
       "apparel-020",
       "apparel_svg_20"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-021",
@@ -8874,29 +8891,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_21.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_21.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_21.svg",
-    "name": "Apparel 021",
+    "name": "White Dinner Jacket",
     "slug": "apparel-021",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 180,
+    "referenceHeightCm": 180,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 719.6,
-      "measurementY": 300.49
+      "groundY": 1444.0,
+      "measurementY": 58.0
     },
-    "viewBox": "189.55 300.49 1158.38 419.11",
-    "aspectRatio": 2.764,
-    "fileSize": 7593,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "310 58 402 1386",
+    "aspectRatio": 0.29,
+    "fileSize": 54597,
+    "status": "verified",
+    "subgroup": "[B] Suits & Tuxedos",
     "tags": [
-      "apparel"
+      "apparel",
+      "[b] suits & tuxedos"
     ],
     "aliases": [
       "apparel-021",
       "apparel_svg_21"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-022",
@@ -8904,29 +8922,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_22.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_22.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_22.svg",
-    "name": "Apparel 022",
+    "name": "Groom's Suit",
     "slug": "apparel-022",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 181,
+    "referenceHeightCm": 181,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1221,
-      "measurementY": 291.39
+      "groundY": 1444.0,
+      "measurementY": 58.0
     },
-    "viewBox": "282.08 291.39 459.88 929.61",
-    "aspectRatio": 0.495,
-    "fileSize": 15874,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "310 58 402 1386",
+    "aspectRatio": 0.29,
+    "fileSize": 27687,
+    "status": "verified",
+    "subgroup": "[B] Suits & Tuxedos",
     "tags": [
-      "apparel"
+      "apparel",
+      "[b] suits & tuxedos"
     ],
     "aliases": [
       "apparel-022",
       "apparel_svg_22"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-023",
@@ -8934,29 +8953,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_23.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_23.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_23.svg",
-    "name": "Apparel 023",
+    "name": "Mermaid Evening Gown",
     "slug": "apparel-023",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 170,
+    "referenceHeightCm": 170,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1315.31,
-      "measurementY": 170.48
+      "groundY": 1424.0,
+      "measurementY": 74.0
     },
-    "viewBox": "385.73 170.48 253.13 1144.83",
-    "aspectRatio": 0.221,
-    "fileSize": 9109,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "156 74 800 1350",
+    "aspectRatio": 0.593,
+    "fileSize": 21299,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-023",
       "apparel_svg_23"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-024",
@@ -8964,29 +8984,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_24.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_24.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_24.svg",
-    "name": "Apparel 024",
+    "name": "Sheath Evening Gown",
     "slug": "apparel-024",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 167,
+    "referenceHeightCm": 167,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 842.03,
-      "measurementY": 132.72
+      "groundY": 1424.0,
+      "measurementY": 74.0
     },
-    "viewBox": "262.98 132.72 1015.04 709.31",
-    "aspectRatio": 1.431,
-    "fileSize": 3257,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "328 74 574 1350",
+    "aspectRatio": 0.425,
+    "fileSize": 17189,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-024",
       "apparel_svg_24"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-025",
@@ -8994,29 +9015,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_25.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_25.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_25.svg",
-    "name": "Apparel 025",
+    "name": "A-Line Evening Gown",
     "slug": "apparel-025",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 168,
+    "referenceHeightCm": 168,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1327.51,
-      "measurementY": 166.95
+      "groundY": 1376.0,
+      "measurementY": 74.0
     },
-    "viewBox": "353.16 166.95 513.21 1160.56",
-    "aspectRatio": 0.442,
-    "fileSize": 2032,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "44 74 938 1302",
+    "aspectRatio": 0.72,
+    "fileSize": 24019,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-025",
       "apparel_svg_25"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-026",
@@ -9024,29 +9046,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_26.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_26.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_26.svg",
-    "name": "Apparel 026",
+    "name": "Slip Evening Dress",
     "slug": "apparel-026",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 166,
+    "referenceHeightCm": 166,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1246.89,
-      "measurementY": 211.98
+      "groundY": 1420.0,
+      "measurementY": 84.0
     },
-    "viewBox": "288.48 211.98 447.25 1034.91",
-    "aspectRatio": 0.432,
-    "fileSize": 3802,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "324 84 496 1336",
+    "aspectRatio": 0.371,
+    "fileSize": 30497,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-026",
       "apparel_svg_26"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-027",
@@ -9054,29 +9077,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_27.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_27.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_27.svg",
-    "name": "Apparel 027",
+    "name": "Column Evening Gown",
     "slug": "apparel-027",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 171,
+    "referenceHeightCm": 171,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 920.42,
-      "measurementY": 60.75
+      "groundY": 1444.0,
+      "measurementY": 80.0
     },
-    "viewBox": "263.31 60.75 605.8 859.67",
-    "aspectRatio": 0.705,
-    "fileSize": 5315,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "316 80 462 1364",
+    "aspectRatio": 0.339,
+    "fileSize": 15450,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-027",
       "apparel_svg_27"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-028",
@@ -9084,29 +9108,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_28.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_28.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_28.svg",
-    "name": "Apparel 028",
+    "name": "Fitted Mermaid Gown",
     "slug": "apparel-028",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 169,
+    "referenceHeightCm": 169,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1313.57,
-      "measurementY": 140.58
+      "groundY": 1424.0,
+      "measurementY": 76.0
     },
-    "viewBox": "355.02 140.58 312.4 1172.99",
-    "aspectRatio": 0.266,
-    "fileSize": 20383,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "298 76 576 1348",
+    "aspectRatio": 0.427,
+    "fileSize": 17718,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-028",
       "apparel_svg_28"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-029",
@@ -9114,29 +9139,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_29.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_29.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_29.svg",
-    "name": "Apparel 029",
+    "name": "Trumpet Evening Gown",
     "slug": "apparel-029",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 170,
+    "referenceHeightCm": 170,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1319.25,
-      "measurementY": 103.13
+      "groundY": 1430.0,
+      "measurementY": 84.0
     },
-    "viewBox": "271.7 103.13 482.8 1216.12",
-    "aspectRatio": 0.397,
-    "fileSize": 114120,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "90 84 784 1346",
+    "aspectRatio": 0.582,
+    "fileSize": 20618,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-029",
       "apparel_svg_29"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-030",
@@ -9144,29 +9170,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_30.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_30.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_30.svg",
-    "name": "Apparel 030",
+    "name": "Short-Sleeve Ball Gown",
     "slug": "apparel-030",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 168,
+    "referenceHeightCm": 168,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 930.37,
-      "measurementY": 95.63
+      "groundY": 1368.0,
+      "measurementY": 98.0
     },
-    "viewBox": "292.78 95.63 92.28 834.74",
-    "aspectRatio": 0.111,
-    "fileSize": 10288,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "54 98 936 1270",
+    "aspectRatio": 0.737,
+    "fileSize": 22269,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-030",
       "apparel_svg_30"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-031",
@@ -9174,29 +9201,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_31.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_31.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_31.svg",
-    "name": "Apparel 031",
+    "name": "Long-Sleeve Evening Gown",
     "slug": "apparel-031",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 169,
+    "referenceHeightCm": 169,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1250.3600000000001,
-      "measurementY": 256.79
+      "groundY": 1460.0,
+      "measurementY": 76.0
     },
-    "viewBox": "314 256.79 394.43 993.57",
-    "aspectRatio": 0.397,
-    "fileSize": 4620,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "342 76 622 1384",
+    "aspectRatio": 0.449,
+    "fileSize": 17136,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-031",
       "apparel_svg_31"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-032",
@@ -9204,29 +9232,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_32.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_32.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_32.svg",
-    "name": "Apparel 032",
+    "name": "Black Tie Tuxedo",
     "slug": "apparel-032",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 182,
+    "referenceHeightCm": 182,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1201.79,
-      "measurementY": 303.91
+      "groundY": 1478.0,
+      "measurementY": 52.0
     },
-    "viewBox": "0.29 303.91 1023.43 897.88",
-    "aspectRatio": 1.14,
-    "fileSize": 4130,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "310 52 430 1426",
+    "aspectRatio": 0.302,
+    "fileSize": 50840,
+    "status": "verified",
+    "subgroup": "[B] Suits & Tuxedos",
     "tags": [
-      "apparel"
+      "apparel",
+      "[b] suits & tuxedos"
     ],
     "aliases": [
       "apparel-032",
       "apparel_svg_32"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-033",
@@ -9234,29 +9263,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_33.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_33.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_33.svg",
-    "name": "Apparel 033",
+    "name": "Morning Tailcoat",
     "slug": "apparel-033",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 181,
+    "referenceHeightCm": 181,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 904.97,
-      "measurementY": 407.82
+      "groundY": 1484.0,
+      "measurementY": 58.0
     },
-    "viewBox": "102.08 407.82 886.47 497.15",
-    "aspectRatio": 1.783,
-    "fileSize": 3726,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "386 58 286 1426",
+    "aspectRatio": 0.201,
+    "fileSize": 47206,
+    "status": "verified",
+    "subgroup": "[B] Suits & Tuxedos",
     "tags": [
-      "apparel"
+      "apparel",
+      "[b] suits & tuxedos"
     ],
     "aliases": [
       "apparel-033",
       "apparel_svg_33"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-034",
@@ -9264,29 +9294,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_34.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_34.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_34.svg",
-    "name": "Apparel 034",
+    "name": "Two-Piece Suit",
     "slug": "apparel-034",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 179,
+    "referenceHeightCm": 179,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 937.93,
-      "measurementY": 69.9
+      "groundY": 1474.0,
+      "measurementY": 50.0
     },
-    "viewBox": "565.02 69.9 383.85 868.03",
-    "aspectRatio": 0.442,
-    "fileSize": 4707,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "322 50 390 1424",
+    "aspectRatio": 0.274,
+    "fileSize": 45436,
+    "status": "verified",
+    "subgroup": "[B] Suits & Tuxedos",
     "tags": [
-      "apparel"
+      "apparel",
+      "[b] suits & tuxedos"
     ],
     "aliases": [
       "apparel-034",
       "apparel_svg_34"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-035",
@@ -9294,29 +9325,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_35.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_35.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_35.svg",
-    "name": "Apparel 035",
+    "name": "Victorian Bustle Gown",
     "slug": "apparel-035",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 167,
+    "referenceHeightCm": 167,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1234.94,
-      "measurementY": 295.16
+      "groundY": 1350.0,
+      "measurementY": 68.0
     },
-    "viewBox": "230.94 295.16 575.86 939.78",
-    "aspectRatio": 0.613,
-    "fileSize": 4128,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "158 68 744 1282",
+    "aspectRatio": 0.58,
+    "fileSize": 78100,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-035",
       "apparel_svg_35"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-036",
@@ -9324,29 +9356,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_36.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_36.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_36.svg",
-    "name": "Apparel 036",
+    "name": "Frock Coat",
     "slug": "apparel-036",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 182,
+    "referenceHeightCm": 182,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 766.5500000000001,
-      "measurementY": 238.71
+      "groundY": 1392.0,
+      "measurementY": 72.0
     },
-    "viewBox": "317.3 238.71 901.52 527.84",
-    "aspectRatio": 1.708,
-    "fileSize": 3580,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "290 72 440 1320",
+    "aspectRatio": 0.333,
+    "fileSize": 54845,
+    "status": "verified",
+    "subgroup": "[B] Suits & Tuxedos",
     "tags": [
-      "apparel"
+      "apparel",
+      "[b] suits & tuxedos"
     ],
     "aliases": [
       "apparel-036",
       "apparel_svg_36"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-037",
@@ -9354,29 +9387,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_37.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_37.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_37.svg",
-    "name": "Apparel 037",
+    "name": "Mermaid Gown with Train",
     "slug": "apparel-037",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 170,
+    "referenceHeightCm": 170,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1295.25,
-      "measurementY": 240.9
+      "groundY": 1390.0,
+      "measurementY": 96.0
     },
-    "viewBox": "411.38 240.9 201.33 1054.35",
-    "aspectRatio": 0.191,
-    "fileSize": 4124,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "260 96 718 1294",
+    "aspectRatio": 0.555,
+    "fileSize": 40504,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-037",
       "apparel_svg_37"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-038",
@@ -9384,29 +9418,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_38.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_38.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_38.svg",
-    "name": "Apparel 038",
+    "name": "High-Neck Victorian Gown",
     "slug": "apparel-038",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 166,
+    "referenceHeightCm": 166,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 826.43,
-      "measurementY": 152.16
+      "groundY": 1382.0,
+      "measurementY": 76.0
     },
-    "viewBox": "290.89 152.16 955.94 674.27",
-    "aspectRatio": 1.418,
-    "fileSize": 141613,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "220 76 636 1306",
+    "aspectRatio": 0.487,
+    "fileSize": 58297,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-038",
       "apparel_svg_38"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-039",
@@ -9414,29 +9449,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_39.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_39.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_39.svg",
-    "name": "Apparel 039",
+    "name": "Lolita Dress",
     "slug": "apparel-039",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 160,
+    "referenceHeightCm": 160,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1181.8,
-      "measurementY": 65.22
+      "groundY": 1402.0,
+      "measurementY": 80.0
     },
-    "viewBox": "248.53 65.22 755.44 1116.58",
-    "aspectRatio": 0.677,
-    "fileSize": 10649,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "268 80 486 1322",
+    "aspectRatio": 0.368,
+    "fileSize": 105773,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-039",
       "apparel_svg_39"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-040",
@@ -9444,29 +9480,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_40.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_40.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_40.svg",
-    "name": "Apparel 040",
+    "name": "Three-Piece Suit",
     "slug": "apparel-040",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 181,
+    "referenceHeightCm": 181,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1201,
-      "measurementY": 299.15
+      "groundY": 1392.0,
+      "measurementY": 72.0
     },
-    "viewBox": "290.55 299.15 444.5 901.85",
-    "aspectRatio": 0.493,
-    "fileSize": 3351,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "300 72 424 1320",
+    "aspectRatio": 0.321,
+    "fileSize": 40446,
+    "status": "verified",
+    "subgroup": "[B] Suits & Tuxedos",
     "tags": [
-      "apparel"
+      "apparel",
+      "[b] suits & tuxedos"
     ],
     "aliases": [
       "apparel-040",
       "apparel_svg_40"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-041",
@@ -9474,29 +9511,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_41.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_41.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_41.svg",
-    "name": "Apparel 041",
+    "name": "Off-Shoulder Mermaid Gown",
     "slug": "apparel-041",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 170,
+    "referenceHeightCm": 170,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1257.21,
-      "measurementY": 291.03
+      "groundY": 1496.0,
+      "measurementY": 40.0
     },
-    "viewBox": "-2.13 291.03 1025.94 966.18",
-    "aspectRatio": 1.062,
-    "fileSize": 1363,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "142 40 742 1456",
+    "aspectRatio": 0.51,
+    "fileSize": 78060,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-041",
       "apparel_svg_41"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-042",
@@ -9504,29 +9542,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_42.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_42.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_42.svg",
-    "name": "Apparel 042",
+    "name": "Off-Shoulder Ball Gown",
     "slug": "apparel-042",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 168,
+    "referenceHeightCm": 168,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1259.26,
-      "measurementY": 301.9
+      "groundY": 1460.0,
+      "measurementY": 58.0
     },
-    "viewBox": "0.29 301.9 1023.43 957.36",
-    "aspectRatio": 1.069,
-    "fileSize": 6218,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "40 58 944 1402",
+    "aspectRatio": 0.673,
+    "fileSize": 90511,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-042",
       "apparel_svg_42"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-043",
@@ -9534,29 +9573,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_43.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_43.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_43.svg",
-    "name": "Apparel 043",
+    "name": "White Tuxedo Jacket",
     "slug": "apparel-043",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 180,
+    "referenceHeightCm": 180,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 992.76,
-      "measurementY": 33.91
+      "groundY": 1392.0,
+      "measurementY": 72.0
     },
-    "viewBox": "370.34 33.91 795.47 958.85",
-    "aspectRatio": 0.83,
-    "fileSize": 12962,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "300 72 424 1320",
+    "aspectRatio": 0.321,
+    "fileSize": 49956,
+    "status": "verified",
+    "subgroup": "[B] Suits & Tuxedos",
     "tags": [
-      "apparel"
+      "apparel",
+      "[b] suits & tuxedos"
     ],
     "aliases": [
       "apparel-043",
       "apparel_svg_43"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-044",
@@ -9564,29 +9604,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_44.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_44.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_44.svg",
-    "name": "Apparel 044",
+    "name": "Slinky Evening Gown",
     "slug": "apparel-044",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 171,
+    "referenceHeightCm": 171,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1281.98,
-      "measurementY": 255.39
+      "groundY": 1404.0,
+      "measurementY": 76.0
     },
-    "viewBox": "237.05 255.39 551.14 1026.59",
-    "aspectRatio": 0.537,
-    "fileSize": 2521,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "316 76 546 1328",
+    "aspectRatio": 0.411,
+    "fileSize": 40852,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-044",
       "apparel_svg_44"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-045",
@@ -9594,29 +9635,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_45.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_45.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_45.svg",
-    "name": "Apparel 045",
+    "name": "One-Shoulder Draped Gown",
     "slug": "apparel-045",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 169,
+    "referenceHeightCm": 169,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 750.36,
-      "measurementY": 274.72
+      "groundY": 1420.0,
+      "measurementY": 74.0
     },
-    "viewBox": "153.83 274.72 1213.5 475.64",
-    "aspectRatio": 2.551,
-    "fileSize": 4464,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "300 74 454 1346",
+    "aspectRatio": 0.337,
+    "fileSize": 50194,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-045",
       "apparel_svg_45"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-046",
@@ -9624,29 +9666,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_46.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_46.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_46.svg",
-    "name": "Apparel 046",
+    "name": "Tailcoat with Waistcoat",
     "slug": "apparel-046",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 182,
+    "referenceHeightCm": 182,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 892.5300000000001,
-      "measurementY": 101.71
+      "groundY": 1392.0,
+      "measurementY": 74.0
     },
-    "viewBox": "386.17 101.71 782.24 790.82",
-    "aspectRatio": 0.989,
-    "fileSize": 11532,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "300 74 424 1318",
+    "aspectRatio": 0.322,
+    "fileSize": 42512,
+    "status": "verified",
+    "subgroup": "[B] Suits & Tuxedos",
     "tags": [
-      "apparel"
+      "apparel",
+      "[b] suits & tuxedos"
     ],
     "aliases": [
       "apparel-046",
       "apparel_svg_46"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-047",
@@ -9654,29 +9697,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_47.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_47.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_47.svg",
-    "name": "Apparel 047",
+    "name": "Graduation Cap and Gown",
     "slug": "apparel-047",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 178,
+    "referenceHeightCm": 178,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1280.3700000000001,
-      "measurementY": 255.72
+      "groundY": 1372.0,
+      "measurementY": 92.0
     },
-    "viewBox": "378.24 255.72 267.75 1024.65",
-    "aspectRatio": 0.261,
-    "fileSize": 5141,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "258 92 514 1280",
+    "aspectRatio": 0.402,
+    "fileSize": 50058,
+    "status": "verified",
+    "subgroup": "[D] Uniforms & Workwear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[d] uniforms & workwear"
     ],
     "aliases": [
       "apparel-047",
       "apparel_svg_47"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-048",
@@ -9684,29 +9728,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_48.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_48.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_48.svg",
-    "name": "Apparel 048",
+    "name": "Strapless Ballgown",
     "slug": "apparel-048",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 167,
+    "referenceHeightCm": 167,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1293.96,
-      "measurementY": 226.65
+      "groundY": 1370.0,
+      "measurementY": 116.0
     },
-    "viewBox": "444.46 226.65 134.08 1067.31",
-    "aspectRatio": 0.126,
-    "fileSize": 5889,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "90 116 848 1254",
+    "aspectRatio": 0.676,
+    "fileSize": 134643,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-048",
       "apparel_svg_48"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-049",
@@ -9714,29 +9759,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_49.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_49.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_49.svg",
-    "name": "Apparel 049",
+    "name": "Judge's Robe",
     "slug": "apparel-049",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 180,
+    "referenceHeightCm": 180,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1297.0500000000002,
-      "measurementY": 224.92
+      "groundY": 1372.0,
+      "measurementY": 74.0
     },
-    "viewBox": "231.71 224.92 559.21 1072.13",
-    "aspectRatio": 0.522,
-    "fileSize": 2072,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "212 74 602 1298",
+    "aspectRatio": 0.464,
+    "fileSize": 44205,
+    "status": "verified",
+    "subgroup": "[D] Uniforms & Workwear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[d] uniforms & workwear"
     ],
     "aliases": [
       "apparel-049",
       "apparel_svg_49"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-050",
@@ -9744,29 +9790,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_50.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_50.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_50.svg",
-    "name": "Apparel 050",
+    "name": "Nun's Habit",
     "slug": "apparel-050",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 165,
+    "referenceHeightCm": 165,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1233.49,
-      "measurementY": 255.93
+      "groundY": 1404.0,
+      "measurementY": 76.0
     },
-    "viewBox": "284.44 255.93 448.76 977.56",
-    "aspectRatio": 0.459,
-    "fileSize": 7739,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "292 76 442 1328",
+    "aspectRatio": 0.333,
+    "fileSize": 40488,
+    "status": "verified",
+    "subgroup": "[C] Traditional Wear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[c] traditional wear"
     ],
     "aliases": [
       "apparel-050",
       "apparel_svg_50"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-051",
@@ -9774,29 +9821,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_51.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_51.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_51.svg",
-    "name": "Apparel 051",
+    "name": "Abaya",
     "slug": "apparel-051",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 164,
+    "referenceHeightCm": 164,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 815.4,
-      "measurementY": 196.26
+      "groundY": 1408.0,
+      "measurementY": 78.0
     },
-    "viewBox": "294.29 196.26 946.96 619.14",
-    "aspectRatio": 1.529,
-    "fileSize": 10462,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "256 78 512 1330",
+    "aspectRatio": 0.385,
+    "fileSize": 141312,
+    "status": "verified",
+    "subgroup": "[C] Traditional Wear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[c] traditional wear"
     ],
     "aliases": [
       "apparel-051",
       "apparel_svg_51"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-052",
@@ -9804,29 +9852,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_52.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_52.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_52.svg",
-    "name": "Apparel 052",
+    "name": "Thobe",
     "slug": "apparel-052",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 178,
+    "referenceHeightCm": 178,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 936.8599999999999,
-      "measurementY": 88.8
+      "groundY": 1390.0,
+      "measurementY": 78.0
     },
-    "viewBox": "233.18 88.8 217.34 848.06",
-    "aspectRatio": 0.256,
-    "fileSize": 8090,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "294 78 438 1312",
+    "aspectRatio": 0.334,
+    "fileSize": 41990,
+    "status": "verified",
+    "subgroup": "[C] Traditional Wear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[c] traditional wear"
     ],
     "aliases": [
       "apparel-052",
       "apparel_svg_52"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-053",
@@ -9834,29 +9883,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_53.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_53.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_53.svg",
-    "name": "Apparel 053",
+    "name": "Kaftan",
     "slug": "apparel-053",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 167,
+    "referenceHeightCm": 167,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1295.78,
-      "measurementY": 200.21
+      "groundY": 1454.0,
+      "measurementY": 80.0
     },
-    "viewBox": "0.29 200.21 1023.43 1095.57",
-    "aspectRatio": 0.934,
-    "fileSize": 7920,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "212 80 690 1374",
+    "aspectRatio": 0.502,
+    "fileSize": 297410,
+    "status": "verified",
+    "subgroup": "[C] Traditional Wear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[c] traditional wear"
     ],
     "aliases": [
       "apparel-053",
       "apparel_svg_53"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-054",
@@ -9864,29 +9914,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_54.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_54.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_54.svg",
-    "name": "Apparel 054",
+    "name": "Saree",
     "slug": "apparel-054",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 163,
+    "referenceHeightCm": 163,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1278.28,
-      "measurementY": 259.65
+      "groundY": 1408.0,
+      "measurementY": 76.0
     },
-    "viewBox": "416.87 259.65 189.39 1018.63",
-    "aspectRatio": 0.186,
-    "fileSize": 4141,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "298 76 500 1332",
+    "aspectRatio": 0.375,
+    "fileSize": 150912,
+    "status": "verified",
+    "subgroup": "[C] Traditional Wear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[c] traditional wear"
     ],
     "aliases": [
       "apparel-054",
       "apparel_svg_54"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-055",
@@ -9894,29 +9945,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_55.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_55.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_55.svg",
-    "name": "Apparel 055",
+    "name": "Korean Hanbok (Male)",
     "slug": "apparel-055",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 178,
+    "referenceHeightCm": 178,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 774.82,
-      "measurementY": 233.12
+      "groundY": 1364.0,
+      "measurementY": 94.0
     },
-    "viewBox": "291.08 233.12 953.81 541.7",
-    "aspectRatio": 1.761,
-    "fileSize": 7541,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "292 94 448 1270",
+    "aspectRatio": 0.353,
+    "fileSize": 44670,
+    "status": "verified",
+    "subgroup": "[C] Traditional Wear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[c] traditional wear"
     ],
     "aliases": [
       "apparel-055",
       "apparel_svg_55"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-056",
@@ -9924,29 +9976,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_56.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_56.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_56.svg",
-    "name": "Apparel 056",
+    "name": "Korean Hanbok (Female)",
     "slug": "apparel-056",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 163,
+    "referenceHeightCm": 163,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1172.28,
-      "measurementY": 309.8
+      "groundY": 1376.0,
+      "measurementY": 102.0
     },
-    "viewBox": "48.55 309.8 927.18 862.48",
-    "aspectRatio": 1.075,
-    "fileSize": 2740,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "222 102 596 1274",
+    "aspectRatio": 0.468,
+    "fileSize": 58842,
+    "status": "verified",
+    "subgroup": "[C] Traditional Wear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[c] traditional wear"
     ],
     "aliases": [
       "apparel-056",
       "apparel_svg_56"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-057",
@@ -9954,29 +10007,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_57.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_57.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_57.svg",
-    "name": "Apparel 057",
+    "name": "Kimono (Male)",
     "slug": "apparel-057",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 176,
+    "referenceHeightCm": 176,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1214.6399999999999,
-      "measurementY": 239.36
+      "groundY": 1368.0,
+      "measurementY": 78.0
     },
-    "viewBox": "87.36 239.36 801.96 975.28",
-    "aspectRatio": 0.822,
-    "fileSize": 16955,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "260 78 508 1290",
+    "aspectRatio": 0.394,
+    "fileSize": 58567,
+    "status": "verified",
+    "subgroup": "[C] Traditional Wear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[c] traditional wear"
     ],
     "aliases": [
       "apparel-057",
       "apparel_svg_57"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-058",
@@ -9984,29 +10038,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_58.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_58.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_58.svg",
-    "name": "Apparel 058",
+    "name": "Kimono (Female)",
     "slug": "apparel-058",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 160,
+    "referenceHeightCm": 160,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1233.1100000000001,
-      "measurementY": 299.52
+      "groundY": 1418.0,
+      "measurementY": 80.0
     },
-    "viewBox": "370.33 299.52 281.48 933.59",
-    "aspectRatio": 0.302,
-    "fileSize": 39194,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "252 80 520 1338",
+    "aspectRatio": 0.389,
+    "fileSize": 161753,
+    "status": "verified",
+    "subgroup": "[C] Traditional Wear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[c] traditional wear"
     ],
     "aliases": [
       "apparel-058",
       "apparel_svg_58"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-059",
@@ -10014,29 +10069,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_59.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_59.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_59.svg",
-    "name": "Apparel 059",
+    "name": "Cheongsam",
     "slug": "apparel-059",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 165,
+    "referenceHeightCm": 165,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 895.36,
-      "measurementY": 87.14
+      "groundY": 1416.0,
+      "measurementY": 116.0
     },
-    "viewBox": "94.15 87.14 405.45 808.22",
-    "aspectRatio": 0.502,
-    "fileSize": 37159,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "338 116 352 1300",
+    "aspectRatio": 0.271,
+    "fileSize": 41317,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-059",
       "apparel_svg_59"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-060",
@@ -10044,29 +10100,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_60.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_60.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_60.svg",
-    "name": "Apparel 060",
+    "name": "Zhongshan Suit",
     "slug": "apparel-060",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 178,
+    "referenceHeightCm": 178,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 867.44,
-      "measurementY": 130.69
+      "groundY": 1412.0,
+      "measurementY": 68.0
     },
-    "viewBox": "370.56 130.69 794.41 736.75",
-    "aspectRatio": 1.078,
-    "fileSize": 6076,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "302 68 424 1344",
+    "aspectRatio": 0.315,
+    "fileSize": 33768,
+    "status": "verified",
+    "subgroup": "[B] Suits & Tuxedos",
     "tags": [
-      "apparel"
+      "apparel",
+      "[b] suits & tuxedos"
     ],
     "aliases": [
       "apparel-060",
       "apparel_svg_60"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-061",
@@ -10074,29 +10131,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_61.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_61.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_61.svg",
-    "name": "Apparel 061",
+    "name": "Qipao",
     "slug": "apparel-061",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 164,
+    "referenceHeightCm": 164,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1166.71,
-      "measurementY": 304.24
+      "groundY": 1434.0,
+      "measurementY": 72.0
     },
-    "viewBox": "201.04 304.24 624.12 862.47",
-    "aspectRatio": 0.724,
-    "fileSize": 5973,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "310 72 396 1362",
+    "aspectRatio": 0.291,
+    "fileSize": 32882,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-061",
       "apparel_svg_61"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-062",
@@ -10104,29 +10162,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_62.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_62.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_62.svg",
-    "name": "Apparel 062",
+    "name": "Yukata",
     "slug": "apparel-062",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 177,
+    "referenceHeightCm": 177,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1345.6200000000001,
-      "measurementY": 157.66
+      "groundY": 1424.0,
+      "measurementY": 74.0
     },
-    "viewBox": "368.73 157.66 286.54 1187.96",
-    "aspectRatio": 0.241,
-    "fileSize": 5255,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "246 74 534 1350",
+    "aspectRatio": 0.396,
+    "fileSize": 89562,
+    "status": "verified",
+    "subgroup": "[C] Traditional Wear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[c] traditional wear"
     ],
     "aliases": [
       "apparel-062",
       "apparel_svg_62"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-063",
@@ -10134,29 +10193,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_63.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_63.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_63.svg",
-    "name": "Apparel 063",
+    "name": "Hanbok (Back View)",
     "slug": "apparel-063",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 163,
+    "referenceHeightCm": 163,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 936.6,
-      "measurementY": 63.9
+      "groundY": 1372.0,
+      "measurementY": 116.0
     },
-    "viewBox": "403.09 63.9 724.89 872.7",
-    "aspectRatio": 0.831,
-    "fileSize": 12322,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "292 116 474 1256",
+    "aspectRatio": 0.377,
+    "fileSize": 56963,
+    "status": "verified",
+    "subgroup": "[C] Traditional Wear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[c] traditional wear"
     ],
     "aliases": [
       "apparel-063",
       "apparel_svg_63"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-064",
@@ -10164,29 +10224,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_64.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_64.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_64.svg",
-    "name": "Apparel 064",
+    "name": "Hanfu",
     "slug": "apparel-064",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 165,
+    "referenceHeightCm": 165,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 932.0300000000001,
-      "measurementY": 101.96
+      "groundY": 1472.0,
+      "measurementY": 64.0
     },
-    "viewBox": "0.43 101.96 1535.14 830.07",
-    "aspectRatio": 1.849,
-    "fileSize": 75700,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "88 64 806 1408",
+    "aspectRatio": 0.572,
+    "fileSize": 197728,
+    "status": "verified",
+    "subgroup": "[C] Traditional Wear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[c] traditional wear"
     ],
     "aliases": [
       "apparel-064",
       "apparel_svg_64"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-065",
@@ -10194,29 +10255,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_65.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_65.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_65.svg",
-    "name": "Apparel 065",
+    "name": "Tang-Style Dress",
     "slug": "apparel-065",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 164,
+    "referenceHeightCm": 164,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 801.11,
-      "measurementY": 205.77
+      "groundY": 1388.0,
+      "measurementY": 116.0
     },
-    "viewBox": "114.65 205.77 1306.81 595.34",
-    "aspectRatio": 2.195,
-    "fileSize": 57114,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "294 116 438 1272",
+    "aspectRatio": 0.344,
+    "fileSize": 61846,
+    "status": "verified",
+    "subgroup": "[C] Traditional Wear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[c] traditional wear"
     ],
     "aliases": [
       "apparel-065",
       "apparel_svg_65"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-066",
@@ -10224,29 +10286,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_66.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_66.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_66.svg",
-    "name": "Apparel 066",
+    "name": "Embroidered Cheongsam",
     "slug": "apparel-066",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 166,
+    "referenceHeightCm": 166,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 961.6899999999999,
-      "measurementY": 50.17
+      "groundY": 1386.0,
+      "measurementY": 80.0
     },
-    "viewBox": "141.21 50.17 1259.32 911.52",
-    "aspectRatio": 1.382,
-    "fileSize": 333644,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "212 80 600 1306",
+    "aspectRatio": 0.459,
+    "fileSize": 296575,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-066",
       "apparel_svg_66"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-067",
@@ -10254,29 +10317,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_67.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_67.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_67.svg",
-    "name": "Apparel 067",
+    "name": "Mermaid Gown (Side View)",
     "slug": "apparel-067",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 170,
+    "referenceHeightCm": 170,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1201.88,
-      "measurementY": 312.89
+      "groundY": 1366.0,
+      "measurementY": 122.0
     },
-    "viewBox": "0.29 312.89 1025.8 888.99",
-    "aspectRatio": 1.154,
-    "fileSize": 81599,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "294 122 652 1244",
+    "aspectRatio": 0.524,
+    "fileSize": 33081,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-067",
       "apparel_svg_67"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-068",
@@ -10284,29 +10348,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_68.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_68.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_68.svg",
-    "name": "Apparel 068",
+    "name": "Ski Suit",
     "slug": "apparel-068",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 181,
+    "referenceHeightCm": 181,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1422.01,
-      "measurementY": 35.99
+      "groundY": 1416.0,
+      "measurementY": 62.0
     },
-    "viewBox": "180.02 35.99 661.33 1386.02",
-    "aspectRatio": 0.477,
-    "fileSize": 79850,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "244 62 530 1354",
+    "aspectRatio": 0.391,
+    "fileSize": 112037,
+    "status": "verified",
+    "subgroup": "[D] Uniforms & Workwear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[d] uniforms & workwear"
     ],
     "aliases": [
       "apparel-068",
       "apparel_svg_68"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-069",
@@ -10314,29 +10379,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_69.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_69.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_69.svg",
-    "name": "Apparel 069",
+    "name": "Ski Outfit",
     "slug": "apparel-069",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 180,
+    "referenceHeightCm": 180,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 787.9100000000001,
-      "measurementY": 83.08
+      "groundY": 1428.0,
+      "measurementY": 44.0
     },
-    "viewBox": "0.43 83.08 1535.14 704.83",
-    "aspectRatio": 2.178,
-    "fileSize": 26453,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "264 44 520 1384",
+    "aspectRatio": 0.376,
+    "fileSize": 111779,
+    "status": "verified",
+    "subgroup": "[D] Uniforms & Workwear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[d] uniforms & workwear"
     ],
     "aliases": [
       "apparel-069",
       "apparel_svg_69"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-070",
@@ -10344,29 +10410,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_70.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_70.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_70.svg",
-    "name": "Apparel 070",
+    "name": "Off-Shoulder Evening Gown",
     "slug": "apparel-070",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 168,
+    "referenceHeightCm": 168,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 929.64,
-      "measurementY": 75.59
+      "groundY": 1418.0,
+      "measurementY": 100.0
     },
-    "viewBox": "21.27 75.59 1490.32 854.05",
-    "aspectRatio": 1.745,
-    "fileSize": 202478,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "304 100 498 1318",
+    "aspectRatio": 0.378,
+    "fileSize": 62019,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-070",
       "apparel_svg_70"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-071",
@@ -10374,29 +10441,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_71.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_71.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_71.svg",
-    "name": "Apparel 071",
+    "name": "Work Coveralls",
     "slug": "apparel-071",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 179,
+    "referenceHeightCm": 179,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1409.6200000000001,
-      "measurementY": 54.68
+      "groundY": 1404.0,
+      "measurementY": 68.0
     },
-    "viewBox": "131.59 54.68 761.85 1354.94",
-    "aspectRatio": 0.562,
-    "fileSize": 64584,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "264 68 506 1336",
+    "aspectRatio": 0.379,
+    "fileSize": 156573,
+    "status": "verified",
+    "subgroup": "[D] Uniforms & Workwear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[d] uniforms & workwear"
     ],
     "aliases": [
       "apparel-071",
       "apparel_svg_71"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-072",
@@ -10404,29 +10472,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_72.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_72.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_72.svg",
-    "name": "Apparel 072",
+    "name": "Hooded Cloak",
     "slug": "apparel-072",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 170,
+    "referenceHeightCm": 170,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1331.5,
-      "measurementY": 143.62
+      "groundY": 1424.0,
+      "measurementY": 72.0
     },
-    "viewBox": "43.22 143.62 936.5 1187.88",
-    "aspectRatio": 0.788,
-    "fileSize": 49571,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "146 72 774 1352",
+    "aspectRatio": 0.572,
+    "fileSize": 53021,
+    "status": "verified",
+    "subgroup": "[D] Uniforms & Workwear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[d] uniforms & workwear"
     ],
     "aliases": [
       "apparel-072",
       "apparel_svg_72"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-073",
@@ -10434,29 +10503,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_73.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_73.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_73.svg",
-    "name": "Apparel 073",
+    "name": "Astronaut Spacesuit",
     "slug": "apparel-073",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 185,
+    "referenceHeightCm": 185,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1308.21,
-      "measurementY": 63.82
+      "groundY": 1406.0,
+      "measurementY": 74.0
     },
-    "viewBox": "61.26 63.82 900.5 1244.39",
-    "aspectRatio": 0.724,
-    "fileSize": 20339,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "266 74 488 1332",
+    "aspectRatio": 0.366,
+    "fileSize": 154240,
+    "status": "verified",
+    "subgroup": "[D] Uniforms & Workwear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[d] uniforms & workwear"
     ],
     "aliases": [
       "apparel-073",
       "apparel_svg_73"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-074",
@@ -10464,29 +10534,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_74.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_74.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_74.svg",
-    "name": "Apparel 074",
+    "name": "Racing Suit",
     "slug": "apparel-074",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 180,
+    "referenceHeightCm": 180,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1291.78,
-      "measurementY": 60.18
+      "groundY": 1416.0,
+      "measurementY": 56.0
     },
-    "viewBox": "24.07 60.18 976.86 1231.6",
-    "aspectRatio": 0.793,
-    "fileSize": 136790,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "242 56 708 1360",
+    "aspectRatio": 0.521,
+    "fileSize": 117357,
+    "status": "verified",
+    "subgroup": "[D] Uniforms & Workwear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[d] uniforms & workwear"
     ],
     "aliases": [
       "apparel-074",
       "apparel_svg_74"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-075",
@@ -10494,29 +10565,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_75.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_75.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_75.svg",
-    "name": "Apparel 075",
+    "name": "NASA Spacesuit",
     "slug": "apparel-075",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 186,
+    "referenceHeightCm": 186,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 857.5999999999999,
-      "measurementY": 114.18
+      "groundY": 1396.0,
+      "measurementY": 100.0
     },
-    "viewBox": "27.03 114.18 1492.84 743.42",
-    "aspectRatio": 2.008,
-    "fileSize": 220675,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "192 100 624 1296",
+    "aspectRatio": 0.481,
+    "fileSize": 250676,
+    "status": "verified",
+    "subgroup": "[D] Uniforms & Workwear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[d] uniforms & workwear"
     ],
     "aliases": [
       "apparel-075",
       "apparel_svg_75"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-076",
@@ -10524,29 +10596,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_76.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_76.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_76.svg",
-    "name": "Apparel 076",
+    "name": "Chef's Uniform",
     "slug": "apparel-076",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 178,
+    "referenceHeightCm": 178,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1306.1000000000001,
-      "measurementY": 162.15
+      "groundY": 1408.0,
+      "measurementY": 42.0
     },
-    "viewBox": "10.23 162.15 1005.8 1143.95",
-    "aspectRatio": 0.879,
-    "fileSize": 94833,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "308 42 412 1366",
+    "aspectRatio": 0.302,
+    "fileSize": 84773,
+    "status": "verified",
+    "subgroup": "[D] Uniforms & Workwear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[d] uniforms & workwear"
     ],
     "aliases": [
       "apparel-076",
       "apparel_svg_76"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-077",
@@ -10554,29 +10627,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_77.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_77.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_77.svg",
-    "name": "Apparel 077",
+    "name": "Doctor's Lab Coat",
     "slug": "apparel-077",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 181,
+    "referenceHeightCm": 181,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 789.7,
-      "measurementY": 294.3
+      "groundY": 1408.0,
+      "measurementY": 70.0
     },
-    "viewBox": "-2.19 294.3 1540.38 495.4",
-    "aspectRatio": 3.109,
-    "fileSize": 82271,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "316 70 408 1338",
+    "aspectRatio": 0.305,
+    "fileSize": 55503,
+    "status": "verified",
+    "subgroup": "[D] Uniforms & Workwear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[d] uniforms & workwear"
     ],
     "aliases": [
       "apparel-077",
       "apparel_svg_77"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-078",
@@ -10584,29 +10658,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_78.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_78.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_78.svg",
-    "name": "Apparel 078",
+    "name": "Firefighter Uniform",
     "slug": "apparel-078",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 182,
+    "referenceHeightCm": 182,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1326.77,
-      "measurementY": 62.22
+      "groundY": 1388.0,
+      "measurementY": 74.0
     },
-    "viewBox": "37.25 62.22 947.57 1264.55",
-    "aspectRatio": 0.749,
-    "fileSize": 83043,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "272 74 486 1314",
+    "aspectRatio": 0.37,
+    "fileSize": 32482,
+    "status": "verified",
+    "subgroup": "[D] Uniforms & Workwear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[d] uniforms & workwear"
     ],
     "aliases": [
       "apparel-078",
       "apparel_svg_78"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-079",
@@ -10614,29 +10689,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_79.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_79.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_79.svg",
-    "name": "Apparel 079",
+    "name": "Military Dress Uniform (Female)",
     "slug": "apparel-079",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 170,
+    "referenceHeightCm": 170,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1345.97,
-      "measurementY": 48.96
+      "groundY": 1430.0,
+      "measurementY": 56.0
     },
-    "viewBox": "63.18 48.96 896.55 1297.01",
-    "aspectRatio": 0.691,
-    "fileSize": 59976,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "304 56 418 1374",
+    "aspectRatio": 0.304,
+    "fileSize": 47296,
+    "status": "verified",
+    "subgroup": "[D] Uniforms & Workwear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[d] uniforms & workwear"
     ],
     "aliases": [
       "apparel-079",
       "apparel_svg_79"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-080",
@@ -10644,29 +10720,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_80.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_80.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_80.svg",
-    "name": "Apparel 080",
+    "name": "Military Dress Uniform (Male)",
     "slug": "apparel-080",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 181,
+    "referenceHeightCm": 181,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 850.54,
-      "measurementY": 143.65
+      "groundY": 1442.0,
+      "measurementY": 44.0
     },
-    "viewBox": "0.43 143.65 1535.14 706.89",
-    "aspectRatio": 2.172,
-    "fileSize": 108892,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "284 44 458 1398",
+    "aspectRatio": 0.328,
+    "fileSize": 55068,
+    "status": "verified",
+    "subgroup": "[D] Uniforms & Workwear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[d] uniforms & workwear"
     ],
     "aliases": [
       "apparel-080",
       "apparel_svg_80"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-081",
@@ -10674,29 +10751,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_81.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_81.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_81.svg",
-    "name": "Apparel 081",
+    "name": "V-Neck Evening Gown",
     "slug": "apparel-081",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 168,
+    "referenceHeightCm": 168,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 872.41,
-      "measurementY": 120.04
+      "groundY": 1406.0,
+      "measurementY": 116.0
     },
-    "viewBox": "-1.1 120.04 1540.23 752.37",
-    "aspectRatio": 2.047,
-    "fileSize": 148030,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "306 116 468 1290",
+    "aspectRatio": 0.363,
+    "fileSize": 52241,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-081",
       "apparel_svg_81"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-082",
@@ -10704,29 +10782,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_82.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_82.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_82.svg",
-    "name": "Apparel 082",
+    "name": "Business Skirt Suit",
     "slug": "apparel-082",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 167,
+    "referenceHeightCm": 167,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 991.01,
-      "measurementY": 49.37
+      "groundY": 1432.0,
+      "measurementY": 72.0
     },
-    "viewBox": "0.43 49.37 1535.14 941.64",
-    "aspectRatio": 1.63,
-    "fileSize": 138234,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "308 72 418 1360",
+    "aspectRatio": 0.307,
+    "fileSize": 31022,
+    "status": "verified",
+    "subgroup": "[B] Suits & Tuxedos",
     "tags": [
-      "apparel"
+      "apparel",
+      "[b] suits & tuxedos"
     ],
     "aliases": [
       "apparel-082",
       "apparel_svg_82"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-083",
@@ -10734,29 +10813,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_83.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_83.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_83.svg",
-    "name": "Apparel 083",
+    "name": "Bomber Jacket Outfit",
     "slug": "apparel-083",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 180,
+    "referenceHeightCm": 180,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1343.38,
-      "measurementY": 72.94
+      "groundY": 1424.0,
+      "measurementY": 54.0
     },
-    "viewBox": "54.06 72.94 773.47 1270.44",
-    "aspectRatio": 0.609,
-    "fileSize": 79035,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "288 54 456 1370",
+    "aspectRatio": 0.333,
+    "fileSize": 91565,
+    "status": "verified",
+    "subgroup": "[D] Uniforms & Workwear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[d] uniforms & workwear"
     ],
     "aliases": [
       "apparel-083",
       "apparel_svg_83"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-084",
@@ -10764,29 +10844,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_84.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_84.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_84.svg",
-    "name": "Apparel 084",
+    "name": "Fencing Uniform",
     "slug": "apparel-084",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 179,
+    "referenceHeightCm": 179,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1209.89,
-      "measurementY": 224.32
+      "groundY": 1436.0,
+      "measurementY": 72.0
     },
-    "viewBox": "14.24 224.32 997.55 985.57",
-    "aspectRatio": 1.012,
-    "fileSize": 434468,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "294 72 444 1364",
+    "aspectRatio": 0.326,
+    "fileSize": 73082,
+    "status": "verified",
+    "subgroup": "[D] Uniforms & Workwear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[d] uniforms & workwear"
     ],
     "aliases": [
       "apparel-084",
       "apparel_svg_84"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-085",
@@ -10794,29 +10875,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_85.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_85.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_85.svg",
-    "name": "Apparel 085",
+    "name": "Equestrian Outfit (Female)",
     "slug": "apparel-085",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 168,
+    "referenceHeightCm": 168,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 911.87,
-      "measurementY": 149.17
+      "groundY": 1450.0,
+      "measurementY": 46.0
     },
-    "viewBox": "27.37 149.17 1482.33 762.7",
-    "aspectRatio": 1.944,
-    "fileSize": 309557,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "294 46 438 1404",
+    "aspectRatio": 0.312,
+    "fileSize": 39422,
+    "status": "verified",
+    "subgroup": "[D] Uniforms & Workwear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[d] uniforms & workwear"
     ],
     "aliases": [
       "apparel-085",
       "apparel_svg_85"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-086",
@@ -10824,29 +10906,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_86.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_86.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_86.svg",
-    "name": "Apparel 086",
+    "name": "Equestrian Outfit (Male)",
     "slug": "apparel-086",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 180,
+    "referenceHeightCm": 180,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1283.36,
-      "measurementY": 148.5
+      "groundY": 1420.0,
+      "measurementY": 54.0
     },
-    "viewBox": "30.23 148.5 964.54 1134.86",
-    "aspectRatio": 0.85,
-    "fileSize": 290674,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "292 54 446 1366",
+    "aspectRatio": 0.327,
+    "fileSize": 41889,
+    "status": "verified",
+    "subgroup": "[D] Uniforms & Workwear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[d] uniforms & workwear"
     ],
     "aliases": [
       "apparel-086",
       "apparel_svg_86"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-087",
@@ -10854,29 +10937,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_87.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_87.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_87.svg",
-    "name": "Apparel 087",
+    "name": "Modern Business Suit",
     "slug": "apparel-087",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 181,
+    "referenceHeightCm": 181,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 889.38,
-      "measurementY": 173.08
+      "groundY": 1440.0,
+      "measurementY": 58.0
     },
-    "viewBox": "0.43 173.08 1535.14 716.3",
-    "aspectRatio": 2.143,
-    "fileSize": 440844,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "296 58 542 1382",
+    "aspectRatio": 0.392,
+    "fileSize": 30459,
+    "status": "verified",
+    "subgroup": "[B] Suits & Tuxedos",
     "tags": [
-      "apparel"
+      "apparel",
+      "[b] suits & tuxedos"
     ],
     "aliases": [
       "apparel-087",
       "apparel_svg_87"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-088",
@@ -10884,29 +10968,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_88.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_88.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_88.svg",
-    "name": "Apparel 088",
+    "name": "Classic Business Suit",
     "slug": "apparel-088",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 180,
+    "referenceHeightCm": 180,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 805.13,
-      "measurementY": 155.02
+      "groundY": 1440.0,
+      "measurementY": 58.0
     },
-    "viewBox": "83.21 155.02 519.42 650.11",
-    "aspectRatio": 0.799,
-    "fileSize": 44844,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "296 58 542 1382",
+    "aspectRatio": 0.392,
+    "fileSize": 30459,
+    "status": "verified",
+    "subgroup": "[B] Suits & Tuxedos",
     "tags": [
-      "apparel"
+      "apparel",
+      "[b] suits & tuxedos"
     ],
     "aliases": [
       "apparel-088",
       "apparel_svg_88"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-089",
@@ -10914,29 +10999,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_89.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_89.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_89.svg",
-    "name": "Apparel 089",
+    "name": "Ballet Tutu",
     "slug": "apparel-089",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 163,
+    "referenceHeightCm": 163,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 944.0400000000001,
-      "measurementY": 26.32
+      "groundY": 1432.0,
+      "measurementY": 62.0
     },
-    "viewBox": "182.13 26.32 1174.23 917.72",
-    "aspectRatio": 1.28,
-    "fileSize": 122396,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "220 62 582 1370",
+    "aspectRatio": 0.425,
+    "fileSize": 125861,
+    "status": "verified",
+    "subgroup": "[D] Uniforms & Workwear",
     "tags": [
-      "apparel"
+      "apparel",
+      "[d] uniforms & workwear"
     ],
     "aliases": [
       "apparel-089",
       "apparel_svg_89"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-090",
@@ -10944,29 +11030,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_90.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_90.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_90.svg",
-    "name": "Apparel 090",
+    "name": "Flamenco Dress",
     "slug": "apparel-090",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 165,
+    "referenceHeightCm": 165,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 736.81,
-      "measurementY": 231.92
+      "groundY": 1412.0,
+      "measurementY": 90.0
     },
-    "viewBox": "152.68 231.92 1288.11 504.89",
-    "aspectRatio": 2.551,
-    "fileSize": 24704,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "148 90 788 1322",
+    "aspectRatio": 0.596,
+    "fileSize": 98370,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-090",
       "apparel_svg_90"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-091",
@@ -10974,29 +11061,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_91.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_91.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_91.svg",
-    "name": "Apparel 091",
+    "name": "Wedding Dress with Veil",
     "slug": "apparel-091",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 169,
+    "referenceHeightCm": 169,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1269.79,
-      "measurementY": 178.13
+      "groundY": 1456.0,
+      "measurementY": 286.0
     },
-    "viewBox": "120.15 178.13 779.38 1091.66",
-    "aspectRatio": 0.714,
-    "fileSize": 37250,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "30 286 972 1170",
+    "aspectRatio": 0.831,
+    "fileSize": 194068,
+    "status": "verified",
+    "subgroup": "[E] Wedding & Bridal",
     "tags": [
-      "apparel"
+      "apparel",
+      "[e] wedding & bridal"
     ],
     "aliases": [
       "apparel-091",
       "apparel_svg_91"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-092",
@@ -11004,29 +11092,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_92.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_92.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_92.svg",
-    "name": "Apparel 092",
+    "name": "Bridal Gown with Bouquet",
     "slug": "apparel-092",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 168,
+    "referenceHeightCm": 168,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 911.5200000000001,
-      "measurementY": 55.82
+      "groundY": 1280.23,
+      "measurementY": 110.67
     },
-    "viewBox": "0.43 55.82 1535.14 855.7",
-    "aspectRatio": 1.794,
-    "fileSize": 160973,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "23.3 110.67 984.12 1169.56",
+    "aspectRatio": 0.841,
+    "fileSize": 29494,
+    "status": "verified",
+    "subgroup": "[E] Wedding & Bridal",
     "tags": [
-      "apparel"
+      "apparel",
+      "[e] wedding & bridal"
     ],
     "aliases": [
       "apparel-092",
       "apparel_svg_92"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-093",
@@ -11034,29 +11123,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_93.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_93.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_93.svg",
-    "name": "Apparel 093",
+    "name": "Wedding Gown (Front)",
     "slug": "apparel-093",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 170,
+    "referenceHeightCm": 170,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1403.6299999999999,
-      "measurementY": 55.58
+      "groundY": 1300.26,
+      "measurementY": 95.75
     },
-    "viewBox": "12.2 55.58 997.55 1348.05",
-    "aspectRatio": 0.74,
-    "fileSize": 75224,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "35.25 95.75 972.46 1204.51",
+    "aspectRatio": 0.807,
+    "fileSize": 35411,
+    "status": "verified",
+    "subgroup": "[E] Wedding & Bridal",
     "tags": [
-      "apparel"
+      "apparel",
+      "[e] wedding & bridal"
     ],
     "aliases": [
       "apparel-093",
       "apparel_svg_93"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-094",
@@ -11094,29 +11184,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_95.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_95.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_95.svg",
-    "name": "Apparel 095",
+    "name": "Skater Dress Silhouette",
     "slug": "apparel-095",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 165,
+    "referenceHeightCm": 165,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 811.6600000000001,
-      "measurementY": 184.69
+      "groundY": 823.25,
+      "measurementY": 152.25
     },
-    "viewBox": "-2.19 184.69 1540.32 626.97",
-    "aspectRatio": 2.457,
-    "fileSize": 322322,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "239.75 152.25 204.25 671",
+    "aspectRatio": 0.304,
+    "fileSize": 7994,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-095",
       "apparel_svg_95"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-096",
@@ -11124,29 +11215,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_96.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_96.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_96.svg",
-    "name": "Apparel 096",
+    "name": "Casual Skater Dress",
     "slug": "apparel-096",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 164,
+    "referenceHeightCm": 164,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1366.21,
-      "measurementY": 54.03
+      "groundY": 823.25,
+      "measurementY": 152.25
     },
-    "viewBox": "109.39 54.03 803.53 1312.18",
-    "aspectRatio": 0.612,
-    "fileSize": 41125,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "239.75 152.25 204.25 671",
+    "aspectRatio": 0.304,
+    "fileSize": 8036,
+    "status": "verified",
+    "subgroup": "[A] Evening Gowns",
     "tags": [
-      "apparel"
+      "apparel",
+      "[a] evening gowns"
     ],
     "aliases": [
       "apparel-096",
       "apparel_svg_96"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-097",
@@ -11154,29 +11246,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_97.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_97.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_97.svg",
-    "name": "Apparel 097",
+    "name": "Man Silhouette",
     "slug": "apparel-097",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 180,
+    "referenceHeightCm": 180,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1022.56,
-      "measurementY": 52.43
+      "groundY": 829.25,
+      "measurementY": 124.5
     },
-    "viewBox": "0.43 52.43 1538.7 970.13",
-    "aspectRatio": 1.586,
-    "fileSize": 204312,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "231.5 124.5 264.5 704.75",
+    "aspectRatio": 0.375,
+    "fileSize": 8061,
+    "status": "verified",
+    "subgroup": "[B] Suits & Tuxedos",
     "tags": [
-      "apparel"
+      "apparel",
+      "[b] suits & tuxedos"
     ],
     "aliases": [
       "apparel-097",
       "apparel_svg_97"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "apparel-098",
@@ -11184,29 +11277,30 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "apparel_svg_98.svg",
     "sourceFile": "src/assets/entities/apparel/apparel_svg_98.svg",
     "publicPath": "/assets/entities/apparel/apparel_svg_98.svg",
-    "name": "Apparel 098",
+    "name": "Casual Man Silhouette",
     "slug": "apparel-098",
-    "heightCm": null,
-    "referenceHeightCm": null,
+    "heightCm": 179,
+    "referenceHeightCm": 179,
     "measurementType": "height",
     "measurementAnchor": {
-      "groundY": 1374.76,
-      "measurementY": 54.4
+      "groundY": 829.25,
+      "measurementY": 124.5
     },
-    "viewBox": "4.15 54.4 1011.72 1320.36",
-    "aspectRatio": 0.766,
-    "fileSize": 125874,
-    "status": "needs-review",
-    "subgroup": null,
+    "viewBox": "231.5 124.5 264.5 704.75",
+    "aspectRatio": 0.375,
+    "fileSize": 8116,
+    "status": "verified",
+    "subgroup": "[B] Suits & Tuxedos",
     "tags": [
-      "apparel"
+      "apparel",
+      "[b] suits & tuxedos"
     ],
     "aliases": [
       "apparel-098",
       "apparel_svg_98"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "animal-bear-01",
