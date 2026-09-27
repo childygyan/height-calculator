@@ -94,12 +94,16 @@ runTest('10. getCanonicalUrl formats localized paths correctly with trailing sla
 // -----------------------------------------------------------------
 console.log('\n--- Test Group 2: Edge Routing & CDN Headers ---');
 
-runTest('11. public/_redirects routes height-calculator.pages.dev to height-calculator.net', () => {
-  const redirectsPath = path.resolve(rootDir, 'public/_redirects');
-  assert(fs.existsSync(redirectsPath), '_redirects file must exist');
-  const content = fs.readFileSync(redirectsPath, 'utf-8');
-  assert(content.includes('https://height-calculator.pages.dev/*  https://height-calculator.net/:splat  301'), 'Must have https://height-calculator.pages.dev/* 301 rule');
-  assert(content.includes('http://height-calculator.pages.dev/*   https://height-calculator.net/:splat  301'), 'Must have http://height-calculator.pages.dev/* 301 rule');
+runTest('11. functions/_middleware.js 301-redirects *.pages.dev to height-calculator.net', () => {
+  // P0-3 fix: Cloudflare Pages `_redirects` silently ignores absolute-URL
+  // sources, so the pages.dev -> apex 301 lives in a Pages Function.
+  const mwPath = path.resolve(rootDir, 'functions/_middleware.js');
+  assert(fs.existsSync(mwPath), 'functions/_middleware.js must exist');
+  const content = fs.readFileSync(mwPath, 'utf-8');
+  assert(content.includes(".pages.dev"), 'Middleware must match *.pages.dev hostnames');
+  assert(content.includes('height-calculator.net'), 'Middleware must redirect to the apex domain');
+  assert(content.includes('301'), 'Middleware must emit a 301 redirect');
+  assert(content.includes('context.next()'), 'Middleware must pass non-pages.dev requests through (no loop)');
 });
 
 runTest('12. public/_headers enforces domain-specific rules (all for prod, noindex for pages.dev)', () => {
