@@ -104,6 +104,8 @@ runTest('11. functions/_middleware.js 301-redirects *.pages.dev to height-calcul
   assert(content.includes('height-calculator.net'), 'Middleware must redirect to the apex domain');
   assert(content.includes('301'), 'Middleware must emit a 301 redirect');
   assert(content.includes('context.next()'), 'Middleware must pass non-pages.dev requests through (no loop)');
+  // P1-1 fix: www.height-calculator.net must 301 to the canonical apex host.
+  assert(content.includes("'www.height-calculator.net'"), 'Middleware must match the www hostname for apex consolidation');
 });
 
 runTest('12. public/_headers enforces domain-specific rules (all for prod, noindex for pages.dev)', () => {

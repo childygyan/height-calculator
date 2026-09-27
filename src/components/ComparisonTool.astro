@@ -19,7 +19,7 @@ interface Props {
 
 const { initialItems, initialComparisonSlug, showQuickCompare = true, locale = 'en' } = Astro.props;
 
-// Server-side pre-resolve initial models so client does not need to bundle 1,400+ assets for initial render
+// Server-side pre-resolve initial models so client does not need to bundle 1,300+ assets for initial render
 const sourceItems = initialItems && initialItems.length > 0 ? initialItems : INITIAL_PEOPLE;
 const resolvedItems = sourceItems.map((item) => {
   try {
