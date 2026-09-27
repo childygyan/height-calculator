@@ -498,6 +498,11 @@ const { locale = 'en' } = Astro.props;
         </div>
       </div>
 
+      <!-- Fixed / Sticky Ruler on the right (always the mirror unit of the left ruler) -->
+      <div class="sticky right-0 z-20 flex-shrink-0 h-full flex flex-col justify-end bg-white/90 backdrop-blur-sm border-l border-slate-200/80 shadow-soft-sm rounded-r-xl">
+        <HeightRuler side="right" />
+      </div>
+
       <!-- Empty State Container (shown when items list is empty) -->
       <div id="chart-empty-state" class="hidden absolute inset-0 z-30 flex flex-col items-center justify-center p-6 bg-white/95 rounded-2xl text-center">
         <!-- Lightweight Inline SVG illustration -->

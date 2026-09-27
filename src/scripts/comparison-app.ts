@@ -82,6 +82,7 @@ class HeightComparisonApp {
   private modelsStage!: HTMLElement;
   private chartGridLines!: HTMLElement;
   private rulerTicksContainer!: HTMLElement;
+  private rulerTicksContainerRight!: HTMLElement | null;
   private chartEmptyState!: HTMLElement;
   private chartTotalCount!: HTMLElement;
   private tooltipEl!: HTMLElement;
@@ -274,6 +275,7 @@ class HeightComparisonApp {
     this.modelsStage = document.getElementById('models-stage') as HTMLElement;
     this.chartGridLines = document.getElementById('chart-grid-lines') as HTMLElement;
     this.rulerTicksContainer = document.getElementById('ruler-ticks') as HTMLElement;
+    this.rulerTicksContainerRight = document.getElementById('ruler-ticks-right') as HTMLElement | null;
     this.chartEmptyState = document.getElementById('chart-empty-state') as HTMLElement;
     this.chartTotalCount = document.getElementById('chart-total-count') as HTMLElement;
     this.tooltipEl = document.getElementById('chart-tooltip') as HTMLElement;
@@ -2219,6 +2221,7 @@ class HeightComparisonApp {
       this.modelsContainer.innerHTML = '';
       this.chartGridLines.innerHTML = '';
       this.rulerTicksContainer.innerHTML = '';
+      if (this.rulerTicksContainerRight) this.rulerTicksContainerRight.innerHTML = '';
       return;
     }
 
@@ -2228,7 +2231,7 @@ class HeightComparisonApp {
     const { scale, rulerMaxCm } = calculateScale(items, visualHeightPx);
 
     const ticks = generateRulerTicks(rulerMaxCm, this.state.rulerUnit);
-    this.renderRuler(ticks, scale);
+    this.renderRulers(rulerMaxCm, scale);
 
     this.chartGridLines.innerHTML = ticks
       .filter((t) => t.isMajor)
@@ -2521,35 +2524,59 @@ class HeightComparisonApp {
     });
   }
 
-  private renderRuler(ticks: ReturnType<typeof generateRulerTicks>, scale: number) {
-    if (!this.rulerTicksContainer) return;
+  /**
+   * Renders both side rulers: the left ruler uses the selected unit,
+   * the right ruler always shows the mirror unit (cm <-> ft/in).
+   */
+  private renderRulers(rulerMaxCm: number, scale: number) {
+    const leftUnit = this.state.rulerUnit;
+    const rightUnit: RulerUnit = leftUnit === 'cm' ? 'ft' : 'cm';
+    this.paintRuler(this.rulerTicksContainer, generateRulerTicks(rulerMaxCm, leftUnit), scale, 'left');
+    if (this.rulerTicksContainerRight) {
+      this.paintRuler(this.rulerTicksContainerRight, generateRulerTicks(rulerMaxCm, rightUnit), scale, 'right');
+    }
+  }
+
+  private paintRuler(
+    container: HTMLElement,
+    ticks: ReturnType<typeof generateRulerTicks>,
+    scale: number,
+    side: 'left' | 'right'
+  ) {
+    if (!container) return;
 
     const maxCm = ticks.length > 0 ? ticks[ticks.length - 1].cm : 200;
-    this.rulerTicksContainer.style.height = `${maxCm * scale}px`;
+    container.style.height = `${maxCm * scale}px`;
 
-    this.rulerTicksContainer.innerHTML = ticks
+    const alignCls = side === 'left' ? 'right-0 justify-end' : 'left-0 justify-start';
+    const labelCls = side === 'left' ? 'mr-1.5' : 'ml-1.5';
+    const barCls = side === 'left' ? 'w-2.5 h-[1.5px] bg-slate-400' : 'w-2.5 h-[1.5px] bg-slate-400';
+    const minorBarCls = 'w-1.5 h-[1px] bg-slate-300';
+
+    container.innerHTML = ticks
       .map((tick) => {
         const bottomPx = tick.cm * scale;
         if (tick.isMajor) {
+          const inner = side === 'left'
+            ? `<span class="text-[10px] font-bold text-slate-500 ${labelCls} whitespace-nowrap">${tick.label}</span><div class="${barCls}"></div>`
+            : `<div class="${barCls}"></div><span class="text-[10px] font-bold text-slate-500 ${labelCls} whitespace-nowrap">${tick.label}</span>`;
           return `
-            <div 
-              class="absolute right-0 flex items-center justify-end w-full"
+            <div
+              class="absolute ${alignCls} flex items-center w-full"
               style="bottom: ${bottomPx}px;"
             >
-              <span class="text-[10px] font-bold text-slate-500 mr-1.5 whitespace-nowrap">${tick.label}</span>
-              <div class="w-2.5 h-[1.5px] bg-slate-400"></div>
-            </div>
-          `;
-        } else {
-          return `
-            <div 
-              class="absolute right-0 flex items-center justify-end w-full"
-              style="bottom: ${bottomPx}px;"
-            >
-              <div class="w-1.5 h-[1px] bg-slate-300"></div>
+              ${inner}
             </div>
           `;
         }
+        return `
+          <div
+            class="absolute ${alignCls} flex items-center w-full"
+            style="bottom: ${bottomPx}px;"
+          >
+            <div class="${minorBarCls}"></div>
+          </div>
+        `;
       })
       .join('');
   }
