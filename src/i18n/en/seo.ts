@@ -50,4 +50,19 @@ export default {
 
   'faq.q7': 'Is this medical advice?',
   'faq.a7': 'No. Height Calculator provides educational estimates based on public growth references (CDC/WHO). It is not medical advice and cannot diagnose growth conditions. If you have concerns about your child’s growth, please consult a pediatrician or qualified healthcare professional.',
+
+  // About page body (shared component, extracted for localization)
+  'about.mission.title': 'Our Core Mission',
+  'about.mission.p1': 'Height is one of the first things parents track and one of the most common things people wonder about — yet a raw number like 172 cm or 5 ft 8 in rarely means much on its own. What does a percentile actually tell you? How tall will a child likely become? Is a growth pattern on track?',
+  'about.mission.p2': ' was built to answer those questions at every age — from a baby’s first centimeters to adult stature. It brings together height percentiles grounded in CDC and WHO growth references, child adult-height prediction from parents’ heights, instant cm ↔ ft/in conversion, and true-scale visual comparison, so anyone can predict, track and truly understand height.',
+  'about.how.title': 'How Our Calculations Work',
+  'about.how.li1t': 'Real growth references:',
+  'about.how.li1x': ' Percentiles are computed against the CDC growth charts (ages 2–20) and the WHO Child Growth Standards (birth to age 5) — the same references pediatricians use.',
+  'about.how.li2t': 'Standard prediction method:',
+  'about.how.li2x': ' Child adult-height estimates use the mid-parental height formula, always shown with an honest typical range of about ±8–10 cm — never presented as a guarantee.',
+  'about.how.li3t': 'Exact unit math:',
+  'about.how.li3x': ' Conversions use the international standard (1 inch = exactly 2.54 cm), so cm ↔ ft/in results are precise, not rounded guesses.',
+  'about.how.li4t': 'True-scale visuals:',
+  'about.how.li4x': ' Side-by-side figures share a single 0 cm baseline and scale proportionally, so what you see matches the numbers.',
+  'about.disclaimer': 'Height Calculator provides educational estimates, not medical advice. For concerns about a child’s growth, please consult a pediatrician.',
 };

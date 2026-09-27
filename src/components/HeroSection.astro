@@ -10,7 +10,7 @@ const { locale = getLocaleFromUrl(Astro.url) } = Astro.props;
 
 // Phase 1 repositioning: primary CTA always opens the calculator hub (EN-only page, plain href).
 const primaryCtaHref = '/height-calculator/';
-const secondaryCtaHref = locale === 'en' ? '#how-it-works' : '#categories';
+const secondaryCtaHref = '#how-it-works';
 ---
 
 <section class="max-w-5xl mx-auto text-center pt-6 sm:pt-10 pb-8 sm:pb-12">
@@ -55,11 +55,12 @@ const secondaryCtaHref = locale === 'en' ? '#how-it-works' : '#categories';
     <div class="flex items-center justify-between text-xs text-slate-400 font-semibold mb-3 border-b border-slate-100 dark:border-slate-700/60 pb-2">
       <span class="flex items-center gap-1.5 text-slate-600 dark:text-slate-300">
         <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-        <span>{t(locale, 'hero.previewTitle')}</span>
+        <span>{t(locale, locale === 'en' ? 'hero.previewTitle' : 'hero.calcPreviewTitle')}</span>
       </span>
-      <span class="text-[11px] text-slate-400">{t(locale, 'hero.baselineFloor')}</span>
+      <span class="text-[11px] text-slate-400">{t(locale, locale === 'en' ? 'hero.baselineFloor' : 'cta.final.badge')}</span>
     </div>
 
+    {locale === 'en' ? (
     <div class="relative h-56 sm:h-64 w-full flex items-end justify-center px-4 overflow-hidden bg-slate-50/70 dark:bg-slate-900/50 rounded-xl border border-slate-100 dark:border-slate-800">
       <!-- Background Grid lines -->
       <div class="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-25 dark:opacity-20">
@@ -117,5 +118,35 @@ const secondaryCtaHref = locale === 'en' ? '#how-it-works' : '#categories';
       <!-- Floor Baseline Line (0 cm) -->
       <div class="absolute bottom-3 left-0 right-0 h-1 bg-gradient-to-r from-brand-600 via-blue-500 to-indigo-600"></div>
     </div>
+    ) : (
+    <!-- Localized calculator-first preview: mock conversion + percentile bar (no comparison figures) -->
+    <div class="w-full py-8 px-6 flex flex-col items-center gap-7 bg-slate-50/70 dark:bg-slate-900/50 rounded-xl border border-slate-100 dark:border-slate-800">
+      <!-- Mock conversion: 175 cm = 5 ft 8.9 in -->
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <div class="flex items-center rounded-lg border-2 border-brand-500 bg-white dark:bg-slate-800 px-4 py-2.5 shadow-soft">
+          <span class="text-2xl font-black text-slate-900 dark:text-white tabular-nums">175</span>
+          <span class="ml-2 text-sm font-bold text-slate-400">cm</span>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+        <div class="flex items-center rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-2.5 shadow-soft">
+          <span class="text-2xl font-black text-brand-600 dark:text-blue-400 tabular-nums">5 ft 8.9 in</span>
+        </div>
+      </div>
+      <!-- Mock percentile bar -->
+      <div class="w-full max-w-md">
+        <div class="flex items-center justify-between text-[11px] font-bold text-slate-400 mb-1.5">
+          <span>P0</span>
+          <span class="text-brand-600 dark:text-blue-400">P62</span>
+          <span>P100</span>
+        </div>
+        <div class="relative h-3 rounded-full bg-gradient-to-r from-slate-200 via-brand-200 to-brand-500 dark:from-slate-700 dark:via-brand-900 dark:to-brand-500">
+          <div class="absolute top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-brand-600 border-[3px] border-white dark:border-slate-900 shadow" style="left: 62%; transform: translate(-50%, -50%);"></div>
+        </div>
+      </div>
+    </div>
+    )}
   </div>
 </section>

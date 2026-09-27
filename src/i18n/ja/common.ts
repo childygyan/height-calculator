@@ -1,9 +1,9 @@
 export default {
   // Brand
   'brand.name': 'Height Calculator',
-  'brand.tagline': '高さであらゆるものを比較',
-  'brand.secondaryTagline': '本当の大きさをその目で実感',
-  'brand.description': '人物、芸能人、アニメキャラクター、映画の登場人物、動物、物体、植物、スポーツ選手などの高さを視覚的に比べられるインタラクティブ比較プラットフォーム。',
+  'brand.tagline': 'Height Calculator — あらゆる身長を比較・変換・理解する',
+  'brand.secondaryTagline': '身長を予測・記録・理解する',
+  'brand.description': '赤ちゃん・男の子・女の子・大人のための無料身長計算機 — 身長パーセンタイルの確認、CDC・WHO成長曲線の閲覧、両親の身長からの子どもの成人身長予測、cm ↔ フィート/インチ変換。',
 
   // Navigation
   'nav.home': 'ホーム',
@@ -19,13 +19,12 @@ export default {
   'nav.apparel': '衣装・靴',
   'nav.fictional': '架空キャラクター',
   'nav.people': '平均身長・パーセンタイル',
-  'nav.calculator': '身長差計算機',
-  'nav.chart': '身長比較表',
+  'nav.calculator': 'Height Calculator',
   'nav.howToUse': '使い方',
   'nav.more': 'その他',
   'nav.categoriesHeader': 'カテゴリー',
   'nav.utilitiesHeader': 'ツール・機能',
-  'nav.startComparing': '比較を始める',
+  'nav.startComparing': '計算を始める',
 
   // Language Switcher
   'language.select': '言語',
@@ -73,11 +72,16 @@ export default {
   'footer.legal': '運営＆免責事項',
   'footer.tools': '便利ツール',
   'footer.allRightsReserved': 'All rights reserved.',
-  'footer.platformStatement': 'Height Calculator は、あらゆるものの高さを視覚的に分かりやすく理解できるようサポートします。',
-  'footer.fastPlatform': '高速・静的ファーストの視覚的計測プラットフォーム',
+  'footer.platformStatement': 'Height Calculatorは、あらゆる年齢の身長を予測・記録・理解するお手伝いをします。',
+  'footer.fastPlatform': '高速な静的ファースト身長計算機',
 
   // Error States
   'error.pageNotFound': 'ページが見つかりません',
   'error.pageNotFoundDesc': 'お探しのページは存在しないか、移動した可能性があります。',
   'error.backHome': 'ホームに戻る',
+
+  // Added: calculator-first repositioning (Sep 2026)
+  'nav.charts': '成長曲線',
+  'nav.about': '概要',
+  'nav.contact': 'お問い合わせ',
 };

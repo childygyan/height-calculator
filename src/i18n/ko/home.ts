@@ -1,14 +1,15 @@
 export default {
   // Hero
-  'hero.badge': '인터랙티브 시각적 키 비교 플랫폼',
-  'hero.title': '키와 높이로 모든 것을 비교하세요',
-  'hero.description': '인터랙티브 시각 비교 도구로 사람, 유명인, 애니 캐릭터, 동물, 사물, 영화 주인공 등의 크기를 생생하게 비교해 보세요.',
-  'hero.startComparing': '비교 시작하기',
-  'hero.exploreComparisons': '추천 비교 살펴보기',
+  'hero.badge': 'Height Calculator',
+  'hero.title': 'Height Calculator — 모든 키를 비교·변환·이해하세요',
+  'hero.description': '자녀의 성인 키를 예측하고, 아기·남자아이·여자아이의 성장 백분위수를 추적하며, cm와 피트/인치 사이의 모든 키를 변환하세요 — 하나의 무료 계산기로.',
+  'hero.startComparing': '계산 시작하기',
+  'hero.exploreComparisons': '사용 방법',
 
   // Hero Preview Graphic
-  'hero.previewTitle': '시각적 측정 미리보기',
-  'hero.baselineFloor': '정렬된 바닥 기준선 (0 cm)',
+  'hero.previewTitle': '키 스케일 미리보기',
+  'hero.baselineFloor': '기준선 (0 cm)',
+  'hero.calcPreviewTitle': '계산기 미리보기',
   'hero.itemDoor': '문',
   'hero.itemHuman': '사람',
   'hero.itemDog': '개',
@@ -38,4 +39,25 @@ export default {
   // Reference Benchmarks Section
   'section.benchmarksBadge': '표준 규격',
   'section.benchmarksTitle': '자주 사용되는 키 기준 척도',
+
+  // Added: calculator-first repositioning (Sep 2026)
+  'howitworks.badge': '사용 방법',
+  'howitworks.title': '모든 키를 이해하는 3단계',
+  'howitworks.desc': '가입도, 다운로드도 필요 없습니다. 한 번 측정하고 숫자를 입력하면 실제 성장 데이터에 기반한 답을 얻을 수 있습니다.',
+  'howitworks.step1.title': '측정',
+  'howitworks.step1.text': '키를 정확하게 측정하세요 — 맨발로, 벽에 등을 곧게 대고 발뒤꿈치를 붙인 채, 0.1 cm 또는 ⅛인치 단위로. 아기는 눕혀서 측정합니다(신장).',
+  'howitworks.step2.title': '입력',
+  'howitworks.step2.text': '키를 센티미터 또는 피트·인치로 입력하세요. 백분위수 확인을 위해 나이와 성별을, 자녀의 성인 키 예측을 위해 양쪽 부모의 키를 추가하세요.',
+  'howitworks.step3.title': '이해',
+  'howitworks.step3.text': '즉각적인 단위 변환, CDC·WHO 성장 곡선 기준 백분위수 순위, 정직한 어린이 키 추정치를 — 모든 숫자 뒤의 데이터와 함께 확인하세요.',
+  'trust.title': '실제 CDC·WHO 성장 데이터 기반',
+  'trust.text': '백분위수와 성장 기준은 CDC 성장 곡선과 WHO 영유아 성장 기준에서 비롯됩니다 — 추측이 아닙니다. 결과는 교육용 추정치이며 의료 조언이 아닙니다. 자녀의 성장에 우려가 있다면 소아과 의사와 상담하세요.',
+  'hubteaser.badge': '무료 계산기 모음',
+  'hubteaser.title': '모든 키를 계산·변환·이해하세요',
+  'hubteaser.text': '인터랙티브 Height Calculator 허브 열기: 아기·남자아이·여자아이 백분위수 확인, CDC·WHO 성장 곡선 살펴보기, 자녀의 성인 키 예측, cm ↔ 피트/인치 변환 — 무료, 가입 불필요.',
+  'hubteaser.button': 'Height Calculator 열기',
+  'cta.final.badge': '무료 • 가입 불필요',
+  'cta.final.title': '키를 계산할 준비가 되셨나요?',
+  'cta.final.text': 'Height Calculator 허브 열기 — 백분위수, 성장 곡선, 어린이 키 예측, 단위 변환을 한곳에서.',
+  'cta.final.button': '계산 시작하기',
 };

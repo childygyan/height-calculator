@@ -1,9 +1,9 @@
 export default {
   // Brand
   'brand.name': 'Height Calculator',
-  'brand.tagline': 'Comparez n\'importe quoi par la taille',
-  'brand.secondaryTagline': 'Voyez sa vraie taille en direct',
-  'brand.description': 'Une plateforme interactive de comparaison visuelle de taille pour comparer des personnes, célébrités, personnages d\'anime, figures de films, animaux, objets, plantes, athlètes et bien plus encore.',
+  'brand.tagline': 'Height Calculator — Comparez, Convertissez et Comprenez Toutes les Tailles',
+  'brand.secondaryTagline': 'Prédisez, Suivez et Comprenez la Taille',
+  'brand.description': 'Une calculatrice de taille gratuite pour bébés, garçons, filles et adultes — vérifiez les percentiles de taille, explorez les courbes de croissance du CDC et de l’OMS, prédisez la taille adulte d’un enfant à partir de la taille de ses parents, et convertissez cm ↔ pieds/po.',
 
   // Navigation
   'nav.home': 'Accueil',
@@ -19,13 +19,12 @@ export default {
   'nav.apparel': 'Vêtements & Chaussures',
   'nav.fictional': 'Personnages Fictifs',
   'nav.people': 'Percentiles Humains',
-  'nav.calculator': 'Calculateur d\'Écart',
-  'nav.chart': 'Tableau Comparatif',
+  'nav.calculator': 'Height Calculator',
   'nav.howToUse': 'Mode d\'emploi',
   'nav.more': 'Plus',
   'nav.categoriesHeader': 'Catégories',
   'nav.utilitiesHeader': 'Outils',
-  'nav.startComparing': 'Commencer à Comparer',
+  'nav.startComparing': 'Commencer à Calculer',
 
   // Language Switcher
   'language.select': 'Langue',
@@ -73,11 +72,16 @@ export default {
   'footer.legal': 'Plateforme & Mentions Légales',
   'footer.tools': 'Outils',
   'footer.allRightsReserved': 'Tous droits réservés.',
-  'footer.platformStatement': 'Height Calculator aide chacun à comprendre visuellement la taille de toute chose.',
-  'footer.fastPlatform': 'Plateforme de mesure visuelle rapide et statique',
+  'footer.platformStatement': 'Height Calculator vous aide à prédire, suivre et comprendre la taille à tout âge.',
+  'footer.fastPlatform': 'Calculatrice de taille rapide et statique',
 
   // Error States
   'error.pageNotFound': 'Page Non Trouvée',
   'error.pageNotFoundDesc': 'La page demandée n\'existe pas ou a été déplacée.',
   'error.backHome': 'Retour à l\'Accueil',
+
+  // Added: calculator-first repositioning (Sep 2026)
+  'nav.charts': 'Courbes',
+  'nav.about': 'À propos',
+  'nav.contact': 'Contact',
 };

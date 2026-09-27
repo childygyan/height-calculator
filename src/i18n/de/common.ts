@@ -1,9 +1,9 @@
 export default {
   // Brand
   'brand.name': 'Height Calculator',
-  'brand.tagline': 'Vergleiche alles nach Größe',
-  'brand.secondaryTagline': 'Sieh, wie groß es wirklich ist',
-  'brand.description': 'Eine interaktive visuelle Plattform für Größenvergleiche von Menschen, Prominenten, Anime-Figuren, Filmhelden, Tieren, Gegenständen, Pflanzen, Sportlern und mehr.',
+  'brand.tagline': 'Height Calculator — Größen vergleichen, umrechnen & verstehen',
+  'brand.secondaryTagline': 'Größe vorhersagen, verfolgen & verstehen',
+  'brand.description': 'Ein kostenloser Größenrechner für Babys, Jungen, Mädchen und Erwachsene — prüfe Größenperzentile, erkunde CDC- & WHO-Wachstumskurven, prognostiziere die Erwachsenengröße eines Kindes anhand der Elterngröße und rechne cm ↔ Fuß/Zoll um.',
 
   // Navigation
   'nav.home': 'Startseite',
@@ -19,13 +19,12 @@ export default {
   'nav.apparel': 'Kleidung & Schuhe',
   'nav.fictional': 'Fiktive Figuren',
   'nav.people': 'Menschliche Perzentile',
-  'nav.calculator': 'Differenz-Rechner',
-  'nav.chart': 'Vergleichstabelle',
+  'nav.calculator': 'Height Calculator',
   'nav.howToUse': 'Anleitung',
   'nav.more': 'Mehr',
   'nav.categoriesHeader': 'Kategorien',
   'nav.utilitiesHeader': 'Werkzeuge',
-  'nav.startComparing': 'Vergleich starten',
+  'nav.startComparing': 'Jetzt Berechnen',
 
   // Language Switcher
   'language.select': 'Sprache',
@@ -73,11 +72,16 @@ export default {
   'footer.legal': 'Plattform & Rechtliches',
   'footer.tools': 'Tools',
   'footer.allRightsReserved': 'Alle Rechte vorbehalten.',
-  'footer.platformStatement': 'Height Calculator hilft Menschen, die Größe von allem visuell zu verstehen.',
-  'footer.fastPlatform': 'Schnelle, statische Plattform für visuelle Größenmessung',
+  'footer.platformStatement': 'Height Calculator hilft dir, die Körpergröße in jedem Alter vorherzusagen, zu verfolgen und zu verstehen.',
+  'footer.fastPlatform': 'Schneller, statischer Größenrechner',
 
   // Error States
   'error.pageNotFound': 'Seite nicht gefunden',
   'error.pageNotFoundDesc': 'Die gesuchte Seite existiert nicht oder wurde verschoben.',
   'error.backHome': 'Zurück zur Startseite',
+
+  // Added: calculator-first repositioning (Sep 2026)
+  'nav.charts': 'Diagramme',
+  'nav.about': 'Über uns',
+  'nav.contact': 'Kontakt',
 };

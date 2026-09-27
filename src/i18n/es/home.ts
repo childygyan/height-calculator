@@ -1,14 +1,15 @@
 export default {
   // Hero
-  'hero.badge': 'Plataforma Interactiva de Comparación Visual de Altura',
-  'hero.title': 'Compara cualquier cosa por altura',
-  'hero.description': 'Compara personas, celebridades, personajes de anime, animales, objetos, figuras de películas y más con una herramienta interactiva de comparación visual.',
-  'hero.startComparing': 'Empezar a Comparar',
-  'hero.exploreComparisons': 'Explorar Comparaciones',
+  'hero.badge': 'Height Calculator',
+  'hero.title': 'Height Calculator — Compara, Convierte y Comprende Cualquier Altura',
+  'hero.description': 'Predice la altura adulta de tu hijo, sigue los percentiles de crecimiento de bebés, niños y niñas, y convierte cualquier altura entre cm y pies/pulgadas — todo en una calculadora gratuita.',
+  'hero.startComparing': 'Empezar a Calcular',
+  'hero.exploreComparisons': 'Cómo Funciona',
 
   // Hero Preview Graphic
-  'hero.previewTitle': 'Vista Previa de Medición Visual',
-  'hero.baselineFloor': 'Línea de Base Alineada (0 cm)',
+  'hero.previewTitle': 'Vista Previa de la Escala de Altura',
+  'hero.baselineFloor': 'Línea Base (0 cm)',
+  'hero.calcPreviewTitle': 'Vista previa de la calculadora',
   'hero.itemDoor': 'Puerta',
   'hero.itemHuman': 'Humano',
   'hero.itemDog': 'Perro',
@@ -38,4 +39,25 @@ export default {
   // Reference Benchmarks Section
   'section.benchmarksBadge': 'Medidas Estándar',
   'section.benchmarksTitle': 'Puntos de Referencia Comunes de Altura',
+
+  // Added: calculator-first repositioning (Sep 2026)
+  'howitworks.badge': 'Cómo Funciona',
+  'howitworks.title': 'Tres Pasos para Comprender Cualquier Altura',
+  'howitworks.desc': 'Sin registro, sin descargas. Mide una vez, introduce los números y obtén respuestas basadas en datos reales de crecimiento.',
+  'howitworks.step1.title': 'Mide',
+  'howitworks.step1.text': 'Mide la altura con precisión — descalzo, con la espalda recta contra la pared y los talones juntos — con una precisión de 0,1 cm o ⅛ de pulgada. Para bebés, mide tumbado (longitud).',
+  'howitworks.step2.title': 'Introduce',
+  'howitworks.step2.text': 'Introduce la altura en centímetros o en pies y pulgadas. Añade la edad y el sexo para comprobar percentiles, o la altura de ambos padres para el predictor de altura adulta.',
+  'howitworks.step3.title': 'Comprende',
+  'howitworks.step3.text': 'Obtén conversiones instantáneas de unidades, clasificaciones de percentiles según las curvas de crecimiento de los CDC y la OMS, y estimaciones honestas de la altura infantil — con los datos detrás de cada número.',
+  'trust.title': 'Basado en datos reales de crecimiento de los CDC y la OMS',
+  'trust.text': 'Los percentiles y las referencias de crecimiento provienen de las curvas de crecimiento de los CDC y de los Estándares de Crecimiento Infantil de la OMS — no son suposiciones. Los resultados son estimaciones educativas, nunca consejo médico. Si te preocupa el crecimiento de un niño, consulta a un pediatra.',
+  'hubteaser.badge': 'Conjunto de Calculadoras Gratuito',
+  'hubteaser.title': 'Calcula, Convierte y Comprende Cualquier Altura',
+  'hubteaser.text': 'Abre el centro interactivo de Height Calculator: comprueba percentiles para bebés, niños y niñas, explora las curvas de crecimiento de los CDC y la OMS, predice la altura adulta de un niño y convierte cm ↔ pies/pulg — gratis, sin registro.',
+  'hubteaser.button': 'Abrir Height Calculator',
+  'cta.final.badge': 'Gratis • Sin registro',
+  'cta.final.title': '¿Listo para calcular tu altura?',
+  'cta.final.text': 'Abre el centro de Height Calculator: percentiles, curvas de crecimiento, predicción de altura infantil y conversión de unidades, todo en un solo lugar.',
+  'cta.final.button': 'Empezar a Calcular',
 };

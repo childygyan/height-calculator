@@ -1,9 +1,9 @@
 export default {
   // Brand
   'brand.name': 'Height Calculator',
-  'brand.tagline': '키와 높이로 모든 것을 비교하세요',
-  'brand.secondaryTagline': '실제 높이가 얼마나 되는지 확인해보세요',
-  'brand.description': '사람, 유명인, 애니메이션 캐릭터, 영화 인물, 동물, 사물, 식물, 운동선수 등의 키와 높이를 직관적으로 비교할 수 있는 인터랙티브 시각 비교 플랫폼입니다.',
+  'brand.tagline': 'Height Calculator — 모든 키를 비교·변환·이해하세요',
+  'brand.secondaryTagline': '키를 예측·추적·이해하세요',
+  'brand.description': '아기, 남자아이, 여자아이, 성인을 위한 무료 키 계산기 — 키 백분위수 확인, CDC·WHO 성장 곡선 살펴보기, 부모 키로 자녀의 성인 키 예측, cm ↔ 피트/인치 변환.',
 
   // Navigation
   'nav.home': '홈',
@@ -19,13 +19,12 @@ export default {
   'nav.apparel': '의류·신발',
   'nav.fictional': '가상 캐릭터',
   'nav.people': '평균 키·백분위수',
-  'nav.calculator': '키 차이 계산기',
-  'nav.chart': '키 비교 차트',
+  'nav.calculator': 'Height Calculator',
   'nav.howToUse': '사용 방법',
   'nav.more': '더보기',
   'nav.categoriesHeader': '카테고리',
   'nav.utilitiesHeader': '도구·기능',
-  'nav.startComparing': '비교 시작하기',
+  'nav.startComparing': '계산 시작하기',
 
   // Language Switcher
   'language.select': '언어',
@@ -73,11 +72,16 @@ export default {
   'footer.legal': '운영 및 법적 고지',
   'footer.tools': '도구 모음',
   'footer.allRightsReserved': 'All rights reserved.',
-  'footer.platformStatement': 'Height Calculator는 모든 사물과 인물의 실제 크기를 시각적으로 쉽게 이해하도록 돕습니다.',
-  'footer.fastPlatform': '빠르고 가벼운 정적 중심의 시각적 측정 플랫폼',
+  'footer.platformStatement': 'Height Calculator는 모든 연령대의 키를 예측·추적·이해하도록 도와줍니다.',
+  'footer.fastPlatform': '빠른 정적 우선 키 계산기',
 
   // Error States
   'error.pageNotFound': '페이지를 찾을 수 없습니다',
   'error.pageNotFoundDesc': '요청하신 페이지가 존재하지 않거나 이동되었습니다.',
   'error.backHome': '홈으로 돌아가기',
+
+  // Added: calculator-first repositioning (Sep 2026)
+  'nav.charts': '성장 곡선',
+  'nav.about': '소개',
+  'nav.contact': '문의',
 };

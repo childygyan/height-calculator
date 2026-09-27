@@ -1,9 +1,9 @@
 export default {
   // Brand
   'brand.name': 'Height Calculator',
-  'brand.tagline': 'Compara cualquier cosa por altura',
-  'brand.secondaryTagline': 'Mira qué tan alto es en realidad',
-  'brand.description': 'Una plataforma interactiva de comparación visual de alturas para comparar personas, celebridades, personajes de anime, figuras de cine, animales, objetos, plantas, atletas y más.',
+  'brand.tagline': 'Height Calculator — Compara, Convierte y Comprende Cualquier Altura',
+  'brand.secondaryTagline': 'Predice, Sigue y Comprende la Altura',
+  'brand.description': 'Una calculadora de altura gratuita para bebés, niños, niñas y adultos: comprueba percentiles de altura, explora las curvas de crecimiento de los CDC y la OMS, predice la altura adulta de un niño a partir de la altura de sus padres y convierte cm ↔ pies/pulg.',
 
   // Navigation
   'nav.home': 'Inicio',
@@ -19,13 +19,12 @@ export default {
   'nav.apparel': 'Ropa y Calzado',
   'nav.fictional': 'Personajes Ficticios',
   'nav.people': 'Percentiles Humanos',
-  'nav.calculator': 'Calculadora de Diferencia',
-  'nav.chart': 'Tabla de Comparación',
+  'nav.calculator': 'Height Calculator',
   'nav.howToUse': 'Cómo usar',
   'nav.more': 'Más',
   'nav.categoriesHeader': 'Categorías',
   'nav.utilitiesHeader': 'Herramientas',
-  'nav.startComparing': 'Empezar a Comparar',
+  'nav.startComparing': 'Empezar a Calcular',
 
   // Language Switcher
   'language.select': 'Idioma',
@@ -73,11 +72,16 @@ export default {
   'footer.legal': 'Plataforma y Legal',
   'footer.tools': 'Herramientas',
   'footer.allRightsReserved': 'Todos los derechos reservados.',
-  'footer.platformStatement': 'Height Calculator ayuda a entender visualmente la altura de cualquier cosa.',
-  'footer.fastPlatform': 'Plataforma de medición visual rápida y estática',
+  'footer.platformStatement': 'Height Calculator te ayuda a predecir, seguir y comprender la altura a cualquier edad.',
+  'footer.fastPlatform': 'Calculadora de altura rápida y estática',
 
   // Error States
   'error.pageNotFound': 'Página no encontrada',
   'error.pageNotFoundDesc': 'La página que buscas no existe o ha sido movida.',
   'error.backHome': 'Volver al Inicio',
+
+  // Added: calculator-first repositioning (Sep 2026)
+  'nav.charts': 'Gráficos',
+  'nav.about': 'Acerca de',
+  'nav.contact': 'Contacto',
 };

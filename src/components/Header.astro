@@ -2,7 +2,7 @@
 import BrandLogo from './brand/BrandLogo.astro';
 import LanguageSwitcher from './i18n/LanguageSwitcher.astro';
 import ThemeToggle from './ThemeToggle.astro';
-import { getLocaleFromUrl, getLocalizedPath } from '../i18n';
+import { getLocaleFromUrl, getLocalizedPath, t } from '../i18n';
 import type { Locale } from '../i18n/locales';
 
 interface Props {
@@ -14,11 +14,11 @@ const { locale = getLocaleFromUrl(Astro.url) } = Astro.props;
 // Phase 1 repositioning: calculator-first nav. The /height-calculator/* pages are
 // EN-only, so they use plain hrefs (no locale prefix). Localized pages keep getLocalizedPath.
 const mainNav = [
-  { label: 'Height Calculator', href: '/height-calculator/' },
-  { label: 'Charts', href: '/height-calculator/boys-chart/' },
-  { label: 'About', href: getLocalizedPath('/about/', locale) },
-  { label: 'How to Use', href: getLocalizedPath('/how-to-use/', locale) },
-  { label: 'Contact', href: getLocalizedPath('/contact/', locale) },
+  { label: t(locale, 'nav.calculator'), href: '/height-calculator/' },
+  { label: t(locale, 'nav.charts'), href: '/height-calculator/boys-chart/' },
+  { label: t(locale, 'nav.about'), href: getLocalizedPath('/about/', locale) },
+  { label: t(locale, 'nav.howToUse'), href: getLocalizedPath('/how-to-use/', locale) },
+  { label: t(locale, 'nav.contact'), href: '/contact/' },
 ];
 ---
 
@@ -51,13 +51,13 @@ const mainNav = [
         href="/height-calculator/boys-chart/"
         class="hidden xl:inline-flex items-center px-3 py-1.5 text-xs font-semibold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors"
       >
-        Charts
+        {t(locale, 'nav.charts')}
       </a>
       <a
         href="/height-calculator/"
         class="inline-flex items-center justify-center px-4 py-2 text-xs sm:text-sm font-bold text-white bg-brand-600 hover:bg-brand-700 active:bg-brand-800 rounded-lg shadow-soft-sm transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
       >
-        Height Calculator
+        {t(locale, 'nav.calculator')}
         <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 ml-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <line x1="5" y1="12" x2="19" y2="12"></line>
           <polyline points="12 5 19 12 12 19"></polyline>
@@ -100,7 +100,7 @@ const mainNav = [
 
     <div class="pt-3">
       <a href="/height-calculator/" class="w-full inline-flex items-center justify-center px-4 py-2.5 text-sm font-bold text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-sm mobile-link">
-        Height Calculator
+        {t(locale, 'nav.calculator')}
       </a>
     </div>
   </div>

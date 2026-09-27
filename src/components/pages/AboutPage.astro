@@ -77,32 +77,33 @@ const aboutSchema = {
     <article class="prose prose-slate max-w-none space-y-10 text-sm sm:text-base leading-relaxed text-slate-700">
       <div class="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-soft">
         <h2 class="text-xl sm:text-2xl font-black text-slate-900 mb-4">
-          Our Core Mission
+          {t(locale, 'about.mission.title')}
         </h2>
         <p>
-          Height is one of the first things parents track and one of the most common things people wonder about — yet a raw number like 172 cm or 5 ft 8 in rarely means much on its own. What does a percentile actually tell you? How tall will a child likely become? Is a growth pattern on track?
+          {t(locale, 'about.mission.p1')}
         </p>
         <p class="mt-3">
-          <strong>Height Calculator</strong> was built to answer those questions at every age — from a baby’s first centimeters to adult stature. It brings together height percentiles grounded in CDC and WHO growth references, child adult-height prediction from parents’ heights, instant cm ↔ ft/in conversion, and true-scale visual comparison, so anyone can predict, track and truly understand height.
+          <strong>{t(locale, 'brand.name')}</strong>{t(locale, 'about.mission.p2')}
         </p>
       </div>
 
       <div class="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-soft">
         <h2 class="text-xl sm:text-2xl font-black text-slate-900 mb-4">
-          How Our Calculations Work
+          {t(locale, 'about.how.title')}
         </h2>
         <ul class="space-y-3 list-disc pl-5">
-          <li><strong>Real growth references:</strong> Percentiles are computed against the CDC growth charts (ages 2–20) and the WHO Child Growth Standards (birth to age 5) — the same references pediatricians use.</li>
-          <li><strong>Standard prediction method:</strong> Child adult-height estimates use the mid-parental height formula, always shown with an honest typical range of about ±8–10 cm — never presented as a guarantee.</li>
-          <li><strong>Exact unit math:</strong> Conversions use the international standard (1 inch = exactly 2.54 cm), so cm ↔ ft/in results are precise, not rounded guesses.</li>
-          <li><strong>True-scale visuals:</strong> Side-by-side figures share a single 0 cm baseline and scale proportionally, so what you see matches the numbers.</li>
+          <li><strong>{t(locale, 'about.how.li1t')}</strong>{t(locale, 'about.how.li1x')}</li>
+          <li><strong>{t(locale, 'about.how.li2t')}</strong>{t(locale, 'about.how.li2x')}</li>
+          <li><strong>{t(locale, 'about.how.li3t')}</strong>{t(locale, 'about.how.li3x')}</li>
+          <li><strong>{t(locale, 'about.how.li4t')}</strong>{t(locale, 'about.how.li4x')}</li>
         </ul>
         <p class="mt-4 text-sm text-slate-500">
-          Height Calculator provides educational estimates, not medical advice. For concerns about a child’s growth, please consult a pediatrician.
+          {t(locale, 'about.disclaimer')}
         </p>
       </div>
 
-      <!-- Categories Supported -->
+      {/* Categories Supported — EN only: category routes are English-only */}
+      {locale === 'en' && (
       <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
         <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-4">
           Supported Categories
@@ -122,6 +123,7 @@ const aboutSchema = {
           })}
         </div>
       </div>
+      )}
 
       <!-- Developer & Creator: FK Digital Media / Firoz Khan -->
       <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-white via-slate-50 to-blue-50/30 dark:from-slate-800 dark:via-slate-800/90 dark:to-brand-950/40 border border-slate-200/90 dark:border-slate-700 shadow-soft">

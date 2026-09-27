@@ -12,8 +12,8 @@ const { locale = getLocaleFromUrl(Astro.url) } = Astro.props;
 const currentYear = new Date().getFullYear();
 
 const exploreLinks = [
-  { label: 'Height Calculator', href: '/height-calculator/' },
-  { label: 'Charts', href: '/height-calculator/boys-chart/' },
+  { label: t(locale, 'nav.calculator'), href: '/height-calculator/' },
+  { label: t(locale, 'nav.charts'), href: '/height-calculator/boys-chart/' },
   { label: t(locale, 'footer.about'), href: getLocalizedPath('/about/', locale) },
   { label: t(locale, 'footer.howToUse'), href: getLocalizedPath('/how-to-use/', locale) },
   { label: t(locale, 'footer.contact'), href: '/contact/' },

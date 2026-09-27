@@ -1,9 +1,9 @@
 export default {
   // Brand
   'brand.name': 'Height Calculator',
-  'brand.tagline': 'ऊंचाई के आधार पर किसी भी चीज़ की तुलना करें',
-  'brand.secondaryTagline': 'देखें कि वास्तव में यह कितना ऊंचा है',
-  'brand.description': 'लोगों, हस्तियों, एनीमे पात्रों, फ़िल्म आकृतियों, जानवरों, वस्तुओं, पौधों और खेल हस्तियों की ऊंचाई की तुलना करने के लिए एक इंटरैक्टिव विज़ुअल प्लेटफ़ॉर्म।',
+  'brand.tagline': 'Height Calculator — किसी भी ऊंचाई की तुलना करें, कन्वर्ट करें और समझें',
+  'brand.secondaryTagline': 'ऊंचाई का अनुमान लगाएं, ट्रैक करें और समझें',
+  'brand.description': 'शिशुओं, लड़कों, लड़कियों और वयस्कों के लिए एक मुफ्त हाइट कैलकुलेटर — हाइट पर्सेंटाइल जांचें, CDC और WHO ग्रोथ चार्ट देखें, माता-पिता की ऊंचाई से बच्चे की वयस्क ऊंचाई का अनुमान लगाएं, और cm ↔ फीट/इंच कन्वर्ट करें।',
 
   // Navigation
   'nav.home': 'होम',
@@ -19,13 +19,12 @@ export default {
   'nav.apparel': 'परिधान',
   'nav.fictional': 'काल्पनिक पात्र',
   'nav.people': 'मानव प्रतिशतक',
-  'nav.calculator': 'अंतर कैलकुलेटर',
-  'nav.chart': 'तुलना चार्ट',
+  'nav.calculator': 'Height Calculator',
   'nav.howToUse': 'उपयोग कैसे करें',
   'nav.more': 'अधिक',
   'nav.categoriesHeader': 'श्रेणियां',
   'nav.utilitiesHeader': 'उपयोगिता उपकरण',
-  'nav.startComparing': 'तुलना शुरू करें',
+  'nav.startComparing': 'कैलकुलेट करना शुरू करें',
 
   // Language Switcher
   'language.select': 'भाषा',
@@ -73,11 +72,16 @@ export default {
   'footer.legal': 'प्लेटफ़ॉर्म और कानूनी',
   'footer.tools': 'उपकरण',
   'footer.allRightsReserved': 'सर्वाधिकार सुरक्षित।',
-  'footer.platformStatement': 'Height Calculator लोगों को किसी भी चीज़ की ऊंचाई को देखने और समझने में मदद करता है।',
-  'footer.fastPlatform': 'तेज़, स्थिर-प्रथम विज़ुअल माप प्लेटफ़ॉर्म',
+  'footer.platformStatement': 'Height Calculator आपको हर उम्र में ऊंचाई का अनुमान लगाने, ट्रैक करने और समझने में मदद करता है।',
+  'footer.fastPlatform': 'तेज़, स्टैटिक-फर्स्ट हाइट कैलकुलेटर',
 
   // Error States
   'error.pageNotFound': 'पृष्ठ नहीं मिला',
   'error.pageNotFoundDesc': 'आप जो पृष्ठ खोज रहे हैं वह मौजूद नहीं है या हटा दिया गया है।',
   'error.backHome': 'होम पर लौटें',
+
+  // Added: calculator-first repositioning (Sep 2026)
+  'nav.charts': 'चार्ट',
+  'nav.about': 'हमारे बारे में',
+  'nav.contact': 'संपर्क',
 };

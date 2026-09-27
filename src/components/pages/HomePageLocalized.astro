@@ -1,0 +1,112 @@
+---
+// Calculator-first homepage for non-English locales.
+// Mirrors HomePageEn.astro's visual design; all copy comes from i18n keys.
+// The interactive tools are English-only: localized CTAs link to the
+// /height-calculator/ hub instead of embedding a tool.
+import Layout from '../../layouts/Layout.astro';
+import HeroSection from '../HeroSection.astro';
+import FAQ from '../FAQ.astro';
+import { SITE } from '../../config/site';
+import { getLocalizedPath, t } from '../../i18n';
+import type { Locale } from '../../i18n/locales';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath('/', locale)}`;
+
+const steps = [
+  { title: t(locale, 'howitworks.step1.title'), text: t(locale, 'howitworks.step1.text') },
+  { title: t(locale, 'howitworks.step2.title'), text: t(locale, 'howitworks.step2.text') },
+  { title: t(locale, 'howitworks.step3.title'), text: t(locale, 'howitworks.step3.text') },
+];
+---
+
+<Layout
+  title={t(locale, 'meta.defaultTitle')}
+  description={t(locale, 'meta.defaultDesc')}
+  canonicalUrl={canonicalUrl}
+  locale={locale}
+>
+  <div class="max-w-[1680px] mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-4">
+    <HeroSection locale={locale} />
+
+    <!-- Calculator hub teaser (interactive tools are EN-only) -->
+    <section id="calculator-hub" class="scroll-mt-20 my-8 sm:my-12">
+      <div class="mb-6 text-center">
+        <span class="inline-block px-4 py-1.5 rounded-full bg-amber-100 text-amber-800 text-xs sm:text-sm font-bold tracking-wide uppercase mb-3">{t(locale, 'hubteaser.badge')}</span>
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-800 mb-2">{t(locale, 'hubteaser.title')}</h2>
+      </div>
+      <div class="max-w-3xl mx-auto p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-sm text-center">
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">{t(locale, 'hubteaser.text')}</p>
+        <a href="/height-calculator/" class="inline-flex items-center gap-2 px-8 py-4 bg-brand-600 text-white font-bold rounded-2xl hover:bg-brand-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+          {t(locale, 'hubteaser.button')}
+          <svg class="w-5 h-5 ml-2 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="scroll-mt-20 my-8 sm:my-12">
+      <div class="mb-6 text-center">
+        <span class="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-800 text-xs sm:text-sm font-bold tracking-wide uppercase mb-3">{t(locale, 'howitworks.badge')}</span>
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-800 mb-2">{t(locale, 'howitworks.title')}</h2>
+        <p class="text-slate-500 text-sm sm:text-base max-w-2xl mx-auto">{t(locale, 'howitworks.desc')}</p>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
+        {steps.map((step, index) => (
+          <div class="relative p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-10 h-10 rounded-xl bg-brand-600 text-white font-extrabold flex items-center justify-center mb-4">{index + 1}</div>
+            <h3 class="font-bold text-slate-800 mb-2">{step.title}</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">{step.text}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Trust strip (CDC/WHO + educational disclaimer) -->
+    <section class="my-8 sm:my-12">
+      <div class="max-w-4xl mx-auto p-6 sm:p-8 rounded-2xl bg-emerald-50 border border-emerald-200">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-emerald-500 text-white flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-lg sm:text-xl font-extrabold text-emerald-900 mb-2">{t(locale, 'trust.title')}</h2>
+            <p class="text-emerald-800 text-sm sm:text-base leading-relaxed">{t(locale, 'trust.text')}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <FAQ locale={locale} limit={4} />
+
+    <!-- Final CTA -->
+    <section class="my-10 sm:my-16">
+      <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-brand-600 to-blue-700 text-white text-center shadow-xl relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" aria-hidden="true">
+          <div class="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-white"></div>
+          <div class="absolute -bottom-32 -right-16 w-96 h-96 rounded-full bg-white"></div>
+        </div>
+        <div class="relative">
+          <p class="text-xs sm:text-sm font-semibold tracking-widest uppercase text-blue-200 mb-3">{t(locale, 'cta.final.badge')}</p>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4">{t(locale, 'cta.final.title')}</h2>
+          <p class="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto mb-8">{t(locale, 'cta.final.text')}</p>
+          <a href="/height-calculator/" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-700 font-bold rounded-2xl hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            {t(locale, 'cta.final.button')}
+            <svg class="w-5 h-5 ml-2 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

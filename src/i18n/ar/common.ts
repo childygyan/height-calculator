@@ -1,9 +1,9 @@
 export default {
   // Brand
   'brand.name': 'Height Calculator',
-  'brand.tagline': 'قارن أي شيء من حيث الطول والارتفاع',
-  'brand.secondaryTagline': 'شاهد كم يبلغ طوله الحقيقي بالفعل',
-  'brand.description': 'منصة تفاعلية بصرية لمقارنة الأطوال بين الأشخاص والمشاهير وشخصيات الأنمي والسينما والحيوانات والمجسمات والنباتات والرياضيين وغير ذلك الكثير.',
+  'brand.tagline': 'Height Calculator — قارن أي طول وحوّله وافهمه',
+  'brand.secondaryTagline': 'توقّع الطول وتتبّعه وافهمه',
+  'brand.description': 'آلة حاسبة مجانية للطول للرضّع والأولاد والبنات والبالغين — تحقق من النسب المئوية للطول، واستكشف مخططات نمو CDC وWHO، وتوقّع طول الطفل عند البلوغ من طول الوالدين، وحوّل سم ↔ قدم/بوصة.',
 
   // Navigation
   'nav.home': 'الرئيسية',
@@ -19,13 +19,12 @@ export default {
   'nav.apparel': 'الملابس والأحذية',
   'nav.fictional': 'شخصيات خيالية',
   'nav.people': 'النسب المئوية للأشخاص',
-  'nav.calculator': 'حاسبة فرق الطول',
-  'nav.chart': 'مخطط مقارنة الطول',
+  'nav.calculator': 'Height Calculator',
   'nav.howToUse': 'كيفية الاستخدام',
   'nav.more': 'المزيد',
   'nav.categoriesHeader': 'التصنيفات',
   'nav.utilitiesHeader': 'الأدوات',
-  'nav.startComparing': 'ابدأ المقارنة',
+  'nav.startComparing': 'ابدأ الحساب',
 
   // Language Switcher
   'language.select': 'اللغة',
@@ -73,11 +72,16 @@ export default {
   'footer.legal': 'المنصة والشروط القانونية',
   'footer.tools': 'الأدوات',
   'footer.allRightsReserved': 'جميع الحقوق محفوظة.',
-  'footer.platformStatement': 'تساعد منصة Height Calculator الأشخاص على فهم الارتفاع الحقيقي لأي شيء بصرياً.',
-  'footer.fastPlatform': 'منصة قياس بصري سريعة ومبنية على مبدأ الثبات أولاً',
+  'footer.platformStatement': 'يساعدك Height Calculator على توقّع الطول وتتبّعه وفهمه في كل الأعمار.',
+  'footer.fastPlatform': 'آلة حاسبة طول سريعة وثابتة',
 
   // Error States
   'error.pageNotFound': 'الصفحة غير موجودة',
   'error.pageNotFoundDesc': 'الصفحة التي تبحث عنها غير موجودة أو تم نقلها.',
   'error.backHome': 'العودة للرئيسية',
+
+  // Added: calculator-first repositioning (Sep 2026)
+  'nav.charts': 'المخططات',
+  'nav.about': 'من نحن',
+  'nav.contact': 'اتصل بنا',
 };

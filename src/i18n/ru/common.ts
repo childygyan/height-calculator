@@ -1,9 +1,9 @@
 export default {
   // Brand
   'brand.name': 'Height Calculator',
-  'brand.tagline': 'Сравнение любых объектов по росту',
-  'brand.secondaryTagline': 'Узнайте реальный рост',
-  'brand.description': 'Интерактивная визуальная платформа для сравнения роста людей, знаменитостей, персонажей аниме и фильмов, животных, предметов, растений, спортсменов и многого другого.',
+  'brand.tagline': 'Height Calculator — сравнивайте, конвертируйте и понимайте любой рост',
+  'brand.secondaryTagline': 'Предсказывайте, отслеживайте и понимайте рост',
+  'brand.description': 'Бесплатный калькулятор роста для младенцев, мальчиков, девочек и взрослых — проверяйте перцентили роста, изучайте кривые роста CDC и ВОЗ, предсказывайте рост ребёнка во взрослом возрасте по росту родителей и конвертируйте см ↔ футы/дюймы.',
 
   // Navigation
   'nav.home': 'Главная',
@@ -19,13 +19,12 @@ export default {
   'nav.apparel': 'Одежда и обувь',
   'nav.fictional': 'Вымышленные персонажи',
   'nav.people': 'Рост людей',
-  'nav.calculator': 'Калькулятор разницы',
-  'nav.chart': 'Таблица роста',
+  'nav.calculator': 'Height Calculator',
   'nav.howToUse': 'Как пользоваться',
   'nav.more': 'Ещё',
   'nav.categoriesHeader': 'Категории',
   'nav.utilitiesHeader': 'Инструменты',
-  'nav.startComparing': 'Начать сравнение',
+  'nav.startComparing': 'Начать расчёт',
 
   // Language Switcher
   'language.select': 'Язык',
@@ -73,11 +72,16 @@ export default {
   'footer.legal': 'Правовая информация',
   'footer.tools': 'Инструменты',
   'footer.allRightsReserved': 'Все права защищены.',
-  'footer.platformStatement': 'Height Calculator помогает наглядно представить и сравнить рост чего угодно.',
-  'footer.fastPlatform': 'Быстрая визуальная платформа для сравнения масштабов',
+  'footer.platformStatement': 'Height Calculator помогает предсказывать, отслеживать и понимать рост в любом возрасте.',
+  'footer.fastPlatform': 'Быстрый статичный калькулятор роста',
 
   // Error States
   'error.pageNotFound': 'Страница не найдена',
   'error.pageNotFoundDesc': 'Запрошенная страница не существует или была перемещена.',
   'error.backHome': 'Вернуться на главную',
+
+  // Added: calculator-first repositioning (Sep 2026)
+  'nav.charts': 'Графики',
+  'nav.about': 'О нас',
+  'nav.contact': 'Контакты',
 };
