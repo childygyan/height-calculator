@@ -65,7 +65,7 @@ export default {
   'hero.visualTitle': 'Aperçu de la Courbe de Croissance',
 
   // Compare tool (homepage top section)
-  'homecompare.badge': 'Comparer les Tailles',
+  'homecompare.badge': 'Comparaison Visuelle',
   'homecompare.title': 'Comparez Toutes les Tailles Côte à Côte',
   'homecompare.desc': 'Choisissez des personnes, célébrités, animaux, personnages et plus — voyez-les dessinés à l’échelle les uns à côté des autres. Tout fonctionne dans votre navigateur.',
 

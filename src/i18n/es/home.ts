@@ -65,7 +65,7 @@ export default {
   'hero.visualTitle': 'Vista Previa de la Curva de Crecimiento',
 
   // Compare tool (homepage top section)
-  'homecompare.badge': 'Comparar Alturas',
+  'homecompare.badge': 'Comparación Visual',
   'homecompare.title': 'Compara Cualquier Altura Lado a Lado',
   'homecompare.desc': 'Elige personas, celebridades, animales, personajes y más — míralos dibujados a escala uno junto al otro. Todo funciona en tu navegador.',
 

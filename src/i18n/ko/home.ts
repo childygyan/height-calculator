@@ -65,7 +65,7 @@ export default {
   'hero.visualTitle': '성장 곡선 미리보기',
 
   // Compare tool (homepage top section)
-  'homecompare.badge': '키 비교하기',
+  'homecompare.badge': '비주얼 비교',
   'homecompare.title': '어떤 키든 나란히 비교하세요',
   'homecompare.desc': '사람, 유명인, 동물, 캐릭터 등을 선택해 실제 비율 그대로 나란히 그려서 확인하세요. 모든 것이 브라우저에서 실행됩니다.',
 

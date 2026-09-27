@@ -65,7 +65,7 @@ export default {
   'hero.visualTitle': 'Vorschau der Wachstumskurve',
 
   // Compare tool (homepage top section)
-  'homecompare.badge': 'Größen Vergleichen',
+  'homecompare.badge': 'Visueller Vergleich',
   'homecompare.title': 'Beliebige Körpergrößen Nebeneinander Vergleichen',
   'homecompare.desc': 'Wähle Personen, Prominente, Tiere, Charaktere und mehr — sie werden maßstabsgetreu nebeneinander dargestellt. Alles läuft in deinem Browser.',
 

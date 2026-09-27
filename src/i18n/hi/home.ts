@@ -65,7 +65,7 @@ export default {
   'hero.visualTitle': 'ग्रोथ चार्ट प्रीव्यू',
 
   // Compare tool (homepage top section)
-  'homecompare.badge': 'ऊंचाई तुलना करें',
+  'homecompare.badge': 'विज़ुअल तुलना',
   'homecompare.title': 'किसी भी ऊंचाई की तुलना साथ-साथ करें',
   'homecompare.desc': 'लोग, सेलिब्रिटी, जानवर, किरदार और बहुत कुछ चुनें — उन्हें एक-दूसरे के बगल में सही पैमाने पर देखें। सब कुछ आपके ब्राउज़र में चलता है।',
 

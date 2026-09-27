@@ -71,7 +71,7 @@ export default {
   'hero.visualTitle': 'Growth Chart Preview',
 
   // Compare tool (homepage top section)
-  'homecompare.badge': 'Compare Heights',
+  'homecompare.badge': 'Visual Comparison',
   'homecompare.title': 'Compare Any Heights Side by Side',
   'homecompare.desc': 'Pick people, celebrities, animals, characters and more — see them drawn to scale next to each other. Everything runs in your browser.',
 

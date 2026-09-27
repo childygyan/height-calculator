@@ -65,7 +65,7 @@ export default {
   'hero.visualTitle': '成長曲線プレビュー',
 
   // Compare tool (homepage top section)
-  'homecompare.badge': '身長を比較',
+  'homecompare.badge': 'ビジュアル比較',
   'homecompare.title': 'あらゆる身長を並べて比較',
   'homecompare.desc': '人物、セレブ、動物、キャラクターなどを選んで、実寸スケールで並べて表示。すべてブラウザ上で動作します。',
 

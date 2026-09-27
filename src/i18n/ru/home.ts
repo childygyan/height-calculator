@@ -65,7 +65,7 @@ export default {
   'hero.visualTitle': 'Предпросмотр кривой роста',
 
   // Compare tool (homepage top section)
-  'homecompare.badge': 'Сравнить Рост',
+  'homecompare.badge': 'Визуальное Сравнение',
   'homecompare.title': 'Сравнивайте Любой Рост Бок о Бок',
   'homecompare.desc': 'Выбирайте людей, знаменитостей, животных, персонажей и других — смотрите, как они нарисованы в масштабе рядом друг с другом. Всё работает в вашем браузере.',
 

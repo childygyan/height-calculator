@@ -65,7 +65,7 @@ export default {
   'hero.visualTitle': 'معاينة مخطط النمو',
 
   // Compare tool (homepage top section)
-  'homecompare.badge': 'قارن الأطوال',
+  'homecompare.badge': 'مقارنة بصرية',
   'homecompare.title': 'قارن أي أطوال جنبًا إلى جنب',
   'homecompare.desc': 'اختر أشخاصًا ومشاهير وحيوانات وشخصيات والمزيد — وشاهدهم مرسومين بمقياس حقيقي بجانب بعضهم. كل شيء يعمل في متصفحك.',
 
