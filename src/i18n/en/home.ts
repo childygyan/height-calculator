@@ -70,6 +70,11 @@ export default {
   // Hero visual (growth-chart motif)
   'hero.visualTitle': 'Growth Chart Preview',
 
+  // Compare tool (homepage top section)
+  'homecompare.badge': 'Compare Heights',
+  'homecompare.title': 'Compare Any Heights Side by Side',
+  'homecompare.desc': 'Pick people, celebrities, animals, characters and more — see them drawn to scale next to each other. Everything runs in your browser.',
+
   // Live calculators (tabbed widget section)
   'livetools.badge': 'Try It Now',
   'livetools.title': 'Live Height Calculators',

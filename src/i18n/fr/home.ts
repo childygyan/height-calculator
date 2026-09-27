@@ -64,6 +64,11 @@ export default {
   // Hero visual (growth-chart motif)
   'hero.visualTitle': 'Aperçu de la Courbe de Croissance',
 
+  // Compare tool (homepage top section)
+  'homecompare.badge': 'Comparer les Tailles',
+  'homecompare.title': 'Comparez Toutes les Tailles Côte à Côte',
+  'homecompare.desc': 'Choisissez des personnes, célébrités, animaux, personnages et plus — voyez-les dessinés à l’échelle les uns à côté des autres. Tout fonctionne dans votre navigateur.',
+
   // Live calculators (tabbed widget section)
   'livetools.badge': 'Essayez Maintenant',
   'livetools.title': 'Calculateurs de Taille en Direct',

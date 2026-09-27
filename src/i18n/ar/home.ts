@@ -64,6 +64,11 @@ export default {
   // Hero visual (growth-chart motif)
   'hero.visualTitle': 'معاينة مخطط النمو',
 
+  // Compare tool (homepage top section)
+  'homecompare.badge': 'قارن الأطوال',
+  'homecompare.title': 'قارن أي أطوال جنبًا إلى جنب',
+  'homecompare.desc': 'اختر أشخاصًا ومشاهير وحيوانات وشخصيات والمزيد — وشاهدهم مرسومين بمقياس حقيقي بجانب بعضهم. كل شيء يعمل في متصفحك.',
+
   // Live calculators (tabbed widget section)
   'livetools.badge': 'جرّبه الآن',
   'livetools.title': 'حاسبات الطول المباشرة',

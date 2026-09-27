@@ -64,6 +64,11 @@ export default {
   // Hero visual (growth-chart motif)
   'hero.visualTitle': 'Предпросмотр кривой роста',
 
+  // Compare tool (homepage top section)
+  'homecompare.badge': 'Сравнить Рост',
+  'homecompare.title': 'Сравнивайте Любой Рост Бок о Бок',
+  'homecompare.desc': 'Выбирайте людей, знаменитостей, животных, персонажей и других — смотрите, как они нарисованы в масштабе рядом друг с другом. Всё работает в вашем браузере.',
+
   // Live calculators (tabbed widget section)
   'livetools.badge': 'Попробовать сейчас',
   'livetools.title': 'Калькуляторы роста — прямо на странице',

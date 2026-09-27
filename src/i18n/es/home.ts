@@ -64,6 +64,11 @@ export default {
   // Hero visual (growth-chart motif)
   'hero.visualTitle': 'Vista Previa de la Curva de Crecimiento',
 
+  // Compare tool (homepage top section)
+  'homecompare.badge': 'Comparar Alturas',
+  'homecompare.title': 'Compara Cualquier Altura Lado a Lado',
+  'homecompare.desc': 'Elige personas, celebridades, animales, personajes y más — míralos dibujados a escala uno junto al otro. Todo funciona en tu navegador.',
+
   // Live calculators (tabbed widget section)
   'livetools.badge': 'Pruébalo Ahora',
   'livetools.title': 'Calculadoras de Altura en Vivo',
