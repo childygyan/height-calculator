@@ -1,0 +1,38 @@
+---
+/**
+ * Trust strip: data sources with real citations (from growth engine metadata)
+ * plus a link to the disclaimer/methodology. Hardcoded English.
+ */
+import { GROWTH_STANDARDS } from "../../lib/growth/standards.js";
+---
+
+<section class="mt-14 sm:mt-20 rounded-3xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/60 px-5 sm:px-8 py-7">
+  <h2 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight text-center">
+    Based on published growth references
+  </h2>
+  <p class="text-sm text-slate-600 dark:text-slate-300 text-center mt-2 max-w-2xl mx-auto leading-relaxed">
+    Every percentile on this site is computed from official LMS tables — the same
+    references pediatricians use. We never estimate outside the ages each reference covers.
+  </p>
+  <ul class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 text-sm">
+    {GROWTH_STANDARDS.map((s) => (
+      <li class="rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-4">
+        <p class="font-bold text-slate-900 dark:text-white">{s.label}</p>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">{s.citation}</p>
+        <a
+          href={s.sourceUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1 text-xs font-bold text-brand-600 dark:text-blue-400 hover:underline mt-2"
+        >
+          Official source
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </li>
+    ))}
+  </ul>
+</section>

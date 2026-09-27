@@ -1,0 +1,123 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/seo/Breadcrumbs.astro";
+import MedicalDisclaimer from "../../../components/MedicalDisclaimer.astro";
+import PercentileTool from "../../../components/calc/PercentileTool.astro";
+import CalcFaq from "../../../components/calc/CalcFaq.astro";
+import SiblingTools from "../../../components/calc/SiblingTools.astro";
+import TrustStrip from "../../../components/calc/TrustStrip.astro";
+import { SITE } from "../../../config/site";
+
+const title = "Boys Height Percentile Calculator (CDC / WHO / UK-WHO) | Height Calculator";
+const description =
+  "Calculate a boy's exact height percentile and z-score. Switch between CDC (2–20y), WHO (0–5y) and UK-WHO (2 weeks–4 years) growth references.";
+const canonicalUrl = `${SITE.siteUrl}/height-calculator/boys-percentile/`;
+
+const faqs = [
+  {
+    q: "What is the difference between the CDC, WHO, and UK-WHO references?",
+    a: "CDC (2–20 years) is the US reference for standing height. WHO (birth–5 years) is the international standard — length lying down under age 2, standing height from 2. UK-WHO (2 weeks–4 years) is the UK chart, which follows WHO data in that window. Each covers only its published ages; the calculator refuses to guess outside them.",
+  },
+  {
+    q: "What does the z-score add beyond the percentile?",
+    a: "They carry the same information in different units: the z-score is standard deviations from the median (0 = median, +1 ≈ 84th percentile, −1 ≈ 16th). Z-scores are more useful for tracking extreme values, where percentiles bunch up near 0 and 100.",
+  },
+  {
+    q: "Why do CDC and WHO give slightly different percentiles for the same child?",
+    a: "They are built from different populations and eras, and they measure differently at young ages. Small differences are expected — pick the reference your pediatrician uses and stick with it when tracking over time.",
+  },
+  {
+    q: "What about ages over 4 on the UK-WHO reference?",
+    a: "From age 4 the UK-WHO charts use the British 1990 reference, whose tables are not openly licensed — so we don't bundle them and the calculator honestly reports no result there. For older children, use the CDC reference (2–20 years).",
+  },
+  {
+    q: "Is my child's data sent anywhere?",
+    a: "No. All calculations happen in your browser using the published tables bundled with this page. Nothing you enter is transmitted or stored.",
+  },
+];
+---
+
+<Layout title={title} description={description} canonicalUrl={canonicalUrl} locale="en">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+    <Breadcrumbs
+      locale="en"
+      items={[
+        { name: "Home", url: "/" },
+        { name: "Height Calculator", url: "/height-calculator/" },
+        { name: "Boys Height Percentile Calculator", url: "/height-calculator/boys-percentile/" },
+      ]}
+    />
+
+    <header class="mt-6 sm:mt-8 text-center">
+      <h1 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+        Boys Height Percentile Calculator
+      </h1>
+      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed max-w-2xl mx-auto">
+        Exact percentile, z-score, and reference median for boys — with a switcher for the
+        <strong> CDC</strong>, <strong>WHO</strong>, and <strong>UK-WHO</strong> growth
+        references. Computed from the official published tables, never estimated.
+      </p>
+    </header>
+
+    <div class="mt-6 max-w-3xl mx-auto">
+      <MedicalDisclaimer />
+      <div class="mt-4">
+        <PercentileTool
+          id="boys-percentile"
+          sex="male"
+          standards={["cdc", "who", "uk"]}
+          defaultStandard="cdc"
+          ageMode="ym"
+          heading="Boys height percentile"
+          intro="Enter age (years + months) and height. Switch references to compare — results only appear inside each reference's published age range."
+        />
+      </div>
+    </div>
+
+    <article class="max-w-3xl mx-auto mt-12 space-y-8 text-sm sm:text-base leading-relaxed text-slate-700 dark:text-slate-300">
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-4">How the calculation works</h2>
+        <p>
+          Each reference publishes <strong>LMS parameters</strong> (Box-Cox power, median,
+          and variation) tabulated by age. We look up the parameters for the exact age —
+          interpolating linearly between tabulated ages, exactly as the CDC documents —
+          then convert the measurement to a z-score and a percentile with the standard
+          normal distribution. It's the published method, implemented verbatim.
+        </p>
+        <ul class="space-y-3 list-disc pl-5 mt-4">
+          <li><strong>CDC</strong> — stature-for-age, 24–240 months, standing height.</li>
+          <li><strong>WHO</strong> — length/height-for-age, birth–5 years; recumbent length under 24 months, standing height from 24 months (with the real ~0.7 cm step preserved).</li>
+          <li><strong>UK-WHO</strong> — ages 2 weeks–4 years, computed from the WHO tables the RCPCH charts use in that window.</li>
+        </ul>
+      </section>
+
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-4">Reading the result honestly</h2>
+        <p>
+          "Taller than X% of peers" compares against the reference population — children
+          measured when the reference was built. It doesn't rate your child, predict the
+          future, or diagnose anything. Percentiles are also rounded and clamped to
+          0.1–99.9, because beyond that the normal model implies more precision than a
+          growth reference can support.
+        </p>
+        <p class="mt-3">
+          Want the visual? Plot the same measurement on the
+          <a href="/height-calculator/boys-chart/" class="font-bold text-brand-600 dark:text-blue-400 hover:underline"> boys growth chart</a>,
+          or estimate adult height from parents' heights with the
+          <a href="/height-calculator/child-height-predictor/" class="font-bold text-brand-600 dark:text-blue-400 hover:underline"> child height predictor</a>.
+        </p>
+      </section>
+    </article>
+
+    <CalcFaq items={faqs} title="Boys percentile calculator FAQs" />
+
+    <SiblingTools current="/height-calculator/boys-percentile/" />
+
+    <TrustStrip />
+  </div>
+</Layout>
+
+<script>
+  import { initAllPercentileTools } from "../../../lib/calc-tools.js";
+  initAllPercentileTools();
+</script>

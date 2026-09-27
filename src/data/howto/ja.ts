@@ -82,7 +82,7 @@ export const jaHowToGuide: HowToGuideData = {
       ],
       link: {
         text: '有名人の身長データベースを見る →',
-        href: '/celebrity-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -129,7 +129,7 @@ export const jaHowToGuide: HowToGuideData = {
       ],
       link: {
         text: '身長差計算機ツールを使ってみる →',
-        href: '/height-difference-calculator/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -161,7 +161,7 @@ export const jaHowToGuide: HowToGuideData = {
       ],
       link: {
         text: '日本・世界の平均身長とパーセンタイルを見る →',
-        href: '/people-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -173,7 +173,7 @@ export const jaHowToGuide: HowToGuideData = {
       ],
       link: {
         text: '動物の身長・体高比較を見る →',
-        href: '/animal-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -185,7 +185,7 @@ export const jaHowToGuide: HowToGuideData = {
       ],
       link: {
         text: '日用品・家具・乗り物のサイズ比較 →',
-        href: '/object-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -197,7 +197,7 @@ export const jaHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'アニメキャラクターの身長比較一覧 →',
-        href: '/anime-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -320,8 +320,8 @@ export const jaHowToGuide: HowToGuideData = {
     heading: '本当の身長を確かめてみませんか？',
     description: '対話型の身長比較ツールを今すぐ起動して、人物、有名人、アニメキャラ、動物、物体をリアルタイムに並べて比較してみましょう。',
     buttonText: '比較ツールを起動する',
-    buttonHref: '/compare/',
+    buttonHref: '/height-calculator/',
     secondaryText: '身長比較表を見る',
-    secondaryHref: '/height-comparison-chart/',
+    secondaryHref: '/height-calculator/boys-chart/',
   },
 };

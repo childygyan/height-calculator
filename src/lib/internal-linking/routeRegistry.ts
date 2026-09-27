@@ -123,7 +123,8 @@ export function getParentCategoryForRoute(path: string): string {
   if (clean.startsWith('apparel-height')) return '/apparel-height-comparison/';
   if (clean.startsWith('fictional-character-height') || clean.startsWith('fictional-height')) return '/fictional-character-height-comparison/';
   if (clean.startsWith('people-height') || clean.startsWith('human-height')) return '/people-height-comparison/';
-  return '/compare/';
+  // Phase 1 repositioning: comparison routes deleted; fall back to home.
+  return '/';
 }
 
 /**

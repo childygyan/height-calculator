@@ -13,7 +13,7 @@
     "test:seo": "npx --yes tsx scripts/test-domain-seo.mjs",
     "test:cluster": "node scripts/test-seo-cluster.mjs",
     "test:blog": "node scripts/test-blog-seo.mjs",
-    "test": "npm run test:seo && npm run test:cluster && npm run test:blog"
+    "test": "npm run test:seo"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.5",

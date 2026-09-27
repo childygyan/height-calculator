@@ -1,0 +1,120 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/seo/Breadcrumbs.astro";
+import MedicalDisclaimer from "../../../components/MedicalDisclaimer.astro";
+import PercentileTool from "../../../components/calc/PercentileTool.astro";
+import CalcFaq from "../../../components/calc/CalcFaq.astro";
+import SiblingTools from "../../../components/calc/SiblingTools.astro";
+import TrustStrip from "../../../components/calc/TrustStrip.astro";
+import { SITE } from "../../../config/site";
+
+const title = "Girls Height Calculator — Check a Girl's Height Percentile | Height Calculator";
+const description =
+  "Free girls height calculator: enter age and height to see where a girl stands against CDC growth references, with percentile, z-score and median.";
+const canonicalUrl = `${SITE.siteUrl}/height-calculator/girls/`;
+
+const faqs = [
+  {
+    q: "How is a girl's height percentile calculated?",
+    a: "We compare the entered height with the CDC 2000 stature-for-age reference for girls using the published LMS method — the same approach pediatricians use. The result is a percentile, a z-score, and the reference median for that exact age.",
+  },
+  {
+    q: "What ages does the girls height calculator cover?",
+    a: "The CDC reference covers ages 2 to 20 years. For girls under 2, use our baby height calculator, which uses the WHO length-for-age standard for 0–24 months.",
+  },
+  {
+    q: "What does a low or high percentile mean?",
+    a: "A percentile only describes where a measurement falls in the reference population — for example, 25th percentile means taller than about 25% of girls the same age. It is not a grade, and a single measurement can't diagnose anything. Growth over time matters more than any single point.",
+  },
+  {
+    q: "Should I be worried if the percentile is very low or very high?",
+    a: "This calculator gives educational estimates, not medical advice. If you have any concerns about a child's growth — especially a big change in percentile over time — talk to a pediatrician.",
+  },
+  {
+    q: "Can I enter height in feet and inches?",
+    a: "Yes. Use the cm / ft-in toggle above the height field; the math uses the exact definition (1 inch = 2.54 cm), and results are shown in both units.",
+  },
+];
+---
+
+<Layout title={title} description={description} canonicalUrl={canonicalUrl} locale="en">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+    <Breadcrumbs
+      locale="en"
+      items={[
+        { name: "Home", url: "/" },
+        { name: "Height Calculator", url: "/height-calculator/" },
+        { name: "Girls Height Calculator", url: "/height-calculator/girls/" },
+      ]}
+    />
+
+    <header class="mt-6 sm:mt-8 text-center">
+      <h1 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+        Girls Height Calculator
+      </h1>
+      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed max-w-2xl mx-auto">
+        How tall is she for her age? Enter a girl's age and height for an instant check
+        against the CDC growth reference — percentile, z-score, and median included.
+        Everything runs in your browser; nothing is stored.
+      </p>
+    </header>
+
+    <div class="mt-6 max-w-3xl mx-auto">
+      <MedicalDisclaimer />
+      <div class="mt-4">
+        <PercentileTool
+          id="girls-quick"
+          sex="female"
+          standards={["cdc"]}
+          defaultStandard="cdc"
+          ageMode="ym"
+          heading="Check a girl's height"
+          intro="Ages 2–20 years (CDC stature-for-age). For girls under 2, use the baby calculator below."
+        />
+      </div>
+    </div>
+
+    <article class="max-w-3xl mx-auto mt-12 space-y-8 text-sm sm:text-base leading-relaxed text-slate-700 dark:text-slate-300">
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-4">Understanding the result</h2>
+        <ul class="space-y-3 list-disc pl-5">
+          <li><strong>Percentile</strong> — where her height falls among girls the same age in the CDC reference. 50th is the middle; 90th means taller than about 90% of peers.</li>
+          <li><strong>Z-score</strong> — the same information in standard-deviation units. 0 is the median; +1 and −1 are roughly the 84th and 16th percentiles.</li>
+          <li><strong>Median for age</strong> — the reference midpoint (50th percentile) height for her exact age, shown in cm and ft/in.</li>
+        </ul>
+        <p class="mt-4">
+          One measurement is a snapshot, not a verdict. Pediatricians care most about the
+          <em> pattern over time</em> — a child tracking steadily along their own curve is
+          reassuring even if the percentile itself is high or low.
+        </p>
+      </section>
+
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-4">Which ages are covered?</h2>
+        <p>
+          This quick check uses the <strong>CDC 2000 stature-for-age reference for girls</strong>,
+          which covers ages <strong>2 to 20 years</strong> (standing height). If you enter an
+          age outside that range, the calculator says so honestly instead of inventing a number.
+        </p>
+        <p class="mt-3">
+          For a girl under 2, height is measured lying down (length) and the right reference
+          is the WHO standard — see our <a href="/height-calculator/baby/" class="font-bold text-brand-600 dark:text-blue-400 hover:underline">baby height calculator</a>
+          (0–24 months). For the full CDC / WHO / UK-WHO switcher, z-scores, and exact
+          percentiles, use the <a href="/height-calculator/girls-percentile/" class="font-bold text-brand-600 dark:text-blue-400 hover:underline">girls height percentile calculator</a>;
+          to see the curves, open the <a href="/height-calculator/girls-chart/" class="font-bold text-brand-600 dark:text-blue-400 hover:underline">girls growth chart</a>.
+        </p>
+      </section>
+    </article>
+
+    <CalcFaq items={faqs} title="Girls height calculator FAQs" />
+
+    <SiblingTools current="/height-calculator/girls/" />
+
+    <TrustStrip />
+  </div>
+</Layout>
+
+<script>
+  import { initAllPercentileTools } from "../../../lib/calc-tools.js";
+  initAllPercentileTools();
+</script>

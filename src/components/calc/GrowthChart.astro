@@ -1,0 +1,190 @@
+---
+/**
+ * Interactive growth chart: P3–P97 percentile curves rendered server-side from
+ * the real LMS tables (curvePoints), plus a client-side "plot your point" tool
+ * (initChartPlot in src/lib/calc-tools.ts). Hardcoded English (EN-only pages).
+ */
+import { curvePoints, STANDARD_CURVE_PERCENTILES } from "../../lib/growth/curves.js";
+import type { GrowthStandard, Sex } from "../../lib/growth/percentile.js";
+
+interface Props {
+  sex: Sex;
+  id: string;
+  heading?: string;
+  intro?: string;
+}
+
+const { sex, id, heading = "Growth chart", intro } = Astro.props;
+
+const W = 760;
+const H = 470;
+const ML = 56;
+const MR = 44;
+const MT = 16;
+const MB = 48;
+
+const standards: GrowthStandard[] = ["cdc", "who"];
+const xDomains: Record<GrowthStandard, [number, number]> = {
+  cdc: [24, 240],
+  who: [0, 60],
+};
+const xTicks: Record<GrowthStandard, number[]> = {
+  cdc: [24, 48, 72, 96, 120, 144, 168, 192, 216, 240],
+  who: [0, 12, 24, 36, 48, 60],
+};
+const xTickLabel = (t: number) => (t === 0 ? "0" : `${t / 12}`);
+
+interface Built {
+  std: GrowthStandard;
+  curves: Array<{ p: number; points: Array<{ ageMonths: number; cm: number }> }>;
+  yMin: number;
+  yMax: number;
+  step: number;
+  yTicks: number[];
+}
+
+const built: Built[] = standards.map((std) => {
+  const curves = (STANDARD_CURVE_PERCENTILES as readonly number[]).map((p) => ({
+    p,
+    points: curvePoints({ sex, standard: std, percentile: p }),
+  }));
+  let lo = Infinity;
+  let hi = -Infinity;
+  for (const c of curves)
+    for (const pt of c.points) {
+      if (pt.cm < lo) lo = pt.cm;
+      if (pt.cm > hi) hi = pt.cm;
+    }
+  const span = hi - lo;
+  const step = span > 110 ? 20 : span > 55 ? 10 : 5;
+  const yMin = Math.floor((lo - step * 0.6) / step) * step;
+  const yMax = Math.ceil((hi + step * 0.6) / step) * step;
+  const yTicks: number[] = [];
+  for (let v = yMin; v <= yMax + 1e-9; v += step) yTicks.push(v);
+  return { std, curves, yMin, yMax, step, yTicks };
+});
+
+const X = (std: GrowthStandard, ageMonths: number) => {
+  const [x0, x1] = xDomains[std];
+  return ML + ((ageMonths - x0) / (x1 - x0)) * (W - ML - MR);
+};
+const Y = (b: Built, cm: number) =>
+  MT + (1 - (cm - b.yMin) / (b.yMax - b.yMin)) * (H - MT - MB);
+
+const mapping = {
+  width: W,
+  height: H,
+  ml: ML,
+  mr: MR,
+  mt: MT,
+  mb: MB,
+  standards: Object.fromEntries(
+    built.map((b) => [
+      b.std,
+      { xMin: xDomains[b.std][0], xMax: xDomains[b.std][1], yMin: b.yMin, yMax: b.yMax },
+    ])
+  ),
+};
+
+const inputCls =
+  "w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2.5 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500";
+const labelCls =
+  "block text-xs font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-1.5";
+---
+
+<div data-chart-tool data-sex={sex} id={id} class="rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-soft overflow-hidden">
+  <div class="px-5 sm:px-7 pt-6 pb-2">
+    <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">{heading}</h2>
+    {intro && <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">{intro}</p>}
+    <div data-chart-stdwrap class="inline-flex gap-2 p-1 mt-4 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700">
+      <button type="button" data-chart-std="cdc" aria-pressed="true" class="rounded-xl px-4 py-2 text-sm font-bold transition-colors bg-brand-600 text-white">CDC · 2–20 y</button>
+      <button type="button" data-chart-std="who" aria-pressed="false" class="rounded-xl px-4 py-2 text-sm font-bold transition-colors bg-white text-slate-700 dark:bg-slate-800 dark:text-slate-200">WHO · 0–5 y</button>
+    </div>
+  </div>
+
+  <div class="px-2 sm:px-4 pt-2">
+    <svg viewBox={`0 0 ${W} ${H}`} class="w-full h-auto select-none" role="img" aria-label={`Growth chart percentile curves for ${sex === "male" ? "boys" : "girls"}`}>
+      {built.map((b) => (
+        <g data-chart-layer={b.std} style={b.std === "cdc" ? "" : "display:none"}>
+          {/* grid */}
+          {b.yTicks.map((v) => (
+            <g>
+              <line x1={ML} y1={Y(b, v)} x2={W - MR} y2={Y(b, v)} stroke="#e2e8f0" stroke-width="1" />
+              <text x={ML - 10} y={Y(b, v) + 4} text-anchor="end" font-size="12" fill="#64748b">{v}</text>
+            </g>
+          ))}
+          {xTicks[b.std].map((t) => (
+            <g>
+              <line x1={X(b.std, t)} y1={MT} x2={X(b.std, t)} y2={H - MB} stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 4" />
+              <text x={X(b.std, t)} y={H - MB + 20} text-anchor="middle" font-size="12" fill="#64748b">{xTickLabel(t)}</text>
+            </g>
+          ))}
+          {/* curves */}
+          {b.curves.map((c) => {
+            const pts = c.points.map((pt) => `${X(b.std, pt.ageMonths).toFixed(1)},${Y(b, pt.cm).toFixed(1)}`).join(" ");
+            const last = c.points[c.points.length - 1];
+            const main = c.p === 50;
+            return (
+              <g>
+                <polyline points={pts} fill="none" stroke={main ? "#2563eb" : "#94a3b8"} stroke-width={main ? 3 : 1.5} stroke-linejoin="round" stroke-linecap="round" opacity={main ? 1 : 0.75} />
+                <text x={X(b.std, last.ageMonths) + 6} y={Y(b, last.cm) + 4} font-size="12" font-weight={main ? "800" : "600"} fill={main ? "#2563eb" : "#64748b"}>
+                  P{c.p}
+                </text>
+              </g>
+            );
+          })}
+          {/* axes */}
+          <line x1={ML} y1={MT} x2={ML} y2={H - MB} stroke="#334155" stroke-width="1.5" />
+          <line x1={ML} y1={H - MB} x2={W - MR} y2={H - MB} stroke="#334155" stroke-width="1.5" />
+          <text x={(ML + W - MR) / 2} y={H - 8} text-anchor="middle" font-size="13" font-weight="700" fill="#475569">Age (years)</text>
+          <text x={16} y={(MT + H - MB) / 2} text-anchor="middle" font-size="13" font-weight="700" fill="#475569" transform={`rotate(-90 16 ${(MT + H - MB) / 2})`}>
+            {b.std === "who" ? "Length / height (cm)" : "Height (cm)"}
+          </text>
+        </g>
+      ))}
+      <circle data-chart-dot r="7" fill="#dc2626" stroke="#ffffff" stroke-width="2.5" style="display:none" />
+    </svg>
+    <script type="application/json" data-chart-mapping set:html={JSON.stringify(mapping)} />
+  </div>
+
+  <!-- Plot-your-point tool -->
+  <div class="px-5 sm:px-7 py-5 border-t border-slate-100 dark:border-slate-700">
+    <h3 class="font-black text-slate-900 dark:text-white text-base">Plot your point</h3>
+    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Enter age and height to drop a dot on the active chart.</p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4">
+      <div>
+        <span class={labelCls}>Age</span>
+        <div class="flex items-center gap-2">
+          <input type="number" data-cage-y min="0" max="20" placeholder="0" class={inputCls} aria-label="Age in years" />
+          <span class="text-xs text-slate-500 shrink-0">y</span>
+          <input type="number" data-cage-m min="0" max="11" placeholder="0" class={inputCls} aria-label="Extra months" />
+          <span class="text-xs text-slate-500 shrink-0">m</span>
+        </div>
+      </div>
+      <div class="col-span-2">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class={labelCls + " !mb-0"}>Height</span>
+          <div data-cunit-wrap class="inline-flex rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700">
+            <button type="button" data-cunit="cm" aria-pressed="true" class="px-2.5 py-1 text-[11px] font-bold bg-slate-900 text-white transition-colors">cm</button>
+            <button type="button" data-cunit="ftin" aria-pressed="false" class="px-2.5 py-1 text-[11px] font-bold bg-white text-slate-700 dark:bg-slate-800 dark:text-slate-200 transition-colors">ft/in</button>
+          </div>
+        </div>
+        <div data-ch-cm-row class="flex items-center gap-2">
+          <input type="number" data-ch-cm min="0" step="0.1" placeholder="e.g. 110.5" class={inputCls} aria-label="Height in centimetres" />
+          <span class="text-xs text-slate-500 shrink-0">cm</span>
+        </div>
+        <div data-ch-ft-row hidden class="flex items-center gap-2">
+          <input type="number" data-ch-ft min="0" max="8" placeholder="0" class={inputCls} aria-label="Feet" />
+          <span class="text-xs text-slate-500 shrink-0">ft</span>
+          <input type="number" data-ch-in min="0" max="11.9" step="0.1" placeholder="0" class={inputCls} aria-label="Inches" />
+          <span class="text-xs text-slate-500 shrink-0">in</span>
+        </div>
+      </div>
+      <div class="flex items-end">
+        <button type="button" data-ccalc class="w-full rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm py-2.5 transition-colors">Plot point</button>
+      </div>
+    </div>
+    <p data-cnotice hidden class="rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 text-amber-900 dark:text-amber-200 text-sm leading-relaxed px-4 py-3 mt-4"></p>
+    <p data-cresult hidden class="text-sm font-bold text-slate-800 dark:text-slate-100 mt-4"></p>
+  </div>
+</div>

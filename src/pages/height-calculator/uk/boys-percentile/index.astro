@@ -1,0 +1,133 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../../components/seo/Breadcrumbs.astro";
+import MedicalDisclaimer from "../../../../components/MedicalDisclaimer.astro";
+import PercentileTool from "../../../../components/calc/PercentileTool.astro";
+import CalcFaq from "../../../../components/calc/CalcFaq.astro";
+import SiblingTools from "../../../../components/calc/SiblingTools.astro";
+import TrustStrip from "../../../../components/calc/TrustStrip.astro";
+import { SITE } from "../../../../config/site";
+
+const title = "UK Boys Height Percentile — UK-WHO Growth Charts (2 Weeks–4 Years) | Height Calculator";
+const description =
+  "UK boys height percentile calculator using UK-WHO growth charts for ages 2 weeks to 4 years. Honest coverage: no UK 1990 data beyond age 4, so no results are invented there.";
+const canonicalUrl = `${SITE.siteUrl}/height-calculator/uk/boys-percentile/`;
+
+const faqs = [
+  {
+    q: "What are the UK-WHO growth charts?",
+    a: "They are the growth charts used across the UK, published with the Royal College of Paediatrics and Child Health (RCPCH). From 2 weeks to 4 years of age they are based on the WHO Child Growth Standards — so UK percentiles in that window are computed from the WHO tables.",
+  },
+  {
+    q: "Why does this calculator stop at 4 years?",
+    a: "From age 4 the UK-WHO charts switch to the British 1990 reference, whose LMS tables are distributed under an MRC licence and are not open data — so we don't bundle them. Rather than invent numbers, the calculator honestly reports no result beyond 4 years. For older boys, use the CDC reference (ages 2–20).",
+  },
+  {
+    q: "Why does it start at 2 weeks, not birth?",
+    a: "On the paper UK-WHO charts, the first two weeks use UK90 pooled birth data, for which ordinary centile curves aren't published. Our UK percentiles therefore start at 14 days, matching what can actually be computed from published data.",
+  },
+  {
+    q: "Should I measure length or height?",
+    a: "Under 24 months, measure recumbent length (lying down); from 24 months, standing height — exactly as the UK-WHO charts do. The calculator handles the method change at 24 months the same way the published tables do.",
+  },
+  {
+    q: "Is my child's data stored?",
+    a: "No. All calculations run in your browser; nothing you enter is sent to a server or stored.",
+  },
+];
+---
+
+<Layout title={title} description={description} canonicalUrl={canonicalUrl} locale="en">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+    <Breadcrumbs
+      locale="en"
+      items={[
+        { name: "Home", url: "/" },
+        { name: "Height Calculator", url: "/height-calculator/" },
+        { name: "UK Boys Height Percentile", url: "/height-calculator/uk/boys-percentile/" },
+      ]}
+    />
+
+    <header class="mt-6 sm:mt-8 text-center">
+      <h1 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+        UK Boys Height Percentile
+      </h1>
+      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed max-w-2xl mx-auto">
+        UK-WHO chart percentiles for boys aged <strong>2 weeks to 4 years</strong> — the
+        charts used across the UK. Enter age (months + days) and height or length for an
+        exact percentile and z-score.
+      </p>
+    </header>
+
+    <div class="mt-6 max-w-3xl mx-auto">
+      <MedicalDisclaimer />
+      <div class="mt-4">
+        <PercentileTool
+          id="uk-boys-percentile"
+          sex="male"
+          standards={["uk"]}
+          defaultStandard="uk"
+          ageMode="mdays"
+          heading="UK-WHO percentile"
+          intro="Ages 14 days – 48 months. Under 24 months measure length lying down; from 24 months measure standing height."
+        />
+      </div>
+      <div class="mt-4 rounded-2xl border border-sky-200 dark:border-sky-800/60 bg-sky-50 dark:bg-sky-950/30 px-4 py-3.5 text-xs sm:text-sm leading-relaxed text-sky-900 dark:text-sky-200">
+        <strong class="font-bold">Honest coverage note:</strong> the RCPCH UK-WHO charts
+        officially use WHO data from 2 weeks to 4 years, so these percentiles are computed
+        from the WHO tables. From age 4 the UK charts use the British 1990 reference,
+        whose tables aren't openly licensed — we don't bundle them, and this calculator
+        will not invent a result for ages over 4. For older boys, use the
+        <a href="/height-calculator/boys-percentile/" class="font-bold underline"> CDC-based boys percentile calculator</a>.
+      </div>
+    </div>
+
+    <article class="max-w-3xl mx-auto mt-12 space-y-8 text-sm sm:text-base leading-relaxed text-slate-700 dark:text-slate-300">
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-4">How UK-WHO percentiles work</h2>
+        <p>
+          The UK-WHO growth charts (RCPCH) adopted the <strong>WHO Child Growth Standards</strong> for
+          ages 2 weeks to 4 years. That means a UK percentile in this window is mathematically
+          identical to the WHO percentile — computed here with the published LMS method:
+          look up the L, M, S parameters for the exact age, convert the measurement to a
+          z-score, then to a percentile.
+        </p>
+        <ul class="space-y-3 list-disc pl-5 mt-4">
+          <li><strong>14 days – 24 months:</strong> recumbent length (lying down).</li>
+          <li><strong>24 – 48 months:</strong> standing height (with the published ~0.7 cm method step preserved at 24 months).</li>
+          <li><strong>Beyond 48 months:</strong> no result — the British 1990 tables aren't open data, and we never extrapolate.</li>
+        </ul>
+      </section>
+
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-4">Reading the result</h2>
+        <p>
+          The percentile tells you where the measurement falls among boys the same age in
+          the reference — e.g. 75th percentile means taller than about 75% of peers. The
+          z-score is the same information in standard-deviation units, useful for tracking
+          over time. Neither is a grade or a diagnosis; a steady personal curve matters
+          more than any single number.
+        </p>
+        <p class="mt-3">
+          Compare with other references in the
+          <a href="/height-calculator/boys-percentile/" class="font-bold text-brand-600 dark:text-blue-400 hover:underline"> boys height percentile calculator</a>
+          (CDC / WHO / UK-WHO switcher), see the curves on the
+          <a href="/height-calculator/boys-chart/" class="font-bold text-brand-600 dark:text-blue-400 hover:underline"> boys growth chart</a>,
+          or estimate adult height with the
+          <a href="/height-calculator/child-height-predictor/" class="font-bold text-brand-600 dark:text-blue-400 hover:underline"> child height predictor</a>.
+        </p>
+      </section>
+    </article>
+
+    <CalcFaq items={faqs} title="UK boys percentile FAQs" />
+
+    <SiblingTools current="/height-calculator/uk/boys-percentile/" />
+
+    <TrustStrip />
+  </div>
+</Layout>
+
+<script>
+  import { initAllPercentileTools } from "../../../../lib/calc-tools.js";
+  initAllPercentileTools();
+</script>

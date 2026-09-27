@@ -82,7 +82,7 @@ export const ptHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'Navegar pelo diretório de estatura de celebridades →',
-        href: '/celebrity-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -129,7 +129,7 @@ export const ptHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'Acessar a calculadora de diferença de altura →',
-        href: '/height-difference-calculator/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -161,7 +161,7 @@ export const ptHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'Conferir percentis de altura humana →',
-        href: '/people-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -173,7 +173,7 @@ export const ptHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'Ver comparações de animais →',
-        href: '/animal-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -185,7 +185,7 @@ export const ptHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'Comparar objetos do dia a dia →',
-        href: '/object-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -197,7 +197,7 @@ export const ptHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'Ver estaturas de personagens de anime →',
-        href: '/anime-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -320,8 +320,8 @@ export const ptHowToGuide: HowToGuideData = {
     heading: 'Pronto para ver a altura real?',
     description: 'Abra a ferramenta de comparação agora mesmo. Compare pessoas, famosos, personagens de anime, animais e objetos em tempo real.',
     buttonText: 'Abrir comparador de altura',
-    buttonHref: '/compare/',
+    buttonHref: '/height-calculator/',
     secondaryText: 'Ver tabela de alturas padrão',
-    secondaryHref: '/height-comparison-chart/',
+    secondaryHref: '/height-calculator/boys-chart/',
   },
 };

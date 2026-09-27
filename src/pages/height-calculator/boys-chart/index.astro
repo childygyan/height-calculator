@@ -1,0 +1,109 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/seo/Breadcrumbs.astro";
+import MedicalDisclaimer from "../../../components/MedicalDisclaimer.astro";
+import GrowthChart from "../../../components/calc/GrowthChart.astro";
+import CalcFaq from "../../../components/calc/CalcFaq.astro";
+import SiblingTools from "../../../components/calc/SiblingTools.astro";
+import TrustStrip from "../../../components/calc/TrustStrip.astro";
+import { SITE } from "../../../config/site";
+
+const title = "Boys Growth Chart — Interactive Percentile Curves (CDC/WHO) | Height Calculator";
+const description =
+  "Interactive boys growth chart with P3–P97 percentile curves from CDC and WHO data. Enter age and height to plot your point on the chart.";
+const canonicalUrl = `${SITE.siteUrl}/height-calculator/boys-chart/`;
+
+const faqs = [
+  {
+    q: "How do I read the percentile curves?",
+    a: "Each curve (P3 to P97) traces one percentile across ages. Find the child's age on the bottom axis, go up to their height, and see which curve the point sits on or between — that is their approximate percentile. The bold blue P50 curve is the median.",
+  },
+  {
+    q: "Which chart should I look at — CDC or WHO?",
+    a: "The CDC tab covers ages 2–20 (standing height, the US reference); the WHO tab covers birth–5 years (length lying down under 2, standing height from 2). Use the tab that matches the child's age and the reference your pediatrician uses.",
+  },
+  {
+    q: "Are these the real published curves?",
+    a: "Yes. Every curve is computed from the official published LMS tables — CDC 2000 stature-for-age and the WHO Child Growth Standards — with the same inverse-LMS transform the charts are built from. Nothing is smoothed, estimated, or drawn by hand.",
+  },
+  {
+    q: "What does it mean if the plotted point is far from the middle?",
+    a: "Being near P3 or P97 just means the measurement is uncommon in the reference population — it is not a diagnosis. What matters most is whether a child tracks along their own curve over time. This chart is educational; discuss concerns with a pediatrician.",
+  },
+];
+---
+
+<Layout title={title} description={description} canonicalUrl={canonicalUrl} locale="en">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+    <Breadcrumbs
+      locale="en"
+      items={[
+        { name: "Home", url: "/" },
+        { name: "Height Calculator", url: "/height-calculator/" },
+        { name: "Boys Growth Chart", url: "/height-calculator/boys-chart/" },
+      ]}
+    />
+
+    <header class="mt-6 sm:mt-8 text-center">
+      <h1 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+        Boys Growth Chart
+      </h1>
+      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed max-w-2xl mx-auto">
+        Interactive P3–P97 percentile curves for boys, drawn from real CDC and WHO data.
+        Switch references, then plot any age and height to see exactly where it lands.
+      </p>
+    </header>
+
+    <div class="mt-6">
+      <MedicalDisclaimer />
+      <div class="mt-4">
+        <GrowthChart
+          id="boys-chart"
+          sex="male"
+          heading="Boys growth chart"
+          intro="Curves computed from the published LMS tables — CDC 2000 (ages 2–20) and WHO Child Growth Standards (birth–5 years). Nothing estimated."
+        />
+      </div>
+    </div>
+
+    <article class="max-w-3xl mx-auto mt-12 space-y-8 text-sm sm:text-base leading-relaxed text-slate-700 dark:text-slate-300">
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-4">How to read this chart</h2>
+        <ul class="space-y-3 list-disc pl-5">
+          <li><strong>Find the age</strong> on the bottom axis and the <strong>height</strong> on the left axis; where they meet is the plotted point.</li>
+          <li><strong>Curves P3–P97</strong> are percentiles. A point on P25 means taller than about 25% of boys that age in the reference.</li>
+          <li><strong>The bold P50 curve</strong> is the median — half of the reference population falls above it, half below.</li>
+          <li><strong>Tracking matters most:</strong> a child following their own curve steadily over time is the reassuring pattern, wherever that curve sits.</li>
+        </ul>
+      </section>
+
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-4">About the two references</h2>
+        <p>
+          The <strong>CDC tab</strong> shows stature-for-age for ages 2–20, the reference used
+          across the US. The <strong>WHO tab</strong> shows length/height-for-age from birth
+          to 5 years — recumbent length under 24 months, standing height from 24 months —
+          the international standard. Curves stop exactly where each reference's published
+          tables stop; we never extend them.
+        </p>
+        <p class="mt-3">
+          Prefer numbers to pictures? Get the exact percentile and z-score in the
+          <a href="/height-calculator/boys-percentile/" class="font-bold text-brand-600 dark:text-blue-400 hover:underline"> boys height percentile calculator</a>,
+          or estimate adult height with the
+          <a href="/height-calculator/child-height-predictor/" class="font-bold text-brand-600 dark:text-blue-400 hover:underline"> child height predictor</a>.
+        </p>
+      </section>
+    </article>
+
+    <CalcFaq items={faqs} title="Boys growth chart FAQs" />
+
+    <SiblingTools current="/height-calculator/boys-chart/" />
+
+    <TrustStrip />
+  </div>
+</Layout>
+
+<script>
+  import { initAllChartPlots } from "../../../lib/calc-tools.js";
+  initAllChartPlots();
+</script>

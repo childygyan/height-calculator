@@ -82,7 +82,7 @@ export const arHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'تصفح دليل أطوال المشاهير المعتمد →',
-        href: '/celebrity-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -129,7 +129,7 @@ export const arHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'جرب حاسبة فرق الطول الفورية →',
-        href: '/height-difference-calculator/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -161,7 +161,7 @@ export const arHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'استكشف النسب المئوية لأطوال البشر عالمياً →',
-        href: '/people-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -173,7 +173,7 @@ export const arHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'شاهد مقارنات أطوال الحيوانات →',
-        href: '/animal-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -185,7 +185,7 @@ export const arHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'قارن أبعاد الكائنات والأدوات اليومية →',
-        href: '/object-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -197,7 +197,7 @@ export const arHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'تصفح أطوال شخصيات الأنمي والكرتون →',
-        href: '/anime-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -320,8 +320,8 @@ export const arHowToGuide: HowToGuideData = {
     heading: 'هل أنت جاهز لاكتشاف الطول الحقيقي؟',
     description: 'شغل أداة مقارنة الأطوال التفاعلية الآن. قارن الأشخاص والمشاهير وشخصيات الأنمي والحيوانات في الوقت الفعلي.',
     buttonText: 'تشغيل محرك المقارنة',
-    buttonHref: '/compare/',
+    buttonHref: '/height-calculator/',
     secondaryText: 'مشاهدة مخطط معايير الطول القياسي',
-    secondaryHref: '/height-comparison-chart/',
+    secondaryHref: '/height-calculator/boys-chart/',
   },
 };

@@ -1,0 +1,121 @@
+---
+/**
+ * Child height predictor widget (DOM only; behavior in src/lib/calc-tools.ts
+ * `initPredictorTool`). Mid-parental height formula, always with ±8.5 cm range.
+ * Hardcoded English (EN-only pages).
+ */
+
+interface Props {
+  id: string;
+  heading?: string;
+  intro?: string;
+}
+
+const {
+  id,
+  heading = "Child height predictor",
+  intro,
+} = Astro.props;
+
+const inputCls =
+  "w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2.5 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500";
+const labelCls =
+  "block text-xs font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-1.5";
+---
+
+<div
+  data-predictor-tool
+  id={id}
+  class="rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-soft overflow-hidden"
+>
+  <div class="px-5 sm:px-7 pt-6 pb-2">
+    <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+      {heading}
+    </h2>
+    {intro && <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">{intro}</p>}
+  </div>
+
+  <div class="px-5 sm:px-7 py-5 space-y-5">
+    <!-- Child sex -->
+    <div data-sex-wrap>
+      <span class={labelCls}>Child's sex</span>
+      <div class="grid grid-cols-2 gap-2 p-1 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700">
+        <button type="button" data-sex="male" aria-pressed="true" class="rounded-xl px-4 py-2.5 text-sm font-bold transition-colors bg-brand-600 text-white">Boy</button>
+        <button type="button" data-sex="female" aria-pressed="false" class="rounded-xl px-4 py-2.5 text-sm font-bold transition-colors bg-white text-slate-700 dark:bg-slate-800 dark:text-slate-200">Girl</button>
+      </div>
+    </div>
+
+    <!-- Unit toggle -->
+    <div class="flex items-center justify-between">
+      <span class={labelCls + " !mb-0"}>Parents' heights</span>
+      <div data-unit-wrap class="inline-flex rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700">
+        <button type="button" data-unit="cm" aria-pressed="true" class="px-3 py-1 text-xs font-bold bg-slate-900 text-white transition-colors">cm</button>
+        <button type="button" data-unit="ftin" aria-pressed="false" class="px-3 py-1 text-xs font-bold bg-white text-slate-700 dark:bg-slate-800 dark:text-slate-200 transition-colors">ft / in</button>
+      </div>
+    </div>
+
+    <!-- Father -->
+    <div>
+      <span class={labelCls}>Father's adult height</span>
+      <div data-cm-row>
+        <div class="flex items-center gap-2">
+          <input type="number" data-father-cm min="0" step="0.1" placeholder="e.g. 178" class={inputCls} aria-label="Father's height in centimetres" />
+          <span class="text-sm text-slate-500 dark:text-slate-400 shrink-0">cm</span>
+        </div>
+      </div>
+      <div data-ft-row hidden>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="flex items-center gap-2">
+            <input type="number" data-father-ft min="0" max="8" placeholder="0" class={inputCls} aria-label="Father's height, feet" />
+            <span class="text-sm text-slate-500 dark:text-slate-400 shrink-0">ft</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <input type="number" data-father-in min="0" max="11.9" step="0.1" placeholder="0" class={inputCls} aria-label="Father's height, inches" />
+            <span class="text-sm text-slate-500 dark:text-slate-400 shrink-0">in</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mother -->
+    <div>
+      <span class={labelCls}>Mother's adult height</span>
+      <div data-cm-row>
+        <div class="flex items-center gap-2">
+          <input type="number" data-mother-cm min="0" step="0.1" placeholder="e.g. 165" class={inputCls} aria-label="Mother's height in centimetres" />
+          <span class="text-sm text-slate-500 dark:text-slate-400 shrink-0">cm</span>
+        </div>
+      </div>
+      <div data-ft-row hidden>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="flex items-center gap-2">
+            <input type="number" data-mother-ft min="0" max="8" placeholder="0" class={inputCls} aria-label="Mother's height, feet" />
+            <span class="text-sm text-slate-500 dark:text-slate-400 shrink-0">ft</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <input type="number" data-mother-in min="0" max="11.9" step="0.1" placeholder="0" class={inputCls} aria-label="Mother's height, inches" />
+            <span class="text-sm text-slate-500 dark:text-slate-400 shrink-0">in</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      data-calc
+      class="w-full rounded-2xl bg-brand-600 hover:bg-brand-700 active:scale-[0.99] text-white font-black text-base py-3.5 shadow-soft-sm transition-all"
+    >
+      Predict adult height
+    </button>
+
+    <p data-notice hidden class="rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 text-amber-900 dark:text-amber-200 text-sm leading-relaxed px-4 py-3"></p>
+
+    <!-- Results -->
+    <div data-results hidden class="rounded-2xl bg-brand-50/60 dark:bg-slate-900 border border-brand-100 dark:border-slate-700 px-5 py-5">
+      <p class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-blue-400">Predicted adult height</p>
+      <p data-r-predicted class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white mt-1 tracking-tight"></p>
+      <p data-r-range class="text-sm text-slate-700 dark:text-slate-200 mt-2 font-bold"></p>
+      <p data-r-detail class="text-xs text-slate-500 dark:text-slate-400 mt-3 leading-relaxed"></p>
+    </div>
+  </div>
+</div>

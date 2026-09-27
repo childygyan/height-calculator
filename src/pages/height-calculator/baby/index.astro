@@ -1,0 +1,122 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/seo/Breadcrumbs.astro";
+import MedicalDisclaimer from "../../../components/MedicalDisclaimer.astro";
+import PercentileTool from "../../../components/calc/PercentileTool.astro";
+import CalcFaq from "../../../components/calc/CalcFaq.astro";
+import SiblingTools from "../../../components/calc/SiblingTools.astro";
+import TrustStrip from "../../../components/calc/TrustStrip.astro";
+import { SITE } from "../../../config/site";
+
+const title = "Baby Height Calculator (0–24 Months) — WHO Length Percentile | Height Calculator";
+const description =
+  "Free baby height calculator for 0–24 months: length-for-age percentile from the WHO Child Growth Standards. Enter age in months and length in cm or inches.";
+const canonicalUrl = `${SITE.siteUrl}/height-calculator/baby/`;
+
+const faqs = [
+  {
+    q: "How do I measure a baby's length correctly?",
+    a: "Lay the baby on their back on a flat surface, gently straighten the legs, and measure from the top of the head to the bottom of the heels. Under age 2 the WHO standard uses recumbent length (lying down), not standing height — the two are not interchangeable.",
+  },
+  {
+    q: "Why does the baby calculator stop at 24 months?",
+    a: "This tool is designed for the length-for-age window (0–24 months). From 24 months the WHO standard switches to standing height, and the published tables have a real ~0.7 cm step at that boundary. For ages 2 and up, use the boys' or girls' percentile calculator with the CDC reference.",
+  },
+  {
+    q: "What does the length-for-age percentile tell me?",
+    a: "It tells you where your baby's length falls compared with babies of the same age and sex in the WHO Multicentre Growth Reference Study — for example, 60th percentile means longer than about 60% of peers. It describes the reference population, not a diagnosis.",
+  },
+  {
+    q: "My baby's percentile changed between checkups. Is that a problem?",
+    a: "Small shifts are normal — measurement technique, time of day, and natural variation all play a role. What matters most is the overall pattern across several measurements. This tool is educational only; discuss any concerns with your pediatrician.",
+  },
+];
+---
+
+<Layout title={title} description={description} canonicalUrl={canonicalUrl} locale="en">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+    <Breadcrumbs
+      locale="en"
+      items={[
+        { name: "Home", url: "/" },
+        { name: "Height Calculator", url: "/height-calculator/" },
+        { name: "Baby Height Calculator", url: "/height-calculator/baby/" },
+      ]}
+    />
+
+    <header class="mt-6 sm:mt-8 text-center">
+      <h1 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+        Baby Height Calculator
+      </h1>
+      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed max-w-2xl mx-auto">
+        For babies <strong>0–24 months</strong>: enter age in months and length to get the
+        WHO length-for-age percentile — the same standard pediatricians use worldwide.
+        Everything runs in your browser; nothing is stored.
+      </p>
+    </header>
+
+    <div class="mt-6 max-w-3xl mx-auto">
+      <MedicalDisclaimer />
+      <div class="mt-4">
+        <PercentileTool
+          id="baby-tool"
+          sex="both"
+          standards={["who"]}
+          defaultStandard="who"
+          ageMode="months"
+          maxAgeMonths={24}
+          maxAgeNotice="This baby calculator covers 0–24 months (length measured lying down). For age 2 and up, use the boys' or girls' percentile calculator with the CDC reference."
+          peerNounMale="baby boys"
+          peerNounFemale="baby girls"
+          heading="Baby length percentile"
+          intro="WHO Child Growth Standards, length-for-age (0–24 months). Measure lying down, head to heels."
+        />
+      </div>
+    </div>
+
+    <article class="max-w-3xl mx-auto mt-12 space-y-8 text-sm sm:text-base leading-relaxed text-slate-700 dark:text-slate-300">
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-4">How baby percentiles work</h2>
+        <p>
+          The <strong>WHO Child Growth Standards</strong> describe how children <em>should</em> grow
+          under optimal conditions, based on the WHO Multicentre Growth Reference Study of
+          breastfed infants across six countries. For babies under 24 months the standard
+          uses <strong>recumbent length</strong> — measured lying down — rather than standing height.
+        </p>
+        <ul class="space-y-3 list-disc pl-5 mt-4">
+          <li><strong>Age in months</strong> — enter the baby's completed age in months (decimals like 14.5 are fine).</li>
+          <li><strong>Length</strong> — measured lying flat, head to heels, in cm or ft/in.</li>
+          <li><strong>Result</strong> — percentile, z-score, and the WHO median length for that exact age and sex.</li>
+        </ul>
+      </section>
+
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-4">Why 24 months is a boundary</h2>
+        <p>
+          At 24 months the WHO standard switches from recumbent length to standing height —
+          and the published tables contain a real <strong>~0.7&nbsp;cm step</strong> at that
+          boundary, because the measurement method changes. Our engine preserves that step
+          exactly as published instead of smoothing it away, and never interpolates across it.
+        </p>
+        <p class="mt-3">
+          Once your child turns 2, switch to the
+          <a href="/height-calculator/boys-percentile/" class="font-bold text-brand-600 dark:text-blue-400 hover:underline"> boys percentile calculator</a> or
+          <a href="/height-calculator/girls-percentile/" class="font-bold text-brand-600 dark:text-blue-400 hover:underline"> girls percentile calculator</a>
+          (CDC reference, ages 2–20), or predict their adult height with the
+          <a href="/height-calculator/child-height-predictor/" class="font-bold text-brand-600 dark:text-blue-400 hover:underline"> child height predictor</a>.
+        </p>
+      </section>
+    </article>
+
+    <CalcFaq items={faqs} title="Baby height calculator FAQs" />
+
+    <SiblingTools current="/height-calculator/baby/" />
+
+    <TrustStrip />
+  </div>
+</Layout>
+
+<script>
+  import { initAllPercentileTools } from "../../../lib/calc-tools.js";
+  initAllPercentileTools();
+</script>

@@ -1,9 +1,9 @@
 export default {
   // Brand
   'brand.name': 'Height Calculator',
-  'brand.tagline': 'Compare Anything by Height',
-  'brand.secondaryTagline': 'See How Tall It Really Is',
-  'brand.description': 'An interactive visual height comparison platform for comparing people, celebrities, anime characters, film figures, animals, objects, plants, sports figures and more.',
+  'brand.tagline': 'Height Calculator — Compare, Convert & Understand Any Height',
+  'brand.secondaryTagline': 'Predict, Track & Understand Height',
+  'brand.description': 'A free height calculator for babies, boys, girls and adults — check height percentiles, explore CDC & WHO growth charts, predict a child’s adult height from parents’ heights, and convert cm ↔ ft/in.',
 
   // Navigation
   'nav.home': 'Home',
@@ -25,7 +25,7 @@ export default {
   'nav.more': 'More',
   'nav.categoriesHeader': 'Categories',
   'nav.utilitiesHeader': 'Utilities',
-  'nav.startComparing': 'Start Comparing',
+  'nav.startComparing': 'Start Calculating',
 
   // Language Switcher
   'language.select': 'Language',
@@ -73,8 +73,8 @@ export default {
   'footer.legal': 'Platform & Legal',
   'footer.tools': 'Tools',
   'footer.allRightsReserved': 'All rights reserved.',
-  'footer.platformStatement': 'Height Calculator helps people visually understand the height of anything.',
-  'footer.fastPlatform': 'Fast, static-first visual measurement platform',
+  'footer.platformStatement': 'Height Calculator helps you predict, track and understand height at every age.',
+  'footer.fastPlatform': 'Fast, static-first height calculator',
 
   // Error States
   'error.pageNotFound': 'Page Not Found',

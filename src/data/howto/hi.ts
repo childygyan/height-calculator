@@ -82,7 +82,7 @@ export const hiHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'सेलिब्रिटी कद निर्देशिका ब्राउज़ करें →',
-        href: '/celebrity-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -129,7 +129,7 @@ export const hiHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'ऊंचाई अंतर कैलकुलेटर टूल आज़माएं →',
-        href: '/height-difference-calculator/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -161,7 +161,7 @@ export const hiHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'मानव ऊंचाई प्रतिशतक और मानक देखें →',
-        href: '/people-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -173,7 +173,7 @@ export const hiHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'जानवरों की ऊंचाई तुलना देखें →',
-        href: '/animal-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -185,7 +185,7 @@ export const hiHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'सामान्य वस्तुओं की तुलना करें →',
-        href: '/object-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -197,7 +197,7 @@ export const hiHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'एनीमे चरित्र तुलना एक्सप्लोर करें →',
-        href: '/anime-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -320,8 +320,8 @@ export const hiHowToGuide: HowToGuideData = {
     heading: 'वास्तविक ऊंचाई देखने के लिए तैयार हैं?',
     description: 'अभी इंटरैक्टिव हाइट कम्पेरिज़न टूल लॉन्च करें। लोगों, मशहूर हस्तियों, एनीमे पात्रों, जानवरों और वस्तुओं की एक साथ वास्तविक समय में तुलना करें।',
     buttonText: 'तुलना इंजन शुरू करें',
-    buttonHref: '/compare/',
+    buttonHref: '/height-calculator/',
     secondaryText: 'ऊंचाई तुलना चार्ट मानक देखें',
-    secondaryHref: '/height-comparison-chart/',
+    secondaryHref: '/height-calculator/boys-chart/',
   },
 };

@@ -1,41 +1,41 @@
 export default {
   // Hero
-  'hero.badge': 'Interactive Visual Height Comparison Platform',
-  'hero.title': 'Compare Anything by Height',
-  'hero.description': 'Compare people, celebrities, anime characters, animals, objects, film characters and more with an interactive visual height comparison tool.',
-  'hero.startComparing': 'Start Comparing',
-  'hero.exploreComparisons': 'Explore Comparisons',
+  'hero.badge': 'Height Calculator',
+  'hero.title': 'Height Calculator — Compare, Convert & Understand Any Height',
+  'hero.description': 'Predict your child’s adult height, track growth percentiles for babies, boys and girls, and convert any height between cm and feet/inches — all in one free calculator.',
+  'hero.startComparing': 'Start Calculating',
+  'hero.exploreComparisons': 'How It Works',
 
   // Hero Preview Graphic
-  'hero.previewTitle': 'Visual Measurement Preview',
-  'hero.baselineFloor': 'Aligned Baseline Floor (0 cm)',
+  'hero.previewTitle': 'Height Scale Preview',
+  'hero.baselineFloor': 'Baseline (0 cm)',
   'hero.itemDoor': 'Door',
   'hero.itemHuman': 'Human',
   'hero.itemDog': 'Dog',
 
   // Live Tool Section
-  'section.liveToolBadge': 'Live Interactive Tool',
-  'section.liveToolTitle': 'Start Your Height Comparison',
+  'section.liveToolBadge': 'Interactive Calculator',
+  'section.liveToolTitle': 'Calculate & Compare Heights Instantly',
 
   // Categories Section
-  'section.categoriesBadge': '10 Universal Categories',
-  'section.categoriesTitle': 'Explore Categories',
-  'section.categoriesDesc': 'Browse verified measurements, physical standards, and tailored comparison workspaces for every category.',
+  'section.categoriesBadge': 'Calculator Suite',
+  'section.categoriesTitle': 'Every Height Calculation in One Place',
+  'section.categoriesDesc': 'Percentile checks, growth charts, child height prediction and unit conversion — built for babies, boys, girls and adults.',
   'section.browseCategory': 'Browse',
 
   // Popular Comparisons Section
-  'section.comparisonsBadge': 'Side-By-Side Matchups',
-  'section.comparisonsTitle': 'Popular Height Comparisons',
-  'section.createCustom': 'Create Custom Comparison',
-  'section.curatedMatchup': 'Curated Matchup',
-  'section.viewComparison': 'View comparison',
+  'section.comparisonsBadge': 'Side-By-Side Results',
+  'section.comparisonsTitle': 'Popular Height Calculations',
+  'section.createCustom': 'Start a New Calculation',
+  'section.curatedMatchup': 'Featured Calculation',
+  'section.viewComparison': 'View calculation',
 
   // Celebrities Section
-  'section.celebritiesBadge': 'Public Stature Directory',
-  'section.celebritiesTitle': 'Popular Verified Celebrities',
-  'section.viewCelebrity': 'View stature & comparisons',
+  'section.celebritiesBadge': 'Reference Data',
+  'section.celebritiesTitle': 'Verified Height Reference Data',
+  'section.viewCelebrity': 'View height data',
 
   // Reference Benchmarks Section
-  'section.benchmarksBadge': 'Standard Measurements',
-  'section.benchmarksTitle': 'Common Height Reference Benchmarks',
+  'section.benchmarksBadge': 'Reference Standards',
+  'section.benchmarksTitle': 'Common Height Benchmarks',
 };

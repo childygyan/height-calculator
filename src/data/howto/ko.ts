@@ -82,7 +82,7 @@ export const koHowToGuide: HowToGuideData = {
       ],
       link: {
         text: '유명인 신장 디렉터리 둘러보기 →',
-        href: '/celebrity-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -129,7 +129,7 @@ export const koHowToGuide: HowToGuideData = {
       ],
       link: {
         text: '키 차이 계산기 도구 사용해보기 →',
-        href: '/height-difference-calculator/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -161,7 +161,7 @@ export const koHowToGuide: HowToGuideData = {
       ],
       link: {
         text: '한국 및 글로벌 신장 백분위수 차트 보기 →',
-        href: '/people-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -173,7 +173,7 @@ export const koHowToGuide: HowToGuideData = {
       ],
       link: {
         text: '동물 신장 비교 목록 보기 →',
-        href: '/animal-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -185,7 +185,7 @@ export const koHowToGuide: HowToGuideData = {
       ],
       link: {
         text: '일상 사물 크기 비교하기 →',
-        href: '/object-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -197,7 +197,7 @@ export const koHowToGuide: HowToGuideData = {
       ],
       link: {
         text: '애니 캐릭터 신장 비교 둘러보기 →',
-        href: '/anime-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -320,8 +320,8 @@ export const koHowToGuide: HowToGuideData = {
     heading: '진짜 높이가 궁금하신가요?',
     description: '인터랙티브 키 비교 도구를 지금 실행해보세요. 사람, 연예인, 애니 캐릭터, 동물, 사물을 실시간으로 나란히 비교할 수 있습니다.',
     buttonText: '비교 도구 실행하기',
-    buttonHref: '/compare/',
+    buttonHref: '/height-calculator/',
     secondaryText: '표준 신장 비교표 확인',
-    secondaryHref: '/height-comparison-chart/',
+    secondaryHref: '/height-calculator/boys-chart/',
   },
 };

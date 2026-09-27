@@ -1,0 +1,284 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/seo/Breadcrumbs.astro";
+import MedicalDisclaimer from "../../components/MedicalDisclaimer.astro";
+import PercentileTool from "../../components/calc/PercentileTool.astro";
+import PredictorTool from "../../components/calc/PredictorTool.astro";
+import CalcFaq from "../../components/calc/CalcFaq.astro";
+import TrustStrip from "../../components/calc/TrustStrip.astro";
+import { CALC_TOOLS } from "../../components/calc/toolList.js";
+import { SITE } from "../../config/site";
+
+const title = "Height Calculator — Compare, Convert & Understand Any Height";
+const description =
+  "Free height calculator for babies, boys and girls: height percentiles, growth charts and child height prediction from parents' heights, based on CDC & WHO data.";
+const canonicalUrl = `${SITE.siteUrl}/height-calculator/`;
+
+const faqs = [
+  {
+    q: "What is a height percentile?",
+    a: "A percentile tells you where a child's height falls compared with children of the same age and sex in a reference population. A 50th percentile means about half of peers are shorter and half are taller; a 90th percentile means the child is taller than about 90% of peers. It is a comparison, not a grade.",
+  },
+  {
+    q: "Which growth reference should I use — CDC, WHO, or UK-WHO?",
+    a: "Use CDC for ages 2–20 (the US reference, standing height), WHO for birth to 5 years (the international standard; length is measured lying down under age 2), and UK-WHO for ages 2 weeks to 4 years (the UK charts, which follow WHO data in that window). Our tools only compute results inside each reference's published age range.",
+  },
+  {
+    q: "How accurate is the child height predictor?",
+    a: "It uses the classic mid-parental height formula, which estimates genetic target height — not a guaranteed outcome. Most children end up within ±8.5 cm of the predicted value, and no method predicts adult height exactly. We always show the range alongside the prediction.",
+  },
+  {
+    q: "Is this medical advice?",
+    a: "No. These are educational estimates based on published growth references. Percentiles describe where a measurement falls in a reference population; they cannot diagnose anything. If you have concerns about a child's growth, consult a pediatrician.",
+  },
+  {
+    q: "Do you store the measurements I enter?",
+    a: "No. Every calculation runs entirely in your browser — ages and heights are never sent to a server or stored anywhere.",
+  },
+  {
+    q: "Why is there no result for some ages?",
+    a: "Each growth reference only covers the ages its published tables were built for — for example, the CDC reference starts at 2 years and the UK-WHO reference ends at 4 years. Rather than guessing beyond published data, the calculator shows an honest notice instead of a number.",
+  },
+];
+
+const steps = [
+  {
+    n: "1",
+    t: "Measure",
+    d: "Measure height standing straight against a wall (or length lying down for babies under 2). Morning measurements are the most consistent.",
+  },
+  {
+    n: "2",
+    t: "Enter",
+    d: "Type in age and height — in centimetres or feet and inches. Pick the growth reference: CDC, WHO, or UK-WHO.",
+  },
+  {
+    n: "3",
+    t: "Understand",
+    d: "See the percentile, z-score, and how the measurement compares with the reference median — plus an honest note whenever data doesn't cover an age.",
+  },
+];
+
+const tabs = [
+  { id: "boys", label: "Boys" },
+  { id: "girls", label: "Girls" },
+  { id: "baby", label: "Baby" },
+  { id: "predictor", label: "Predictor" },
+];
+---
+
+<Layout title={title} description={description} canonicalUrl={canonicalUrl} locale="en">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+    <Breadcrumbs
+      locale="en"
+      items={[
+        { name: "Home", url: "/" },
+        { name: "Height Calculator", url: "/height-calculator/" },
+      ]}
+    />
+
+    <!-- Hero -->
+    <header class="text-center mt-6 sm:mt-10" id="calculator">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-50 text-brand-700 border border-brand-200/80 mb-4 dark:bg-slate-800 dark:text-blue-300 dark:border-slate-700">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-brand-600 dark:text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 3v18"></path>
+          <path d="M19 3v18"></path>
+          <path d="M5 8h14"></path>
+          <path d="M5 16h14"></path>
+        </svg>
+        <span>Free · No sign-up · Based on CDC &amp; WHO data</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+        Height Calculator
+      </h1>
+      <p class="text-lg sm:text-xl font-bold text-brand-700 dark:text-blue-300 mt-2">
+        Compare, Convert &amp; Understand Any Height
+      </p>
+      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-4 leading-relaxed max-w-2xl mx-auto">
+        Enter a child's age and height to see their growth percentile, explore interactive
+        CDC and WHO growth charts, or predict adult height from parents' heights — all
+        calculated from published growth references, right in your browser.
+      </p>
+    </header>
+
+    <!-- Live quick-calculator widget with tabs -->
+    <section class="mt-8 sm:mt-10" aria-label="Quick calculator">
+      <div class="flex justify-center">
+        <div class="inline-flex gap-1 p-1 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700" role="tablist" aria-label="Calculator type">
+          {tabs.map((tab) => (
+            <button
+              type="button"
+              role="tab"
+              data-tab={tab.id}
+              aria-selected={tab.id === "boys" ? "true" : "false"}
+              class:list={[
+                "rounded-xl px-4 sm:px-6 py-2.5 text-sm font-bold transition-colors",
+                tab.id === "boys"
+                  ? "bg-brand-600 text-white shadow-soft-sm"
+                  : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white",
+              ]}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div class="mt-5 max-w-3xl mx-auto">
+        <div data-tabpanel="boys" role="tabpanel">
+          <MedicalDisclaimer />
+          <div class="mt-4">
+            <PercentileTool
+              id="hub-boys"
+              sex="male"
+              standards={["cdc"]}
+              defaultStandard="cdc"
+              ageMode="ym"
+              heading="Boys quick check"
+              intro="How does his height compare? Enter age and height for an instant CDC percentile."
+            />
+          </div>
+        </div>
+        <div data-tabpanel="girls" role="tabpanel" hidden>
+          <MedicalDisclaimer />
+          <div class="mt-4">
+            <PercentileTool
+              id="hub-girls"
+              sex="female"
+              standards={["cdc"]}
+              defaultStandard="cdc"
+              ageMode="ym"
+              heading="Girls quick check"
+              intro="How does her height compare? Enter age and height for an instant CDC percentile."
+            />
+          </div>
+        </div>
+        <div data-tabpanel="baby" role="tabpanel" hidden>
+          <MedicalDisclaimer />
+          <div class="mt-4">
+            <PercentileTool
+              id="hub-baby"
+              sex="both"
+              standards={["who"]}
+              defaultStandard="who"
+              ageMode="months"
+              maxAgeMonths={24}
+              maxAgeNotice="This quick check covers babies up to 24 months. For older children, use the boys' or girls' percentile calculator with the CDC reference (ages 2–20)."
+              peerNounMale="baby boys"
+              peerNounFemale="baby girls"
+              heading="Baby quick check"
+              intro="Length-for-age percentile for babies 0–24 months, from the WHO Child Growth Standards."
+            />
+          </div>
+        </div>
+        <div data-tabpanel="predictor" role="tabpanel" hidden>
+          <MedicalDisclaimer />
+          <div class="mt-4">
+            <PredictorTool
+              id="hub-predictor"
+              heading="Quick prediction"
+              intro="Enter both parents' heights to estimate a child's likely adult height — always with an honest range."
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tool cards grid -->
+    <section class="mt-14 sm:mt-20" aria-label="All calculators">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight text-center">
+        Every height calculator, in one place
+      </h2>
+      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 text-center mt-2 max-w-2xl mx-auto">
+        Nine focused tools — percentiles, growth charts, and prediction — each built on
+        published CDC, WHO, and UK-WHO references.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+        {CALC_TOOLS.map((tool) => (
+          <a
+            href={tool.href}
+            class="group rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-5 shadow-soft-sm hover:shadow-soft hover:border-brand-400 dark:hover:border-brand-600 hover:-translate-y-0.5 transition-all"
+          >
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 transition-colors">
+                {tool.name}
+              </h3>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 text-slate-300 group-hover:text-brand-500 group-hover:translate-x-0.5 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1.5 leading-relaxed">{tool.desc}</p>
+            <span class="inline-block text-xs font-bold text-brand-600 dark:text-blue-400 mt-3 group-hover:underline">
+              Open calculator
+            </span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="mt-14 sm:mt-20" aria-label="How it works">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight text-center">
+        How it works
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+        {steps.map((s) => (
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 shadow-soft-sm text-center">
+            <div class="w-10 h-10 mx-auto rounded-full bg-brand-600 text-white font-black flex items-center justify-center text-lg">
+              {s.n}
+            </div>
+            <h3 class="font-black text-slate-900 dark:text-white mt-3">{s.t}</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">{s.d}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <TrustStrip />
+
+    <CalcFaq items={faqs} title="Height calculator FAQs" />
+
+    <!-- Footer CTA -->
+    <section class="mt-14 sm:mt-20 text-center rounded-3xl bg-gradient-to-br from-brand-600 to-brand-800 px-6 py-10 sm:py-14">
+      <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight">Start Calculating</h2>
+      <p class="text-brand-100 mt-2 max-w-xl mx-auto text-sm sm:text-base">
+        Percentiles, growth charts, and honest predictions — free, private, and based on
+        the references pediatricians use.
+      </p>
+      <a
+        href="#calculator"
+        class="inline-block mt-6 rounded-2xl bg-white text-brand-700 font-black px-8 py-3.5 shadow-soft hover:shadow-lg hover:-translate-y-0.5 transition-all"
+      >
+        Calculate now
+      </a>
+    </section>
+  </div>
+</Layout>
+
+<script>
+  import { initAllPercentileTools, initAllPredictorTools } from "../../lib/calc-tools.js";
+
+  initAllPercentileTools();
+  initAllPredictorTools();
+
+  // Hub tab switching
+  const tabBtns = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-tab]"));
+  const panels = Array.from(document.querySelectorAll<HTMLElement>("[data-tabpanel]"));
+  const paintTabs = (active: string) => {
+    tabBtns.forEach((b) => {
+      const on = b.dataset.tab === active;
+      b.setAttribute("aria-selected", on ? "true" : "false");
+      b.classList.toggle("bg-brand-600", on);
+      b.classList.toggle("text-white", on);
+      b.classList.toggle("shadow-soft-sm", on);
+      b.classList.toggle("text-slate-600", !on);
+    });
+    panels.forEach((p) => {
+      p.hidden = p.dataset.tabpanel !== active;
+    });
+  };
+  tabBtns.forEach((b) =>
+    b.addEventListener("click", () => paintTabs(b.dataset.tab || "boys"))
+  );
+</script>

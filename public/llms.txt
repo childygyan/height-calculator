@@ -1,26 +1,25 @@
 # Height Calculator
 
-> Height Calculator (https://height-calculator.net) is a visual, programmatic height comparison engine and comprehensive entity reference platform. It enables users, developers, and AI agents to accurately compare the heights of people, celebrities, anime characters, fictional figures, animals, everyday objects, vehicles, plants, and landmarks side-by-side with true-to-scale visual proportions.
+> Height Calculator (https://height-calculator.net) — Compare, Convert & Understand Any Height. A free height calculator for babies, boys, girls and adults: check height percentiles against CDC & WHO growth charts, predict a child's adult height from parents' heights, convert between centimeters and feet/inches, and compare heights side by side with true-to-scale visuals. Results are educational estimates, not medical advice.
 
 ## Core Tools & Utilities
 
-- [Height Comparison Canvas](https://height-calculator.net/): Interactive side-by-side visual comparison stage supporting up to 10 entities simultaneously, real-time metric/imperial ruler scaling, customizable silhouettes, and image exports.
-- [Height Comparison Calculator](https://height-calculator.net/height-comparison-calculator/): Calculates exact numerical, imperial (feet/inches), metric (centimeters), and percentage height differences between any two individuals, celebrities, or objects.
-- [Height Comparison Chart](https://height-calculator.net/height-comparison-chart/): Visual ruler chart mapping global standard height benchmarks from 50 cm to 300+ cm.
-- [How to Use Guide](https://height-calculator.net/how-to-use/): Comprehensive educational walkthrough on measuring heights, comparing silhouettes, accounting for footwear/posture, and interpreting visual scale charts.
+- [Height Calculator Hub](https://height-calculator.net/height-calculator/): Percentile checks, growth charts, child height prediction and unit conversion in one place.
+- [Interactive Height Canvas](https://height-calculator.net/): Side-by-side visual comparison stage with true-to-scale proportions, real-time metric/imperial ruler scaling, customizable silhouettes, and image exports.
+- [How to Use Guide](https://height-calculator.net/how-to-use/): Measuring height accurately, converting units, reading percentiles, and understanding growth charts.
 
-## Primary Category Directories
+## Data Sources & Standards
 
-- [Celebrity Height Comparison](https://height-calculator.net/celebrity-height-comparison/): Verified heights of actors, actresses, musicians, athletes, and public figures (e.g., Brad Pitt, Dwayne Johnson, Taylor Swift, Virat Kohli).
-- [Anime Character Heights](https://height-calculator.net/anime-height-comparison/): Canonical heights of anime and manga characters across Shonen, Seinen, and popular series.
-- [Film & Cinematic Characters](https://height-calculator.net/film-height-comparison/): Heights of famous fictional movie characters, superheroes, villains, and cinematic monsters.
-- [Animal Height Comparison](https://height-calculator.net/animal-height-comparison/): Biological height, shoulder height, and length data for mammals, birds, reptiles, and prehistoric animals (e.g., Giraffe, African Elephant, Lion, Horse).
-- [Everyday Object Heights](https://height-calculator.net/object-height-comparison/): Real-world physical dimensions of household items, furniture, doors, vehicles, trucks, and architecture.
-- [Plant & Tree Heights](https://height-calculator.net/plant-height-comparison/): Botanical height data for common trees, palms, cacti, sunflowers, and shrubs.
-- [Sports Equipment Heights](https://height-calculator.net/sports-height-comparison/): Standard regulation dimensions for basketball hoops, tennis nets, soccer goals, and athletic gear.
-- [Human Percentiles & Demographic Standards](https://height-calculator.net/people-height-comparison/): Statistical average human heights (male and female) across different age groups and regions.
-- [Fictional Characters](https://height-calculator.net/fictional-character-height-comparison/): Canonical dimensions of gaming icons, fantasy entities, and comic figures.
-- [Apparel Dimensions](https://height-calculator.net/apparel-height-comparison/): Wearable garments, footwear, headwear, and lifestyle items.
+- Growth references: CDC growth charts (United States, ages 2–20) and WHO Child Growth Standards (birth to age 5, worldwide).
+- Child height prediction: mid-parental height method — (father + mother + 13 cm) ÷ 2 for boys, (father + mother − 13 cm) ÷ 2 for girls — with a typical range of about ±8–10 cm (3–4 in). Estimates only, never exact.
+- Units: exact international standard (1 inch = 2.54 cm); heights stored in centimeters, convertible on-the-fly to feet and inches.
+- Honesty policy: educational estimates, not medical advice. For growth concerns, consult a pediatrician.
+- Structured Data: key pages provide Schema.org markup (`FAQPage`, `BreadcrumbList`, `Article`).
+- Neutral ground-line baseline: visual models are grounded uniformly to represent accurate real-world standing perspective without optical distortion.
+
+## Legacy Comparison Directories
+
+The previous entity comparison directories (celebrity, anime, film, animal, object, plant, sports, fictional-character, apparel and people height comparisons) have been consolidated: their URLs now redirect to the Height Calculator hub above.
 
 ## Multilingual Support
 
@@ -34,9 +33,3 @@ Height Calculator provides full internationalization across 9 supported language
 - Japanese (日本語): https://height-calculator.net/ja/
 - Korean (한국어): https://height-calculator.net/ko/
 - Arabic (العربية): https://height-calculator.net/ar/
-
-## Data Standards & Verification
-
-- Units: All entities store verified reference heights in centimeters (`heightCm`), convertible on-the-fly to feet and inches (`ft`, `in`).
-- Structured Data: Every entity page provides Schema.org `Person` or `Thing` markup with `QuantitativeValue` measurements (`CMT` / `INH`).
-- Neutral ground-line baseline: Visual models are grounded uniformly to represent accurate real-world standing perspective without optical distortion.

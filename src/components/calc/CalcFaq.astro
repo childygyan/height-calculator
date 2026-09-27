@@ -1,0 +1,56 @@
+---
+/**
+ * FAQ section with FAQPage JSON-LD for EN-only calculator pages.
+ * Items are hardcoded per page (no i18n keys).
+ */
+
+interface FaqItem {
+  q: string;
+  a: string;
+}
+
+interface Props {
+  items: FaqItem[];
+  badge?: string;
+  title?: string;
+}
+
+const { items, badge = "FAQ", title = "Frequently asked questions" } = Astro.props;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: items.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
+---
+
+<section class="mt-14 sm:mt-20">
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-8">
+      <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-blue-400 bg-brand-50 dark:bg-slate-800 px-3 py-1 rounded-full">
+        {badge}
+      </span>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-3">
+        {title}
+      </h2>
+    </div>
+    <div class="space-y-3">
+      {items.map((item) => (
+        <details class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/80 dark:border-slate-700 shadow-soft-sm p-4 sm:p-5 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-bold text-slate-900 dark:text-white text-sm sm:text-base hover:text-brand-600 dark:hover:text-blue-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-lg gap-3">
+            <span>{item.q}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 text-slate-400 group-open:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mt-3">{item.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

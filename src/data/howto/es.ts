@@ -82,7 +82,7 @@ export const esHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'Explorar el directorio de estatura de celebridades →',
-        href: '/celebrity-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -129,7 +129,7 @@ export const esHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'Probar la calculadora de diferencia de altura →',
-        href: '/height-difference-calculator/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -161,7 +161,7 @@ export const esHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'Ver percentiles de altura humana y estándares →',
-        href: '/people-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -173,7 +173,7 @@ export const esHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'Ver comparaciones de animales →',
-        href: '/animal-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -185,7 +185,7 @@ export const esHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'Comparar objetos cotidianos →',
-        href: '/object-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -197,7 +197,7 @@ export const esHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'Explorar estaturas de personajes de anime →',
-        href: '/anime-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -320,8 +320,8 @@ export const esHowToGuide: HowToGuideData = {
     heading: '¿Listo para ver la altura real?',
     description: 'Inicia el comparador interactivo ahora. Compara personas, celebridades, personajes de anime, animales y objetos en tiempo real.',
     buttonText: 'Iniciar comparador de altura',
-    buttonHref: '/compare/',
+    buttonHref: '/height-calculator/',
     secondaryText: 'Ver tabla de comparación estándar',
-    secondaryHref: '/height-comparison-chart/',
+    secondaryHref: '/height-calculator/boys-chart/',
   },
 };

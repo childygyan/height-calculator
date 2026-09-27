@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import ComparisonTool from '../ComparisonTool.astro';
 import HeroSection from '../HeroSection.astro';
+import HomePageEn from './HomePageEn.astro';
 import CategoryIcon from '../brand/CategoryIcon.astro';
 import FAQ from '../FAQ.astro';
 import { SITE } from '../../config/site';
@@ -36,8 +37,15 @@ const popularCharts = [
 ];
 
 const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath('/', locale)}`;
+
+// EN renders the calculator-first homepage (Phase 2 repositioning).
+// Other locales keep the legacy comparison sections until their rewrite phase.
+const isEnglishHomepage = locale === 'en';
 ---
 
+{isEnglishHomepage ? (
+  <HomePageEn />
+) : (
 <Layout
   title={t(locale, 'meta.defaultTitle')}
   description={t(locale, 'meta.defaultDesc')}
@@ -118,7 +126,7 @@ const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath('/', locale)}`;
               {t(locale, 'section.comparisonsTitle')}
             </h2>
           </div>
-          <a href={getLocalizedPath('/compare/', locale)} class="text-xs font-bold text-brand-600 dark:text-blue-400 hover:underline flex items-center gap-1">
+          <a href="/height-calculator/" class="text-xs font-bold text-brand-600 dark:text-blue-400 hover:underline flex items-center gap-1">
             {t(locale, 'section.createCustom')} →
           </a>
         </div>
@@ -126,7 +134,7 @@ const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath('/', locale)}`;
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {popularComparisons.map((comp) => (
             <a
-              href={getLocalizedPath(`/compare/${comp.slug}/`, locale)}
+              href="/height-calculator/"
               class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group flex flex-col justify-between"
             >
               <div>
@@ -162,7 +170,7 @@ const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath('/', locale)}`;
               {t(locale, 'section.celebritiesTitle')}
             </h2>
           </div>
-          <a href={getLocalizedPath('/celebrity-height-comparison/', locale)} class="text-xs font-bold text-brand-600 dark:text-blue-400 hover:underline flex items-center gap-1">
+          <a href="/height-calculator/" class="text-xs font-bold text-brand-600 dark:text-blue-400 hover:underline flex items-center gap-1">
             {t(locale, 'action.viewAll')} →
           </a>
         </div>
@@ -213,11 +221,11 @@ const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath('/', locale)}`;
               {t(locale, 'nav.howToUse') || 'How to Use'} →
             </a>
             <span class="text-slate-300 dark:text-slate-700">|</span>
-            <a href={getLocalizedPath('/height-comparison-chart/', locale)} class="text-xs font-bold text-brand-600 dark:text-blue-400 hover:underline">
+            <a href="/height-calculator/boys-chart/" class="text-xs font-bold text-brand-600 dark:text-blue-400 hover:underline">
               {t(locale, 'nav.chart')} →
             </a>
             <span class="text-slate-300 dark:text-slate-700">|</span>
-            <a href={getLocalizedPath('/height-comparison-calculator/', locale)} class="text-xs font-bold text-brand-600 dark:text-blue-400 hover:underline">
+            <a href="/height-calculator/" class="text-xs font-bold text-brand-600 dark:text-blue-400 hover:underline">
               {t(locale, 'nav.calculator')} →
             </a>
           </div>
@@ -239,3 +247,4 @@ const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath('/', locale)}`;
     <FAQ locale={locale} />
   </div>
 </Layout>
+)}

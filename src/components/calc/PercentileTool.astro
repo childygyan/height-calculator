@@ -1,0 +1,199 @@
+---
+/**
+ * Generic percentile calculator widget (DOM only; behavior lives in
+ * src/lib/calc-tools.ts `initPercentileTool`, configured via data-config).
+ * Hardcoded English (EN-only pages).
+ */
+import { GROWTH_STANDARDS } from "../../lib/growth/standards.js";
+import type { GrowthStandard, Sex, AgeMode } from "../../lib/calc-tools.js";
+
+interface Props {
+  id: string;
+  sex: Sex | "both";
+  standards: GrowthStandard[];
+  defaultStandard: GrowthStandard;
+  ageMode: AgeMode;
+  maxAgeMonths?: number;
+  maxAgeNotice?: string;
+  peerNounMale?: string;
+  peerNounFemale?: string;
+  heading?: string;
+  intro?: string;
+}
+
+const {
+  id,
+  sex,
+  standards,
+  defaultStandard,
+  ageMode,
+  maxAgeMonths,
+  maxAgeNotice,
+  peerNounMale = "boys",
+  peerNounFemale = "girls",
+  heading = "Height percentile calculator",
+  intro,
+} = Astro.props;
+
+const config = JSON.stringify({
+  sex,
+  standards,
+  defaultStandard,
+  ageMode,
+  maxAgeMonths,
+  maxAgeNotice,
+  peerNounMale,
+  peerNounFemale,
+});
+
+const stdMetas = standards.map((s) => GROWTH_STANDARDS.find((m) => m.key === s)!);
+
+const inputCls =
+  "w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2.5 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500";
+const labelCls =
+  "block text-xs font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-1.5";
+---
+
+<div
+  data-percentile-tool
+  data-config={config}
+  id={id}
+  class="rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-soft overflow-hidden"
+>
+  <div class="px-5 sm:px-7 pt-6 pb-2">
+    <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+      {heading}
+    </h2>
+    {intro && <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">{intro}</p>}
+  </div>
+
+  <div class="px-5 sm:px-7 py-5 space-y-5">
+    <!-- Sex selector -->
+    <div data-sex-wrap={sex === "both" ? "" : undefined} hidden={sex !== "both"}>
+      <span class={labelCls}>Child's sex</span>
+      <div class="grid grid-cols-2 gap-2 p-1 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700">
+        <button type="button" data-sex="male" aria-pressed="true" class="rounded-xl px-4 py-2.5 text-sm font-bold transition-colors bg-brand-600 text-white">Boy</button>
+        <button type="button" data-sex="female" aria-pressed="false" class="rounded-xl px-4 py-2.5 text-sm font-bold transition-colors bg-white text-slate-700 dark:bg-slate-800 dark:text-slate-200">Girl</button>
+      </div>
+    </div>
+
+    <!-- Standard switcher -->
+    <div data-std-wrap={standards.length > 1 ? "" : undefined} hidden={standards.length <= 1}>
+      <span class={labelCls}>Growth reference</span>
+      <div class="grid grid-cols-3 gap-2 p-1 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700">
+        {stdMetas.map((m) => (
+          <button
+            type="button"
+            data-std={m.key}
+            aria-pressed={m.key === defaultStandard ? "true" : "false"}
+            class:list={[
+              "rounded-xl px-2 py-2.5 text-sm font-bold transition-colors",
+              m.key === defaultStandard
+                ? "bg-brand-600 text-white"
+                : "bg-white text-slate-700 dark:bg-slate-800 dark:text-slate-200",
+            ]}
+          >
+            {m.label}
+          </button>
+        ))}
+      </div>
+      <p data-stdnote class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed"></p>
+    </div>
+
+    <!-- Age -->
+    <div>
+      <span class={labelCls}>Age</span>
+      {ageMode === "months" && (
+        <div class="flex items-center gap-2">
+          <input type="number" data-age-months min="0" max={maxAgeMonths ?? 60} step="0.5" placeholder="e.g. 14" class={inputCls} aria-label="Age in months" />
+          <span class="text-sm text-slate-500 dark:text-slate-400 shrink-0">months</span>
+        </div>
+      )}
+      {ageMode === "mdays" && (
+        <div class="grid grid-cols-2 gap-3">
+          <div class="flex items-center gap-2">
+            <input type="number" data-age-m min="0" max="48" placeholder="0" class={inputCls} aria-label="Age in months" />
+            <span class="text-sm text-slate-500 dark:text-slate-400 shrink-0">mo</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <input type="number" data-age-d min="0" max="30" placeholder="0" class={inputCls} aria-label="Extra days" />
+            <span class="text-sm text-slate-500 dark:text-slate-400 shrink-0">days</span>
+          </div>
+        </div>
+      )}
+      {ageMode === "ym" && (
+        <div class="grid grid-cols-2 gap-3">
+          <div class="flex items-center gap-2">
+            <input type="number" data-age-y min="0" max="20" placeholder="0" class={inputCls} aria-label="Age in years" />
+            <span class="text-sm text-slate-500 dark:text-slate-400 shrink-0">years</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <input type="number" data-age-m min="0" max="11" placeholder="0" class={inputCls} aria-label="Extra months" />
+            <span class="text-sm text-slate-500 dark:text-slate-400 shrink-0">months</span>
+          </div>
+        </div>
+      )}
+    </div>
+
+    <!-- Height + unit toggle -->
+    <div>
+      <div class="flex items-center justify-between mb-1.5">
+        <span class={labelCls + " !mb-0"}>Height</span>
+        <div data-unit-wrap class="inline-flex rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700">
+          <button type="button" data-unit="cm" aria-pressed="true" class="px-3 py-1 text-xs font-bold bg-slate-900 text-white transition-colors">cm</button>
+          <button type="button" data-unit="ftin" aria-pressed="false" class="px-3 py-1 text-xs font-bold bg-white text-slate-700 dark:bg-slate-800 dark:text-slate-200 transition-colors">ft / in</button>
+        </div>
+      </div>
+      <div data-h-cm-row>
+        <div class="flex items-center gap-2">
+          <input type="number" data-h-cm min="0" step="0.1" placeholder="e.g. 110.5" class={inputCls} aria-label="Height in centimetres" />
+          <span class="text-sm text-slate-500 dark:text-slate-400 shrink-0">cm</span>
+        </div>
+      </div>
+      <div data-h-ft-row hidden>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="flex items-center gap-2">
+            <input type="number" data-h-ft min="0" max="8" placeholder="0" class={inputCls} aria-label="Feet" />
+            <span class="text-sm text-slate-500 dark:text-slate-400 shrink-0">ft</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <input type="number" data-h-in min="0" max="11.9" step="0.1" placeholder="0" class={inputCls} aria-label="Inches" />
+            <span class="text-sm text-slate-500 dark:text-slate-400 shrink-0">in</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      data-calc
+      class="w-full rounded-2xl bg-brand-600 hover:bg-brand-700 active:scale-[0.99] text-white font-black text-base py-3.5 shadow-soft-sm transition-all"
+    >
+      Calculate percentile
+    </button>
+
+    <p data-notice hidden class="rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 text-amber-900 dark:text-amber-200 text-sm leading-relaxed px-4 py-3"></p>
+
+    <!-- Results -->
+    <div data-results hidden class="rounded-2xl bg-brand-50/60 dark:bg-slate-900 border border-brand-100 dark:border-slate-700 px-5 py-5">
+      <p class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-blue-400">Result</p>
+      <p data-r-pct class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white mt-1 tracking-tight"></p>
+      <p data-r-detail class="text-sm text-slate-700 dark:text-slate-200 mt-1.5 font-semibold"></p>
+      <dl class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4 text-sm">
+        <div class="rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-2.5">
+          <dt class="text-[11px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400">Z-score</dt>
+          <dd data-r-z class="font-black text-slate-900 dark:text-white mt-0.5"></dd>
+        </div>
+        <div class="rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-2.5">
+          <dt class="text-[11px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400">Median for age</dt>
+          <dd data-r-median class="font-black text-slate-900 dark:text-white mt-0.5"></dd>
+        </div>
+        <div class="rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-2.5">
+          <dt class="text-[11px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400">Entered height</dt>
+          <dd data-r-entered class="font-black text-slate-900 dark:text-white mt-0.5"></dd>
+        </div>
+      </dl>
+      <p data-r-ref class="text-[11px] text-slate-500 dark:text-slate-400 mt-3 leading-relaxed"></p>
+    </div>
+  </div>
+</div>

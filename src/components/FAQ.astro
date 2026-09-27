@@ -5,9 +5,11 @@ import type { Locale } from '../i18n/locales';
 interface Props {
   locale?: Locale;
   showSchema?: boolean;
+  /** Show only the first N questions (teaser). Defaults to all. */
+  limit?: number;
 }
 
-const { locale = getLocaleFromUrl(Astro.url), showSchema = true } = Astro.props;
+const { locale = getLocaleFromUrl(Astro.url), showSchema = true, limit } = Astro.props;
 
 const faqItems = [
   { question: t(locale, 'faq.q1'), answer: t(locale, 'faq.a1') },
@@ -17,7 +19,7 @@ const faqItems = [
   { question: t(locale, 'faq.q5'), answer: t(locale, 'faq.a5') },
   { question: t(locale, 'faq.q6'), answer: t(locale, 'faq.a6') },
   { question: t(locale, 'faq.q7'), answer: t(locale, 'faq.a7') },
-];
+].slice(0, limit ?? 7);
 
 const faqSchema = {
   '@context': 'https://schema.org',

@@ -2,26 +2,26 @@ import type { HowToGuideData } from './types';
 
 export const enHowToGuide: HowToGuideData = {
   locale: 'en',
-  title: 'How to Use the Height Comparison Tool',
-  subtitle: 'A comprehensive, step-by-step master guide to comparing people, celebrities, anime characters, animals, and objects with visual mathematical precision.',
+  title: 'How to Use the Height Calculator',
+  subtitle: 'A comprehensive, step-by-step master guide to measuring, converting, comparing and understanding height — from baby growth to adult stature.',
   badge: 'Master User Guide',
-  metaDescription: 'Learn how to use Height Calculator\'s height comparison tool to compare people, animals, objects and characters, understand height differences, adjust comparisons and share results.',
+  metaDescription: 'Learn how to use Height Calculator: measure height accurately, convert cm and ft/in, calculate height differences, check percentiles and understand growth charts.',
   readTime: '8 min read',
   tocTitle: 'Table of Contents',
   intro: {
-    lead: 'Height Calculator is an interactive visual measurement platform built to help people intuitively understand the true physical scale of anything in the known universe.',
+    lead: 'Height Calculator is a free height calculator built to help you predict, track and truly understand height — from a baby’s first centimeters to adult stature.',
     paragraphs: [
-      'Whether you are curious about how you measure up next to your favorite movie star, analyzing character height charts for an animation project, teaching students about wildlife proportions, or drafting a novel, numbers alone often fail to communicate genuine physical presence. Reading that an individual is 188 cm (6 ft 2 in) tall provides an abstract measurement; placing that figure directly beside an average doorframe, a companion, or an everyday object instantly brings scale to life.',
-      'Our universal height comparison tool bridges the gap between raw numeric measurements and human visual perception. By anchoring every silhouette to a common zero-level ground baseline and scaling every figure through rigorous mathematical geometry, Height Calculator eliminates perspective distortion. This guide walks you through every single feature of the platform, from basic searches and drag-and-drop canvas interactions to custom uploads, difference metrics, and high-resolution chart exports.',
+      'Whether you are a parent tracking your baby’s growth, wondering how tall your child will become, or simply converting between centimeters and feet/inches, raw numbers rarely tell the full story. Reading that a child is 95 cm tall is abstract; seeing where that falls on a CDC/WHO percentile chart — or what it predicts for adult height — turns a number into understanding.',
+      'Height Calculator bridges the gap between raw measurements and real understanding. Enter any height to convert units instantly, compare two heights side by side with the exact difference, check percentiles against trusted growth references, and estimate a child’s adult height from the parents’ heights. This guide walks you through every feature, from accurate measuring and unit conversion to percentiles, predictions and sharing your results.',
     ],
   },
   sections: [
     {
       id: 'what-is-height-calculator',
-      heading: '1. What Is a Height Comparison Tool?',
+      heading: '1. What Is a Height Calculator?',
       paragraphs: [
-        'A height comparison tool is an interactive visualizer designed to display two or more measurable entities side-by-side using an identical scale factor. Rather than forcing you to mentally calculate what a 15-centimeter or 6-inch gap looks like in real life, the tool renders anatomically proportioned models that clearly demonstrate proportional relationships.',
-        'On Height Calculator, the comparison engine supports a wide range of verified categories: adult men and women, global celebrities, beloved anime and manga characters, iconic film heroes, domestic and wild animals, architectural and household objects, botanical plants, sports equipment, and legendary fictional creatures. Every entity is measured against a shared vertical ruler, allowing you to combine any two or more items into a single, cohesive visual chart.',
+        'A height calculator turns raw height numbers into clear answers. Instead of wondering what a percentile means, how many centimeters separate two heights, or how tall a child might become, the calculator computes it instantly — and can show heights side by side on one true scale so you see the relationships, not just read them.',
+        'On Height Calculator you can convert between centimeters and feet/inches, calculate exact height differences, check where a height falls on CDC/WHO percentile references, estimate a child’s adult height from the parents’ heights, and visualize heights side by side on a shared ruler — all free, with no account needed.',
       ],
       callout: {
         type: 'info',
@@ -30,15 +30,15 @@ export const enHowToGuide: HowToGuideData = {
     },
     {
       id: 'how-to-start',
-      heading: '2. How to Start a Comparison: 7 Simple Steps',
+      heading: '2. How to Start: 7 Simple Steps',
       paragraphs: [
-        'Getting started on Height Calculator requires zero registration, no software downloads, and no complex setup. The tool is available directly on the homepage and comparison workspace.',
+        'Getting started on Height Calculator requires zero registration, no software downloads, and no complex setup. The calculator is available directly on the homepage and in the calculator hub.',
       ],
       steps: [
         {
           number: 1,
           title: 'Open the Workspace',
-          description: 'Navigate to height-calculator.net or visit the dedicated /compare/ page in your web browser.',
+          description: 'Navigate to height-calculator.net or open the /height-calculator/ hub in your web browser.',
         },
         {
           number: 2,
@@ -81,8 +81,8 @@ export const enHowToGuide: HowToGuideData = {
         'If an entity is not currently present in the library, you do not need to worry: Height Calculator includes a custom entity input form where you can type any name, specify a precise height in centimeters or feet and inches, select gender or category, choose a silhouette color, and instantly insert your custom figure onto the stage.',
       ],
       link: {
-        text: 'Browse the Celebrity Stature Directory →',
-        href: '/celebrity-height-comparison/',
+        text: 'Open the Height Calculator Hub →',
+        href: '/height-calculator/',
       },
     },
     {
@@ -128,15 +128,15 @@ export const enHowToGuide: HowToGuideData = {
         'Conversion between systems is strictly calculated using the international standard: 1 inch = exactly 2.54 cm, and 1 foot = exactly 30.48 cm. Entering 5 ft 10 in instantly translates to 177.8 cm without rounding artifacts or data corruption.',
       ],
       link: {
-        text: 'Try the Height Difference Calculator Tool →',
-        href: '/height-difference-calculator/',
+        text: 'Open the Height Calculator Hub →',
+        href: '/height-calculator/',
       },
     },
     {
       id: 'understanding-visual-result',
-      heading: '8. How to Read the Comparison Canvas and Ruler',
+      heading: '8. How to Read the Calculator Canvas and Ruler',
       paragraphs: [
-        'The Height Calculator comparison canvas is engineered with several visual cues that make reading results effortless:',
+        'The Height Calculator canvas is engineered with several visual cues that make reading results effortless:',
         '1. The Ground Baseline (0 cm / 0 ft): A prominent horizontal baseline at the bottom of the canvas representing the floor. Every model is anchored here, ensuring fair, unskewed comparisons.',
         '2. The Vertical Ruler: Positioned along the left edge of the stage, the ruler features dynamic tick marks with clear numerical labels. It automatically calculates the maximum height needed to encompass the tallest figure plus generous headroom.',
         '3. Entity Labels and Badges: Above or beneath each figure, a clean tag displays the entity\'s name, chosen category badge, and exact height in your preferred unit.',
@@ -154,14 +154,14 @@ export const enHowToGuide: HowToGuideData = {
     },
     {
       id: 'comparing-people',
-      heading: '10. Comparing People, Couples, and Public Figures',
+      heading: '10. Comparing People, Couples and Families',
       paragraphs: [
         'One of the most frequent uses of Height Calculator is exploring interpersonal statures. Friends comparing their heights for an upcoming event, couples curious about their visual contrast in photographs, or parents tracking children\'s growth milestones find the side-by-side human silhouettes exceptionally illuminating.',
         'Our human models feature distinct male and female anatomical proportions—accurately reflecting differences in shoulder breadth, hip-to-waist ratios, and posture—while maintaining identical scaling. You can also compare yourself directly against world-famous athletes, actors, historical leaders, and musicians with documented heights.',
       ],
       link: {
-        text: 'Explore Human Height Percentiles & Benchmarks →',
-        href: '/people-height-comparison/',
+        text: 'Open the Height Calculator Hub →',
+        href: '/height-calculator/',
       },
     },
     {
@@ -172,8 +172,8 @@ export const enHowToGuide: HowToGuideData = {
         'Height Calculator eliminates this confusion by placing wildlife on the exact same scale as humans. You can place a domestic cat (25 cm) beside a Golden Retriever (60 cm), compare an average person to an adult Arabian horse (160 cm), or look up in awe at an African bush elephant (330 cm) or a towering giraffe (500 cm). It is an invaluable educational resource for classrooms, biology enthusiasts, and nature lovers.',
       ],
       link: {
-        text: 'View Animal Height Comparisons →',
-        href: '/animal-height-comparison/',
+        text: 'Open the Height Calculator Hub →',
+        href: '/height-calculator/',
       },
     },
     {
@@ -184,8 +184,8 @@ export const enHowToGuide: HowToGuideData = {
         'The Height Calculator Objects category includes household furniture (chairs, desks, beds, refrigerators), vehicles (compact cars, SUVs, bicycles, transit buses), architectural landmarks, and athletic fixtures (such as official regulation 305 cm basketball rims). This gives designers, architects, and shoppers an effortless way to check spatial clearances.',
       ],
       link: {
-        text: 'Compare Common Everyday Objects →',
-        href: '/object-height-comparison/',
+        text: 'Open the Height Calculator Hub →',
+        href: '/height-calculator/',
       },
     },
     {
@@ -196,13 +196,13 @@ export const enHowToGuide: HowToGuideData = {
         'On Height Calculator, you can stand legendary heroes like Goku, Naruto, Levi Ackerman, or All Might next to each other, or compare giant mechas and mythical monsters against ordinary civilians. It provides digital artists, cosplayers, fanfiction writers, and lore enthusiasts with an indispensable reference tool for drafting proportional fanart and costumes.',
       ],
       link: {
-        text: 'Explore Anime Character Comparisons →',
-        href: '/anime-height-comparison/',
+        text: 'Open the Height Calculator Hub →',
+        href: '/height-calculator/',
       },
     },
     {
       id: 'using-the-result',
-      heading: '14. What to Do with Your Finished Comparison',
+      heading: '14. What to Do with Your Finished Calculation',
       paragraphs: [
         'Once you have arranged your entities to perfection, Height Calculator gives you practical tools to utilize your results:',
         '• Download as PNG Image: Click the "Download Chart" button in the canvas toolbar. The tool compiles your silhouettes, ruler, labels, and baseline into a crystal-clear, high-resolution PNG image with a clean background, ready for saving to your device or embedding into documents and presentations.',
@@ -283,7 +283,7 @@ export const enHowToGuide: HowToGuideData = {
     },
     {
       id: 'who-can-use',
-      heading: '22. Who Benefits from the Height Comparison Tool?',
+      heading: '22. Who Benefits from the Height Calculator?',
       paragraphs: [
         'Height Calculator is designed for an exceptionally diverse global audience:',
         '• Students and Educators: Bringing geometry, biology, and physical science to life in classrooms.',
@@ -304,25 +304,25 @@ export const enHowToGuide: HowToGuideData = {
     },
     {
       id: 'final-cta',
-      heading: '24. Start Your First Height Comparison Today',
+      heading: '24. Start Your First Height Calculation Today',
       paragraphs: [
-        'Ready to experience true visual scale? The comparison engine is live, fast, and completely free. Choose any entity, set your measurements, and discover how anything in the world truly compares.',
+        'Ready to calculate? The height calculator is live, fast and completely free. Enter a height, convert units, check a percentile or predict a child’s adult height — and truly understand what the numbers mean.',
       ],
     },
   ],
   faqTransition: {
     badge: 'Have More Questions?',
     heading: 'Explore Our Frequently Asked Questions',
-    text: 'Learn more about Height Calculator\'s proportional scaling algorithm, unit conversions, and universal rendering engine.',
+    text: 'Learn more about Height Calculator’s percentiles, growth charts, unit conversions and child height prediction.',
     ctaText: 'View All Frequently Asked Questions',
     ctaHref: '/#faq',
   },
   finalCta: {
-    heading: 'Ready to See How Tall It Really Is?',
-    description: 'Launch the interactive height comparison tool now. Add people, celebrities, anime characters, animals, and objects side-by-side in real time.',
-    buttonText: 'Launch Comparison Engine',
-    buttonHref: '/compare/',
-    secondaryText: 'Explore Comparison Chart Standards',
-    secondaryHref: '/height-comparison-chart/',
+    heading: 'Ready to Calculate Your Height?',
+    description: 'Open the Height Calculator hub now — convert units, compare heights, check percentiles and predict child adult height, all in one free calculator.',
+    buttonText: 'Open Height Calculator',
+    buttonHref: '/height-calculator/',
+    secondaryText: 'Explore All Calculators',
+    secondaryHref: '/height-calculator/',
   },
 };

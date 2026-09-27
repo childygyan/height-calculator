@@ -82,7 +82,7 @@ export const deHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'Promi-Größenverzeichnis durchstöbern →',
-        href: '/celebrity-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -129,7 +129,7 @@ export const deHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'Größenunterschied-Rechner ausprobieren →',
-        href: '/height-difference-calculator/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -161,7 +161,7 @@ export const deHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'Menschliche Größen-Perzentile einsehen →',
-        href: '/people-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -173,7 +173,7 @@ export const deHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'Tier-Größenvergleiche aufrufen →',
-        href: '/animal-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -185,7 +185,7 @@ export const deHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'Alltagsgegenstände vergleichen →',
-        href: '/object-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -197,7 +197,7 @@ export const deHowToGuide: HowToGuideData = {
       ],
       link: {
         text: 'Anime-Größenvergleiche entdecken →',
-        href: '/anime-height-comparison/',
+        href: '/height-calculator/',
       },
     },
     {
@@ -320,8 +320,8 @@ export const deHowToGuide: HowToGuideData = {
     heading: 'Bereit für den echten Größenvergleich?',
     description: 'Starten Sie das interaktive Tool jetzt. Vergleichen Sie Menschen, Stars, Anime-Figuren, Tiere und Gegenstände in Echtzeit.',
     buttonText: 'Größenvergleich starten',
-    buttonHref: '/compare/',
+    buttonHref: '/height-calculator/',
     secondaryText: 'Größenvergleichstabelle ansehen',
-    secondaryHref: '/height-comparison-chart/',
+    secondaryHref: '/height-calculator/boys-chart/',
   },
 };

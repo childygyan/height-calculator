@@ -10,12 +10,45 @@ https://www.height-calculator.net/*   https://height-calculator.net/:splat  301!
 http://www.height-calculator.net/*    https://height-calculator.net/:splat  301!
 http://height-calculator.net/*        https://height-calculator.net/:splat  301!
 
-# Category Hub Shortlink Aliases (Direct 301 redirects to authoritative category hubs)
-/celebrity-height/            /celebrity-height-comparison/  301
-/celebrity-height             /celebrity-height-comparison/  301
-/fictional-character-height/  /fictional-character-height-comparison/  301
-/fictional-character-height   /fictional-character-height-comparison/  301
-
-# Calculator Alias Redirects (Consolidate into canonical comparison calculator)
-/height-difference-calculator/  /height-comparison-calculator/  301
-/height-difference-calculator   /height-comparison-calculator/  301
+# Phase 1: Retired comparison routes → /height-calculator/ (site never went live, no indexed SEO equity)
+# NOTE: /height-calculator/* targets are built in a later phase.
+/compare/                                /height-calculator/  301
+/compare                                 /height-calculator/  301
+/height-comparison/                      /height-calculator/  301
+/height-comparison                       /height-calculator/  301
+/height-comparison-calculator/           /height-calculator/  301
+/height-comparison-calculator            /height-calculator/  301
+/height-difference-calculator/           /height-calculator/  301
+/height-difference-calculator            /height-calculator/  301
+/height-comparison-visualizer/           /height-calculator/  301
+/height-comparison-visualizer            /height-calculator/  301
+/height-comparison-couple/               /height-calculator/  301
+/height-comparison-couple                /height-calculator/  301
+/size-comparison/                        /height-calculator/  301
+/size-comparison                         /height-calculator/  301
+/celebrity-height/                       /height-calculator/  301
+/celebrity-height                        /height-calculator/  301
+/celebrity-height-comparison/            /height-calculator/  301
+/celebrity-height-comparison             /height-calculator/  301
+/dashboard/                              /height-calculator/  301
+/dashboard                               /height-calculator/  301
+/animal-height-comparison/               /height-calculator/  301
+/animal-height-comparison                /height-calculator/  301
+/anime-height-comparison/                /height-calculator/  301
+/anime-height-comparison                 /height-calculator/  301
+/apparel-height-comparison/              /height-calculator/  301
+/apparel-height-comparison               /height-calculator/  301
+/fictional-character-height-comparison/  /height-calculator/  301
+/fictional-character-height-comparison   /height-calculator/  301
+/film-height-comparison/                 /height-calculator/  301
+/film-height-comparison                  /height-calculator/  301
+/object-height-comparison/               /height-calculator/  301
+/object-height-comparison                /height-calculator/  301
+/people-height-comparison/               /height-calculator/  301
+/people-height-comparison                /height-calculator/  301
+/plant-height-comparison/                /height-calculator/  301
+/plant-height-comparison                 /height-calculator/  301
+/sports-height-comparison/               /height-calculator/  301
+/sports-height-comparison                /height-calculator/  301
+/height-comparison-chart/                /height-calculator/boys-chart/  301
+/height-comparison-chart                 /height-calculator/boys-chart/  301

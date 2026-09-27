@@ -1,53 +1,53 @@
 export default {
   // Global Meta
-  'meta.defaultTitle': 'Height Comparison Tool – Compare Anything by Height | Height Calculator',
-  'meta.defaultDesc': 'Compare people, celebrities, anime characters, animals, objects, film characters and more with Height Calculator interactive visual height comparison tool.',
-  'meta.keywords': 'height comparison, height difference calculator, celebrity heights, compare heights visual, anime height comparison',
+  'meta.defaultTitle': 'Height Calculator — Compare, Convert & Understand Any Height',
+  'meta.defaultDesc': 'Free height calculator for babies, boys and girls. Check height percentiles, explore CDC & WHO growth charts, and predict a child’s adult height from parents’ heights.',
+  'meta.keywords': 'height calculator, boys height calculator, girls height calculator, baby height calculator, height percentile calculator, child height predictor, growth chart calculator',
 
   // Compare Tool SEO
-  'compare.h1': 'Height Comparison Tool',
-  'compare.title': 'Height Comparison Tool – Interactive Side-by-Side Visualizer | Height Calculator',
-  'compare.desc': 'Add any figure or custom measurement to compare heights visually in real time. Features proportional SVG and PNG models on a shared 0 cm baseline.',
+  'compare.h1': 'Height Comparison Calculator',
+  'compare.title': 'Height Comparison Calculator – Compare Heights Side by Side | Height Calculator',
+  'compare.desc': 'Add any figure or custom measurement to calculate and compare heights visually in real time. Features proportional SVG and PNG models on a shared 0 cm baseline.',
 
   // Calculator SEO
   'calculator.title': 'Height Difference Calculator – Calculate Differences in cm & ft/in | Height Calculator',
   'calculator.desc': 'Calculate the exact numerical and percentage height difference between two or more people. Instant conversion between feet/inches and centimeters.',
 
   // Chart SEO
-  'chart.title': 'Height Comparison Chart – Visual Height Reference Standards | Height Calculator',
-  'chart.desc': 'Comprehensive height comparison charts comparing human percentiles, celebrities, animals, and everyday items on a unified visual ruler.',
+  'chart.title': 'Height Chart & Percentile Reference | Height Calculator',
+  'chart.desc': 'Height charts and percentile references spanning babies, children and adults — see where any height falls against population benchmarks on a unified visual ruler.',
 
   // About SEO
-  'about.title': 'About Height Calculator – Purpose, Methodology & Technical Standards | Height Calculator',
-  'about.desc': 'Learn about Height Calculator mission to help people visually understand the height of anything through strict mathematical scaling and verified records.',
+  'about.title': 'About Height Calculator – Our Mission | Height Calculator',
+  'about.desc': 'Height Calculator helps parents and curious minds predict, track and understand height at every age — from baby growth percentiles to child adult-height predictions.',
 
   // How-To Guide SEO
-  'howto.title': 'How to Use the Height Comparison Tool | Height Calculator',
-  'howto.desc': 'Learn how to use Height Calculator\'s height comparison tool to compare people, animals, objects and characters, understand height differences, adjust comparisons and share results.',
+  'howto.title': 'How to Use the Height Calculator | Height Calculator',
+  'howto.desc': 'Learn how to use Height Calculator: measure height accurately, convert cm and ft/in, calculate height differences, check percentiles and understand growth charts.',
 
   // FAQ default questions & answers
   'faq.badge': 'Got Questions?',
   'faq.title': 'Frequently Asked Questions',
-  'faq.subtitle': 'Learn how our height comparison engine and proportional scaling algorithm work.',
+  'faq.subtitle': 'How the Height Calculator works — percentiles, predictions, units and data sources.',
 
-  'faq.q1': 'How accurate is the height comparison?',
-  'faq.a1': 'Our tool calculates height comparisons using strict mathematical geometry. Every person’s height is internally stored as an exact centimeter value. Visual models share a single unified coordinate space (viewBox 0 0 100 400) and scale proportionately using a dynamic linear factor (scale = maxVisualHeight / chartMaxCm). This guarantees that a 200 cm model is visually exactly 2× the height of a 100 cm model, and all models stand on the exact same 0 cm baseline floor.',
+  'faq.q1': 'What does the Height Calculator do?',
+  'faq.a1': 'Height Calculator is a free height calculator for babies, boys, girls and adults. Convert any height between centimeters and feet/inches, compare heights side by side, calculate the exact difference between two heights, check where a child’s height falls on a percentile chart, and estimate a child’s future adult height from the parents’ heights. Every result is an educational estimate — not medical advice.',
 
-  'faq.q2': 'Can I compare multiple people at once?',
-  'faq.a2': 'Yes! You can compare from 2 up to 20+ people simultaneously. The chart dynamically accommodates additional models by adjusting spacing and enabling smooth horizontal scrolling on smaller screens so the visual clarity of each silhouette is preserved.',
+  'faq.q2': 'How is a height percentile calculated?',
+  'faq.a2': 'A height percentile compares a child’s height against large population reference datasets for the same age and sex. A child at the 75th percentile is taller than about 75 out of 100 peers of the same age and sex. Our percentile references are based on the CDC growth charts (United States, ages 2–20) and the WHO Child Growth Standards (birth to age 5, used worldwide).',
 
-  'faq.q3': 'Can I compare male and female heights?',
-  'faq.a3': 'Yes, each participant can be designated as either Male or Female. Each gender features a distinct, anatomically proportioned silhouette with realistic shoulders, torso, arms, legs, and posture, while maintaining identical baseline alignment and height scale.',
+  'faq.q3': 'How accurate is the child height predictor?',
+  'faq.a3': 'The predictor uses the mid-parental height method, the standard formula pediatricians reference. For boys it is (father’s height + mother’s height + 13 cm) ÷ 2; for girls, (father’s height + mother’s height − 13 cm) ÷ 2. It is an estimate, not a guarantee: most children end up within about 8–10 cm (3–4 inches) of the predicted value, and genetics, nutrition, sleep and health all influence final height. No predictor is 100% accurate.',
 
-  'faq.q4': 'Can I enter height in feet and inches?',
-  'faq.a4': 'Yes. You can switch between Imperial (ft/in) and Metric (cm) anytime. When entering feet and inches (e.g., 5 ft 10 in), our engine converts it using the exact international yard and pound standard (1 inch = 2.54 cm, 1 foot = 30.48 cm).',
+  'faq.q4': 'Where does the growth data come from?',
+  'faq.a4': 'Our percentile and growth-chart references come from two authoritative public sources: the CDC (Centers for Disease Control and Prevention) growth charts, based on US national health surveys for ages 2–20, and the WHO (World Health Organization) Child Growth Standards for birth to age 5, built from a multi-country study of healthy children. Unit conversions use the exact international standard (1 inch = 2.54 cm).',
 
-  'faq.q5': 'Can I enter height in centimeters?',
-  'faq.a5': 'Yes, you can input height in centimeters directly (between 30 cm and 250 cm). You can also switch between imperial and metric units at any time without losing any entered data.',
+  'faq.q5': 'Can I enter height in feet and inches?',
+  'faq.a5': 'Yes. You can switch between Imperial (ft/in) and Metric (cm) at any time. When entering feet and inches (e.g. 5 ft 10 in), the calculator converts using the exact international standard (1 inch = 2.54 cm, 1 foot = 30.48 cm) — so 5 ft 10 in is precisely 177.8 cm.',
 
-  'faq.q6': 'Can I share my height comparison?',
-  'faq.a6': 'Yes. Clicking "Share" encodes your custom comparison into a URL that can be copied directly to your clipboard. Anyone who visits your link will view the exact same comparison without needing an account or database lookup.',
+  'faq.q6': 'Can I enter height in centimeters?',
+  'faq.a6': 'Yes, you can input height in centimeters directly (between 30 cm and 250 cm). You can switch between imperial and metric units at any time without losing any entered data.',
 
-  'faq.q7': 'How is the visual height calculated?',
-  'faq.a7': 'The chart determines the tallest participant and establishes a rounded vertical ruler limit (e.g. 180, 200, 220, or 240 cm). A single pixel scale factor (scale = visualHeight / rulerMax) is then applied to all participants equally. Feet are anchored precisely to the zero floor line, ensuring flawless visual ratios.',
+  'faq.q7': 'Is this medical advice?',
+  'faq.a7': 'No. Height Calculator provides educational estimates based on public growth references (CDC/WHO). It is not medical advice and cannot diagnose growth conditions. If you have concerns about your child’s growth, please consult a pediatrician or qualified healthcare professional.',
 };

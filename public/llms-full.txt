@@ -1,7 +1,7 @@
 # Height Calculator — Comprehensive LLM Knowledge Base
 
 > Website: https://height-calculator.net  
-> Purpose: Visual height comparison engine, anatomical scaling reference, and height comparison calculator.
+> Purpose: Free height calculator — compare, convert & understand any height. Height percentiles (CDC/WHO growth charts), child adult-height prediction from parents' heights, cm ↔ ft/in conversion, and true-scale side-by-side visual comparison for babies, boys, girls and adults.
 
 ---
 
@@ -14,62 +14,32 @@ Height Calculator uses a mathematically calibrated scaling pipeline designed to 
   - $1 \text{ inch} = 2.54 \text{ cm}$
   - $\text{Feet \& Inches}: \text{feet} = \lfloor \frac{\text{cm}}{30.48} \rfloor, \text{inches} = \text{round}((\frac{\text{cm}}{30.48} - \text{feet}) \times 12)$
 - Supported Formats: Metric (meters, centimeters), Imperial (feet, inches).
+- Percentile Engine: Heights are ranked against CDC growth-chart reference tables (ages 2–20) and WHO Child Growth Standards (birth–5) for the matching age and sex.
+- Child Height Predictor: Mid-parental height method — boys: $(\text{father} + \text{mother} + 13\text{ cm}) \div 2$; girls: $(\text{father} + \text{mother} - 13\text{ cm}) \div 2$ — reported with a typical range of ±8–10 cm. Estimates only, never exact, never medical advice.
 
 ---
 
 ## 2. Tools and URLs
 
 ### Core Platform
-- **Visual Canvas:** `https://height-calculator.net/`  
+- **Height Calculator Hub:** `https://height-calculator.net/height-calculator/`  
+  Percentile checks, growth charts, child height prediction and unit conversion in one place.
+- **Interactive Canvas:** `https://height-calculator.net/`  
   Supports up to 10 entities simultaneously. Features include color assignment, opacity adjustment, drag-and-drop manual positioning, auto-align mode, zoom (50%–200%), ruler toggle (cm/ft), difference indicators, and high-resolution PNG export.
-- **Height Comparison Calculator:** `https://height-calculator.net/height-comparison-calculator/`  
-  Direct input calculator showing absolute difference, percentage difference, ratio comparison, eye-level alignment estimate, and contextual comparisons (e.g. difference in terms of soda cans, tennis balls, or step heights).
-- **Height Comparison Chart:** `https://height-calculator.net/height-comparison-chart/`  
-  Visual scale benchmark reference ranging from 50 cm to 300+ cm.
 - **How to Use:** `https://height-calculator.net/how-to-use/`  
-  Comprehensive instructional guide for accurate height measurements, standing posture tips, and visual scale interpretation.
+  Instructional guide for accurate height measurement, unit conversion, percentile interpretation, and growth-chart reading.
+
+### Legacy routes (redirected)
+The previous comparison routes (`/compare/`, `/height-comparison-calculator/`, `/height-difference-calculator/`, `/height-comparison-chart/`, `/height-comparison-visualizer/`, `/height-comparison-couple/`, `/size-comparison/`, and the 10 category comparison directories) now 301-redirect to the Height Calculator hub.
 
 ---
 
-## 3. Entity Classification & Taxonomies
+## 3. Data Sources & Honesty Policy
 
-Height Calculator organizes over 1,400 entities across 10 structured categories:
-
-1. **Celebrities (`/celebrity-height-comparison/`)**:
-   Actors, athletes, public figures, historical leaders.
-   - Example routes:
-     - `/celebrity-height/brad-pitt/` (180 cm / 5'11")
-     - `/celebrity-height/taylor-swift/` (180 cm / 5'11")
-     - `/celebrity-height/dwayne-johnson/` (196 cm / 6'5")
-     - `/celebrity-height/tom-cruise/` (170 cm / 5'7")
-     - `/celebrity-height/virat-kohli/` (175 cm / 5'9")
-
-2. **Animals (`/animal-height-comparison/`)**:
-   Terrestrial and aquatic fauna measured by standing height or shoulder height.
-   - Example routes:
-     - `/animal-height-comparison/giraffe/` (550 cm / 18'0")
-     - `/animal-height-comparison/african-elephant/` (330 cm / 10'10")
-     - `/animal-height-comparison/lion/` (120 cm / 3'11")
-     - `/animal-height-comparison/horse/` (160 cm / 5'3")
-
-3. **Anime & Manga (`/anime-height-comparison/`)**:
-   Canonical character heights from popular series including Dragon Ball, One Piece, Naruto, Attack on Titan, and Bleach.
-
-4. **Films & Characters (`/film-height-comparison/`, `/fictional-character-height-comparison/`)**:
-   Cinematic creatures, superheroes, video game figures, comic characters.
-
-5. **Everyday Objects & Architecture (`/object-height-comparison/`)**:
-   Standard physical items providing real-world spatial anchors.
-   - Examples: Door (203 cm), Refrigerator (175 cm), Sedan Car (145 cm), Dining Table (76 cm), Chair (85 cm), Bicycle (100 cm).
-
-6. **Plants & Trees (`/plant-height-comparison/`)**:
-   Botanical specimens from standard indoor potted plants (40 cm) to giant sequoias and palm trees.
-
-7. **Sports Equipment (`/sports-height-comparison/`)**:
-   Regulation basketball hoops (305 cm / 10'0"), tennis nets (91 cm), soccer goals (244 cm), volleyball nets (243 cm).
-
-8. **Human Demographic Benchmarks (`/people-height-comparison/`)**:
-   Global statistical averages for adult males (175 cm) and adult females (163 cm).
+- **CDC growth charts** (Centers for Disease Control and Prevention): US national health survey reference data, ages 2–20.
+- **WHO Child Growth Standards** (World Health Organization): multi-country study of healthy children, birth to age 5.
+- **Prediction accuracy**: the mid-parental height estimate typically lands within ±8–10 cm (3–4 in) of actual adult height for most children. Genetics, nutrition, sleep and health all influence the outcome. No predictor is 100% accurate.
+- **Medical disclaimer**: all results are educational estimates, not medical advice. Growth concerns should be discussed with a pediatrician.
 
 ---
 

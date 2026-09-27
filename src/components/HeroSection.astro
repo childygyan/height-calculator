@@ -7,6 +7,10 @@ interface Props {
 }
 
 const { locale = getLocaleFromUrl(Astro.url) } = Astro.props;
+
+// Phase 1 repositioning: primary CTA always opens the calculator hub (EN-only page, plain href).
+const primaryCtaHref = '/height-calculator/';
+const secondaryCtaHref = locale === 'en' ? '#how-it-works' : '#categories';
 ---
 
 <section class="max-w-5xl mx-auto text-center pt-6 sm:pt-10 pb-8 sm:pb-12">
@@ -29,7 +33,7 @@ const { locale = getLocaleFromUrl(Astro.url) } = Astro.props;
   <!-- Primary & Secondary CTAs -->
   <div class="mt-7 flex flex-wrap items-center justify-center gap-3.5">
     <a
-      href={getLocalizedPath('/compare/', locale)}
+      href={primaryCtaHref}
       class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-bold text-sm sm:text-base text-white bg-brand-600 hover:bg-brand-700 active:bg-brand-800 shadow-soft transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
     >
       {t(locale, 'hero.startComparing')}
@@ -39,7 +43,7 @@ const { locale = getLocaleFromUrl(Astro.url) } = Astro.props;
       </svg>
     </a>
     <a
-      href="#categories"
+      href={secondaryCtaHref}
       class="inline-flex items-center justify-center px-5 py-3 rounded-lg font-semibold text-sm sm:text-base text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 shadow-soft-sm transition-all"
     >
       {t(locale, 'hero.exploreComparisons')}
