@@ -1,11 +1,17 @@
 # PRD: Height Calculator — Content & Brand Repositioning
 
-**Status:** Draft for Firoz's approval — **v2: calculator-first expansion added 2026-09-27**
+**Status:** Draft for Firoz's approval — **v3: Firoz's 4 decisions locked 2026-09-27**
 **Date:** 2026-09-27
 **Repo:** `childygyan/height-calculator` (local: `~/workspace/height-calculator`, branch `master`)
 **Domain:** height-calculator.net
 
 > **v2 direction (Firoz, 2026-09-27):** Sirf words rewrite kaafi nahi hai. Site ko **calculator-first** banana hai — naye "height calculator" keywords (boys, percentile, parents, CDC/UK, baby, chart) target karne ke liye **nayi URL structure + naye calculator tools**. Ye §5 ka **Option B** hai. Neeche §13–§17 me pura plan hai.
+>
+> **v3 decisions (Firoz, 2026-09-27):**
+> 1. **Tagline:** naya banega (calculator-first context) — T1/T2/T3 options §5 me, Firoz pick karega.
+> 2. **Language:** naya calculator section **EN-first** — baaki 9 locales baad me.
+> 3. **Purana comparison: HATAO** — comparison routes delete, key URLs se 301 redirect naye hub par. (Site abhi live/indexed nahi hai, isliye equity loss ka risk nahi.)
+> 4. **Layout:** `/height-calculator/` hub ka **naya calculator-focused layout** banega.
 
 ---
 
@@ -55,9 +61,14 @@ Tagline candidates:
 **Option B: pivot toward real calculators.**
 Keep comparison as one section; add/emphasize cm↔ft/in converter, height-difference calculator, (later) BMI / child-height predictor. Bigger build, new pages, new SEO targets. Only choose if the product should actually become calculator-first.
 
-*Default if no answer: Option A with tagline A1.*
+*Default if no answer: Option A with tagline A1. — SUPERSEDED: Option B confirmed v2.*
 
 > **UPDATE 2026-09-27:** Firoz ne "height calculator" keyword clusters (boys, percentile, parents, CDC/UK, baby, chart) diye aur URL structure change manga hai — matlab direction **Option B (calculator-first pivot)** confirm hota hai. §13–§17 isi par based hai.
+
+**Naye tagline options (calculator-first, Firoz pick karega):**
+- **T1:** "Height Calculator — How Tall Will Your Child Be?"
+- **T2:** "Height Calculator — Percentiles, Predictions & Charts for Every Age"
+- **T3:** "Height Calculator — From Baby's First cm to Adult Height"
 
 ## 6. Terminology map (EN master)
 
@@ -130,21 +141,45 @@ Brand mentions already swapped; verify, no voice rewrite needed.
 3. Default locale: keep English at `/` (pt-BR at `/pt/`), or make pt-BR the default?
 4. Blog: light rewrite (this PRD) or full re-do of the 6 articles?
 
-## 12. Execution plan (after PRD approval)
+## 12. Execution plan (after PRD approval) — v3
 
-- **Phase 1:** EN master — homepage + SEO meta + FAQ (brand reword, §6–§7).
-- **Phase 2:** EN — tool pages + category hubs + about/howto/blog (brand reword).
-- **Phase 3:** Propagate brand reword to 9 locales (+ pt-BR quality pass).
-- **Phase 4:** NEW — calculator-first expansion: URL structure + tools (§13–§16).
-- **Phase 5:** QA — build, i18n check, SEO audit, browser spot-check, commit + push.
+- **Phase 1:** Comparison removal — routes delete, 301 redirects, nav/sitemap/homepage se hatao (§13.3).
+- **Phase 2:** EN brand reword — homepage (naya hero + T-tagline), about/howto, FAQ.
+- **Phase 3:** NEW — `/height-calculator/` hub naya layout + tools: boys, girls, baby, percentile (CDC/WHO/UK-WHO), child-height predictor, charts (§13–§14). **EN-only.**
+- **Phase 4:** QA — build, i18n check (EN keys; baaki locales me fallback), SEO audit, browser spot-check, commit + push.
+- **Phase 5 (later):** 9 locales me propagation + pt-BR quality pass.
 
 ---
 
 ## 13. New URL structure (calculator-first)
 
-Old comparison URLs (`/height-comparison-*`, `/compare`, category hubs) **stay live** — unko delete/redirect karne se existing SEO equity jal jayegi. Naya calculator section **alag taxonomy** me banega aur homepage/nav me **primary** banega; comparison section secondary me shift hoga.
+> **v3: Purana comparison HATAO (Firoz's decision).** Site abhi live/indexed nahi hai, isliye purane URLs ki koi SEO equity nahi hai — safe delete. Comparison routes remove honge; key URLs se 301 redirect naye calculator hub/pages par (bookmarks/safety ke liye).
 
-### 13.1 Proposed URL map (EN)
+### 13.0 Comparison removal
+
+**Delete hone wale routes:**
+`/compare`, `/height-comparison`, `/height-comparison-calculator`, `/height-difference-calculator`, `/height-comparison-chart`, `/height-comparison-visualizer`, `/height-comparison-couple`, `/size-comparison`, `/celebrity-height`, `/celebrity-height-comparison`, `/animal-height-comparison`, `/anime-height-comparison`, `/apparel-height-comparison`, `/fictional-character-height-comparison`, `/film-height-comparison`, `/object-height-comparison`, `/people-height-comparison`, `/plant-height-comparison`, `/sports-height-comparison`, `/dashboard`
+
+**301 redirects (public/_redirects me):**
+
+| Old URL | New URL |
+|---|---|
+| `/compare` | `/height-calculator/` |
+| `/height-comparison-calculator` | `/height-calculator/` |
+| `/height-difference-calculator` | `/height-calculator/` |
+| `/height-comparison` | `/height-calculator/` |
+| `/height-comparison-chart` | `/height-calculator/boys-chart/` |
+| `/height-comparison-visualizer` | `/height-calculator/` |
+| `/height-comparison-couple` | `/height-calculator/` |
+| `/size-comparison` | `/height-calculator/` |
+| `/*-height-comparison` (category hubs) | `/height-calculator/` |
+| `/celebrity-height` | `/height-calculator/` |
+
+**Saath me:** nav se comparison links hatao, homepage rewrite (calculator-first hero), sitemap se purane URLs hatao, entity/comparison data files jo ab koi page use nahi karta — remove. Blog ke 6 comparison-themed articles: hatao (baad me calculator-themed articles likhenge).
+
+**Rehne wale pages:** `/`, `/height-calculator/*` (naya), `/about`, `/how-to-use`, `/contact`, `/privacy`, `/terms`.
+
+### 13.1 Proposed URL map (EN) — naya calculator section
 
 | Keyword cluster | New URL | Page / tool |
 |---|---|---|
@@ -163,10 +198,10 @@ Old comparison URLs (`/height-comparison-*`, `/compare`, category hubs) **stay l
 | height calculator boys cdc | `/height-calculator/boys-percentile/` (CDC tab default) | CDC tab pre-selected |
 | height calculator boys most accurate | content angle, no separate URL | "How accurate" section inside predictor/percentile pages |
 
-### 13.2 Site hierarchy
+### 13.2 Site hierarchy (v3 — comparison hata diya)
 
 ```
-/height-calculator/            (hub)
+/height-calculator/            (hub — NAYA layout, §13.3)
 ├── /boys/                     (boys calculator)
 ├── /girls/                    (girls calculator)
 ├── /baby/                     (baby 0–24m)
@@ -178,7 +213,19 @@ Old comparison URLs (`/height-comparison-*`, `/compare`, category hubs) **stay l
 └── /uk/boys-percentile/       (UK-WHO version)
 ```
 
-Nav order: **Height Calculator hub → Compare tool → Charts → Categories → Blog**. Homepage hero ab calculator hub ko promote karega.
+### 13.3 Naya hub layout (`/height-calculator/`)
+
+Existing homepage style **nahi** — fresh calculator-focused layout:
+1. **Hero:** T-tagline + short subline + **live quick-calculator widget** (tabs: Boys | Girls | Baby | Predictor) — user bina scroll kiye calculate kar sake.
+2. **Tool cards grid:** har calculator ka card (icon, naam, ek-line desc, CTA) — boys, girls, baby, percentile, predictor, charts.
+3. **How it works:** 3 steps (measure → enter → understand result).
+4. **Trust strip:** data sources (CDC/WHO/UK-WHO), medical disclaimer link.
+5. **FAQ:** 4–6 calculator-specific sawal.
+6. **Footer CTA:** "Start calculating".
+
+Homepage (`/`) ka hero bhi rewrite hoga — calculator-first, T-tagline ke saath, primary CTA `/height-calculator/` par.
+
+Nav order (v3): **Height Calculator → Charts → About → How to Use → Contact**. Comparison links khatm.
 
 ## 14. New tools to build
 
@@ -211,18 +258,19 @@ Nav order: **Height Calculator hub → Compare tool → Charts → Categories �
 3. **"Most accurate" claims:** koi bhi page ye claim nahi karega ki prediction 100% accurate hai — range + limitations hamesha saath me.
 4. Existing honesty rules (no fake reviewers/testimonials/stats) continue.
 
-## 16. SEO plan for new section
+## 16. SEO plan for new section (v3)
 
-- Har naya URL: unique title/desc/H1 targeting apna keyword cluster (§13.1 table), EN me launch.
-- Internal linking: hub ↔ tool pages ↔ relevant blog/category pages; homepage se hub ko prominent link.
-- Sitemap: naye URLs auto-include (existing sitemap pipeline).
-- Purane comparison URLs: untouched (no redirects) — equity safe. Agar baad me koi 1:1 replacement banta hai to 301 tab decide hoga, abhi nahi.
-- Launch order: **EN first** (keywords English hain) → phir pt-BR + baaki locales (decide §17.3).
+- Har naya URL: unique title/desc/H1 targeting apna keyword cluster (§13.1 table), **EN me launch**.
+- Purane comparison URLs: **delete + §13.0 ke 301 redirects**. Sitemap se purane URLs hatao, naye auto-include.
+- Internal linking: hub ↔ tool pages; homepage hero → hub.
+- `llms.txt` / `llms-full.txt`: regenerate (purana comparison framing hatao).
+- i18n: naye EN keys add; baaki 9 locales me English fallback values taaki `i18n:check` pass rahe (proper translation Phase 5 me).
+- Launch order: **EN first** → phir pt-BR + baaki locales.
 
-## 17. Updated open decisions for Firoz
+## 17. Decisions — v3 status (2026-09-27)
 
-1. ✅ Direction: **Option B confirmed** (calculator-first) — §13–§16 ke hisaab se.
-2. Tagline: A1 / A2 / A3 / apna koi? (ab calculator-first context me — naya tagline bhi suggest kar sakta hoon)
-3. Naye calculator pages: **EN-first launch** ya day-one sab 10 locales me?
-4. Purane comparison pages: hamesha live rakhein (recommended) ya kuch ko 301 karke naye URLs me merge karein?
-5. `/height-calculator/` hub ka design: existing homepage style me ya alag calculator-focused layout?
+1. ✅ Direction: **Option B confirmed** (calculator-first).
+2. ⏳ Tagline: **T1 / T2 / T3** — Firoz pick karega (§5).
+3. ✅ Language: **EN-first** — naya section sirf English me launch.
+4. ✅ Purana comparison: **HATAO** — routes delete + 301 (§13.0).
+5. ✅ Hub layout: **naya calculator-focused** (§13.3).
