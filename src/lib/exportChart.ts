@@ -207,13 +207,21 @@ export async function downloadChartAsPng(
   ctx.strokeRect(10, 10, width - 20, height - 20);
 
   // 2. Header & Branding
+  ctx.textAlign = 'left';
   ctx.fillStyle = '#0f172a';
   ctx.font = 'bold 24px Inter, system-ui, sans-serif';
-  ctx.fillText('Height Comparison Tool', 40, 52);
+  ctx.fillText('Height Calculator', 40, 52);
 
   ctx.fillStyle = '#64748b';
   ctx.font = '14px Inter, system-ui, sans-serif';
-  ctx.fillText('Human, Celebrity, Animal & Object Comparison • Accurate Scale', 40, 76);
+  ctx.fillText('Visual Comparison • Accurate Scale', 40, 76);
+
+  // Domain branding (top-right)
+  ctx.textAlign = 'right';
+  ctx.fillStyle = '#059669';
+  ctx.font = 'bold 14px Inter, system-ui, sans-serif';
+  ctx.fillText('height-calculator.net', width - 40, 52);
+  ctx.textAlign = 'left';
 
   // 3. Draw Horizontal Grid Lines and Ruler Ticks
   const ticks = generateRulerTicks(rulerMaxCm, rulerUnit);
@@ -365,6 +373,13 @@ export async function downloadChartAsPng(
     );
     ctx.restore();
   }
+
+  // 6.8 Footer branding (domain)
+  ctx.textAlign = 'center';
+  ctx.fillStyle = '#059669';
+  ctx.font = 'bold 13px Inter, system-ui, sans-serif';
+  ctx.fillText('height-calculator.net', width / 2, height - 16);
+  ctx.textAlign = 'left';
 
   // 7. Trigger download
   return new Promise((resolve) => {
