@@ -11,9 +11,7 @@ http://www.height-calculator.net/*    https://height-calculator.net/:splat  301!
 http://height-calculator.net/*        https://height-calculator.net/:splat  301!
 
 # Phase 1: Retired comparison routes → /height-calculator/ (site never went live, no indexed SEO equity)
-# NOTE: /height-calculator/* targets are built in a later phase.
-/compare/                                /height-calculator/  301
-/compare                                 /height-calculator/  301
+# NOTE: /compare/ is a live page again (Sep 2026) — its old redirect was removed.
 /height-comparison/                      /height-calculator/  301
 /height-comparison                       /height-calculator/  301
 /height-comparison-calculator/           /height-calculator/  301

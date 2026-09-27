@@ -16,6 +16,7 @@ const { locale = getLocaleFromUrl(Astro.url) } = Astro.props;
 const mainNav = [
   { label: t(locale, 'nav.calculator'), href: '/height-calculator/' },
   { label: t(locale, 'nav.charts'), href: '/height-calculator/boys-chart/' },
+  { label: t(locale, 'nav.compare'), href: '/compare/' },
   { label: t(locale, 'nav.about'), href: getLocalizedPath('/about/', locale) },
   { label: t(locale, 'nav.howToUse'), href: getLocalizedPath('/how-to-use/', locale) },
   { label: t(locale, 'nav.contact'), href: '/contact/' },
