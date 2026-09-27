@@ -60,4 +60,44 @@ export default {
   'cta.final.title': 'جاهز لحساب طولك؟',
   'cta.final.text': 'افتح مركز Height Calculator — النسب المئوية، ومخططات النمو، والتنبؤ بطول الأطفال، وتحويل الوحدات، كل ذلك في مكان واحد.',
   'cta.final.button': 'ابدأ الحساب',
+
+  // Hero visual (growth-chart motif)
+  'hero.visualTitle': 'معاينة مخطط النمو',
+
+  // Live calculators (tabbed widget section)
+  'livetools.badge': 'جرّبه الآن',
+  'livetools.title': 'حاسبات الطول المباشرة',
+  'livetools.desc': 'حوّل الوحدات، أو تحقق من النسبة المئوية للنمو، أو توقّع طول الطفل عند البلوغ — هنا مباشرة، الآن. كل شيء يعمل في متصفحك؛ لا يُرفع شيء ولا يُخزَّن شيء.',
+  'livetools.tab.converter': 'محول الوحدات',
+  'livetools.tab.percentile': 'النسبة المئوية للطول',
+  'livetools.tab.predictor': 'متنبئ طول الطفل',
+
+  // Unit converter widget
+  'converter.title': 'محول وحدات الطول',
+  'converter.desc': 'اكتب الطول في أي جهة — الجهة الأخرى تتحول فورًا.',
+  'converter.cmLabel': 'سنتيمترات',
+  'converter.ftLabel': 'أقدام',
+  'converter.inLabel': 'بوصات',
+  'converter.hint': 'المعيار الدولي الدقيق: 1 بوصة = 2.54 سم.',
+
+  // Homepage percentile widget
+  'homepercentile.heading': 'فحص النسبة المئوية للطول',
+  'homepercentile.intro': 'أين يقع طول الطفل بين أقرانه؟ أدخل العمر والطول للحصول على النسبة المئوية لـ CDC فورًا (الأعمار 2–20).',
+
+  // Homepage predictor widget
+  'homepredictor.heading': 'متنبئ طول الطفل',
+  'homepredictor.intro': 'أدخل طول كلا الوالدين لتقدير طول الطفل المحتمل عند البلوغ — يُعرض دائمًا بنطاق صادق ±8.5 سم.',
+
+  // Tool suite grid
+  'toolsuite.badge': 'مجموعة الحاسبات',
+  'toolsuite.title': 'كل حاسبات الطول في مكان واحد',
+  'toolsuite.desc': 'تسع أدوات متخصصة — النسب المئوية ومخططات النمو والتنبؤ — كل منها مبني على مراجع منشورة من CDC وWHO وWHO البريطانية.',
+  'toolsuite.open': 'افتح الحاسبة',
+
+  // EN-only tool teaser (used on localized homepages)
+  'entool.percentile.title': 'حاسبة النسبة المئوية للطول',
+  'entool.percentile.text': 'شاهد بالضبط أين يقع طول الطفل على مخططات نمو CDC وWHO — مع الدرجة المعيارية (z-score) والوسيط المرجعي.',
+  'entool.predictor.title': 'متنبئ طول الطفل',
+  'entool.predictor.text': 'قدّر طول الطفل عند البلوغ من طول كلا الوالدين — دائمًا بنطاق صادق.',
+  'entool.button': 'افتح بالإنجليزية',
 };

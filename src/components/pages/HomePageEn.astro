@@ -1,15 +1,24 @@
 ---
-// EN-ONLY calculator-first homepage (Phase 2 repositioning).
-// Other locales keep rendering the legacy sections in HomePage.astro
-// until their own rewrite phase; all copy here is intentionally English.
+// EN-ONLY calculator-first homepage: hero + LIVE calculator widgets
+// (unit converter, percentile check, child predictor) + tool suite.
 import Layout from '../../layouts/Layout.astro';
-import ComparisonTool from '../ComparisonTool.astro';
 import HeroSection from '../HeroSection.astro';
 import FAQ from '../FAQ.astro';
+import TrustStrip from '../calc/TrustStrip.astro';
+import PercentileTool from '../calc/PercentileTool.astro';
+import PredictorTool from '../calc/PredictorTool.astro';
+import UnitConverter from '../calc/UnitConverter.astro';
+import { CALC_TOOLS } from '../calc/toolList.js';
 import { SITE } from '../../config/site';
 import { t } from '../../i18n';
 
 const canonicalUrl = `${SITE.siteUrl}/`;
+
+const tabs = [
+  { id: 'converter', label: t('en', 'livetools.tab.converter') },
+  { id: 'percentile', label: t('en', 'livetools.tab.percentile') },
+  { id: 'predictor', label: t('en', 'livetools.tab.predictor') },
+];
 
 const steps = [
   {
@@ -37,27 +46,111 @@ const steps = [
   locale="en"
 >
   <div class="max-w-[1680px] mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-4">
-    <!-- Hero Section -->
+    <!-- Hero -->
     <HeroSection locale="en" />
 
-    <!-- Interactive Calculator Workspace -->
-    <section id="calculator-tool" class="scroll-mt-20 my-8 sm:my-12">
-      <div class="mb-4 text-center">
-        <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-blue-400 bg-brand-50 dark:bg-slate-800 px-3 py-1 rounded-full">
-          {t('en', 'section.liveToolBadge')}
+    <!-- Live calculators -->
+    <section id="live-calculators" class="scroll-mt-20 my-8 sm:my-12" aria-label={t('en', 'livetools.title')}>
+      <div class="mb-6 text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-700 dark:text-brand-300 bg-brand-100 dark:bg-brand-950/60 border border-brand-200/60 dark:border-brand-800/60 px-3.5 py-1.5 rounded-full">
+          {t('en', 'livetools.badge')}
         </span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-2">
-          {t('en', 'section.liveToolTitle')}
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-3">
+          {t('en', 'livetools.title')}
         </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 max-w-2xl mx-auto leading-relaxed">
+          {t('en', 'livetools.desc')}
+        </p>
       </div>
-      <ComparisonTool locale="en" />
+
+      <div class="flex justify-center">
+        <div class="inline-flex gap-1 p-1 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700" role="tablist" aria-label={t('en', 'livetools.title')}>
+          {tabs.map((tab) => (
+            <button
+              type="button"
+              role="tab"
+              data-htab={tab.id}
+              aria-selected={tab.id === 'converter' ? 'true' : 'false'}
+              class:list={[
+                'rounded-xl px-4 sm:px-6 py-2.5 text-sm font-bold transition-colors',
+                tab.id === 'converter'
+                  ? 'bg-brand-600 text-white shadow-soft-sm'
+                  : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white',
+              ]}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div class="mt-5 max-w-3xl mx-auto">
+        <div data-htabpanel="converter" role="tabpanel">
+          <UnitConverter id="home-converter" locale="en" />
+        </div>
+        <div data-htabpanel="percentile" role="tabpanel" hidden>
+          <PercentileTool
+            id="home-percentile"
+            sex="both"
+            standards={['cdc']}
+            defaultStandard="cdc"
+            ageMode="ym"
+            heading={t('en', 'homepercentile.heading')}
+            intro={t('en', 'homepercentile.intro')}
+          />
+        </div>
+        <div data-htabpanel="predictor" role="tabpanel" hidden>
+          <PredictorTool
+            id="home-predictor"
+            heading={t('en', 'homepredictor.heading')}
+            intro={t('en', 'homepredictor.intro')}
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Tool suite grid -->
+    <section class="mt-16 sm:mt-24" aria-label={t('en', 'toolsuite.title')}>
+      <div class="text-center mb-8">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-700 dark:text-brand-300 bg-brand-100 dark:bg-brand-950/60 border border-brand-200/60 dark:border-brand-800/60 px-3.5 py-1.5 rounded-full">
+          {t('en', 'toolsuite.badge')}
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-3">
+          {t('en', 'toolsuite.title')}
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 max-w-2xl mx-auto leading-relaxed">
+          {t('en', 'toolsuite.desc')}
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+        {CALC_TOOLS.map((tool) => (
+          <a
+            href={tool.href}
+            class="group rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-5 shadow-soft-sm hover:shadow-soft hover:border-brand-400 dark:hover:border-brand-600 hover:-translate-y-0.5 transition-all"
+          >
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                {tool.name}
+              </h3>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 text-slate-300 group-hover:text-brand-500 group-hover:translate-x-0.5 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1.5 leading-relaxed">{tool.desc}</p>
+            <span class="inline-block text-xs font-bold text-brand-600 dark:text-brand-400 mt-3 group-hover:underline">
+              {t('en', 'toolsuite.open')}
+            </span>
+          </a>
+        ))}
+      </div>
     </section>
 
     <!-- How It Works: 3 steps -->
-    <section id="how-it-works" class="mt-20 pt-12 border-t border-slate-200 dark:border-slate-800 scroll-mt-20">
+    <section id="how-it-works" class="mt-16 sm:mt-24 pt-12 border-t border-slate-200 dark:border-slate-800 scroll-mt-20">
       <div class="max-w-5xl mx-auto">
         <div class="text-center mb-10">
-          <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-blue-400 bg-brand-50 dark:bg-slate-800 px-3 py-1 rounded-full">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-700 dark:text-brand-300 bg-brand-100 dark:bg-brand-950/60 border border-brand-200/60 dark:border-brand-800/60 px-3.5 py-1.5 rounded-full">
             How It Works
           </span>
           <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-3">
@@ -70,8 +163,8 @@ const steps = [
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {steps.map((step) => (
-            <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft text-center">
-              <div class="w-12 h-12 mx-auto rounded-full bg-brand-600 dark:bg-blue-500 text-white font-black text-xl flex items-center justify-center mb-4">
+            <div class="p-6 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft text-center">
+              <div class="w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-brand-500 to-teal-600 text-white font-black text-xl flex items-center justify-center mb-4 shadow-soft-sm">
                 {step.number}
               </div>
               <h3 class="font-extrabold text-lg text-slate-900 dark:text-white">
@@ -86,59 +179,73 @@ const steps = [
       </div>
     </section>
 
-    <!-- Trust / disclaimer strip -->
-    <section class="mt-20">
-      <div class="max-w-5xl mx-auto">
-        <div class="p-6 sm:p-8 rounded-3xl bg-brand-50/60 dark:bg-slate-800/60 border border-brand-200/60 dark:border-slate-700 shadow-soft-sm">
-          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <div class="w-11 h-11 shrink-0 rounded-2xl bg-brand-600 dark:bg-blue-500 text-white flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                <polyline points="9 12 11 14 15 10"></polyline>
-              </svg>
-            </div>
-            <div>
-              <h2 class="font-extrabold text-base sm:text-lg text-slate-900 dark:text-white">
-                Built on real CDC &amp; WHO growth data
-              </h2>
-              <p class="text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
-                Percentiles and growth references come from the CDC growth charts and WHO Child Growth Standards — not guesswork.
-                Results are educational estimates, never medical advice. If you have concerns about a child’s growth, please consult a pediatrician.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Trust strip -->
+    <div class="mt-16 sm:mt-20">
+      <TrustStrip />
+    </div>
 
     <!-- FAQ teaser (first 4 questions) -->
     <FAQ locale="en" limit={4} />
 
     <!-- Final CTA -->
-    <section class="mt-20 mb-8">
+    <section class="mt-16 sm:mt-20 mb-8">
       <div class="max-w-5xl mx-auto">
-        <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-brand-600 to-blue-700 dark:from-brand-700 dark:to-blue-800 text-center shadow-soft">
-          <span class="text-xs font-bold uppercase tracking-widest text-blue-100 bg-white/15 px-3 py-1 rounded-full">
-            Free • No sign-up
-          </span>
-          <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight mt-4">
-            Ready to calculate your height?
-          </h2>
-          <p class="text-sm sm:text-base text-blue-100 mt-3 max-w-2xl mx-auto leading-relaxed">
-            Open the Height Calculator hub — percentiles, growth charts, child height prediction and unit conversion, all in one place.
-          </p>
-          <a
-            href="/height-calculator/"
-            class="inline-flex items-center justify-center mt-6 px-8 py-3.5 rounded-xl font-bold text-sm sm:text-base text-brand-700 bg-white hover:bg-blue-50 active:bg-blue-100 shadow-soft transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
-          >
-            Start Calculating
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
+        <div class="relative overflow-hidden p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-brand-600 via-brand-700 to-teal-700 text-center shadow-soft">
+          <div class="absolute inset-0 opacity-10" aria-hidden="true">
+            <div class="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-white"></div>
+            <div class="absolute -bottom-32 -right-16 w-96 h-96 rounded-full bg-white"></div>
+          </div>
+          <div class="relative">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-100 bg-white/15 px-3.5 py-1.5 rounded-full">
+              Free • No sign-up
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight mt-4">
+              Ready to calculate your height?
+            </h2>
+            <p class="text-sm sm:text-base text-brand-100 mt-3 max-w-2xl mx-auto leading-relaxed">
+              Open the Height Calculator hub — percentiles, growth charts, child height prediction and unit conversion, all in one place.
+            </p>
+            <a
+              href="/height-calculator/"
+              class="inline-flex items-center justify-center mt-6 px-8 py-3.5 rounded-2xl font-bold text-sm sm:text-base text-brand-700 bg-white hover:bg-brand-50 active:bg-brand-100 shadow-soft transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            >
+              Start Calculating
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
   </div>
 </Layout>
+
+<script>
+  import { initAllPercentileTools, initAllPredictorTools } from "../../lib/calc-tools.js";
+
+  initAllPercentileTools();
+  initAllPredictorTools();
+
+  // Homepage tab switching (converter / percentile / predictor)
+  const tabBtns = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-htab]"));
+  const panels = Array.from(document.querySelectorAll<HTMLElement>("[data-htabpanel]"));
+  const paintTabs = (active: string) => {
+    tabBtns.forEach((b) => {
+      const on = b.dataset.htab === active;
+      b.setAttribute("aria-selected", on ? "true" : "false");
+      b.classList.toggle("bg-brand-600", on);
+      b.classList.toggle("text-white", on);
+      b.classList.toggle("shadow-soft-sm", on);
+      b.classList.toggle("text-slate-600", !on);
+      b.classList.toggle("dark:text-slate-300", !on);
+    });
+    panels.forEach((p) => {
+      p.hidden = p.dataset.htabpanel !== active;
+    });
+  };
+  tabBtns.forEach((b) =>
+    b.addEventListener("click", () => paintTabs(b.dataset.htab || "converter"))
+  );
+</script>

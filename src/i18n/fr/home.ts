@@ -60,4 +60,44 @@ export default {
   'cta.final.title': 'Prêt à calculer votre taille ?',
   'cta.final.text': 'Ouvrez le centre Height Calculator — percentiles, courbes de croissance, prédiction de taille et conversion d’unités, tout au même endroit.',
   'cta.final.button': 'Commencer à Calculer',
+
+  // Hero visual (growth-chart motif)
+  'hero.visualTitle': 'Aperçu de la Courbe de Croissance',
+
+  // Live calculators (tabbed widget section)
+  'livetools.badge': 'Essayez Maintenant',
+  'livetools.title': 'Calculateurs de Taille en Direct',
+  'livetools.desc': 'Convertissez les unités, vérifiez un percentile de croissance ou prédisez la taille adulte d’un enfant — ici même, tout de suite. Tout s’exécute dans votre navigateur ; rien n’est téléversé ni stocké.',
+  'livetools.tab.converter': 'Convertisseur d’Unités',
+  'livetools.tab.percentile': 'Percentile de Taille',
+  'livetools.tab.predictor': 'Prédicteur Enfant',
+
+  // Unit converter widget
+  'converter.title': 'Convertisseur d’Unités de Taille',
+  'converter.desc': 'Tapez une taille d’un côté — l’autre côté se convertit instantanément.',
+  'converter.cmLabel': 'Centimètres',
+  'converter.ftLabel': 'Pieds',
+  'converter.inLabel': 'Pouces',
+  'converter.hint': 'Norme internationale exacte : 1 pouce = 2,54 cm.',
+
+  // Homepage percentile widget
+  'homepercentile.heading': 'Vérification du Percentile de Taille',
+  'homepercentile.intro': 'Où se situe la taille d’un enfant parmi ses pairs ? Saisissez l’âge et la taille pour obtenir instantanément le percentile du CDC (âges 2–20).',
+
+  // Homepage predictor widget
+  'homepredictor.heading': 'Prédicteur de Taille d’Enfant',
+  'homepredictor.intro': 'Saisissez la taille des deux parents pour estimer la probable taille adulte d’un enfant — toujours affichée avec une honnête fourchette de ±8,5 cm.',
+
+  // Tool suite grid
+  'toolsuite.badge': 'Suite de Calculateurs',
+  'toolsuite.title': 'Tous les Calculateurs de Taille au Même Endroit',
+  'toolsuite.desc': 'Neuf outils ciblés — percentiles, courbes de croissance et prédiction — chacun basé sur des références publiées du CDC, de l’OMS et de l’OMS Royaume-Uni.',
+  'toolsuite.open': 'Ouvrir le calculateur',
+
+  // EN-only tool teaser (used on localized homepages)
+  'entool.percentile.title': 'Calculateur de Percentile de Taille',
+  'entool.percentile.text': 'Voyez exactement où se situe la taille d’un enfant sur les courbes de croissance du CDC et de l’OMS — avec score z et médiane de référence.',
+  'entool.predictor.title': 'Prédicteur de Taille d’Enfant',
+  'entool.predictor.text': 'Estimez la taille adulte d’un enfant à partir de la taille des deux parents — toujours avec une fourchette honnête.',
+  'entool.button': 'Ouvrir en Anglais',
 };

@@ -1,11 +1,13 @@
 ---
 // Calculator-first homepage for non-English locales.
 // Mirrors HomePageEn.astro's visual design; all copy comes from i18n keys.
-// The interactive tools are English-only: localized CTAs link to the
-// /height-calculator/ hub instead of embedding a tool.
+// The unit converter is i18n-aware and embedded live; percentile and
+// predictor tools are EN-only and shown as teasers linking to the
+// /height-calculator/ hub instead of embedding an English-only tool.
 import Layout from '../../layouts/Layout.astro';
 import HeroSection from '../HeroSection.astro';
 import FAQ from '../FAQ.astro';
+import UnitConverter from '../calc/UnitConverter.astro';
 import { SITE } from '../../config/site';
 import { getLocalizedPath, t } from '../../i18n';
 import type { Locale } from '../../i18n/locales';
@@ -17,6 +19,12 @@ interface Props {
 const { locale } = Astro.props;
 
 const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath('/', locale)}`;
+
+const tabs = [
+  { id: 'converter', label: t(locale, 'livetools.tab.converter') },
+  { id: 'percentile', label: t(locale, 'livetools.tab.percentile') },
+  { id: 'predictor', label: t(locale, 'livetools.tab.predictor') },
+];
 
 const steps = [
   { title: t(locale, 'howitworks.step1.title'), text: t(locale, 'howitworks.step1.text') },
@@ -32,81 +40,254 @@ const steps = [
   locale={locale}
 >
   <div class="max-w-[1680px] mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-4">
+    <!-- Hero -->
     <HeroSection locale={locale} />
 
-    <!-- Calculator hub teaser (interactive tools are EN-only) -->
-    <section id="calculator-hub" class="scroll-mt-20 my-8 sm:my-12">
+    <!-- Live calculators -->
+    <section id="live-calculators" class="scroll-mt-20 my-8 sm:my-12" aria-label={t(locale, 'livetools.title')}>
       <div class="mb-6 text-center">
-        <span class="inline-block px-4 py-1.5 rounded-full bg-amber-100 text-amber-800 text-xs sm:text-sm font-bold tracking-wide uppercase mb-3">{t(locale, 'hubteaser.badge')}</span>
-        <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-800 mb-2">{t(locale, 'hubteaser.title')}</h2>
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-700 dark:text-brand-300 bg-brand-100 dark:bg-brand-950/60 border border-brand-200/60 dark:border-brand-800/60 px-3.5 py-1.5 rounded-full">
+          {t(locale, 'livetools.badge')}
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-3">
+          {t(locale, 'livetools.title')}
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 max-w-2xl mx-auto leading-relaxed">
+          {t(locale, 'livetools.desc')}
+        </p>
       </div>
-      <div class="max-w-3xl mx-auto p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-sm text-center">
-        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">{t(locale, 'hubteaser.text')}</p>
-        <a href="/height-calculator/" class="inline-flex items-center gap-2 px-8 py-4 bg-brand-600 text-white font-bold rounded-2xl hover:bg-brand-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+
+      <div class="flex justify-center">
+        <div class="inline-flex gap-1 p-1 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700" role="tablist" aria-label={t(locale, 'livetools.title')}>
+          {tabs.map((tab) => (
+            <button
+              type="button"
+              role="tab"
+              data-htab={tab.id}
+              aria-selected={tab.id === 'converter' ? 'true' : 'false'}
+              class:list={[
+                'rounded-xl px-4 sm:px-6 py-2.5 text-sm font-bold transition-colors',
+                tab.id === 'converter'
+                  ? 'bg-brand-600 text-white shadow-soft-sm'
+                  : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white',
+              ]}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div class="mt-5 max-w-3xl mx-auto">
+        <div data-htabpanel="converter" role="tabpanel">
+          <UnitConverter id="home-converter" locale={locale} />
+        </div>
+
+        <!-- Percentile + predictor tools are EN-only: teaser cards -->
+        <div data-htabpanel="percentile" role="tabpanel" hidden>
+          <div class="rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-soft overflow-hidden">
+            <div class="px-5 sm:px-7 pt-6 pb-2">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 shrink-0 rounded-2xl bg-gradient-to-br from-brand-500 to-teal-600 text-white flex items-center justify-center" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 3v18h18" />
+                    <path d="M7 15l4-6 4 3 5-8" />
+                  </svg>
+                </div>
+                <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+                  {t(locale, 'entool.percentile.title')}
+                </h2>
+              </div>
+              <p class="text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+                {t(locale, 'entool.percentile.text')}
+              </p>
+            </div>
+            <div class="px-5 sm:px-7 pb-6 pt-3">
+              <a
+                href="/height-calculator/"
+                class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl font-bold text-sm sm:text-base text-white bg-brand-600 hover:bg-brand-700 active:bg-brand-800 shadow-soft transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
+              >
+                {t(locale, 'entool.button')}
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2 rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div data-htabpanel="predictor" role="tabpanel" hidden>
+          <div class="rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-soft overflow-hidden">
+            <div class="px-5 sm:px-7 pt-6 pb-2">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 shrink-0 rounded-2xl bg-gradient-to-br from-brand-500 to-teal-600 text-white flex items-center justify-center" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                </div>
+                <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+                  {t(locale, 'entool.predictor.title')}
+                </h2>
+              </div>
+              <p class="text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+                {t(locale, 'entool.predictor.text')}
+              </p>
+            </div>
+            <div class="px-5 sm:px-7 pb-6 pt-3">
+              <a
+                href="/height-calculator/"
+                class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl font-bold text-sm sm:text-base text-white bg-brand-600 hover:bg-brand-700 active:bg-brand-800 shadow-soft transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
+              >
+                {t(locale, 'entool.button')}
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2 rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculator hub teaser (replaces the EN-only tool suite grid) -->
+    <section id="calculator-hub" class="scroll-mt-20 mt-16 sm:mt-24" aria-label={t(locale, 'hubteaser.title')}>
+      <div class="text-center mb-8">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-700 dark:text-brand-300 bg-brand-100 dark:bg-brand-950/60 border border-brand-200/60 dark:border-brand-800/60 px-3.5 py-1.5 rounded-full">
+          {t(locale, 'hubteaser.badge')}
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-3">
+          {t(locale, 'hubteaser.title')}
+        </h2>
+      </div>
+      <div class="max-w-3xl mx-auto p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-brand-50 to-teal-50 dark:from-brand-950/40 dark:to-slate-900 border border-brand-200/60 dark:border-brand-800/60 shadow-soft text-center">
+        <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-6">{t(locale, 'hubteaser.text')}</p>
+        <a
+          href="/height-calculator/"
+          class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-600 text-white font-bold rounded-2xl hover:bg-brand-700 transition-all shadow-soft hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
+        >
           {t(locale, 'hubteaser.button')}
-          <svg class="w-5 h-5 ml-2 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
           </svg>
         </a>
       </div>
     </section>
 
-    <!-- How It Works -->
-    <section id="how-it-works" class="scroll-mt-20 my-8 sm:my-12">
-      <div class="mb-6 text-center">
-        <span class="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-800 text-xs sm:text-sm font-bold tracking-wide uppercase mb-3">{t(locale, 'howitworks.badge')}</span>
-        <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-800 mb-2">{t(locale, 'howitworks.title')}</h2>
-        <p class="text-slate-500 text-sm sm:text-base max-w-2xl mx-auto">{t(locale, 'howitworks.desc')}</p>
-      </div>
-      <div class="grid sm:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
-        {steps.map((step, index) => (
-          <div class="relative p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-            <div class="w-10 h-10 rounded-xl bg-brand-600 text-white font-extrabold flex items-center justify-center mb-4">{index + 1}</div>
-            <h3 class="font-bold text-slate-800 mb-2">{step.title}</h3>
-            <p class="text-sm text-slate-500 leading-relaxed">{step.text}</p>
-          </div>
-        ))}
+    <!-- How It Works: 3 steps -->
+    <section id="how-it-works" class="mt-16 sm:mt-24 pt-12 border-t border-slate-200 dark:border-slate-800 scroll-mt-20">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-10">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-700 dark:text-brand-300 bg-brand-100 dark:bg-brand-950/60 border border-brand-200/60 dark:border-brand-800/60 px-3.5 py-1.5 rounded-full">
+            {t(locale, 'howitworks.badge')}
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-3">
+            {t(locale, 'howitworks.title')}
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 max-w-2xl mx-auto">
+            {t(locale, 'howitworks.desc')}
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {steps.map((step, index) => (
+            <div class="p-6 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft text-center">
+              <div class="w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-brand-500 to-teal-600 text-white font-black text-xl flex items-center justify-center mb-4 shadow-soft-sm">
+                {index + 1}
+              </div>
+              <h3 class="font-extrabold text-lg text-slate-900 dark:text-white">
+                {step.title}
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                {step.text}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
 
     <!-- Trust strip (CDC/WHO + educational disclaimer) -->
-    <section class="my-8 sm:my-12">
-      <div class="max-w-4xl mx-auto p-6 sm:p-8 rounded-2xl bg-emerald-50 border border-emerald-200">
+    <div class="mt-16 sm:mt-20">
+      <div class="max-w-4xl mx-auto p-6 sm:p-8 rounded-3xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 shadow-soft-sm">
         <div class="flex items-start gap-4">
-          <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-emerald-500 text-white flex items-center justify-center">
+          <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-500 to-teal-600 text-white flex items-center justify-center" aria-hidden="true">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
           </div>
           <div>
-            <h2 class="text-lg sm:text-xl font-extrabold text-emerald-900 mb-2">{t(locale, 'trust.title')}</h2>
-            <p class="text-emerald-800 text-sm sm:text-base leading-relaxed">{t(locale, 'trust.text')}</p>
+            <h2 class="text-lg sm:text-xl font-extrabold text-emerald-900 dark:text-emerald-100 mb-2">{t(locale, 'trust.title')}</h2>
+            <p class="text-emerald-800 dark:text-emerald-200/90 text-sm sm:text-base leading-relaxed">{t(locale, 'trust.text')}</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
+    <!-- FAQ teaser (first 4 questions) -->
     <FAQ locale={locale} limit={4} />
 
     <!-- Final CTA -->
-    <section class="my-10 sm:my-16">
-      <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-brand-600 to-blue-700 text-white text-center shadow-xl relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10" aria-hidden="true">
-          <div class="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-white"></div>
-          <div class="absolute -bottom-32 -right-16 w-96 h-96 rounded-full bg-white"></div>
-        </div>
-        <div class="relative">
-          <p class="text-xs sm:text-sm font-semibold tracking-widest uppercase text-blue-200 mb-3">{t(locale, 'cta.final.badge')}</p>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4">{t(locale, 'cta.final.title')}</h2>
-          <p class="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto mb-8">{t(locale, 'cta.final.text')}</p>
-          <a href="/height-calculator/" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-700 font-bold rounded-2xl hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-            {t(locale, 'cta.final.button')}
-            <svg class="w-5 h-5 ml-2 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-            </svg>
-          </a>
+    <section class="mt-16 sm:mt-20 mb-8">
+      <div class="max-w-5xl mx-auto">
+        <div class="relative overflow-hidden p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-brand-600 via-brand-700 to-teal-700 text-center shadow-soft">
+          <div class="absolute inset-0 opacity-10" aria-hidden="true">
+            <div class="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-white"></div>
+            <div class="absolute -bottom-32 -right-16 w-96 h-96 rounded-full bg-white"></div>
+          </div>
+          <div class="relative">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-100 bg-white/15 px-3.5 py-1.5 rounded-full">
+              {t(locale, 'cta.final.badge')}
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight mt-4">
+              {t(locale, 'cta.final.title')}
+            </h2>
+            <p class="text-sm sm:text-base text-brand-100 mt-3 max-w-2xl mx-auto leading-relaxed">
+              {t(locale, 'cta.final.text')}
+            </p>
+            <a
+              href="/height-calculator/"
+              class="inline-flex items-center justify-center mt-6 px-8 py-3.5 rounded-2xl font-bold text-sm sm:text-base text-brand-700 bg-white hover:bg-brand-50 active:bg-brand-100 shadow-soft transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            >
+              {t(locale, 'cta.final.button')}
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2 rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
   </div>
 </Layout>
+
+<script>
+  // Homepage tab switching (converter / percentile / predictor).
+  // The converter widget wires its own listeners; the other two panels
+  // are EN-only teasers, so no calc-tools init is needed here.
+  const tabBtns = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-htab]"));
+  const panels = Array.from(document.querySelectorAll<HTMLElement>("[data-htabpanel]"));
+  const paintTabs = (active: string) => {
+    tabBtns.forEach((b) => {
+      const on = b.dataset.htab === active;
+      b.setAttribute("aria-selected", on ? "true" : "false");
+      b.classList.toggle("bg-brand-600", on);
+      b.classList.toggle("text-white", on);
+      b.classList.toggle("shadow-soft-sm", on);
+      b.classList.toggle("text-slate-600", !on);
+      b.classList.toggle("dark:text-slate-300", !on);
+    });
+    panels.forEach((p) => {
+      p.hidden = p.dataset.htabpanel !== active;
+    });
+  };
+  tabBtns.forEach((b) =>
+    b.addEventListener("click", () => paintTabs(b.dataset.htab || "converter"))
+  );
+</script>

@@ -60,4 +60,44 @@ export default {
   'cta.final.title': 'Bereit, deine Größe zu berechnen?',
   'cta.final.text': 'Öffne den Height Calculator-Hub — Perzentile, Wachstumskurven, Kindergrößen-Prognose und Einheitenumrechnung, alles an einem Ort.',
   'cta.final.button': 'Jetzt Berechnen',
+
+  // Hero visual (growth-chart motif)
+  'hero.visualTitle': 'Vorschau der Wachstumskurve',
+
+  // Live calculators (tabbed widget section)
+  'livetools.badge': 'Jetzt Ausprobieren',
+  'livetools.title': 'Größenrechner im Live-Einsatz',
+  'livetools.desc': 'Rechne Einheiten um, prüfe ein Wachstumsperzentil oder prognostiziere die Erwachsenengröße deines Kindes — direkt hier, direkt jetzt. Alles läuft in deinem Browser; nichts wird hochgeladen oder gespeichert.',
+  'livetools.tab.converter': 'Einheitenumrechner',
+  'livetools.tab.percentile': 'Größenperzentil',
+  'livetools.tab.predictor': 'Kindergrößen-Prognose',
+
+  // Unit converter widget
+  'converter.title': 'Größen-Einheitenumrechner',
+  'converter.desc': 'Gib auf einer Seite eine Größe ein — die andere Seite rechnet sofort um.',
+  'converter.cmLabel': 'Zentimeter',
+  'converter.ftLabel': 'Fuß',
+  'converter.inLabel': 'Zoll',
+  'converter.hint': 'Exakter internationaler Standard: 1 Zoll = 2,54 cm.',
+
+  // Homepage percentile widget
+  'homepercentile.heading': 'Größenperzentil-Prüfung',
+  'homepercentile.intro': 'Wo liegt die Größe eines Kindes im Vergleich zu Gleichaltrigen? Gib Alter und Größe ein und erhalte sofort das CDC-Perzentil (Alter 2–20).',
+
+  // Homepage predictor widget
+  'homepredictor.heading': 'Kindergrößen-Prognose',
+  'homepredictor.intro': 'Gib die Größe beider Eltern ein, um die wahrscheinliche Erwachsenengröße eines Kindes zu schätzen — immer mit ehrlicher ±8,5-cm-Spanne.',
+
+  // Tool suite grid
+  'toolsuite.badge': 'Rechner-Suite',
+  'toolsuite.title': 'Alle Größenrechner an einem Ort',
+  'toolsuite.desc': 'Neun fokussierte Tools — Perzentile, Wachstumskurven und Prognosen — jeweils auf Basis veröffentlichter CDC-, WHO- und UK-WHO-Referenzen.',
+  'toolsuite.open': 'Rechner öffnen',
+
+  // EN-only tool teaser (used on localized homepages)
+  'entool.percentile.title': 'Größenperzentil-Rechner',
+  'entool.percentile.text': 'Sieh genau, wo die Größe eines Kindes auf den CDC- & WHO-Wachstumskurven liegt — mit Z-Wert und Referenzmedian.',
+  'entool.predictor.title': 'Kindergrößen-Prognose',
+  'entool.predictor.text': 'Schätze die Erwachsenengröße eines Kindes anhand der Größe beider Eltern — immer mit ehrlicher Spanne.',
+  'entool.button': 'Auf Englisch öffnen',
 };

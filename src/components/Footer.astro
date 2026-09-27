@@ -45,7 +45,7 @@ const legalLinks = [
         <ul class="space-y-2 text-xs">
           {exploreLinks.map((l) => (
             <li>
-              <a href={l.href} class="hover:text-brand-600 dark:hover:text-blue-400 transition-colors">
+              <a href={l.href} class="hover:text-brand-600 dark:hover:text-emerald-400 transition-colors">
                 {l.label}
               </a>
             </li>
@@ -59,7 +59,7 @@ const legalLinks = [
         <ul class="space-y-2 text-xs">
           {legalLinks.map((l) => (
             <li>
-              <a href={l.href} class="hover:text-brand-600 dark:hover:text-blue-400 transition-colors">
+              <a href={l.href} class="hover:text-brand-600 dark:hover:text-emerald-400 transition-colors">
                 {l.label}
               </a>
             </li>
@@ -73,12 +73,12 @@ const legalLinks = [
       <div class="flex flex-wrap items-center gap-1.5">
         <span>© {currentYear} {SITE.name}. {t(locale, 'footer.allRightsReserved')}</span>
         <span>•</span>
-        <span>Built by <a href="https://github.com/fkdigitalmedia" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-blue-400 transition-colors">FK Digital Media</a></span>
+        <span>Built by <a href="https://github.com/fkdigitalmedia" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-emerald-400 transition-colors">FK Digital Media</a></span>
       </div>
       <div class="flex items-center gap-4 text-[11px]">
         <span>{t(locale, 'footer.fastPlatform')}</span>
         <span>•</span>
-        <a href={getLocalizedPath('/', locale)} class="text-brand-600 dark:text-blue-400 hover:underline">{SITE.domain}</a>
+        <a href={getLocalizedPath('/', locale)} class="text-brand-600 dark:text-emerald-400 hover:underline">{SITE.domain}</a>
       </div>
     </div>
   </div>

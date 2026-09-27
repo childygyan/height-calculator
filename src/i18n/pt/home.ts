@@ -60,4 +60,44 @@ export default {
   'cta.final.title': 'Pronto para calcular sua altura?',
   'cta.final.text': 'Abra o centro do Height Calculator — percentis, curvas de crescimento, previsão de altura infantil e conversão de unidades, tudo em um só lugar.',
   'cta.final.button': 'Começar a Calcular',
+
+  // Hero visual (growth-chart motif)
+  'hero.visualTitle': 'Pré-visualização da Curva de Crescimento',
+
+  // Live calculators (tabbed widget section)
+  'livetools.badge': 'Teste Agora',
+  'livetools.title': 'Calculadoras de Altura ao Vivo',
+  'livetools.desc': 'Converta unidades, verifique um percentil de crescimento ou preveja a altura adulta de uma criança — aqui mesmo, agora mesmo. Tudo roda no seu navegador; nada é enviado nem armazenado.',
+  'livetools.tab.converter': 'Conversor de Unidades',
+  'livetools.tab.percentile': 'Percentil de Altura',
+  'livetools.tab.predictor': 'Previsor Infantil',
+
+  // Unit converter widget
+  'converter.title': 'Conversor de Unidades de Altura',
+  'converter.desc': 'Digite uma altura de qualquer lado — o outro lado converte na hora.',
+  'converter.cmLabel': 'Centímetros',
+  'converter.ftLabel': 'Pés',
+  'converter.inLabel': 'Polegadas',
+  'converter.hint': 'Padrão internacional exato: 1 polegada = 2,54 cm.',
+
+  // Homepage percentile widget
+  'homepercentile.heading': 'Verificação de Percentil de Altura',
+  'homepercentile.intro': 'Onde a altura de uma criança se encaixa entre seus pares? Digite a idade e a altura para obter na hora o percentil do CDC (idades 2–20).',
+
+  // Homepage predictor widget
+  'homepredictor.heading': 'Previsor de Altura Infantil',
+  'homepredictor.intro': 'Digite a altura dos dois pais para estimar a provável altura adulta de uma criança — sempre exibida com uma honesta faixa de ±8,5 cm.',
+
+  // Tool suite grid
+  'toolsuite.badge': 'Conjunto de Calculadoras',
+  'toolsuite.title': 'Todas as Calculadoras de Altura em um Só Lugar',
+  'toolsuite.desc': 'Nove ferramentas focadas — percentis, curvas de crescimento e previsão — cada uma baseada em referências publicadas do CDC, da OMS e da OMS do Reino Unido.',
+  'toolsuite.open': 'Abrir calculadora',
+
+  // EN-only tool teaser (used on localized homepages)
+  'entool.percentile.title': 'Calculadora de Percentil de Altura',
+  'entool.percentile.text': 'Veja exatamente onde a altura de uma criança se encaixa nas curvas de crescimento do CDC e da OMS — com escore z e mediana de referência.',
+  'entool.predictor.title': 'Previsor de Altura Infantil',
+  'entool.predictor.text': 'Estime a altura adulta de uma criança a partir da altura dos dois pais — sempre com uma faixa honesta.',
+  'entool.button': 'Abrir em Inglês',
 };

@@ -66,4 +66,44 @@ export default {
   'cta.final.title': 'Ready to calculate your height?',
   'cta.final.text': 'Open the Height Calculator hub — percentiles, growth charts, child height prediction and unit conversion, all in one place.',
   'cta.final.button': 'Start Calculating',
+
+  // Hero visual (growth-chart motif)
+  'hero.visualTitle': 'Growth Chart Preview',
+
+  // Live calculators (tabbed widget section)
+  'livetools.badge': 'Try It Now',
+  'livetools.title': 'Live Height Calculators',
+  'livetools.desc': 'Convert units, check a growth percentile, or predict a child’s adult height — right here, right now. Everything runs in your browser; nothing is uploaded or stored.',
+  'livetools.tab.converter': 'Unit Converter',
+  'livetools.tab.percentile': 'Height Percentile',
+  'livetools.tab.predictor': 'Child Predictor',
+
+  // Unit converter widget
+  'converter.title': 'Height Unit Converter',
+  'converter.desc': 'Type a height on either side — the other side converts instantly.',
+  'converter.cmLabel': 'Centimeters',
+  'converter.ftLabel': 'Feet',
+  'converter.inLabel': 'Inches',
+  'converter.hint': 'Exact international standard: 1 inch = 2.54 cm.',
+
+  // Homepage percentile widget
+  'homepercentile.heading': 'Height Percentile Check',
+  'homepercentile.intro': 'Where does a child’s height fall among peers? Enter age and height for an instant CDC percentile (ages 2–20).',
+
+  // Homepage predictor widget
+  'homepredictor.heading': 'Child Height Predictor',
+  'homepredictor.intro': 'Enter both parents’ heights to estimate a child’s likely adult height — always shown with an honest ±8.5 cm range.',
+
+  // Tool suite grid
+  'toolsuite.badge': 'Calculator Suite',
+  'toolsuite.title': 'Every Height Calculator in One Place',
+  'toolsuite.desc': 'Nine focused tools — percentiles, growth charts, and prediction — each built on published CDC, WHO, and UK-WHO references.',
+  'toolsuite.open': 'Open calculator',
+
+  // EN-only tool teaser (used on localized homepages)
+  'entool.percentile.title': 'Height Percentile Calculator',
+  'entool.percentile.text': 'See exactly where a child’s height falls on the CDC & WHO growth charts — with z-score and reference median.',
+  'entool.predictor.title': 'Child Height Predictor',
+  'entool.predictor.text': 'Estimate a child’s adult height from both parents’ heights — always with an honest range.',
+  'entool.button': 'Open in English',
 };

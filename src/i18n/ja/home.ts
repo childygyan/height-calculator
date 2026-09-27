@@ -60,4 +60,44 @@ export default {
   'cta.final.title': '身長を計算する準備はできましたか？',
   'cta.final.text': 'Height Calculatorハブを開く — パーセンタイル、成長曲線、子どもの身長予測、単位変換がすべてひとつの場所に。',
   'cta.final.button': '計算を始める',
+
+  // Hero visual (growth-chart motif)
+  'hero.visualTitle': '成長曲線プレビュー',
+
+  // Live calculators (tabbed widget section)
+  'livetools.badge': '今すぐ試す',
+  'livetools.title': 'ライブ身長計算ツール',
+  'livetools.desc': '単位変換、成長パーセンタイルの確認、お子さんの成人身長予測を——ここで今すぐ。すべてブラウザ上で動作し、データのアップロードや保存は一切ありません。',
+  'livetools.tab.converter': '単位変換',
+  'livetools.tab.percentile': '身長パーセンタイル',
+  'livetools.tab.predictor': '子ども身長予測',
+
+  // Unit converter widget
+  'converter.title': '身長単位変換ツール',
+  'converter.desc': 'どちらか一方に身長を入力すると、もう一方が即座に変換されます。',
+  'converter.cmLabel': 'センチメートル',
+  'converter.ftLabel': 'フィート',
+  'converter.inLabel': 'インチ',
+  'converter.hint': '正確な国際基準：1インチ = 2.54 cm。',
+
+  // Homepage percentile widget
+  'homepercentile.heading': '身長パーセンタイル確認',
+  'homepercentile.intro': 'お子さんの身長は同年代の中でどの位置？年齢と身長を入力するだけで、CDCパーセンタイルがすぐに分かります（2～20歳）。',
+
+  // Homepage predictor widget
+  'homepredictor.heading': '子ども身長予測ツール',
+  'homepredictor.intro': '両親の身長を入力して、お子さんの成人時の推定身長を計算——常に正直な±8.5 cmの範囲表示付き。',
+
+  // Tool suite grid
+  'toolsuite.badge': '計算ツール集',
+  'toolsuite.title': 'すべての身長計算ツールがここに',
+  'toolsuite.desc': 'パーセンタイル、成長曲線、予測——9つの専門ツールを、CDC・WHO・英国WHOの公開基準データにもとづいて開発。',
+  'toolsuite.open': '計算ツールを開く',
+
+  // EN-only tool teaser (used on localized homepages)
+  'entool.percentile.title': '身長パーセンタイル計算ツール',
+  'entool.percentile.text': 'お子さんの身長がCDC・WHO成長曲線のどこに位置するかを正確に表示——zスコアと基準中央値つき。',
+  'entool.predictor.title': '子ども身長予測ツール',
+  'entool.predictor.text': '両親の身長からお子さんの成人身長を推定——常に正直な範囲表示付き。',
+  'entool.button': '英語で開く',
 };

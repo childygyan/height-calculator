@@ -1,0 +1,160 @@
+---
+/**
+ * Height unit converter: cm <-> ft/in with two-way live conversion.
+ * i18n-aware via t(); behavior is self-contained (inline script below),
+ * independent of src/lib/calc-tools.ts.
+ */
+import { t } from '../../i18n';
+import type { Locale } from '../../i18n/locales';
+
+interface Props {
+  id?: string;
+  locale?: Locale;
+}
+
+const { id = 'unit-converter', locale = 'en' } = Astro.props;
+
+const inputCls =
+  'w-full rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 px-4 py-3 pr-12 text-2xl font-black tabular-nums text-slate-900 dark:text-white placeholder:text-slate-300 dark:placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition';
+const labelCls =
+  'block text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-2';
+const unitTagCls =
+  'absolute right-4 top-1/2 -translate-y-1/2 text-sm font-bold text-slate-400 pointer-events-none';
+---
+
+<div
+  data-unit-converter
+  id={id}
+  class="rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-soft overflow-hidden"
+>
+  <div class="px-5 sm:px-7 pt-6 pb-2">
+    <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+      {t(locale, 'converter.title')}
+    </h2>
+    <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+      {t(locale, 'converter.desc')}
+    </p>
+  </div>
+
+  <div class="px-5 sm:px-7 py-5">
+    <div class="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] gap-4 items-center">
+      <!-- Metric side -->
+      <div>
+        <label class={labelCls} for={`${id}-cm`}>{t(locale, 'converter.cmLabel')}</label>
+        <div class="relative">
+          <input
+            id={`${id}-cm`}
+            data-cm
+            type="number"
+            min="0"
+            step="0.1"
+            inputmode="decimal"
+            placeholder="175"
+            aria-label={t(locale, 'converter.cmLabel')}
+            class={inputCls}
+          />
+          <span class={unitTagCls}>cm</span>
+        </div>
+      </div>
+
+      <!-- Swap glyph -->
+      <div class="flex items-center justify-center" aria-hidden="true">
+        <span class="w-11 h-11 rounded-full bg-brand-100 dark:bg-brand-950/60 text-brand-700 dark:text-brand-300 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </span>
+      </div>
+
+      <!-- Imperial side -->
+      <div>
+        <span class={labelCls} id={`${id}-ftin-label`}>
+          {t(locale, 'converter.ftLabel')} / {t(locale, 'converter.inLabel')}
+        </span>
+        <div class="grid grid-cols-2 gap-3" role="group" aria-labelledby={`${id}-ftin-label`}>
+          <div class="relative">
+            <input
+              data-ft
+              type="number"
+              min="0"
+              step="1"
+              inputmode="numeric"
+              placeholder="5"
+              aria-label={t(locale, 'converter.ftLabel')}
+              class={inputCls}
+            />
+            <span class={unitTagCls}>ft</span>
+          </div>
+          <div class="relative">
+            <input
+              data-inch
+              type="number"
+              min="0"
+              step="0.1"
+              inputmode="decimal"
+              placeholder="8.9"
+              aria-label={t(locale, 'converter.inLabel')}
+              class={inputCls}
+            />
+            <span class={unitTagCls}>in</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-xs text-slate-500 dark:text-slate-400 mt-4 leading-relaxed">
+      {t(locale, 'converter.hint')}
+    </p>
+  </div>
+</div>
+
+<script>
+  // Two-way live conversion. Runs once per widget instance; guarded so
+  // duplicate script evaluation never double-binds listeners.
+  const roots = document.querySelectorAll<HTMLElement>('[data-unit-converter]:not([data-wired])');
+  roots.forEach((root) => {
+    root.setAttribute('data-wired', 'true');
+    const cmEl = root.querySelector<HTMLInputElement>('[data-cm]');
+    const ftEl = root.querySelector<HTMLInputElement>('[data-ft]');
+    const inEl = root.querySelector<HTMLInputElement>('[data-inch]');
+    if (!cmEl || !ftEl || !inEl) return;
+
+    const CM_PER_IN = 2.54;
+    let lock = false;
+
+    const fromCm = () => {
+      if (lock) return;
+      lock = true;
+      const v = parseFloat(cmEl.value);
+      if (cmEl.value.trim() === '' || !isFinite(v) || v < 0) {
+        ftEl.value = '';
+        inEl.value = '';
+      } else {
+        const totalIn = v / CM_PER_IN;
+        ftEl.value = String(Math.floor(totalIn / 12));
+        inEl.value = (totalIn % 12).toFixed(1);
+      }
+      lock = false;
+    };
+
+    const fromFtIn = () => {
+      if (lock) return;
+      lock = true;
+      const fRaw = ftEl.value.trim();
+      const iRaw = inEl.value.trim();
+      if (fRaw === '' && iRaw === '') {
+        cmEl.value = '';
+      } else {
+        const f = Math.max(0, parseFloat(fRaw) || 0);
+        const i = Math.max(0, parseFloat(iRaw) || 0);
+        cmEl.value = ((f * 12 + i) * CM_PER_IN).toFixed(1);
+      }
+      lock = false;
+    };
+
+    cmEl.addEventListener('input', fromCm);
+    ftEl.addEventListener('input', fromFtIn);
+    inEl.addEventListener('input', fromFtIn);
+  });
+</script>

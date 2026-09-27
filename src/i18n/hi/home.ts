@@ -60,4 +60,44 @@ export default {
   'cta.final.title': 'अपनी ऊंचाई कैलकुलेट करने के लिए तैयार हैं?',
   'cta.final.text': 'Height Calculator हब खोलें — पर्सेंटाइल, ग्रोथ चार्ट, बच्चे की ऊंचाई का अनुमान और यूनिट कन्वर्ज़न, सब एक ही जगह।',
   'cta.final.button': 'कैलकुलेट करना शुरू करें',
+
+  // Hero visual (growth-chart motif)
+  'hero.visualTitle': 'ग्रोथ चार्ट प्रीव्यू',
+
+  // Live calculators (tabbed widget section)
+  'livetools.badge': 'अभी आज़माएं',
+  'livetools.title': 'लाइव हाइट कैलकुलेटर',
+  'livetools.desc': 'यूनिट कन्वर्ट करें, ग्रोथ पर्सेंटाइल जांचें, या बच्चे की वयस्क ऊंचाई का अनुमान लगाएं — यहीं, अभी। सब कुछ आपके ब्राउज़र में चलता है; कुछ भी अपलोड या स्टोर नहीं होता।',
+  'livetools.tab.converter': 'यूनिट कन्वर्टर',
+  'livetools.tab.percentile': 'हाइट पर्सेंटाइल',
+  'livetools.tab.predictor': 'चाइल्ड प्रेडिक्टर',
+
+  // Unit converter widget
+  'converter.title': 'हाइट यूनिट कन्वर्टर',
+  'converter.desc': 'किसी भी तरफ ऊंचाई लिखें — दूसरी तरफ तुरंत कन्वर्ट हो जाएगी।',
+  'converter.cmLabel': 'सेंटिमीटर',
+  'converter.ftLabel': 'फीट',
+  'converter.inLabel': 'इंच',
+  'converter.hint': 'सटीक अंतरराष्ट्रीय मानक: 1 इंच = 2.54 सेमी।',
+
+  // Homepage percentile widget
+  'homepercentile.heading': 'हाइट पर्सेंटाइल चेक',
+  'homepercentile.intro': 'बच्चे की ऊंचाई अपने साथियों में कहां आती है? उम्र और ऊंचाई दर्ज करें और तुरंत CDC पर्सेंटाइल पाएं (उम्र 2–20)।',
+
+  // Homepage predictor widget
+  'homepredictor.heading': 'चाइल्ड हाइट प्रेडिक्टर',
+  'homepredictor.intro': 'बच्चे की संभावित वयस्क ऊंचाई का अनुमान लगाने के लिए दोनों माता-पिता की ऊंचाई दर्ज करें — हमेशा ईमानदार ±8.5 सेमी रेंज के साथ।',
+
+  // Tool suite grid
+  'toolsuite.badge': 'कैलकुलेटर सूट',
+  'toolsuite.title': 'सभी हाइट कैलकुलेटर एक ही जगह',
+  'toolsuite.desc': 'नौ फोकस्ड टूल — पर्सेंटाइल, ग्रोथ चार्ट और प्रेडिक्शन — हर एक प्रकाशित CDC, WHO और UK-WHO रेफरेंस पर आधारित।',
+  'toolsuite.open': 'कैलकुलेटर खोलें',
+
+  // EN-only tool teaser (used on localized homepages)
+  'entool.percentile.title': 'हाइट पर्सेंटाइल कैलकुलेटर',
+  'entool.percentile.text': 'देखें कि बच्चे की ऊंचाई CDC और WHO ग्रोथ चार्ट पर ठीक कहां आती है — z-स्कोर और रेफरेंस मीडियन के साथ।',
+  'entool.predictor.title': 'चाइल्ड हाइट प्रेडिक्टर',
+  'entool.predictor.text': 'दोनों माता-पिता की ऊंचाई से बच्चे की वयस्क ऊंचाई का अनुमान लगाएं — हमेशा ईमानदार रेंज के साथ।',
+  'entool.button': 'अंग्रेज़ी में खोलें',
 };

@@ -60,4 +60,44 @@ export default {
   'cta.final.title': '키를 계산할 준비가 되셨나요?',
   'cta.final.text': 'Height Calculator 허브 열기 — 백분위수, 성장 곡선, 어린이 키 예측, 단위 변환을 한곳에서.',
   'cta.final.button': '계산 시작하기',
+
+  // Hero visual (growth-chart motif)
+  'hero.visualTitle': '성장 곡선 미리보기',
+
+  // Live calculators (tabbed widget section)
+  'livetools.badge': '지금 체험하기',
+  'livetools.title': '실시간 키 계산기',
+  'livetools.desc': '단위 변환, 성장 백분위수 확인, 자녀의 성인 키 예측을 — 바로 여기에서, 지금 바로. 모든 과정은 브라우저에서 실행되며, 업로드되거나 저장되는 것은 없습니다.',
+  'livetools.tab.converter': '단위 변환기',
+  'livetools.tab.percentile': '키 백분위수',
+  'livetools.tab.predictor': '자녀 키 예측',
+
+  // Unit converter widget
+  'converter.title': '키 단위 변환기',
+  'converter.desc': '어느 한쪽에 키를 입력하면 다른 쪽이 즉시 변환됩니다.',
+  'converter.cmLabel': '센티미터',
+  'converter.ftLabel': '피트',
+  'converter.inLabel': '인치',
+  'converter.hint': '정확한 국제 표준: 1인치 = 2.54 cm.',
+
+  // Homepage percentile widget
+  'homepercentile.heading': '키 백분위수 확인',
+  'homepercentile.intro': '아이의 키가 또래 중 어느 위치일까요? 나이와 키를 입력하면 CDC 백분위수를 즉시 확인할 수 있습니다(2~20세).',
+
+  // Homepage predictor widget
+  'homepredictor.heading': '자녀 키 예측기',
+  'homepredictor.intro': '부모 두 분의 키를 입력해 자녀의 예상 성인 키를 계산하세요 — 항상 정직한 ±8.5 cm 범위로 표시됩니다.',
+
+  // Tool suite grid
+  'toolsuite.badge': '계산기 모음',
+  'toolsuite.title': '모든 키 계산기를 한곳에',
+  'toolsuite.desc': '백분위수, 성장 곡선, 예측 — 9가지 전문 도구를 모두 공개된 CDC·WHO·영국 WHO 기준 데이터로 만들었습니다.',
+  'toolsuite.open': '계산기 열기',
+
+  // EN-only tool teaser (used on localized homepages)
+  'entool.percentile.title': '키 백분위수 계산기',
+  'entool.percentile.text': '아이의 키가 CDC·WHO 성장 곡선의 어느 위치에 있는지 정확히 확인 — z점수와 기준 중앙값 포함.',
+  'entool.predictor.title': '자녀 키 예측기',
+  'entool.predictor.text': '부모 두 분의 키로 자녀의 성인 키를 예측 — 항상 정직한 범위와 함께.',
+  'entool.button': '영어로 열기',
 };

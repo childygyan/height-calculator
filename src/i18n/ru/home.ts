@@ -60,4 +60,44 @@ export default {
   'cta.final.title': 'Готовы рассчитать свой рост?',
   'cta.final.text': 'Откройте хаб Height Calculator — перцентили, кривые роста, прогноз роста детей и конвертация единиц в одном месте.',
   'cta.final.button': 'Начать расчёт',
+
+  // Hero visual (growth-chart motif)
+  'hero.visualTitle': 'Предпросмотр кривой роста',
+
+  // Live calculators (tabbed widget section)
+  'livetools.badge': 'Попробовать сейчас',
+  'livetools.title': 'Калькуляторы роста — прямо на странице',
+  'livetools.desc': 'Конвертируйте единицы, проверьте перцентиль роста или предскажите взрослый рост ребёнка — прямо здесь и сейчас. Всё работает в вашем браузере; ничего не загружается и не сохраняется.',
+  'livetools.tab.converter': 'Конвертер единиц',
+  'livetools.tab.percentile': 'Перцентиль роста',
+  'livetools.tab.predictor': 'Прогноз роста ребёнка',
+
+  // Unit converter widget
+  'converter.title': 'Конвертер единиц роста',
+  'converter.desc': 'Введите рост с любой стороны — другая сторона пересчитается мгновенно.',
+  'converter.cmLabel': 'Сантиметры',
+  'converter.ftLabel': 'Футы',
+  'converter.inLabel': 'Дюймы',
+  'converter.hint': 'Точный международный стандарт: 1 дюйм = 2,54 см.',
+
+  // Homepage percentile widget
+  'homepercentile.heading': 'Проверка перцентиля роста',
+  'homepercentile.intro': 'Где находится рост ребёнка среди сверстников? Введите возраст и рост, чтобы мгновенно получить перцентиль CDC (возраст 2–20).',
+
+  // Homepage predictor widget
+  'homepredictor.heading': 'Прогноз роста ребёнка',
+  'homepredictor.intro': 'Введите рост обоих родителей, чтобы оценить вероятный взрослый рост ребёнка — всегда с честным диапазоном ±8,5 см.',
+
+  // Tool suite grid
+  'toolsuite.badge': 'Набор калькуляторов',
+  'toolsuite.title': 'Все калькуляторы роста в одном месте',
+  'toolsuite.desc': 'Девять специализированных инструментов — перцентили, кривые роста и прогнозы — каждый на основе опубликованных данных CDC, ВОЗ и ВОЗ Великобритании.',
+  'toolsuite.open': 'Открыть калькулятор',
+
+  // EN-only tool teaser (used on localized homepages)
+  'entool.percentile.title': 'Калькулятор перцентиля роста',
+  'entool.percentile.text': 'Узнайте точно, где находится рост ребёнка на кривых роста CDC и ВОЗ — с z-оценкой и эталонной медианой.',
+  'entool.predictor.title': 'Прогноз роста ребёнка',
+  'entool.predictor.text': 'Оцените взрослый рост ребёнка по росту обоих родителей — всегда с честным диапазоном.',
+  'entool.button': 'Открыть на английском',
 };
