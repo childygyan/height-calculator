@@ -1,12 +1,8 @@
 User-agent: *
 Allow: /
-Disallow: /dashboard/
-Disallow: /api/
-Disallow: /compare/share/
 
 Sitemap: https://height-calculator.net/sitemap.xml
 
 # LLM & AI Agent Reference
 # https://llmstxt.org
 # llms.txt: https://height-calculator.net/llms.txt
-

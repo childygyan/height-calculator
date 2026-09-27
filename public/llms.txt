@@ -5,6 +5,7 @@
 ## Core Tools & Utilities
 
 - [Height Calculator Hub](https://height-calculator.net/height-calculator/): Percentile checks, growth charts, child height prediction and unit conversion in one place.
+- [Visual Height Comparison](https://height-calculator.net/compare/): Compare your height side by side with 1,300+ figures — celebrities, athletes, animals, anime and film characters, everyday objects — drawn true to scale, with exportable charts.
 - [Interactive Height Canvas](https://height-calculator.net/): Side-by-side visual comparison stage with true-to-scale proportions, real-time metric/imperial ruler scaling, customizable silhouettes, and image exports.
 - [How to Use Guide](https://height-calculator.net/how-to-use/): Measuring height accurately, converting units, reading percentiles, and understanding growth charts.
 
@@ -23,7 +24,7 @@ The previous entity comparison directories (celebrity, anime, film, animal, obje
 
 ## Multilingual Support
 
-Height Calculator provides full internationalization across 9 supported languages:
+Height Calculator provides full internationalization across 10 supported languages:
 - English (Default): https://height-calculator.net/
 - Hindi (हिन्दी): https://height-calculator.net/hi/
 - Spanish (Español): https://height-calculator.net/es/
@@ -33,3 +34,4 @@ Height Calculator provides full internationalization across 9 supported language
 - Japanese (日本語): https://height-calculator.net/ja/
 - Korean (한국어): https://height-calculator.net/ko/
 - Arabic (العربية): https://height-calculator.net/ar/
+- Russian (Русский): https://height-calculator.net/ru/

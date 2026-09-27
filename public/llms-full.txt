@@ -45,7 +45,7 @@ The previous comparison routes (`/compare/`, `/height-comparison-calculator/`, `
 
 ## 4. Multilingual Coverage & Locales
 
-Height Calculator supports complete bidirectional localization across 9 languages:
+Height Calculator supports complete bidirectional localization across 10 languages:
 - `en` (English) — Source of truth
 - `hi` (Hindi) — `/hi/`
 - `es` (Spanish) — `/es/`
@@ -55,6 +55,7 @@ Height Calculator supports complete bidirectional localization across 9 language
 - `ja` (Japanese) — `/ja/`
 - `ko` (Korean) — `/ko/`
 - `ar` (Arabic, RTL) — `/ar/`
+- `ru` (Russian) — `/ru/`
 
 All localized hubs include native translations, canonical links, and alternate hreflang annotations.
 
