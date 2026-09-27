@@ -19,6 +19,7 @@ export default {
 
   // About SEO
   'about.title': 'О Height Calculator – Наша миссия | Height Calculator',
+  'about.meta.title': 'О Height Calculator — Наша миссия и методология',
   'about.desc': 'Height Calculator помогает родителям и любознательным предсказывать, отслеживать и понимать рост в любом возрасте — от перцентилей роста младенцев до прогнозов взрослого роста детей.',
 
   // How-To Guide SEO

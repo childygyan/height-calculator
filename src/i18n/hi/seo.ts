@@ -19,6 +19,7 @@ export default {
 
   // About SEO
   'about.title': 'Height Calculator के बारे में – हमारा मिशन | Height Calculator',
+  'about.meta.title': 'Height Calculator के बारे में — हमारा मिशन और कार्यप्रणाली',
   'about.desc': 'Height Calculator माता-पिता और जिज्ञासु लोगों को हर उम्र में ऊंचाई का अनुमान लगाने, ट्रैक करने और समझने में मदद करता है — शिशु के ग्रोथ पर्सेंटाइल से लेकर बच्चे की वयस्क ऊंचाई के अनुमान तक।',
 
   // How-To Guide SEO

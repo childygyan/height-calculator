@@ -19,6 +19,7 @@ export default {
 
   // About SEO
   'about.title': 'عن Height Calculator – مهمتنا | Height Calculator',
+  'about.meta.title': 'عن Height Calculator — مهمتنا ومنهجيتنا',
   'about.desc': 'يساعد Height Calculator الآباء والفضوليين على توقّع الطول وتتبّعه وفهمه في كل الأعمار — من النسب المئوية لنمو الرضّع إلى توقعات طول الأطفال عند البلوغ.',
 
   // How-To Guide SEO

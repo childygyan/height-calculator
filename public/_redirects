@@ -3,12 +3,14 @@
 # Canonical Domain: https://height-calculator.net
 # ==============================================================================
 
-# Canonical Domain Enforcement (Single-hop redirect from www, HTTP, and preview domain)
-https://height-calculator.pages.dev/*  https://height-calculator.net/:splat  301
-http://height-calculator.pages.dev/*   https://height-calculator.net/:splat  301
-https://www.height-calculator.net/*   https://height-calculator.net/:splat  301!
-http://www.height-calculator.net/*    https://height-calculator.net/:splat  301!
-http://height-calculator.net/*        https://height-calculator.net/:splat  301!
+# Canonical Domain Enforcement
+# NOTE (P0-3 fix): Cloudflare Pages `_redirects` only accepts RELATIVE paths as
+# the redirect source, so absolute-URL rules (e.g.
+# "https://height-calculator.pages.dev/* -> https://height-calculator.net/:splat")
+# were silently ignored and have been removed. The pages.dev -> apex 301
+# (path-preserving) is now implemented in functions/_middleware.js, which
+# genuinely emits a 301. The http:// and www rules below were equally invalid
+# and are intentionally not re-added here (www DNS is a separate P1 issue).
 
 # Phase 1: Retired comparison routes → /height-calculator/ (site never went live, no indexed SEO equity)
 # NOTE: /compare/ is a live page again (Sep 2026) — its old redirect was removed.

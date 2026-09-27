@@ -19,6 +19,7 @@ export default {
 
   // About SEO
   'about.title': 'About Height Calculator – Our Mission | Height Calculator',
+  'about.meta.title': 'About Height Calculator — Our Mission & Methodology',
   'about.desc': 'Height Calculator helps parents and curious minds predict, track and understand height at every age — from baby growth percentiles to child adult-height predictions.',
 
   // How-To Guide SEO

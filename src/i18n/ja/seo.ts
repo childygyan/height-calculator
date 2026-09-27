@@ -19,6 +19,7 @@ export default {
 
   // About SEO
   'about.title': 'Height Calculatorについて – 私たちのミッション | Height Calculator',
+  'about.meta.title': 'Height Calculatorについて — 私たちのミッションと計算方法',
   'about.desc': 'Height Calculatorは、保護者や知的好奇心のある方が、あらゆる年齢の身長を予測・記録・理解するお手伝いをします — 赤ちゃんの成長パーセンタイルから子どもの成人身長予測まで。',
 
   // How-To Guide SEO
