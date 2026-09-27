@@ -18,7 +18,7 @@ export default {
   'chart.desc': 'Umfassende Größenvergleichstabellen, die menschliche Perzentile, Prominente, Tiere und Alltagsgegenstände auf einem einheitlichen visuellen Maßstab gegenüberstellen.',
 
   // About SEO
-  'about.title': 'Über Height Calculator – Unsere Mission | Height Calculator',
+  'about.title': 'Über Height Calculator – Unsere Mission',
   'about.meta.title': 'Über Height Calculator — Unsere Mission & Methodik',
   'about.desc': 'Height Calculator hilft Eltern und Neugierigen, die Körpergröße in jedem Alter vorherzusagen, zu verfolgen und zu verstehen — von Baby-Wachstumsperzentilen bis zur Erwachsenengrößen-Prognose.',
 

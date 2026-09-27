@@ -18,7 +18,7 @@ export default {
   'chart.desc': '人類の統計パーセンタイル、有名人、動物、身の回りの日用品を共通の垂直ルーラー上で分かりやすく整理した総合身長チャート。',
 
   // About SEO
-  'about.title': 'Height Calculatorについて – 私たちのミッション | Height Calculator',
+  'about.title': 'Height Calculatorについて – 私たちのミッション',
   'about.meta.title': 'Height Calculatorについて — 私たちのミッションと計算方法',
   'about.desc': 'Height Calculatorは、保護者や知的好奇心のある方が、あらゆる年齢の身長を予測・記録・理解するお手伝いをします — 赤ちゃんの成長パーセンタイルから子どもの成人身長予測まで。',
 

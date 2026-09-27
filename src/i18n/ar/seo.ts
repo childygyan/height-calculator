@@ -18,7 +18,7 @@ export default {
   'chart.desc': 'مخططات مقارنة شاملة تقارن بين النسب المئوية للبشر، المشاهير، الحيوانات، والأشياء اليومية على مسطرة بصرية واحدة.',
 
   // About SEO
-  'about.title': 'عن Height Calculator – مهمتنا | Height Calculator',
+  'about.title': 'عن Height Calculator – مهمتنا',
   'about.meta.title': 'عن Height Calculator — مهمتنا ومنهجيتنا',
   'about.desc': 'يساعد Height Calculator الآباء والفضوليين على توقّع الطول وتتبّعه وفهمه في كل الأعمار — من النسب المئوية لنمو الرضّع إلى توقعات طول الأطفال عند البلوغ.',
 

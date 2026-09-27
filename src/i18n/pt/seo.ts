@@ -18,7 +18,7 @@ export default {
   'chart.desc': 'Tabelas completas comparando percentis humanos, celebridades, animais e objetos do dia a dia em uma régua métrica visual unificada.',
 
   // About SEO
-  'about.title': 'Sobre o Height Calculator – Nossa Missão | Height Calculator',
+  'about.title': 'Sobre o Height Calculator – Nossa Missão',
   'about.meta.title': 'Sobre o Height Calculator — Nossa missão e metodologia',
   'about.desc': 'O Height Calculator ajuda pais e curiosos a prever, acompanhar e entender a altura em todas as idades — dos percentis de crescimento do bebê às previsões de altura adulta das crianças.',
 

@@ -18,7 +18,7 @@ export default {
   'chart.desc': '인간 신장 백분위수, 유명인, 동물, 일상 사물을 통합된 눈금자 위에 정리한 종합적인 시각 신장 비교 표준 차트.',
 
   // About SEO
-  'about.title': 'Height Calculator 소개 – 우리의 미션 | Height Calculator',
+  'about.title': 'Height Calculator 소개 – 우리의 미션',
   'about.meta.title': 'Height Calculator 소개 — 우리의 미션 및 계산 방법',
   'about.desc': 'Height Calculator는 부모와 호기심 많은 분들이 모든 연령대의 키를 예측·추적·이해하도록 돕습니다 — 아기의 성장 백분위수부터 어린이의 성인 키 예측까지.',
 

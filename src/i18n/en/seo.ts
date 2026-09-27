@@ -18,7 +18,7 @@ export default {
   'chart.desc': 'Height charts and percentile references spanning babies, children and adults — see where any height falls against population benchmarks on a unified visual ruler.',
 
   // About SEO
-  'about.title': 'About Height Calculator – Our Mission | Height Calculator',
+  'about.title': 'About Height Calculator – Our Mission',
   'about.meta.title': 'About Height Calculator — Our Mission & Methodology',
   'about.desc': 'Height Calculator helps parents and curious minds predict, track and understand height at every age — from baby growth percentiles to child adult-height predictions.',
 
