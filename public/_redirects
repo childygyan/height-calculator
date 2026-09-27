@@ -1,14 +1,14 @@
 # ==============================================================================
-# Cloudflare Pages Direct 301 Redirects: comparacaodealtura.com
-# Canonical Domain: https://comparacaodealtura.com
+# Cloudflare Pages Direct 301 Redirects: height-calculator.net
+# Canonical Domain: https://height-calculator.net
 # ==============================================================================
 
 # Canonical Domain Enforcement (Single-hop redirect from www, HTTP, and preview domain)
-https://comparacaodealtura.pages.dev/*  https://comparacaodealtura.com/:splat  301
-http://comparacaodealtura.pages.dev/*   https://comparacaodealtura.com/:splat  301
-https://www.comparacaodealtura.com/*   https://comparacaodealtura.com/:splat  301!
-http://www.comparacaodealtura.com/*    https://comparacaodealtura.com/:splat  301!
-http://comparacaodealtura.com/*        https://comparacaodealtura.com/:splat  301!
+https://height-calculator.pages.dev/*  https://height-calculator.net/:splat  301
+http://height-calculator.pages.dev/*   https://height-calculator.net/:splat  301
+https://www.height-calculator.net/*   https://height-calculator.net/:splat  301!
+http://www.height-calculator.net/*    https://height-calculator.net/:splat  301!
+http://height-calculator.net/*        https://height-calculator.net/:splat  301!
 
 # Category Hub Shortlink Aliases (Direct 301 redirects to authoritative category hubs)
 /celebrity-height/            /celebrity-height-comparison/  301

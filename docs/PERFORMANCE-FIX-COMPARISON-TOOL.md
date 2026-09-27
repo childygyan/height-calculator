@@ -1,7 +1,7 @@
-# COMPARACAODEALTURA.ORG — P0 PERFORMANCE FIX REPORT
+# HEIGHT_CALCULATOR.ORG — P0 PERFORMANCE FIX REPORT
 ## Elimination of Massive Static HTML Asset Drawer Payload
 
-**Project:** comparacaodealtura.com  
+**Project:** height-calculator.net  
 **Target:** Eliminate P0 performance bottleneck from static HTML asset drawer  
 **Tech Stack:** Astro.js, Vanilla TypeScript, Tailwind CSS, Cloudflare  
 **Status:** COMPLETED & VERIFIED  

@@ -1,29 +1,29 @@
 export default {
   // Global Meta
-  'meta.defaultTitle': '신장 비교 도구 – 모든 대상을 한눈에 키 비교 | Comparação de Altura',
-  'meta.defaultDesc': '사람, 연예인, 애니메이션 캐릭터, 동물, 사물, 영화 주인공의 신장 차이를 Comparação de Altura의 대화형 시각 비교 도구로 손쉽게 확인하세요.',
+  'meta.defaultTitle': '신장 비교 도구 – 모든 대상을 한눈에 키 비교 | Height Calculator',
+  'meta.defaultDesc': '사람, 연예인, 애니메이션 캐릭터, 동물, 사물, 영화 주인공의 신장 차이를 Height Calculator의 대화형 시각 비교 도구로 손쉽게 확인하세요.',
   'meta.keywords': '키 비교, 신장 차이 계산기, 연예인 키, 시각적 키 비교, 애니 캐릭터 키',
 
   // Compare Tool SEO
   'compare.h1': '키 비교 도구',
-  'compare.title': '키 비교 도구 – 실시간 인터랙티브 나란히 비교 | Comparação de Altura',
+  'compare.title': '키 비교 도구 – 실시간 인터랙티브 나란히 비교 | Height Calculator',
   'compare.desc': '원하는 인물이나 사용자 지정 측정값을 추가하여 실시간으로 신장을 시각 비교하세요. 동일한 0cm 기준선 위에 비례 정렬된 정밀 SVG 및 PNG 모델을 제공합니다.',
 
   // Calculator SEO
-  'calculator.title': '신장 차이 계산기 – cm 및 피트/인치 단위 오차 없는 연산 | Comparação de Altura',
+  'calculator.title': '신장 차이 계산기 – cm 및 피트/인치 단위 오차 없는 연산 | Height Calculator',
   'calculator.desc': '두 명 이상의 인물 사이의 정확한 수치 차이와 백분율 차이를 계산합니다. 피트/인치와 센티미터 단위 간의 즉각적인 양방향 자동 변환 지원.',
 
   // Chart SEO
-  'chart.title': '신장 비교 차트 – 시각적 표준 측정 기준표 | Comparação de Altura',
+  'chart.title': '신장 비교 차트 – 시각적 표준 측정 기준표 | Height Calculator',
   'chart.desc': '인간 신장 백분위수, 유명인, 동물, 일상 사물을 통합된 눈금자 위에 정리한 종합적인 시각 신장 비교 표준 차트.',
 
   // About SEO
-  'about.title': 'Comparação de Altura 소개 – 플랫폼 목표, 측정 방법론 및 기술 표준 | Comparação de Altura',
-  'about.desc': '엄밀한 수학적 비례 스케일링과 검증된 기록을 바탕으로 모든 대상의 실제 크기를 시각적으로 쉽게 이해할 수 있도록 돕는 Comparação de Altura의 철학을 만나보세요.',
+  'about.title': 'Height Calculator 소개 – 플랫폼 목표, 측정 방법론 및 기술 표준 | Height Calculator',
+  'about.desc': '엄밀한 수학적 비례 스케일링과 검증된 기록을 바탕으로 모든 대상의 실제 크기를 시각적으로 쉽게 이해할 수 있도록 돕는 Height Calculator의 철학을 만나보세요.',
 
   // How-To Guide SEO
-  'howto.title': '신장 비교 도구 사용 방법 가이드 | Comparação de Altura',
-  'howto.desc': 'Comparação de Altura의 키 비교 도구를 사용하여 사람, 동물, 사물, 캐릭터의 신장을 비교하고, 키 차이를 직관적으로 파악하며, 결과를 조정하고 공유하는 방법을 알아보세요.',
+  'howto.title': '신장 비교 도구 사용 방법 가이드 | Height Calculator',
+  'howto.desc': 'Height Calculator의 키 비교 도구를 사용하여 사람, 동물, 사물, 캐릭터의 신장을 비교하고, 키 차이를 직관적으로 파악하며, 결과를 조정하고 공유하는 방법을 알아보세요.',
 
   // FAQ default questions & answers
   'faq.badge': '자주 묻는 질문',

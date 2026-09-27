@@ -1,18 +1,18 @@
 # ==============================================================================
-# Cloudflare Pages Domain-Specific Headers: Comparação de Altura
+# Cloudflare Pages Domain-Specific Headers: Height Calculator
 # ==============================================================================
 
 # Production Custom Domain (Authoritative & Indexable)
-https://comparacaodealtura.com/*
+https://height-calculator.net/*
   X-Robots-Tag: all
   Cache-Control: public, max-age=0, must-revalidate
 
-https://www.comparacaodealtura.com/*
+https://www.height-calculator.net/*
   X-Robots-Tag: all
   Cache-Control: public, max-age=0, must-revalidate
 
 # Cloudflare Pages Preview Domain & Subdomains (Non-Indexable)
-https://comparacaodealtura.pages.dev/*
+https://height-calculator.pages.dev/*
   X-Robots-Tag: noindex, nofollow
 
 https://:project.pages.dev/*

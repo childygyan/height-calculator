@@ -3,7 +3,7 @@ import type { BlogArticle, BlogAuthor, BlogCategoryMeta } from './types.ts';
 export const SITE_AUTHOR: BlogAuthor = {
   name: 'Firoz Khan',
   role: 'Full Stack Developer',
-  bio: 'Full Stack Developer and founder of FK Digital Media, building and maintaining comparacaodealtura.com with a focus on mathematical scale modeling and accessible web tools.',
+  bio: 'Full Stack Developer and founder of FK Digital Media, building and maintaining height-calculator.net with a focus on mathematical scale modeling and accessible web tools.',
   url: '/about/',
   sameAs: [
     'https://www.linkedin.com/in/firoz-khan-1153358a/',
@@ -211,7 +211,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
         heading: 'How Dwayne Johnson Compares to an Equine Stature',
         subheading: 'Standing taller than the shoulder of a full-sized riding horse.',
         paragraphs: [
-          'One of the most striking comparisons on Comparação de Altura is placing Dwayne Johnson next to a standard riding horse (Equus caballus). Horses are measured at the dorsal withers—the highest point of the shoulder blade—typically averaging 15.3 hands (160 cm or 5 feet 3 inches).',
+          'One of the most striking comparisons on Height Calculator is placing Dwayne Johnson next to a standard riding horse (Equus caballus). Horses are measured at the dorsal withers—the highest point of the shoulder blade—typically averaging 15.3 hands (160 cm or 5 feet 3 inches).',
           'At 196 cm, Dwayne Johnson stands a massive 36 cm (over 14 inches) taller than the horse\'s withers. An observer standing beside him would look up to him even when he is standing beside a full-grown equine mount.',
         ],
       },
@@ -297,7 +297,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
         subheading: 'What happens when football\'s two greatest icons line up side-by-side.',
         paragraphs: [
           'For nearly two decades, Lionel Messi and Cristiano Ronaldo defined modern football. Beyond their records and tactical positions, their physical silhouettes could hardly be more distinct. Ronaldo stands 187 cm (6 ft 1.6 in), whereas Messi stands 170 cm (5 ft 7 in).',
-          'On Comparação de Altura\'s orthographic canvas, Messi\'s head crown reaches right around Ronaldo\'s upper nasal bridge. When they face each other, Ronaldo gazes down at an angle of roughly 8 degrees, while Messi tilts upward to meet his eyes.',
+          'On Height Calculator\'s orthographic canvas, Messi\'s head crown reaches right around Ronaldo\'s upper nasal bridge. When they face each other, Ronaldo gazes down at an angle of roughly 8 degrees, while Messi tilts upward to meet his eyes.',
           'Yet on the pitch, both leveraged their stature into historic competitive advantages.',
         ],
         callout: {

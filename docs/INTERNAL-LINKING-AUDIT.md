@@ -1,8 +1,8 @@
-# comparacaodealtura.com — Advanced Internal Linking Architecture & Audit Report
+# height-calculator.net — Advanced Internal Linking Architecture & Audit Report
 
 ## Executive Summary
 
-comparacaodealtura.com's internal linking architecture has been engineered from the ground up to establish an airtight, topical, search-engine crawlable, and user-friendly link hierarchy. Across 409 compiled static production routes and 14,921 analyzed internal hyperlinks:
+height-calculator.net's internal linking architecture has been engineered from the ground up to establish an airtight, topical, search-engine crawlable, and user-friendly link hierarchy. Across 409 compiled static production routes and 14,921 analyzed internal hyperlinks:
 - **Broken Internal Links (404s):** **0** (100% verified target resolution across all 9 locales)
 - **Orphan Pages (0 Inbound Links):** **0** (100% of pages possess multiple crawl paths)
 - **Unreachable Pages from Homepage:** **0** (Every indexable page is reachable within 1–4 clicks)
@@ -75,7 +75,7 @@ To prevent spam signals, maintain crawl budget efficiency, and preserve UX clari
 
 ## 4. Multilingual Linking & Locale Routing Isolation
 
-comparacaodealtura.com supports 9 languages:
+height-calculator.net supports 9 languages:
 - `en` (English — Canonical default)
 - `hi` (Hindi)
 - `es` (Spanish)

@@ -10,7 +10,7 @@ const i18nDir = path.join(rootDir, 'src', 'i18n');
 const LOCALES = ['en', 'hi', 'es', 'fr', 'de', 'pt', 'ja', 'ko', 'ar', 'ru'];
 const MODULES = ['common', 'home', 'comparison', 'categories', 'seo'];
 
-console.log('COMPARACAODEALTURA.ORG - i18n TRANSLATION VALIDATION');
+console.log('HEIGHT_CALCULATOR.ORG - i18n TRANSLATION VALIDATION');
 
 function readDict(filePath) {
   const content = fs.readFileSync(filePath, 'utf-8');

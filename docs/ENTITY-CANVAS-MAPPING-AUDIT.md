@@ -1,5 +1,5 @@
 # ENTITY-TO-CANVAS MAPPING & IDENTITY AUDIT REPORT
-**Platform:** comparacaodealtura.com  
+**Platform:** height-calculator.net  
 **System:** Universal Entity Comparison Engine & Smart Entity-to-Canvas System  
 **Audit Date:** September 19, 2026  
 **Status:** FULLY VERIFIED (236 / 236 Automated Tests Passing)
@@ -8,7 +8,7 @@
 
 ## 1. Executive Summary
 
-A comprehensive architectural overhaul of the Entity-to-Canvas comparison pipeline was implemented across comparacaodealtura.com. The primary objectives were:
+A comprehensive architectural overhaul of the Entity-to-Canvas comparison pipeline was implemented across height-calculator.net. The primary objectives were:
 1. **Absolute Identity Integrity**: Ensuring that selecting any two entities (e.g. "Dwayne Johnson vs Horse") loads and displays their authentic, verified images on canvas—eliminating wrong entity substitutions, fuzzy-name mismatches, and dangerous fallback heuristics (such as Horse showing as Cat).
 2. **True Proportional Physical Scaling**: Calibrating baseline alignment and proportional scaling so that every entity is rendered strictly according to its real-world stored height in centimeters (e.g., Dwayne Johnson at 196 cm standing 36 cm taller than a Horse at 160 cm withers line).
 3. **Multi-Category Universal Support**: Supporting all 11 entity categories (Humans, Celebrities, Animals, Objects, Plants, Sports, Apparel, Fictional, Anime, Films) with first-class discoverability.

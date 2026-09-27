@@ -15,7 +15,7 @@ export default {
 
   // Live Tool Section
   'section.liveToolBadge': 'Ferramenta Interativa ao Vivo',
-  'section.liveToolTitle': 'Inicie Sua Comparação de Altura',
+  'section.liveToolTitle': 'Inicie Sua Height Calculator',
 
   // Categories Section
   'section.categoriesBadge': '10 Categorias Universais',

@@ -1,18 +1,18 @@
 /**
- * Master Brand Configuration: Comparação de Altura
- * Official Domain: comparacaodealtura.com
+ * Master Brand Configuration: Height Calculator
+ * Official Domain: height-calculator.net
  * Primary Tagline: Compare qualquer coisa por altura
  * Secondary Tagline: Veja a altura real de qualquer coisa
  */
 export const SITE = {
-  name: 'Comparação de Altura',
-  brandName: 'Comparação de Altura',
-  domain: 'comparacaodealtura.com',
+  name: 'Height Calculator',
+  brandName: 'Height Calculator',
+  domain: 'height-calculator.net',
   tagline: 'Compare qualquer coisa por altura',
   secondaryTagline: 'Veja a altura real de qualquer coisa',
-  siteUrl: 'https://comparacaodealtura.com',
-  defaultTitle: 'Height Comparison Tool – Compare Anything by Height | Comparação de Altura',
-  defaultDescription: 'Compare people, celebrities, anime characters, animals, objects, film characters and more with Comparação de Altura\'s interactive height comparison tool.',
-  defaultOgImage: 'https://comparacaodealtura.com/og-image.svg',
-  author: 'Comparação de Altura',
+  siteUrl: 'https://height-calculator.net',
+  defaultTitle: 'Height Comparison Tool – Compare Anything by Height | Height Calculator',
+  defaultDescription: 'Compare people, celebrities, anime characters, animals, objects, film characters and more with Height Calculator\'s interactive height comparison tool.',
+  defaultOgImage: 'https://height-calculator.net/og-image.svg',
+  author: 'Height Calculator',
 };

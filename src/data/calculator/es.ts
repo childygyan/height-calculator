@@ -2,8 +2,8 @@ import type { CalculatorTranslationData } from './types';
 
 export const esCalculator: CalculatorTranslationData = {
   seo: {
-    title: 'Calculadora de Diferencia de Altura | Compara Estaturas | Comparação de Altura',
-    description: 'Calcula la diferencia exacta de estatura física entre dos personas, parejas u objetos en centímetros, pies y pulgadas. Calcula el porcentaje y visualiza la brecha con Comparação de Altura.',
+    title: 'Calculadora de Diferencia de Altura | Compara Estaturas | Height Calculator',
+    description: 'Calcula la diferencia exacta de estatura física entre dos personas, parejas u objetos en centímetros, pies y pulgadas. Calcula el porcentaje y visualiza la brecha con Height Calculator.',
   },
   badge: 'Herramienta de Medición de Altura de Precisión',
   h1: 'Calculadora de Diferencia de Altura',
@@ -69,7 +69,7 @@ export const esCalculator: CalculatorTranslationData = {
     },
     {
       question: '¿Puedo visualizar esta diferencia de altura en el lienzo de comparación?',
-      answer: '¡Sí! Haz clic en el botón "Comparar Visualmente en el Lienzo" después de calcular, y ambas alturas se cargarán instantáneamente en el lienzo interactivo de Comparação de Altura.',
+      answer: '¡Sí! Haz clic en el botón "Comparar Visualmente en el Lienzo" después de calcular, y ambas alturas se cargarán instantáneamente en el lienzo interactivo de Height Calculator.',
     },
     {
       question: '¿Cómo convierto entre centímetros y pies/pulgadas?',

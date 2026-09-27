@@ -1,6 +1,6 @@
 export default {
   // Brand
-  'brand.name': 'Comparação de Altura',
+  'brand.name': 'Height Calculator',
   'brand.tagline': 'ऊंचाई के आधार पर किसी भी चीज़ की तुलना करें',
   'brand.secondaryTagline': 'देखें कि वास्तव में यह कितना ऊंचा है',
   'brand.description': 'लोगों, हस्तियों, एनीमे पात्रों, फ़िल्म आकृतियों, जानवरों, वस्तुओं, पौधों और खेल हस्तियों की ऊंचाई की तुलना करने के लिए एक इंटरैक्टिव विज़ुअल प्लेटफ़ॉर्म।',
@@ -73,7 +73,7 @@ export default {
   'footer.legal': 'प्लेटफ़ॉर्म और कानूनी',
   'footer.tools': 'उपकरण',
   'footer.allRightsReserved': 'सर्वाधिकार सुरक्षित।',
-  'footer.platformStatement': 'Comparação de Altura लोगों को किसी भी चीज़ की ऊंचाई को देखने और समझने में मदद करता है।',
+  'footer.platformStatement': 'Height Calculator लोगों को किसी भी चीज़ की ऊंचाई को देखने और समझने में मदद करता है।',
   'footer.fastPlatform': 'तेज़, स्थिर-प्रथम विज़ुअल माप प्लेटफ़ॉर्म',
 
   // Error States

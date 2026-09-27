@@ -1,6 +1,6 @@
 export default {
   // Brand
-  'brand.name': 'Comparação de Altura',
+  'brand.name': 'Height Calculator',
   'brand.tagline': '키와 높이로 모든 것을 비교하세요',
   'brand.secondaryTagline': '실제 높이가 얼마나 되는지 확인해보세요',
   'brand.description': '사람, 유명인, 애니메이션 캐릭터, 영화 인물, 동물, 사물, 식물, 운동선수 등의 키와 높이를 직관적으로 비교할 수 있는 인터랙티브 시각 비교 플랫폼입니다.',
@@ -73,7 +73,7 @@ export default {
   'footer.legal': '운영 및 법적 고지',
   'footer.tools': '도구 모음',
   'footer.allRightsReserved': 'All rights reserved.',
-  'footer.platformStatement': 'Comparação de Altura는 모든 사물과 인물의 실제 크기를 시각적으로 쉽게 이해하도록 돕습니다.',
+  'footer.platformStatement': 'Height Calculator는 모든 사물과 인물의 실제 크기를 시각적으로 쉽게 이해하도록 돕습니다.',
   'footer.fastPlatform': '빠르고 가벼운 정적 중심의 시각적 측정 플랫폼',
 
   // Error States

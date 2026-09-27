@@ -1,6 +1,6 @@
 export default {
   // Brand
-  'brand.name': 'Comparação de Altura',
+  'brand.name': 'Height Calculator',
   'brand.tagline': 'قارن أي شيء من حيث الطول والارتفاع',
   'brand.secondaryTagline': 'شاهد كم يبلغ طوله الحقيقي بالفعل',
   'brand.description': 'منصة تفاعلية بصرية لمقارنة الأطوال بين الأشخاص والمشاهير وشخصيات الأنمي والسينما والحيوانات والمجسمات والنباتات والرياضيين وغير ذلك الكثير.',
@@ -73,7 +73,7 @@ export default {
   'footer.legal': 'المنصة والشروط القانونية',
   'footer.tools': 'الأدوات',
   'footer.allRightsReserved': 'جميع الحقوق محفوظة.',
-  'footer.platformStatement': 'تساعد منصة Comparação de Altura الأشخاص على فهم الارتفاع الحقيقي لأي شيء بصرياً.',
+  'footer.platformStatement': 'تساعد منصة Height Calculator الأشخاص على فهم الارتفاع الحقيقي لأي شيء بصرياً.',
   'footer.fastPlatform': 'منصة قياس بصري سريعة ومبنية على مبدأ الثبات أولاً',
 
   // Error States

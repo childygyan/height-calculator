@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://comparacaodealtura.com',
+  site: 'https://height-calculator.net',
   trailingSlash: 'always',
   output: 'static',
   i18n: {

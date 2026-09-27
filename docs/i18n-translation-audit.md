@@ -1,6 +1,6 @@
-# comparacaodealtura.com — Multilingual Translation Audit
+# height-calculator.net — Multilingual Translation Audit
 
-**Project:** Comparação de Altura (comparacaodealtura.com)  
+**Project:** Height Calculator (height-calculator.net)  
 **Architecture:** Astro.js Static-First i18n  
 **Default / Canonical Locale:** English (`en` at `/`)  
 **Configured Locales:** 9 (`en`, `hi`, `es`, `fr`, `de`, `pt`, `ja`, `ko`, `ar`)  
@@ -11,11 +11,11 @@
 
 ## 1. Executive Summary
 
-All user-facing copy, navigation links, meta tags, titles, descriptions, FAQs, category benchmarks, and comparison tools across **comparacaodealtura.com** have been fully translated into all 9 configured locales.
+All user-facing copy, navigation links, meta tags, titles, descriptions, FAQs, category benchmarks, and comparison tools across **height-calculator.net** have been fully translated into all 9 configured locales.
 
 Strict compliance with core architectural rules:
 1. **Zero Architecture Duplication:** The comparison engine (`comparison-app.ts`), entity database (`ASSET_REGISTRY` with 1,461 models), and numerical measurement standards (`heightCm`) remain 100% shared across all languages.
-2. **Brand Integrity:** The brand name `Comparação de Altura` and domain `comparacaodealtura.com` are never translated and remain invariant across all locales.
+2. **Brand Integrity:** The brand name `Height Calculator` and domain `height-calculator.net` are never translated and remain invariant across all locales.
 3. **Bi-Directional Support:** Arabic (`ar`) automatically configures `dir="rtl"` and text alignment in `Layout.astro`.
 4. **Canonical Routing:** English is served at root `/`, while localized versions are cleanly namespaced under `/{locale}/` without duplicate route prefixes.
 

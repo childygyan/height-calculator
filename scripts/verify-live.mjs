@@ -8,10 +8,10 @@ async function verifyLive() {
   };
 
   console.log('====================================================');
-  console.log('1. Checking Production Domain: https://comparacaodealtura.com/');
+  console.log('1. Checking Production Domain: https://height-calculator.net/');
   console.log('====================================================');
   try {
-    const res = await fetch('https://comparacaodealtura.com/', { headers: browserHeaders, redirect: 'manual' });
+    const res = await fetch('https://height-calculator.net/', { headers: browserHeaders, redirect: 'manual' });
     console.log('Status:', res.status);
     console.log('X-Robots-Tag:', res.headers.get('x-robots-tag'));
     console.log('Cache-Control:', res.headers.get('cache-control'));
@@ -26,10 +26,10 @@ async function verifyLive() {
   }
 
   console.log('\n====================================================');
-  console.log('2. Checking Production as Googlebot: https://comparacaodealtura.com/');
+  console.log('2. Checking Production as Googlebot: https://height-calculator.net/');
   console.log('====================================================');
   try {
-    const res = await fetch('https://comparacaodealtura.com/', { headers: googlebotHeaders, redirect: 'manual' });
+    const res = await fetch('https://height-calculator.net/', { headers: googlebotHeaders, redirect: 'manual' });
     console.log('Status:', res.status);
     console.log('X-Robots-Tag:', res.headers.get('x-robots-tag'));
     const text = await res.text();
@@ -44,7 +44,7 @@ async function verifyLive() {
   console.log('3. Checking Sample Subpages: /compare/, /celebrity-height-comparison/, /celebrity-height/brad-pitt/');
   console.log('====================================================');
   for (const p of ['/compare/', '/celebrity-height-comparison/', '/celebrity-height/brad-pitt/']) {
-    const res = await fetch(`https://comparacaodealtura.com${p}`, { headers: browserHeaders });
+    const res = await fetch(`https://height-calculator.net${p}`, { headers: browserHeaders });
     const text = await res.text();
     const c = text.match(/<link rel="canonical" href="([^"]+)"/);
     const noindex = text.includes('meta name="robots" content="noindex');
@@ -52,15 +52,15 @@ async function verifyLive() {
   }
 
   console.log('\n====================================================');
-  console.log('4. Checking Preview Domain: https://comparacaodealtura.pages.dev/');
+  console.log('4. Checking Preview Domain: https://height-calculator.pages.dev/');
   console.log('====================================================');
   try {
-    const res = await fetch('https://comparacaodealtura.pages.dev/', { headers: browserHeaders, redirect: 'manual' });
+    const res = await fetch('https://height-calculator.pages.dev/', { headers: browserHeaders, redirect: 'manual' });
     console.log('Status:', res.status);
     console.log('Location (redirect):', res.headers.get('location'));
     console.log('X-Robots-Tag:', res.headers.get('x-robots-tag'));
     const text = await res.text();
-    const hasClientScript = text.includes('comparacaodealtura.pages.dev') && text.includes('noindex, nofollow');
+    const hasClientScript = text.includes('height-calculator.pages.dev') && text.includes('noindex, nofollow');
     console.log('Has client-side preview noindex script?', hasClientScript);
     const c = text.match(/<link rel="canonical" href="([^"]+)"/);
     console.log('Canonical points to:', c ? c[1] : 'NONE');
@@ -69,10 +69,10 @@ async function verifyLive() {
   }
 
   console.log('\n====================================================');
-  console.log('5. Checking 404 Behavior: https://comparacaodealtura.com/404/');
+  console.log('5. Checking 404 Behavior: https://height-calculator.net/404/');
   console.log('====================================================');
   try {
-    const res = await fetch('https://comparacaodealtura.com/404/', { headers: browserHeaders });
+    const res = await fetch('https://height-calculator.net/404/', { headers: browserHeaders });
     console.log('404 Status:', res.status);
     const text = await res.text();
     console.log('404 has noindex tag?', text.includes('meta name="robots" content="noindex, nofollow"'));
@@ -86,16 +86,16 @@ async function verifyLive() {
   console.log('6. Checking CSS & JS Static Bundles');
   console.log('====================================================');
   try {
-    const res = await fetch('https://comparacaodealtura.com/', { headers: browserHeaders });
+    const res = await fetch('https://height-calculator.net/', { headers: browserHeaders });
     const text = await res.text();
     const cssMatch = text.match(/href="(\/_astro\/[^"]+\.css)"/);
     const jsMatch = text.match(/src="(\/_astro\/[^"]+\.js)"/);
     if (cssMatch) {
-      const cssRes = await fetch('https://comparacaodealtura.com' + cssMatch[1]);
+      const cssRes = await fetch('https://height-calculator.net' + cssMatch[1]);
       console.log('CSS:', cssMatch[1], '-> Status:', cssRes.status, 'Cache-Control:', cssRes.headers.get('cache-control'));
     }
     if (jsMatch) {
-      const jsRes = await fetch('https://comparacaodealtura.com' + jsMatch[1]);
+      const jsRes = await fetch('https://height-calculator.net' + jsMatch[1]);
       console.log('JS:', jsMatch[1], '-> Status:', jsRes.status, 'Cache-Control:', jsRes.headers.get('cache-control'));
     }
   } catch (err) {

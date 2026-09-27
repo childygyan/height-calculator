@@ -1,7 +1,7 @@
 import type { FeatureFlags, PlanConfiguration, PlanTier } from '../types/saas';
 
 /**
- * Comparação de Altura Master Feature Flags
+ * Height Calculator Master Feature Flags
  * Controls SaaS feature availability across the application.
  * All flags default to false to protect the live static public platform.
  */

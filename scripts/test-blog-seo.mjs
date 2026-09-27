@@ -16,8 +16,8 @@ const EXPECTED_SLUGS = [
 ];
 
 const LOCALES = ['ar', 'de', 'es', 'fr', 'hi', 'ja', 'ko', 'pt', 'ru'];
-const PRODUCTION_ORIGIN = 'https://comparacaodealtura.com';
-const FORBIDDEN_HOST = 'comparacaodealtura.pages.dev';
+const PRODUCTION_ORIGIN = 'https://height-calculator.net';
+const FORBIDDEN_HOST = 'height-calculator.pages.dev';
 
 let passed = 0;
 let failed = 0;

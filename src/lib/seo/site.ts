@@ -1,22 +1,22 @@
 /**
- * Centralized SEO Environment & Domain Hostname Authority: comparacaodealtura.com
+ * Centralized SEO Environment & Domain Hostname Authority: height-calculator.net
  *
  * Production Domain (Authoritative, Indexable):
- *   https://comparacaodealtura.com/
+ *   https://height-calculator.net/
  *
  * Preview / Cloudflare Pages Subdomains (Non-indexable):
- *   https://comparacaodealtura.pages.dev/
+ *   https://height-calculator.pages.dev/
  *   https://*.pages.dev/
  */
 
 import { SUPPORTED_LOCALES, DEFAULT_LOCALE, type Locale } from '../../i18n/locales';
 
-export const PRODUCTION_DOMAIN = 'comparacaodealtura.com';
-export const PRODUCTION_ORIGIN = 'https://comparacaodealtura.com';
+export const PRODUCTION_DOMAIN = 'height-calculator.net';
+export const PRODUCTION_ORIGIN = 'https://height-calculator.net';
 export const PREVIEW_DOMAIN_SUFFIX = '.pages.dev';
 
 /**
- * Checks if a hostname matches the official production domain (comparacaodealtura.com or www.comparacaodealtura.com).
+ * Checks if a hostname matches the official production domain (height-calculator.net or www.height-calculator.net).
  */
 export function isProductionHost(hostname?: string): boolean {
   if (!hostname) return true;
@@ -30,7 +30,7 @@ export function isProductionHost(hostname?: string): boolean {
 export function isPreviewHost(hostname?: string): boolean {
   if (!hostname) return false;
   const cleanHost = hostname.toLowerCase().trim();
-  return cleanHost === 'comparacaodealtura.pages.dev' || cleanHost.endsWith(PREVIEW_DOMAIN_SUFFIX);
+  return cleanHost === 'height-calculator.pages.dev' || cleanHost.endsWith(PREVIEW_DOMAIN_SUFFIX);
 }
 
 /**
@@ -57,16 +57,16 @@ export function stripLocaleFromPath(pathname: string): string {
 
 /**
  * Generates an absolute production canonical URL for any pathname and optional locale.
- * - Always points to the authoritative production origin: https://comparacaodealtura.com
+ * - Always points to the authoritative production origin: https://height-calculator.net
  * - Automatically strips tracking / query parameters and URL fragments.
  * - Adheres strictly to the project's trailing-slash policy (always ends with '/').
  *
  * Examples:
  *   getCanonicalUrl('/celebrity-height/brad-pitt/?utm_source=test')
- *   -> 'https://comparacaodealtura.com/celebrity-height/brad-pitt/'
+ *   -> 'https://height-calculator.net/celebrity-height/brad-pitt/'
  *
  *   getCanonicalUrl('/compare/', 'hi')
- *   -> 'https://comparacaodealtura.com/hi/compare/'
+ *   -> 'https://height-calculator.net/hi/compare/'
  */
 export function getCanonicalUrl(pathname: string, locale?: Locale): string {
   // Strip any query parameters (?...) or hash fragments (#...)

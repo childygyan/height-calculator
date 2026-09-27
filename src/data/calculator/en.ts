@@ -2,8 +2,8 @@ import type { CalculatorTranslationData } from './types';
 
 export const enCalculator: CalculatorTranslationData = {
   seo: {
-    title: 'Height Difference Calculator | Compare Statures & Percentages | Comparação de Altura',
-    description: 'Calculate the exact physical height difference between two people, couples, or objects in centimeters, feet, and inches. Compute percentage difference and visual stature gap with Comparação de Altura.',
+    title: 'Height Difference Calculator | Compare Statures & Percentages | Height Calculator',
+    description: 'Calculate the exact physical height difference between two people, couples, or objects in centimeters, feet, and inches. Compute percentage difference and visual stature gap with Height Calculator.',
   },
   badge: 'Precision Height Measurement Tool',
   h1: 'Height Difference Calculator',
@@ -69,7 +69,7 @@ export const enCalculator: CalculatorTranslationData = {
     },
     {
       question: 'Can I visualize this height difference on the comparison canvas?',
-      answer: 'Yes! Click the "Compare Visually on Comparison Canvas" button after calculating, and both heights will instantly load onto the interactive Comparação de Altura comparison canvas.',
+      answer: 'Yes! Click the "Compare Visually on Comparison Canvas" button after calculating, and both heights will instantly load onto the interactive Height Calculator comparison canvas.',
     },
     {
       question: 'How do I convert between centimeters and feet/inches?',

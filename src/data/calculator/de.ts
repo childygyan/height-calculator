@@ -2,8 +2,8 @@ import type { CalculatorTranslationData } from './types';
 
 export const deCalculator: CalculatorTranslationData = {
   seo: {
-    title: 'Größenunterschied-Rechner | Körpergrößen & Prozentsätze vergleichen | Comparação de Altura',
-    description: 'Berechnen Sie den exakten physischen Größenunterschied zwischen zwei Personen, Paaren oder Objekten in Zentimetern, Fuß und Zoll. Berechnen Sie den Prozentunterschied mit Comparação de Altura.',
+    title: 'Größenunterschied-Rechner | Körpergrößen & Prozentsätze vergleichen | Height Calculator',
+    description: 'Berechnen Sie den exakten physischen Größenunterschied zwischen zwei Personen, Paaren oder Objekten in Zentimetern, Fuß und Zoll. Berechnen Sie den Prozentunterschied mit Height Calculator.',
   },
   badge: 'Präzisions-Körpergrößen-Messwerkzeug',
   h1: 'Größenunterschied-Rechner',
@@ -69,7 +69,7 @@ export const deCalculator: CalculatorTranslationData = {
     },
     {
       question: 'Kann ich diesen Größenunterschied auf der Vergleichsleinwand visualisieren?',
-      answer: 'Ja! Klicken Sie nach der Berechnung auf die Schaltfläche „Visuell auf der Vergleichsleinwand vergleichen“, und beide Staturen werden sofort auf die interaktive Comparação de Altura-Leinwand geladen.',
+      answer: 'Ja! Klicken Sie nach der Berechnung auf die Schaltfläche „Visuell auf der Vergleichsleinwand vergleichen“, und beide Staturen werden sofort auf die interaktive Height Calculator-Leinwand geladen.',
     },
     {
       question: 'Wie rechne ich zwischen Zentimetern und Fuß/Zoll um?',

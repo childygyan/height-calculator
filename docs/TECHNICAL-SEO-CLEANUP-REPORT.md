@@ -1,6 +1,6 @@
 # Technical SEO Cleanup & Production Route Audit Report
 
-**Project:** Comparação de Altura (comparacaodealtura.com)  
+**Project:** Height Calculator (height-calculator.net)  
 **Framework:** Astro.js 5 (Static-First SSG)  
 **Deployment Target:** Cloudflare Pages  
 **Audit & Cleanup Date:** September 19, 2026  
@@ -35,10 +35,10 @@
 
 | Route Type / URL Pattern | Previous Canonical Behavior | Expected & Fixed Canonical | Status |
 |---|---|---|---|
-| English Core (`/`, `/compare/`, etc.) | Absolute HTTPS with trailing slash | `https://comparacaodealtura.com/[route]/` | PASS |
-| Localized Hubs (`/hi/compare/`, etc.) | Self-referencing localized canonical | `https://comparacaodealtura.com/[locale]/[route]/` | PASS |
-| Entity Pages (`/celebrity-height/[slug]/`) | Self-referencing absolute HTTPS URL | `https://comparacaodealtura.com/celebrity-height/[slug]/` | PASS |
-| Legacy Shortcuts (`/celebrity-height/`) | Previously unhandled or canonical mismatch | 301 direct redirect to `https://comparacaodealtura.com/celebrity-height-comparison/` | PASS |
+| English Core (`/`, `/compare/`, etc.) | Absolute HTTPS with trailing slash | `https://height-calculator.net/[route]/` | PASS |
+| Localized Hubs (`/hi/compare/`, etc.) | Self-referencing localized canonical | `https://height-calculator.net/[locale]/[route]/` | PASS |
+| Entity Pages (`/celebrity-height/[slug]/`) | Self-referencing absolute HTTPS URL | `https://height-calculator.net/celebrity-height/[slug]/` | PASS |
+| Legacy Shortcuts (`/celebrity-height/`) | Previously unhandled or canonical mismatch | 301 direct redirect to `https://height-calculator.net/celebrity-height-comparison/` | PASS |
 | Private SaaS Dashboard (`/dashboard/`) | Evaluated for canonical indexing | Self-referencing with `<meta name="robots" content="noindex, nofollow">` | PASS |
 
 ---
@@ -47,9 +47,9 @@
 
 | Request Source | Target Destination | Status Code | Reason / Impact |
 |---|---|---|---|
-| `https://www.comparacaodealtura.com/*` | `https://comparacaodealtura.com/:splat` | 301 (Permanent) | Single-hop canonical domain consolidation |
-| `http://www.comparacaodealtura.com/*` | `https://comparacaodealtura.com/:splat` | 301 (Permanent) | Direct HTTP to HTTPS non-www (no multi-hop chains) |
-| `http://comparacaodealtura.com/*` | `https://comparacaodealtura.com/:splat` | 301 (Permanent) | Direct HTTP to HTTPS canonical redirect |
+| `https://www.height-calculator.net/*` | `https://height-calculator.net/:splat` | 301 (Permanent) | Single-hop canonical domain consolidation |
+| `http://www.height-calculator.net/*` | `https://height-calculator.net/:splat` | 301 (Permanent) | Direct HTTP to HTTPS non-www (no multi-hop chains) |
+| `http://height-calculator.net/*` | `https://height-calculator.net/:splat` | 301 (Permanent) | Direct HTTP to HTTPS canonical redirect |
 | `/celebrity-height/` | `/celebrity-height-comparison/` | 301 (Permanent) | Resolves potential 404 when slug is stripped from entity URLs |
 | `/fictional-character-height/` | `/fictional-character-height-comparison/` | 301 (Permanent) | Direct category alias redirect |
 
@@ -74,7 +74,7 @@ export default defineConfig({
 ### Updated Authoritative Configuration:
 ```javascript
 export default defineConfig({
-  site: 'https://comparacaodealtura.com',
+  site: 'https://height-calculator.net',
   trailingSlash: 'always',
   output: 'static',
   i18n: {
@@ -87,14 +87,14 @@ export default defineConfig({
 });
 ```
 - **Changes Made:**
-  - Added `site: 'https://comparacaodealtura.com'`: Standardizes canonical URL generation across Astro internals and adapters.
+  - Added `site: 'https://height-calculator.net'`: Standardizes canonical URL generation across Astro internals and adapters.
   - Added `trailingSlash: 'always'`: Strictly synchronizes URL structure with directory output format (`/path/`).
 
 ---
 
 ## 6. Sitemap Validation
 
-- **Location:** `https://comparacaodealtura.com/sitemap.xml`
+- **Location:** `https://height-calculator.net/sitemap.xml`
 - **Total Valid URLs Included:** 406
 - **Multilingual Expansion:** Expanded from legacy `['en', 'hi']` (98 URLs) to all 9 supported locales (`en`, `hi`, `es`, `fr`, `de`, `pt`, `ja`, `ko`, `ar`).
 - **Core Hub Coverage:** All 29 multilingual core routes (`/`, `/about/`, `/compare/`, `/how-to-use/`, `/height-difference-calculator/`, `/height-comparison-chart/`, 10 category pages, 13 comparisons) have full reciprocal hreflang alternate links (9 locales + `x-default`).
@@ -110,7 +110,7 @@ export default defineConfig({
 ## 7. Hreflang Validation
 
 - **Critical Fix (The Hreflang 404 Trap Resolved):**
-  - **Before:** Global `Layout.astro` indiscriminately printed 9 alternate hreflang tags on every page. Because individual entity pages (`/celebrity-height/[slug]/`, etc.) exist only in English, every entity page emitted 8 broken 404 links (e.g. `https://comparacaodealtura.com/hi/celebrity-height/brad-pitt/`).
+  - **Before:** Global `Layout.astro` indiscriminately printed 9 alternate hreflang tags on every page. Because individual entity pages (`/celebrity-height/[slug]/`, etc.) exist only in English, every entity page emitted 8 broken 404 links (e.g. `https://height-calculator.net/hi/celebrity-height/brad-pitt/`).
   - **After:** `src/i18n/utils.ts` was equipped with route-aware validation (`isRouteLocalized`).
     - Multilingual pages output all 9 reciprocal alternates + `x-default`.
     - Single-language entity pages emit 0 alternate tags, preventing Google Search Console international targeting errors.
@@ -170,7 +170,7 @@ export default defineConfig({
 |---|---|:---:|
 | Duplicate route files | Exactly one authoritative source route per URL | **PASS** |
 | Development routes in production | Zero dev/test pages in `dist/` | **PASS** |
-| Canonical site config | `site: 'https://comparacaodealtura.com'` in `astro.config.mjs` | **PASS** |
+| Canonical site config | `site: 'https://height-calculator.net'` in `astro.config.mjs` | **PASS** |
 | Trailing slash normalization | `trailingSlash: 'always'` enforced consistently | **PASS** |
 | Cloudflare redirects | Single-hop `www` -> non-`www` and `http` -> `https` in `_redirects` | **PASS** |
 | Hreflang 404 prevention | Omit alternate tags on English-only entity pages | **PASS** |

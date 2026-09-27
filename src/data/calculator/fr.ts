@@ -2,8 +2,8 @@ import type { CalculatorTranslationData } from './types';
 
 export const frCalculator: CalculatorTranslationData = {
   seo: {
-    title: 'Calculateur de Différence de Taille | Comparez les statures | Comparação de Altura',
-    description: 'Calculez la différence exacte de taille physique entre deux personnes, couples ou objets en centimètres, pieds et pouces. Calculez le pourcentage d\'écart avec Comparação de Altura.',
+    title: 'Calculateur de Différence de Taille | Comparez les statures | Height Calculator',
+    description: 'Calculez la différence exacte de taille physique entre deux personnes, couples ou objets en centimètres, pieds et pouces. Calculez le pourcentage d\'écart avec Height Calculator.',
   },
   badge: 'Outil de Mesure de Taille de Précision',
   h1: 'Calculateur de Différence de Taille',
@@ -69,7 +69,7 @@ export const frCalculator: CalculatorTranslationData = {
     },
     {
       question: 'Puis-je visualiser cette différence de taille sur le canevas de comparaison ?',
-      answer: 'Oui ! Cliquez sur le bouton « Comparer Visuellement sur le Canevas » après le calcul, et les deux tailles seront instantanément chargées sur le canevas interactif Comparação de Altura.',
+      answer: 'Oui ! Cliquez sur le bouton « Comparer Visuellement sur le Canevas » après le calcul, et les deux tailles seront instantanément chargées sur le canevas interactif Height Calculator.',
     },
     {
       question: 'Comment convertir les centimètres en pieds et pouces ?',

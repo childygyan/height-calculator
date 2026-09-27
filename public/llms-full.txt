@@ -1,13 +1,13 @@
-# Comparação de Altura — Comprehensive LLM Knowledge Base
+# Height Calculator — Comprehensive LLM Knowledge Base
 
-> Website: https://comparacaodealtura.com  
+> Website: https://height-calculator.net  
 > Purpose: Visual height comparison engine, anatomical scaling reference, and height comparison calculator.
 
 ---
 
 ## 1. System Architecture & Measurement Engine
 
-Comparação de Altura uses a mathematically calibrated scaling pipeline designed to render side-by-side silhouettes and models with accurate real-world proportions:
+Height Calculator uses a mathematically calibrated scaling pipeline designed to render side-by-side silhouettes and models with accurate real-world proportions:
 - Ground Anchor: All standing figures share a common floor baseline ($Y = 0$).
 - Proportional Scaling: Heights are converted from centimeters to stage pixels according to dynamic canvas heights (default ~620px viewport baseline).
 - Unit Conversions:
@@ -20,20 +20,20 @@ Comparação de Altura uses a mathematically calibrated scaling pipeline designe
 ## 2. Tools and URLs
 
 ### Core Platform
-- **Visual Canvas:** `https://comparacaodealtura.com/`  
+- **Visual Canvas:** `https://height-calculator.net/`  
   Supports up to 10 entities simultaneously. Features include color assignment, opacity adjustment, drag-and-drop manual positioning, auto-align mode, zoom (50%–200%), ruler toggle (cm/ft), difference indicators, and high-resolution PNG export.
-- **Height Comparison Calculator:** `https://comparacaodealtura.com/height-comparison-calculator/`  
+- **Height Comparison Calculator:** `https://height-calculator.net/height-comparison-calculator/`  
   Direct input calculator showing absolute difference, percentage difference, ratio comparison, eye-level alignment estimate, and contextual comparisons (e.g. difference in terms of soda cans, tennis balls, or step heights).
-- **Height Comparison Chart:** `https://comparacaodealtura.com/height-comparison-chart/`  
+- **Height Comparison Chart:** `https://height-calculator.net/height-comparison-chart/`  
   Visual scale benchmark reference ranging from 50 cm to 300+ cm.
-- **How to Use:** `https://comparacaodealtura.com/how-to-use/`  
+- **How to Use:** `https://height-calculator.net/how-to-use/`  
   Comprehensive instructional guide for accurate height measurements, standing posture tips, and visual scale interpretation.
 
 ---
 
 ## 3. Entity Classification & Taxonomies
 
-Comparação de Altura organizes over 1,400 entities across 10 structured categories:
+Height Calculator organizes over 1,400 entities across 10 structured categories:
 
 1. **Celebrities (`/celebrity-height-comparison/`)**:
    Actors, athletes, public figures, historical leaders.
@@ -75,7 +75,7 @@ Comparação de Altura organizes over 1,400 entities across 10 structured catego
 
 ## 4. Multilingual Coverage & Locales
 
-Comparação de Altura supports complete bidirectional localization across 9 languages:
+Height Calculator supports complete bidirectional localization across 9 languages:
 - `en` (English) — Source of truth
 - `hi` (Hindi) — `/hi/`
 - `es` (Spanish) — `/es/`
@@ -92,7 +92,7 @@ All localized hubs include native translations, canonical links, and alternate h
 
 ## 5. Metadata, Robots, & Sitemaps
 
-- Sitemap: `https://comparacaodealtura.com/sitemap.xml`
-- Robots: `https://comparacaodealtura.com/robots.txt`
-- LLM Manifest: `https://comparacaodealtura.com/llms.txt`
-- Full Knowledge Base: `https://comparacaodealtura.com/llms-full.txt`
+- Sitemap: `https://height-calculator.net/sitemap.xml`
+- Robots: `https://height-calculator.net/robots.txt`
+- LLM Manifest: `https://height-calculator.net/llms.txt`
+- Full Knowledge Base: `https://height-calculator.net/llms-full.txt`

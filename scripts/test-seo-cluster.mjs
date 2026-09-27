@@ -24,7 +24,7 @@ function runTest(testName, fn) {
 }
 
 console.log('\n===============================================================');
-console.log('🧪 RUNNING COMPARACAODEALTURA.ORG SEARCH INTENT SEO CLUSTER AUDIT');
+console.log('🧪 RUNNING HEIGHT_CALCULATOR.ORG SEARCH INTENT SEO CLUSTER AUDIT');
 console.log('===============================================================\n');
 
 const clusterPages = [
@@ -52,7 +52,7 @@ for (const p of clusterPages) {
     assert.ok(h1Matches[0].toLowerCase().includes(p.expectedH1.toLowerCase()), `H1 did not match expected topic`);
 
     // Canonical tag points to production domain with trailing slash
-    const expectedCanonical = `https://comparacaodealtura.com/${p.path}/`;
+    const expectedCanonical = `https://height-calculator.net/${p.path}/`;
     assert.ok(content.includes(`<link rel="canonical" href="${expectedCanonical}"`), `Canonical mismatch: expected ${expectedCanonical}`);
 
     // No static noindex
@@ -86,7 +86,7 @@ for (const loc of locales) {
       assert.strictEqual(fs.existsSync(locFile), true, `File missing: ${locFile}`);
       const content = fs.readFileSync(locFile, 'utf8');
 
-      const expectedCanonical = `https://comparacaodealtura.com/${loc}/${p.path}/`;
+      const expectedCanonical = `https://height-calculator.net/${loc}/${p.path}/`;
       assert.ok(content.includes(`<link rel="canonical" href="${expectedCanonical}"`), `Canonical mismatch for localized page: expected ${expectedCanonical}`);
 
       // Exactly one H1
@@ -104,12 +104,12 @@ runTest('Sitemap.xml contains all core pillar URLs with full alternates', () => 
   const sitemap = fs.readFileSync(sitemapFile, 'utf8');
 
   for (const p of clusterPages) {
-    const url = `https://comparacaodealtura.com/${p.path}/`;
+    const url = `https://height-calculator.net/${p.path}/`;
     assert.ok(sitemap.includes(`<loc>${url}</loc>`), `Sitemap missing ${url}`);
   }
 
   // Verify no pages.dev in sitemap
-  assert.ok(!sitemap.includes('comparacaodealtura.pages.dev'), `Sitemap contains preview domain reference`);
+  assert.ok(!sitemap.includes('height-calculator.pages.dev'), `Sitemap contains preview domain reference`);
 });
 
 // Test Group 4: Redirects Verification

@@ -26,7 +26,7 @@ export const CATEGORIES: CategoryDefinition[] = [
     route: '/people-height-comparison/',
     entityCategoryKey: 'male',
     secondaryCategoryKey: 'female',
-    title: 'People Height Comparison | Comparação de Altura',
+    title: 'People Height Comparison | Height Calculator',
     description: 'Compare adult male and female human heights side-by-side using mathematically accurate anatomical silhouettes aligned to an identical floor baseline.',
     badge: 'Anthropometric Reference',
     measurementAnchor: 'Crown to Soles (Barefoot standing stature)',
@@ -40,7 +40,7 @@ export const CATEGORIES: CategoryDefinition[] = [
     ],
     faqs: [
       {
-        question: 'How is human height measured on Comparação de Altura?',
+        question: 'How is human height measured on Height Calculator?',
         answer: 'Heights are represented according to standardized anthropometric protocol: vertical barefoot stature from vertex to heels, calibrated in centimeters and feet/inches.',
       },
       {
@@ -60,7 +60,7 @@ export const CATEGORIES: CategoryDefinition[] = [
     h1: 'Celebrity Height Comparison',
     route: '/celebrity-height-comparison/',
     entityCategoryKey: 'celebrities',
-    title: 'Celebrity Height Comparison | Comparação de Altura',
+    title: 'Celebrity Height Comparison | Height Calculator',
     description: 'Compare verified heights of Hollywood actors, Bollywood stars, world-class athletes, and musicians with accurate visual models standing on an aligned baseline.',
     badge: 'Verified Stature Directory',
     measurementAnchor: 'Official standing stature documentation',
@@ -79,7 +79,7 @@ export const CATEGORIES: CategoryDefinition[] = [
       },
       {
         question: 'Can I compare celebrities against myself or everyday objects?',
-        answer: 'Yes! The Comparação de Altura comparison tool lets you mix celebrities with standard human models, animals, doors, sedans, and more on the same canvas.',
+        answer: 'Yes! The Height Calculator comparison tool lets you mix celebrities with standard human models, animals, doors, sedans, and more on the same canvas.',
       },
       {
         question: 'Who is the tallest verified celebrity on the platform?',
@@ -94,7 +94,7 @@ export const CATEGORIES: CategoryDefinition[] = [
     h1: 'Anime Character Height Comparison',
     route: '/anime-height-comparison/',
     entityCategoryKey: 'anime',
-    title: 'Anime Character Height Comparison | Comparação de Altura',
+    title: 'Anime Character Height Comparison | Height Calculator',
     description: 'Compare official heights of popular anime and manga characters side-by-side. Discover canonical heights from Shonen Jump, studio databooks, and canon lore.',
     badge: 'Canonical Lore Database',
     measurementAnchor: 'Official Databook Standing Stature',
@@ -113,7 +113,7 @@ export const CATEGORIES: CategoryDefinition[] = [
       },
       {
         question: 'How do anime character models render on the canvas?',
-        answer: 'Comparação de Altura uses our universal format-agnostic rendering engine supporting high-resolution PNG transparent cutouts and SVG vector silhouettes.',
+        answer: 'Height Calculator uses our universal format-agnostic rendering engine supporting high-resolution PNG transparent cutouts and SVG vector silhouettes.',
       },
       {
         question: 'How does Goku compare to an average human?',
@@ -128,7 +128,7 @@ export const CATEGORIES: CategoryDefinition[] = [
     h1: 'Film Character Height Comparison',
     route: '/film-height-comparison/',
     entityCategoryKey: 'films',
-    title: 'Film Character Height Comparison | Comparação de Altura',
+    title: 'Film Character Height Comparison | Height Calculator',
     description: 'Compare heights of famous movie heroes, villains, sci-fi creatures, and cinematic figures visually with exact mathematical proportions.',
     badge: 'Cinematic Stature Guide',
     measurementAnchor: 'Canon Script & Prop Blueprint Stature',
@@ -158,7 +158,7 @@ export const CATEGORIES: CategoryDefinition[] = [
     h1: 'Animal Height Comparison',
     route: '/animal-height-comparison/',
     entityCategoryKey: 'animals',
-    title: 'Animal Height Comparison | Comparação de Altura',
+    title: 'Animal Height Comparison | Height Calculator',
     description: 'Compare animal species heights and shoulder withers measurements to humans and everyday objects on a mathematically aligned ground baseline.',
     badge: 'Zoological Measurement Standards',
     measurementAnchor: 'Shoulder / Withers height for quadrupeds; Crown for bipeds',
@@ -178,7 +178,7 @@ export const CATEGORIES: CategoryDefinition[] = [
       },
       {
         question: 'Are horses measured in hands or centimeters?',
-        answer: 'Comparação de Altura provides both metric centimeters and traditional equestrian hands (where 1 hand = 4 inches = 10.16 cm).',
+        answer: 'Height Calculator provides both metric centimeters and traditional equestrian hands (where 1 hand = 4 inches = 10.16 cm).',
       },
       {
         question: 'How tall is an African Elephant compared to a human?',
@@ -193,7 +193,7 @@ export const CATEGORIES: CategoryDefinition[] = [
     h1: 'Object Height Comparison',
     route: '/object-height-comparison/',
     entityCategoryKey: 'objects',
-    title: 'Object Height Comparison | Comparação de Altura',
+    title: 'Object Height Comparison | Height Calculator',
     description: 'Compare everyday items, furniture, consumer electronics, vehicles, and architectural elements with humans using a standardized physical scale.',
     badge: 'Everyday Reference Standards',
     measurementAnchor: 'Ground / floor to highest rigid structural plane',
@@ -224,7 +224,7 @@ export const CATEGORIES: CategoryDefinition[] = [
     h1: 'Plant Height Comparison',
     route: '/plant-height-comparison/',
     entityCategoryKey: 'plants',
-    title: 'Plant Height Comparison | Comparação de Altura',
+    title: 'Plant Height Comparison | Height Calculator',
     description: 'Compare trees, garden shrubs, flowering plants, and botanical specimens with human stature on a proportional scale.',
     badge: 'Botanical Scale Directory',
     measurementAnchor: 'Soil line to upper canopy apex',
@@ -237,7 +237,7 @@ export const CATEGORIES: CategoryDefinition[] = [
     ],
     faqs: [
       {
-        question: 'How are plants measured on Comparação de Altura?',
+        question: 'How are plants measured on Height Calculator?',
         answer: 'Plants are measured from ground level to the peak of their natural foliage canopy.',
       },
       {
@@ -253,7 +253,7 @@ export const CATEGORIES: CategoryDefinition[] = [
     h1: 'Sports Figure Height Comparison',
     route: '/sports-height-comparison/',
     entityCategoryKey: 'sports',
-    title: 'Sports Figure Height Comparison | Comparação de Altura',
+    title: 'Sports Figure Height Comparison | Height Calculator',
     description: 'Compare athletes across basketball, football, cricket, and soccer alongside regulation equipment such as basketball rims and goalposts.',
     badge: 'Athletic Combine Standards',
     measurementAnchor: 'Official Combine Barefoot Stature & Regulation Rim Height',
@@ -283,7 +283,7 @@ export const CATEGORIES: CategoryDefinition[] = [
     h1: 'Apparel Height Comparison',
     route: '/apparel-height-comparison/',
     entityCategoryKey: 'apparel',
-    title: 'Apparel Height Comparison | Comparação de Altura',
+    title: 'Apparel Height Comparison | Height Calculator',
     description: 'Compare how high heels, athletic platform sneakers, work boots, hats, and protective headgear modify human standing stature.',
     badge: 'Wearable Stature Dynamics',
     measurementAnchor: 'Effective vertical offset added to barefoot stature',
@@ -312,7 +312,7 @@ export const CATEGORIES: CategoryDefinition[] = [
     h1: 'Fictional Character Height Comparison',
     route: '/fictional-character-height-comparison/',
     entityCategoryKey: 'fictional',
-    title: 'Fictional Character Height Comparison | Comparação de Altura',
+    title: 'Fictional Character Height Comparison | Height Calculator',
     description: 'Compare fantastical creatures, monsters, comic book legends, and mythological beings with realistic human figures.',
     badge: 'Fantasy & Sci-Fi Scale Guide',
     measurementAnchor: 'Canonical Franchise Lore & World-Building Archives',
@@ -330,7 +330,7 @@ export const CATEGORIES: CategoryDefinition[] = [
       },
       {
         question: 'Can I compare fictional characters to modern skyscrapers or vehicles?',
-        answer: 'Yes! Place fantasy giants or monsters beside buses, doors, or humans on the Comparação de Altura comparison canvas.',
+        answer: 'Yes! Place fantasy giants or monsters beside buses, doors, or humans on the Height Calculator comparison canvas.',
       },
     ],
   },

@@ -2,8 +2,8 @@ import type { CalculatorTranslationData } from './types';
 
 export const koCalculator: CalculatorTranslationData = {
   seo: {
-    title: '키 차이 계산기 | 신장 및 비율 비교 | Comparação de Altura',
-    description: '두 사람, 연인 또는 사물 사이의 정확한 신장 차이를 센티미터, 피트, 인치로 계산하세요. Comparação de Altura에서 키 차이 비율과 시각적 체격 차이를 확인하세요.',
+    title: '키 차이 계산기 | 신장 및 비율 비교 | Height Calculator',
+    description: '두 사람, 연인 또는 사물 사이의 정확한 신장 차이를 센티미터, 피트, 인치로 계산하세요. Height Calculator에서 키 차이 비율과 시각적 체격 차이를 확인하세요.',
   },
   badge: '정밀 신장 측정 도구',
   h1: '키 차이 계산기',
@@ -69,7 +69,7 @@ export const koCalculator: CalculatorTranslationData = {
     },
     {
       question: '이 키 차이를 비교 캔버스에서 직접 볼 수 있나요?',
-      answer: '네! 계산 후 "비교 캔버스에서 시각적으로 비교하기" 버튼을 클릭하면 두 사람의 키가 인터랙티브 Comparação de Altura 캔버스에 즉시 로드됩니다.',
+      answer: '네! 계산 후 "비교 캔버스에서 시각적으로 비교하기" 버튼을 클릭하면 두 사람의 키가 인터랙티브 Height Calculator 캔버스에 즉시 로드됩니다.',
     },
     {
       question: '센티미터와 피트/인치는 어떻게 환산하나요?',

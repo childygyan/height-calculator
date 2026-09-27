@@ -1,6 +1,6 @@
 export default {
   // Brand
-  'brand.name': 'Comparação de Altura',
+  'brand.name': 'Height Calculator',
   'brand.tagline': 'Compare qualquer coisa por altura',
   'brand.secondaryTagline': 'Veja a altura real de qualquer coisa',
   'brand.description': 'Uma plataforma interativa de comparação visual de altura para comparar pessoas, celebridades, personagens de anime, figuras de cinema, animais, objetos, plantas, atletas e muito mais.',
@@ -73,7 +73,7 @@ export default {
   'footer.legal': 'Plataforma e Legal',
   'footer.tools': 'Ferramentas',
   'footer.allRightsReserved': 'Todos os direitos reservados.',
-  'footer.platformStatement': 'O Comparação de Altura ajuda as pessoas a compreender visualmente a altura de qualquer coisa.',
+  'footer.platformStatement': 'O Height Calculator ajuda as pessoas a compreender visualmente a altura de qualquer coisa.',
   'footer.fastPlatform': 'Plataforma de medição visual rápida e estática',
 
   // Error States

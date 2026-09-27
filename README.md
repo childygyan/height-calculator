@@ -1,4 +1,4 @@
-# Comparação de Altura — Production SaaS
+# Height Calculator — Production SaaS
 
 A modern, responsive, high-precision visual height comparison web tool built with **Astro.js**, **TypeScript**, **Tailwind CSS**, and **proportional inline SVG human silhouettes**.
 

@@ -1,6 +1,6 @@
-# comparacaodealtura.com — Search Intent Hub & Related Query SEO System Architecture
+# height-calculator.net — Search Intent Hub & Related Query SEO System Architecture
 
-This report details the implementation of the comprehensive, SEO-focused topical content system built around **"Height Comparison"** for **comparacaodealtura.com**.
+This report details the implementation of the comprehensive, SEO-focused topical content system built around **"Height Comparison"** for **height-calculator.net**.
 
 ---
 
@@ -185,8 +185,8 @@ All visible structured data strictly matches on-page content:
 ## 10. Multilingual Implementation
 
 - **Astro i18n Matrix:** All 5 new cluster routes are generated across all 9 supported locales (`en`, `hi`, `es`, `fr`, `de`, `pt`, `ja`, `ko`, `ar`).
-- **Reciprocal Hreflangs:** Full reciprocal alternate tags plus `x-default` pointing to canonical `https://comparacaodealtura.com/`.
-- **Zero Preview Leakage:** No `comparacaodealtura.pages.dev` URLs appear in `hreflang` or `sitemap.xml`.
+- **Reciprocal Hreflangs:** Full reciprocal alternate tags plus `x-default` pointing to canonical `https://height-calculator.net/`.
+- **Zero Preview Leakage:** No `height-calculator.pages.dev` URLs appear in `hreflang` or `sitemap.xml`.
 
 ---
 

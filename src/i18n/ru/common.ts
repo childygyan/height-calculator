@@ -1,6 +1,6 @@
 export default {
   // Brand
-  'brand.name': 'Comparação de Altura',
+  'brand.name': 'Height Calculator',
   'brand.tagline': 'Сравнение любых объектов по росту',
   'brand.secondaryTagline': 'Узнайте реальный рост',
   'brand.description': 'Интерактивная визуальная платформа для сравнения роста людей, знаменитостей, персонажей аниме и фильмов, животных, предметов, растений, спортсменов и многого другого.',
@@ -73,7 +73,7 @@ export default {
   'footer.legal': 'Правовая информация',
   'footer.tools': 'Инструменты',
   'footer.allRightsReserved': 'Все права защищены.',
-  'footer.platformStatement': 'Comparação de Altura помогает наглядно представить и сравнить рост чего угодно.',
+  'footer.platformStatement': 'Height Calculator помогает наглядно представить и сравнить рост чего угодно.',
   'footer.fastPlatform': 'Быстрая визуальная платформа для сравнения масштабов',
 
   // Error States

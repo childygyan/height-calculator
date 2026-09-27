@@ -1,6 +1,6 @@
-# comparacaodealtura.com — SaaS-Ready Architecture Blueprint
+# height-calculator.net — SaaS-Ready Architecture Blueprint
 
-**Project:** Comparação de Altura (comparacaodealtura.com)  
+**Project:** Height Calculator (height-calculator.net)  
 **Framework:** Astro.js 4/5 (Static-First SSG)  
 **Deployment Target:** Cloudflare Pages + Cloudflare Workers + D1 + R2  
 **Current Status:** Architectural Preparation Complete (Public SEO Platform 100% Preserved)  
@@ -10,7 +10,7 @@
 
 ## Executive Summary
 
-comparacaodealtura.com operates as a dual-layer platform:
+height-calculator.net operates as a dual-layer platform:
 1. **Public SEO Platform:** High-performance, statically generated (SSG), crawlable, multilingual visual height comparison directory with zero authentication barriers.
 2. **SaaS Application Layer:** Dynamic, authenticated workspace for user accounts, cloud-saved comparisons, custom entity modeling, private sharing links, R2 asset storage, and tiered feature entitlements.
 
@@ -21,7 +21,7 @@ comparacaodealtura.com operates as a dual-layer platform:
 
 ## 1. Current Architecture
 
-Comparação de Altura is built using Astro.js with static site generation (`output: 'static'`).
+Height Calculator is built using Astro.js with static site generation (`output: 'static'`).
 
 ```
 ┌───────────────────────────────────────────────────────────────────────┐
@@ -89,7 +89,7 @@ The public platform is optimized for organic search traffic, Core Web Vitals, an
 When user accounts and subscriptions are activated, the architecture branches into an edge-native hybrid topology:
 
 ```
-                               comparacaodealtura.com
+                               height-calculator.net
                                      │
                  ┌───────────────────┴───────────────────┐
                  │                                       │
@@ -313,14 +313,14 @@ To maintain optimal CDN caching and security, public and user assets are strictl
 
 ### Public Assets:
 - **Location:** Static directory (`public/assets/entities/`)
-- **URL Format:** `https://comparacaodealtura.com/assets/entities/[category]/[file].svg`
+- **URL Format:** `https://height-calculator.net/assets/entities/[category]/[file].svg`
 - **Cache Policy:** `public, max-age=31536000, immutable`
 - **Access:** Unrestricted public CDN edge delivery
 
 ### User Assets (Custom Uploads):
 - **Location:** Cloudflare R2 Private Bucket (`env.R2_USER_ASSETS`)
 - **Object Key Schema:** `user/{userId}/{assetId}.{extension}`
-- **URL Format:** `https://assets.comparacaodealtura.com/user/[userId]/[assetId].[ext]`
+- **URL Format:** `https://assets.height-calculator.net/user/[userId]/[assetId].[ext]`
 - **Upload Method:** Presigned R2 PUT URLs generated server-side via `generatePresignedUploadUrl()`
 - **Validation:** Strict MIME-type checking (`image/png`, `image/jpeg`, `image/webp`, `image/svg+xml`) and plan-based byte size limits.
 

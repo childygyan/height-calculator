@@ -5,23 +5,23 @@ export const frHowToGuide: HowToGuideData = {
   title: 'Comment utiliser le comparateur de taille',
   subtitle: 'Un guide complet pas à pas pour comparer des personnes, des célébrités, des personnages d’anime, des animaux et des objets avec une précision mathématique visuelle.',
   badge: 'Guide Utilisateur',
-  metaDescription: 'Découvrez comment utiliser le comparateur de taille Comparação de Altura pour comparer des personnes, animaux, objets et personnages, mesurer les écarts et partager vos résultats.',
+  metaDescription: 'Découvrez comment utiliser le comparateur de taille Height Calculator pour comparer des personnes, animaux, objets et personnages, mesurer les écarts et partager vos résultats.',
   readTime: '8 min de lecture',
   tocTitle: 'Sommaire',
   intro: {
-    lead: 'Comparação de Altura est une plateforme de mesure visuelle interactive conçue pour aider chacun à comprendre intuitivement l’échelle physique réelle de toute chose.',
+    lead: 'Height Calculator est une plateforme de mesure visuelle interactive conçue pour aider chacun à comprendre intuitivement l’échelle physique réelle de toute chose.',
     paragraphs: [
       'Que vous soyez curieux de connaître votre taille par rapport à votre acteur favori, en train d’analyser des fiches de mensuration pour un projet d’animation, d’enseigner les proportions biologiques en classe ou d’écrire un roman, les chiffres seuls peinent souvent à transmettre une véritable présence physique. Savoir qu’une personne mesure 188 cm (6 pi 2 po) reste abstrait ; placer cette silhouette à côté d’un chambranle de porte, d’un partenaire ou d’un animal domestique donne instantanément vie à la mesure.',
-      'Notre comparateur universel fait le pont entre données brutes et perception visuelle humaine. En alignant chaque silhouette sur une ligne de sol commune à 0 cm et en appliquant un facteur d’échelle géométrique rigoureux, Comparação de Altura élimine les distorsions de perspective. Ce guide passe en revue toutes les fonctionnalités de la plateforme, de la recherche et de la manipulation sur scène aux réglages d’échelle et à l’export d’images en haute résolution.',
+      'Notre comparateur universel fait le pont entre données brutes et perception visuelle humaine. En alignant chaque silhouette sur une ligne de sol commune à 0 cm et en appliquant un facteur d’échelle géométrique rigoureux, Height Calculator élimine les distorsions de perspective. Ce guide passe en revue toutes les fonctionnalités de la plateforme, de la recherche et de la manipulation sur scène aux réglages d’échelle et à l’export d’images en haute résolution.',
     ],
   },
   sections: [
     {
-      id: 'what-is-comparacaodealtura',
+      id: 'what-is-height-calculator',
       heading: '1. Qu’est-ce qu’un comparateur de taille visuel ?',
       paragraphs: [
         'Un comparateur de taille est un outil visuel interactif permettant de juxtaposer deux ou plusieurs entités selon une échelle rigoureusement identique. Plutôt que d’imaginer ce que représente un écart de 15 centimètres ou de 6 pouces dans la réalité, l’outil affiche des silhouettes aux proportions anatomiques exactes.',
-        'Sur Comparação de Altura, le moteur prend en charge de nombreuses catégories vérifiées : hommes et femmes, célébrités mondiales, héros d’anime et de manga, personnages de cinéma, faune sauvage et domestique, mobilier, véhicules et architectures, végétaux et créatures légendaires.',
+        'Sur Height Calculator, le moteur prend en charge de nombreuses catégories vérifiées : hommes et femmes, célébrités mondiales, héros d’anime et de manga, personnages de cinéma, faune sauvage et domestique, mobilier, véhicules et architectures, végétaux et créatures légendaires.',
       ],
       callout: {
         type: 'info',
@@ -32,13 +32,13 @@ export const frHowToGuide: HowToGuideData = {
       id: 'how-to-start',
       heading: '2. Comment lancer une comparaison en 7 étapes',
       paragraphs: [
-        'L’utilisation de Comparação de Altura ne nécessite aucune inscription, aucun téléchargement et aucune configuration complexe.',
+        'L’utilisation de Height Calculator ne nécessite aucune inscription, aucun téléchargement et aucune configuration complexe.',
       ],
       steps: [
         {
           number: 1,
           title: 'Accédez à la plateforme',
-          description: 'Rendez-vous sur comparacaodealtura.com ou accédez directement à la page /compare/ sur votre navigateur.',
+          description: 'Rendez-vous sur height-calculator.net ou accédez directement à la page /compare/ sur votre navigateur.',
         },
         {
           number: 2,
@@ -76,7 +76,7 @@ export const frHowToGuide: HowToGuideData = {
       id: 'searching-entities',
       heading: '3. Explorer le catalogue universel d’entités',
       paragraphs: [
-        'Comparação de Altura dispose d’un catalogue riche de milliers de profils vérifiés. La recherche instantanée vous permet de trouver n’importe quelle entité en quelques frappes.',
+        'Height Calculator dispose d’un catalogue riche de milliers de profils vérifiés. La recherche instantanée vous permet de trouver n’importe quelle entité en quelques frappes.',
         'Vous pouvez filtrer par catégorie (Célébrités, Anime, Animaux, Objets, etc.) ou saisir directement un nom, un métier ou un pseudonyme populaire.',
         'Si une figure spécifique n’est pas encore référencée, notre formulaire d’ajout personnalisé vous permet de créer n’importe quelle silhouette en saisissant son nom, sa hauteur en cm ou pieds/pouces, son genre et sa couleur.',
       ],
@@ -90,7 +90,7 @@ export const frHowToGuide: HowToGuideData = {
       heading: '4. Comparer plusieurs silhouettes en même temps',
       paragraphs: [
         'Les comparaisons réelles dépassent souvent le simple face-à-face : visualiser une famille entière, un groupe d’aventuriers ou l’échelle comparative entre un humain, un chien, un cheval et un éléphant.',
-        'Comparação de Altura vous permet de juxtaposer de 2 à plus de 20 silhouettes simultanément. Sur grand écran, l’espace est réparti harmonieusement ; sur smartphone, un défilement horizontal fluide permet de naviguer sans rétrécir les figures.',
+        'Height Calculator vous permet de juxtaposer de 2 à plus de 20 silhouettes simultanément. Sur grand écran, l’espace est réparti harmonieusement ; sur smartphone, un défilement horizontal fluide permet de naviguer sans rétrécir les figures.',
       ],
       callout: {
         type: 'tip',
@@ -102,7 +102,7 @@ export const frHowToGuide: HowToGuideData = {
       heading: '5. Déplacer les silhouettes : Glisser-déposer sur scène',
       paragraphs: [
         'Par défaut, les figures s’alignent dans l’ordre d’ajout. Cependant, la mise en scène requiert souvent un agencement personnalisé.',
-        'Sur Comparação de Altura, vous pouvez cliquer et faire glisser n’importe quelle silhouette (ou la déplacer du doigt sur mobile) le long du sol à 0 cm. Rapprochez deux rivaux épaule contre épaule ou placez un animal au pied de son maître.',
+        'Sur Height Calculator, vous pouvez cliquer et faire glisser n’importe quelle silhouette (ou la déplacer du doigt sur mobile) le long du sol à 0 cm. Rapprochez deux rivaux épaule contre épaule ou placez un animal au pied de son maître.',
         'Vous pouvez également trier la scène instantanément par taille croissante ou décroissante grâce aux boutons de la barre d’outils.',
       ],
     },
@@ -123,7 +123,7 @@ export const frHowToGuide: HowToGuideData = {
       id: 'height-units',
       heading: '7. Unités de mesure : Métrique (cm) et Impérial (pieds et pouces)',
       paragraphs: [
-        'Les mesures mondiales se partagent entre le système métrique (mètres et centimètres) et le système impérial (pieds et pouces). Comparação de Altura assure une conversion bidirectionnelle instantanée.',
+        'Les mesures mondiales se partagent entre le système métrique (mètres et centimètres) et le système impérial (pieds et pouces). Height Calculator assure une conversion bidirectionnelle instantanée.',
         'Vous pouvez basculer entre « cm » et « ft » au sommet de la règle. En mode impérial, des repères majeurs apparaissent tous les 12 pouces (1 pied) et secondaires tous les 6 pouces. En mode métrique, les paliers sont de 20 ou 50 cm.',
         'Le calcul applique le standard international strict : 1 pouce = 2,54 cm, et 1 pied = 30,48 cm.',
       ],
@@ -136,7 +136,7 @@ export const frHowToGuide: HowToGuideData = {
       id: 'understanding-visual-result',
       heading: '8. Comment lire le graphique et la règle de mesure',
       paragraphs: [
-        'La scène Comparação de Altura est dotée d’indicateurs clairs pour une lecture immédiate :',
+        'La scène Height Calculator est dotée d’indicateurs clairs pour une lecture immédiate :',
         '1. La ligne de sol zéro (0 cm / 0 pi) : Ligne continue en bas de scène représentant le sol.',
         '2. La règle verticale : Située à gauche, elle calcule la hauteur maximale nécessaire pour englober la plus grande silhouette avec une marge agréable.',
         '3. Les étiquettes descriptives : Chaque figure affiche son nom, sa catégorie et sa taille exacte dans l’unité choisie.',
@@ -147,7 +147,7 @@ export const frHowToGuide: HowToGuideData = {
       id: 'height-difference',
       heading: '9. Analyser l’écart de taille et les statistiques',
       paragraphs: [
-        'Lorsque exactement deux silhouettes sont présentes sur scène, Comparação de Altura affiche automatiquement un encadré d’analyse de différence.',
+        'Lorsque exactement deux silhouettes sont présentes sur scène, Height Calculator affiche automatiquement un encadré d’analyse de différence.',
         'Par exemple, en comparant un homme de 180 cm et une femme de 165 cm, l’outil précise : « La Personne A est 15 cm (5,9 pouces) plus grande que la Personne B ». Les écarts métriques et impériaux sont arrondis au dixième.',
         'À partir de trois entités, un tableau récapitulatif synthétise la plus grande taille, la plus petite, la moyenne du groupe et les écarts relatifs.',
       ],
@@ -169,7 +169,7 @@ export const frHowToGuide: HowToGuideData = {
       heading: '11. Le règne animal : Du chat domestique aux géants sauvages',
       paragraphs: [
         'Les illustrations d’encyclopédies ne sont presque jamais à l’échelle : un félin peut paraître aussi imposant qu’un rhinocéros sur une même page.',
-        'Comparação de Altura rétablit la réalité en plaçant les animaux sur la même ligne que l’humain. Observez la stature d’un chat (25 cm) face à un grand chien (60 cm), ou mesurez-vous à un cheval (160 cm) et à un éléphant d’Afrique (330 cm).',
+        'Height Calculator rétablit la réalité en plaçant les animaux sur la même ligne que l’humain. Observez la stature d’un chat (25 cm) face à un grand chien (60 cm), ou mesurez-vous à un cheval (160 cm) et à un éléphant d’Afrique (330 cm).',
       ],
       link: {
         text: 'Voir les comparaisons d’animaux →',
@@ -193,7 +193,7 @@ export const frHowToGuide: HowToGuideData = {
       heading: '13. Personnages d’anime et héros de fiction',
       paragraphs: [
         'Les fiches canoniques des mangas et comics alimentent de passionnants débats. Dans les cases dessinées, les perspectives rendent la comparaison difficile.',
-        'Sur Comparação de Altura, alignez côte à côte des héros emblématiques comme Goku, Naruto ou Levi Ackerman, ou confrontez des méchas et créatures colossales à des civils ordinaires.',
+        'Sur Height Calculator, alignez côte à côte des héros emblématiques comme Goku, Naruto ou Levi Ackerman, ou confrontez des méchas et créatures colossales à des civils ordinaires.',
       ],
       link: {
         text: 'Comparer les personnages d’anime →',
@@ -227,7 +227,7 @@ export const frHowToGuide: HowToGuideData = {
       id: 'mobile-experience',
       heading: '16. Une expérience pensée pour mobile, tablette et ordinateur',
       paragraphs: [
-        'Comparação de Altura adopte une architecture réactive pensée en priorité pour mobile :',
+        'Height Calculator adopte une architecture réactive pensée en priorité pour mobile :',
         '• Commandes tactiles : Glisser les figures et zoomer est rapide et sans ralentissement.',
         '• Tiroirs adaptatifs : Les panneaux d’outils se replient pour laisser toute la place à la scène de visualisation.',
         '• Balayage horizontal : Faites glisser la scène du doigt pour observer facilement de longues files de personnages sur smartphone.',
@@ -246,7 +246,7 @@ export const frHowToGuide: HowToGuideData = {
       heading: '18. Chiffres et visuels : L’alliance de la précision et de l’intuition',
       paragraphs: [
         'Ni un tableau de données brutes ni un dessin sans repère ne suffisent à eux seuls. Les chiffres manquent d’impact spontané ; un dessin non gradué peut être trompeur.',
-        'Comparação de Altura réunit le meilleur des deux : la rigueur mathématique des valeurs exactes associée à la clarté immédiate d’une silhouette posée au sol.',
+        'Height Calculator réunit le meilleur des deux : la rigueur mathématique des valeurs exactes associée à la clarté immédiate d’une silhouette posée au sol.',
       ],
     },
     {
@@ -285,7 +285,7 @@ export const frHowToGuide: HowToGuideData = {
       id: 'who-can-use',
       heading: '22. À qui s’adresse cet outil ?',
       paragraphs: [
-        'Comparação de Altura répond aux besoins de profils très variés :',
+        'Height Calculator répond aux besoins de profils très variés :',
         '• Étudiants et enseignants : Pour donner du relief aux cours de géométrie, de sciences physiques et de biologie.',
         '• Auteurs et romanciers : Pour garantir la cohérence des regards et des interactions physiques entre protagonistes.',
         '• Illustrateurs et animateurs : Pour établir des fiches de référence proportionnelles avant de dessiner.',

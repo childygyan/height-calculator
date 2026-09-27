@@ -1,6 +1,6 @@
 export default {
   // Brand
-  'brand.name': 'Comparação de Altura',
+  'brand.name': 'Height Calculator',
   'brand.tagline': '高さであらゆるものを比較',
   'brand.secondaryTagline': '本当の大きさをその目で実感',
   'brand.description': '人物、芸能人、アニメキャラクター、映画の登場人物、動物、物体、植物、スポーツ選手などの高さを視覚的に比べられるインタラクティブ比較プラットフォーム。',
@@ -73,7 +73,7 @@ export default {
   'footer.legal': '運営＆免責事項',
   'footer.tools': '便利ツール',
   'footer.allRightsReserved': 'All rights reserved.',
-  'footer.platformStatement': 'Comparação de Altura は、あらゆるものの高さを視覚的に分かりやすく理解できるようサポートします。',
+  'footer.platformStatement': 'Height Calculator は、あらゆるものの高さを視覚的に分かりやすく理解できるようサポートします。',
   'footer.fastPlatform': '高速・静的ファーストの視覚的計測プラットフォーム',
 
   // Error States

@@ -1,29 +1,29 @@
 export default {
   // Global Meta
-  'meta.defaultTitle': '身長比較ツール – あらゆるものの高さを視覚的に比較 | Comparação de Altura',
-  'meta.defaultDesc': '人物、有名人、アニメキャラクター、動物、物体、映画の登場人物などの身長差を直感的なビジュアルで比較できるComparação de Altura公式ツールです。',
+  'meta.defaultTitle': '身長比較ツール – あらゆるものの高さを視覚的に比較 | Height Calculator',
+  'meta.defaultDesc': '人物、有名人、アニメキャラクター、動物、物体、映画の登場人物などの身長差を直感的なビジュアルで比較できるHeight Calculator公式ツールです。',
   'meta.keywords': '身長比較, 身長差計算, 芸能人の身長, 身長比較ツール, アニメキャラ身長',
 
   // Compare Tool SEO
   'compare.h1': '身長比較ツール',
-  'compare.title': '身長比較ツール – リアルタイム並列ビジュアライザー | Comparação de Altura',
+  'compare.title': '身長比較ツール – リアルタイム並列ビジュアライザー | Height Calculator',
   'compare.desc': '任意の人物や数値を自由に追加し、リアルタイムで身長を並べて比較できます。共通の0cm接地線上に配置された高精度SVG・PNGモデルを搭載。',
 
   // Calculator SEO
-  'calculator.title': '身長差計算機 – cm＆フィート/インチでの差異を瞬時に計算 | Comparação de Altura',
+  'calculator.title': '身長差計算機 – cm＆フィート/インチでの差異を瞬時に計算 | Height Calculator',
   'calculator.desc': '2人以上の身長の正確な数値差およびパーセンテージ比率を瞬時に算出します。フィート/インチとcmの双方向変換にも完全対応。',
 
   // Chart SEO
-  'chart.title': '身長比較表 – 標準身長および視覚的リファレンス | Comparação de Altura',
+  'chart.title': '身長比較表 – 標準身長および視覚的リファレンス | Height Calculator',
   'chart.desc': '人類の統計パーセンタイル、有名人、動物、身の回りの日用品を共通の垂直ルーラー上で分かりやすく整理した総合身長チャート。',
 
   // About SEO
-  'about.title': 'Comparação de Altura について – サイトの理念・測定基準と技術仕様 | Comparação de Altura',
-  'about.desc': '厳格な幾何学スケーリングと検証済みデータに基づき、あらゆる実体のスケールを視覚的に直感理解できるComparação de Alturaの理念をご紹介します。',
+  'about.title': 'Height Calculator について – サイトの理念・測定基準と技術仕様 | Height Calculator',
+  'about.desc': '厳格な幾何学スケーリングと検証済みデータに基づき、あらゆる実体のスケールを視覚的に直感理解できるHeight Calculatorの理念をご紹介します。',
 
   // How-To Guide SEO
-  'howto.title': '身長比較ツールの使い方ガイド | Comparação de Altura',
-  'howto.desc': 'Comparação de Alturaの身長比較ツールを使って人物、動物、物体、キャラクターを比較し、身長差を視覚的に理解し、結果を調整・共有する方法を詳しく解説します。',
+  'howto.title': '身長比較ツールの使い方ガイド | Height Calculator',
+  'howto.desc': 'Height Calculatorの身長比較ツールを使って人物、動物、物体、キャラクターを比較し、身長差を視覚的に理解し、結果を調整・共有する方法を詳しく解説します。',
 
   // FAQ default questions & answers
   'faq.badge': 'よくあるご質問',

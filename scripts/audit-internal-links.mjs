@@ -26,7 +26,7 @@ function normalizeUrl(rawUrl, currentPath) {
 
   // Handle external links
   if (rawUrl.startsWith('http://') || rawUrl.startsWith('https://')) {
-    if (!rawUrl.includes('comparacaodealtura.com')) {
+    if (!rawUrl.includes('height-calculator.net')) {
       return null; // External
     }
     // Convert to relative pathname
@@ -59,7 +59,7 @@ function normalizeUrl(rawUrl, currentPath) {
 
 function runAudit() {
   console.log('====================================================');
-  console.log('COMPARACAODEALTURA.ORG — ADVANCED INTERNAL LINKING AUDIT');
+  console.log('HEIGHT_CALCULATOR.ORG — ADVANCED INTERNAL LINKING AUDIT');
   console.log('====================================================\n');
 
   if (!fs.existsSync(DIST_DIR)) {

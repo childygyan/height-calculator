@@ -1,29 +1,29 @@
 export default {
   // Global Meta
-  'meta.defaultTitle': 'Größenvergleichs-Tool – Alles nach Größe vergleichen | Comparação de Altura',
-  'meta.defaultDesc': 'Vergleichen Sie Menschen, Prominente, Anime-Figuren, Tiere, Gegenstände und Filmfiguren mit dem interaktiven visuellen Größenvergleich von Comparação de Altura.',
+  'meta.defaultTitle': 'Größenvergleichs-Tool – Alles nach Größe vergleichen | Height Calculator',
+  'meta.defaultDesc': 'Vergleichen Sie Menschen, Prominente, Anime-Figuren, Tiere, Gegenstände und Filmfiguren mit dem interaktiven visuellen Größenvergleich von Height Calculator.',
   'meta.keywords': 'Größenvergleich, Körpergröße vergleichen, Größenunterschied Rechner, Promi Größen, Anime Größenvergleich',
 
   // Compare Tool SEO
   'compare.h1': 'Größenvergleichs-Tool',
-  'compare.title': 'Größenvergleichs-Tool – Interaktiver visueller Direktvergleich | Comparação de Altura',
+  'compare.title': 'Größenvergleichs-Tool – Interaktiver visueller Direktvergleich | Height Calculator',
   'compare.desc': 'Fügen Sie beliebige Figuren oder eigene Messwerte hinzu, um Körpergrößen in Echtzeit visuell zu vergleichen. Proportionale SVG- und PNG-Modelle auf einer 0-cm-Grundlinie.',
 
   // Calculator SEO
-  'calculator.title': 'Größenunterschied-Rechner – Differenzen in cm & ft/in berechnen | Comparação de Altura',
+  'calculator.title': 'Größenunterschied-Rechner – Differenzen in cm & ft/in berechnen | Height Calculator',
   'calculator.desc': 'Berechnen Sie den exakten numerischen und prozentualen Größenunterschied zwischen zwei oder mehreren Personen. Sofortige Umrechnung zwischen Fuß/Zoll und Zentimetern.',
 
   // Chart SEO
-  'chart.title': 'Größenvergleichstabelle – Visuelle Referenz- und Standardmaße | Comparação de Altura',
+  'chart.title': 'Größenvergleichstabelle – Visuelle Referenz- und Standardmaße | Height Calculator',
   'chart.desc': 'Umfassende Größenvergleichstabellen, die menschliche Perzentile, Prominente, Tiere und Alltagsgegenstände auf einem einheitlichen visuellen Maßstab gegenüberstellen.',
 
   // About SEO
-  'about.title': 'Über Comparação de Altura – Mission, Methodik & Technische Maßstäbe | Comparação de Altura',
-  'about.desc': 'Erfahren Sie mehr über die Mission von Comparação de Altura, Menschen dabei zu helfen, reale Dimensionen durch exakte mathematische Skalierung und verifizierte Daten visuell zu erfassen.',
+  'about.title': 'Über Height Calculator – Mission, Methodik & Technische Maßstäbe | Height Calculator',
+  'about.desc': 'Erfahren Sie mehr über die Mission von Height Calculator, Menschen dabei zu helfen, reale Dimensionen durch exakte mathematische Skalierung und verifizierte Daten visuell zu erfassen.',
 
   // How-To Guide SEO
-  'howto.title': 'So nutzen Sie das Größenvergleichs-Tool | Comparação de Altura',
-  'howto.desc': 'Erfahren Sie, wie Sie das Größenvergleichs-Tool von Comparação de Altura nutzen, um Menschen, Tiere, Objekte und Figuren zu vergleichen, Unterschiede zu verstehen und Ergebnisse zu teilen.',
+  'howto.title': 'So nutzen Sie das Größenvergleichs-Tool | Height Calculator',
+  'howto.desc': 'Erfahren Sie, wie Sie das Größenvergleichs-Tool von Height Calculator nutzen, um Menschen, Tiere, Objekte und Figuren zu vergleichen, Unterschiede zu verstehen und Ergebnisse zu teilen.',
 
   // FAQ default questions & answers
   'faq.badge': 'Häufige Fragen',

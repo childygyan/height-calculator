@@ -1,6 +1,6 @@
-# comparacaodealtura.com SEO Audit & Programmatic SEO Report
+# height-calculator.net SEO Audit & Programmatic SEO Report
 
-**Project:** Comparação de Altura (comparacaodealtura.com)  
+**Project:** Height Calculator (height-calculator.net)  
 **Tech Stack:** Astro.js 5, Static-First (SSG), Tailwind CSS, TypeScript  
 **Deployment Target:** Cloudflare Pages  
 **Audit Type:** Technical, Programmatic, Multilingual & Entity-Based SEO Audit  
@@ -27,7 +27,7 @@
 
 ## 1. Executive Summary
 
-comparacaodealtura.com has a solid modern foundation: a static-first Astro.js SSG architecture, fast page compilation (450 pages in ~59 seconds), responsive Tailwind styling, and a clean baseline-aligned height comparison engine.
+height-calculator.net has a solid modern foundation: a static-first Astro.js SSG architecture, fast page compilation (450 pages in ~59 seconds), responsive Tailwind styling, and a clean baseline-aligned height comparison engine.
 
 However, the website is currently **NOT ready for unrestricted search indexing or programmatic expansion**. There are four critical architectural flaws that must be addressed before launch:
 
@@ -46,10 +46,10 @@ However, the website is currently **NOT ready for unrestricted search indexing o
 
 ### 2.2. Trailing Slashes & URL Normalization
 - **Configuration:** `build.format: 'directory'`.
-- **Verdict: PASS.** Every page is rendered as `[route]/index.html`, ensuring clean directory-style trailing-slash URLs (`https://comparacaodealtura.com/compare/`).
+- **Verdict: PASS.** Every page is rendered as `[route]/index.html`, ensuring clean directory-style trailing-slash URLs (`https://height-calculator.net/compare/`).
 
 ### 2.3. Missing Astro Site Configuration
-- **Evidence:** `astro.config.mjs` lines 5–18 omits `site: 'https://comparacaodealtura.com'`.
+- **Evidence:** `astro.config.mjs` lines 5–18 omits `site: 'https://height-calculator.net'`.
 - **Risk:** Standard Astro utilities like `Astro.site` return `undefined`. Canonical generation relies on manual imports from `src/config/site.ts`.
 
 ---
@@ -76,7 +76,7 @@ User-agent: *
 Allow: /
 Disallow: /dev/
 
-Sitemap: https://comparacaodealtura.com/sitemap.xml
+Sitemap: https://height-calculator.net/sitemap.xml
 ```
 - **Verdict: PASS.** Valid syntax. No accidental blocking of CSS, JavaScript, SVG, or PNG assets.
 - **Multilingual Crawlability:** All localized directories (`/hi/`, `/es/`, `/fr/`, `/de/`, `/pt/`, `/ja/`, `/ko/`, `/ar/`) are fully crawlable.
@@ -90,7 +90,7 @@ Sitemap: https://comparacaodealtura.com/sitemap.xml
 ## 5. Sitemap Audit
 
 ### 5.1. Sitemap File Analysis (`src/pages/sitemap.xml.ts`)
-- **Generated Location:** `https://comparacaodealtura.com/sitemap.xml`.
+- **Generated Location:** `https://height-calculator.net/sitemap.xml`.
 - **Output Format:** Valid XML conforming to the Sitemaps 0.9 standard with `xmlns:xhtml` namespace.
 - **Total URLs in Sitemap:** ~98 URLs.
 - **Total HTML Pages Built:** 450 pages.
@@ -115,13 +115,13 @@ Sitemap: https://comparacaodealtura.com/sitemap.xml
 ### 6.2. Critical Canonical Irregularities Found:
 1. **Cross-Route Canonical Cannibalization:**
    - `src/pages/celebrity-height/index.astro` emits:
-     `<link rel="canonical" href="https://comparacaodealtura.com/celebrity-height-comparison/">`
+     `<link rel="canonical" href="https://height-calculator.net/celebrity-height-comparison/">`
    - `src/pages/animal-height/index.astro` emits:
-     `<link rel="canonical" href="https://comparacaodealtura.com/animal-height-comparison/">`
+     `<link rel="canonical" href="https://height-calculator.net/animal-height-comparison/">`
    - `src/pages/object-height/index.astro` emits:
-     `<link rel="canonical" href="https://comparacaodealtura.com/object-height-comparison/">`
+     `<link rel="canonical" href="https://height-calculator.net/object-height-comparison/">`
    - `src/pages/human-height/index.astro` emits:
-     `<link rel="canonical" href="https://comparacaodealtura.com/people-height-comparison/">`
+     `<link rel="canonical" href="https://height-calculator.net/people-height-comparison/">`
    **Verdict:** These pages are duplicate index pages left over from earlier refactoring. They waste crawl budget and confuse search engine crawlers.
 
 2. **Parallel Entity Duplicate Canonicals:**
@@ -148,16 +148,16 @@ const alternateLinks = getAlternateLocaleLinks(currentPath);
 **The Bug:**
 When `Layout.astro` renders on `/celebrity-height/tom-cruise/`, it produces:
 ```html
-<link rel="alternate" hreflang="en" href="https://comparacaodealtura.com/celebrity-height/tom-cruise/">
-<link rel="alternate" hreflang="hi" href="https://comparacaodealtura.com/hi/celebrity-height/tom-cruise/">
-<link rel="alternate" hreflang="es" href="https://comparacaodealtura.com/es/celebrity-height/tom-cruise/">
-<link rel="alternate" hreflang="fr" href="https://comparacaodealtura.com/fr/celebrity-height/tom-cruise/">
-<link rel="alternate" hreflang="de" href="https://comparacaodealtura.com/de/celebrity-height/tom-cruise/">
-<link rel="alternate" hreflang="pt" href="https://comparacaodealtura.com/pt/celebrity-height/tom-cruise/">
-<link rel="alternate" hreflang="ja" href="https://comparacaodealtura.com/ja/celebrity-height/tom-cruise/">
-<link rel="alternate" hreflang="ko" href="https://comparacaodealtura.com/ko/celebrity-height/tom-cruise/">
-<link rel="alternate" hreflang="ar" href="https://comparacaodealtura.com/ar/celebrity-height/tom-cruise/">
-<link rel="alternate" hreflang="x-default" href="https://comparacaodealtura.com/celebrity-height/tom-cruise/">
+<link rel="alternate" hreflang="en" href="https://height-calculator.net/celebrity-height/tom-cruise/">
+<link rel="alternate" hreflang="hi" href="https://height-calculator.net/hi/celebrity-height/tom-cruise/">
+<link rel="alternate" hreflang="es" href="https://height-calculator.net/es/celebrity-height/tom-cruise/">
+<link rel="alternate" hreflang="fr" href="https://height-calculator.net/fr/celebrity-height/tom-cruise/">
+<link rel="alternate" hreflang="de" href="https://height-calculator.net/de/celebrity-height/tom-cruise/">
+<link rel="alternate" hreflang="pt" href="https://height-calculator.net/pt/celebrity-height/tom-cruise/">
+<link rel="alternate" hreflang="ja" href="https://height-calculator.net/ja/celebrity-height/tom-cruise/">
+<link rel="alternate" hreflang="ko" href="https://height-calculator.net/ko/celebrity-height/tom-cruise/">
+<link rel="alternate" hreflang="ar" href="https://height-calculator.net/ar/celebrity-height/tom-cruise/">
+<link rel="alternate" hreflang="x-default" href="https://height-calculator.net/celebrity-height/tom-cruise/">
 ```
 **Every single one of those 8 non-English URLs returns a 404 HTTP status code** because `src/pages/[locale]/celebrity-height/[slug].astro` does not exist!
 
@@ -213,7 +213,7 @@ Doorway pages are defined by Google as:
 > "Web pages that are created to rank for specific, similar search queries... They lead users to pages that are not as useful or interesting as the final destination."
 
 **Current Risk Level: MEDIUM-HIGH on programmatic categories.**
-If Comparação de Altura generates 500 sports entity pages (`/sports-height-comparison/sports-001/` to `/sports-height-comparison/sports-500/`) with identical layouts and boilerplate text solely to capture long-tail queries, search algorithms will flag them as doorway pages.
+If Height Calculator generates 500 sports entity pages (`/sports-height-comparison/sports-001/` to `/sports-height-comparison/sports-500/`) with identical layouts and boilerplate text solely to capture long-tail queries, search algorithms will flag them as doorway pages.
 
 ### 11.2. Mitigation Strategy:
 Each entity page must provide unique, authentic value:
@@ -240,7 +240,7 @@ The codebase contains 4 major legacy duplicate route pairs:
 ## 13. Comparison URL & Permutation Strategy
 
 ### 13.1. Theoretical Comparison Page Growth
-If Comparação de Altura allows arbitrary pairwise comparison page generation across its 1,461 entities:
+If Height Calculator allows arbitrary pairwise comparison page generation across its 1,461 entities:
 $$\text{Total Combinations} = \frac{N \times (N - 1)}{2} = \frac{1,461 \times 1,460}{2} = 1,066,530\text{ pages}$$
 
 Scaled to 10,000 entities:
@@ -301,7 +301,7 @@ $$50,000,000 \times 9 = 450,000,000\text{ URLs}$$
 ## 16. Homepage SEO
 
 ### 16.1. Metadata & Content Hierarchy
-- **Title:** `Height Comparison Tool – Compare Anything by Height | Comparação de Altura`
+- **Title:** `Height Comparison Tool – Compare Anything by Height | Height Calculator`
 - **Description:** Clear, compelling meta description emphasizing the universal nature of the tool.
 - **Heading Hierarchy:**
   - `H1`: `Compare Anything by Height`
@@ -442,7 +442,7 @@ Loading a 15 MB uncompressed PNG on mobile connections will result in an LCP of 
 ## 26. Recommended Target Architecture
 
 ```
-comparacaodealtura.com/
+height-calculator.net/
 ├── /                              (Canonical English Homepage)
 ├── /[locale]/                     (Localized Homepage: hi, es, fr, de, pt, ja, ko, ar)
 │
@@ -474,7 +474,7 @@ comparacaodealtura.com/
 #### Issue 1: Hreflang Tags Pointing to 404 Pages
 - **Why it matters:** Google Search Console will flag thousands of reciprocal hreflang errors and invalidate international targeting.
 - **Affected pages:** All individual entity pages across all categories.
-- **Evidence:** `dist/celebrity-height/tom-cruise/index.html` contains `<link rel="alternate" hreflang="hi" href="https://comparacaodealtura.com/hi/celebrity-height/tom-cruise/">` which returns 404.
+- **Evidence:** `dist/celebrity-height/tom-cruise/index.html` contains `<link rel="alternate" hreflang="hi" href="https://height-calculator.net/hi/celebrity-height/tom-cruise/">` which returns 404.
 - **Recommended fix:** Update `getAlternateLocaleLinks(pathname)` in `src/i18n/utils.ts` to only emit localized hreflang tags for routes that actually exist in the target locale. If a route only exists in English, emit only the self-referencing `en` and `x-default` tags.
 - **Implementation location:** `src/i18n/utils.ts` (`getAlternateLocaleLinks`).
 - **Expected benefit:** 100% clean hreflang validation in GSC with zero 404 errors.
@@ -544,7 +544,7 @@ comparacaodealtura.com/
 #### Issue 9: Missing Astro Site Property
 - **Why it matters:** Standard Astro helper functions cannot resolve the root domain.
 - **Affected pages:** Build configuration.
-- **Recommended fix:** Add `site: 'https://comparacaodealtura.com'` to `astro.config.mjs`.
+- **Recommended fix:** Add `site: 'https://height-calculator.net'` to `astro.config.mjs`.
 
 ---
 
@@ -632,4 +632,4 @@ comparacaodealtura.com/
 - **Directory Trailing Slashes:** Handled cleanly with `format: 'directory'`.
 - **Translation System:** 183-key dictionary structure with 0 missing keys.
 - **Core Canvas Logic:** Unified coordinate geometry with shared baseline floor at 0 cm.
-- **Brand Rules:** `Comparação de Altura` and `comparacaodealtura.com` remaining invariant across all languages.
+- **Brand Rules:** `Height Calculator` and `height-calculator.net` remaining invariant across all languages.

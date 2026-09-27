@@ -1,7 +1,7 @@
 import type { EntityCategory, ComparisonItem } from '../lib/constants';
 
 /**
- * PublicEntity: Canonical verified public entity in the Comparação de Altura platform.
+ * PublicEntity: Canonical verified public entity in the Height Calculator platform.
  * These are static, curated, and public records for people, celebrities,
  * anime, films, animals, objects, plants, sports, apparel, etc.
  */
@@ -30,7 +30,7 @@ export interface PublicEntity {
 }
 
 /**
- * CustomEntity: User-created entity in the Comparação de Altura SaaS layer.
+ * CustomEntity: User-created entity in the Height Calculator SaaS layer.
  * Stored securely in Cloudflare D1 with user assets stored in Cloudflare R2.
  * Never mixed into the static public dataset.
  */

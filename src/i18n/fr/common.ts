@@ -1,6 +1,6 @@
 export default {
   // Brand
-  'brand.name': 'Comparação de Altura',
+  'brand.name': 'Height Calculator',
   'brand.tagline': 'Comparez n\'importe quoi par la taille',
   'brand.secondaryTagline': 'Voyez sa vraie taille en direct',
   'brand.description': 'Une plateforme interactive de comparaison visuelle de taille pour comparer des personnes, célébrités, personnages d\'anime, figures de films, animaux, objets, plantes, athlètes et bien plus encore.',
@@ -73,7 +73,7 @@ export default {
   'footer.legal': 'Plateforme & Mentions Légales',
   'footer.tools': 'Outils',
   'footer.allRightsReserved': 'Tous droits réservés.',
-  'footer.platformStatement': 'Comparação de Altura aide chacun à comprendre visuellement la taille de toute chose.',
+  'footer.platformStatement': 'Height Calculator aide chacun à comprendre visuellement la taille de toute chose.',
   'footer.fastPlatform': 'Plateforme de mesure visuelle rapide et statique',
 
   // Error States

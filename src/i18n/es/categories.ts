@@ -1,52 +1,52 @@
 export default {
   // Category Titles & Badges
   'cat.people.name': 'Personas',
-  'cat.people.title': 'Comparación de Altura de Personas | Comparação de Altura',
+  'cat.people.title': 'Comparación de Altura de Personas | Height Calculator',
   'cat.people.description': 'Compara alturas de hombres y mujeres adultos lado a lado usando siluetas anatómicas matemáticamente precisas sobre una línea de base común.',
   'cat.people.badge': 'Referencia Antropométrica',
 
   'cat.celebrities.name': 'Celebridades',
-  'cat.celebrities.title': 'Comparación de Altura de Celebridades – Actores, Cantantes y Figuras Públicas | Comparação de Altura',
+  'cat.celebrities.title': 'Comparación de Altura de Celebridades – Actores, Cantantes y Figuras Públicas | Height Calculator',
   'cat.celebrities.description': 'Compara estaturas de celebridades lado a lado. Descubre qué tan altos son actores, músicos, atletas e iconos históricos con modelos visuales de referencia.',
   'cat.celebrities.badge': 'Figuras Públicas Verificadas',
 
   'cat.anime.name': 'Anime',
-  'cat.anime.title': 'Comparación de Altura de Personajes de Anime – Escala Visual Lado a Lado | Comparação de Altura',
+  'cat.anime.title': 'Comparación de Altura de Personajes de Anime – Escala Visual Lado a Lado | Height Calculator',
   'cat.anime.description': 'Compara estaturas oficiales de personajes de anime y manga lado a lado. Explora diferencias de tamaño visuales en series populares.',
   'cat.anime.badge': 'Medidas Oficiales del Canon',
 
   'cat.films.name': 'Películas',
-  'cat.films.title': 'Comparación de Altura de Personajes de Cine y Películas | Comparação de Altura',
+  'cat.films.title': 'Comparación de Altura de Personajes de Cine y Películas | Height Calculator',
   'cat.films.description': 'Compara alturas de héroes icónicos del cine, villanos, titanes de ciencia ficción y figuras cinematográficas frente a estaturas humanas reales.',
   'cat.films.badge': 'Escala Cinematográfica',
 
   'cat.animals.name': 'Animales',
-  'cat.animals.title': 'Comparación de Altura de Animales – Escala de Fauna y Mascotas | Comparação de Altura',
+  'cat.animals.title': 'Comparación de Altura de Animales – Escala de Fauna y Mascotas | Height Calculator',
   'cat.animals.description': 'Compara la altura a la cruz y de pie de animales salvajes, perros, grandes felinos y megafauna frente a escalas de referencia humanas.',
   'cat.animals.badge': 'Escala de Fauna y Vida Silvestre',
 
   'cat.objects.name': 'Objetos',
-  'cat.objects.title': 'Comparación de Altura de Objetos – Artículos Cotidianos y Arquitectura | Comparação de Altura',
+  'cat.objects.title': 'Comparación de Altura de Objetos – Artículos Cotidianos y Arquitectura | Height Calculator',
   'cat.objects.description': 'Compara objetos cotidianos, vehículos, muebles, equipamiento deportivo y estructuras para comprender sus verdaderas dimensiones físicas.',
   'cat.objects.badge': 'Escala del Mundo Físico',
 
   'cat.plants.name': 'Plantas',
-  'cat.plants.title': 'Comparación de Altura de Plantas y Árboles | Comparação de Altura',
+  'cat.plants.title': 'Comparación de Altura de Plantas y Árboles | Height Calculator',
   'cat.plants.description': 'Compara alturas de árboles, flora, especímenes botánicos y secuoyas gigantes junto a humanos y estructuras.',
   'cat.plants.badge': 'Escala Botánica',
 
   'cat.sports.name': 'Deportes',
-  'cat.sports.title': 'Comparación de Altura de Atletas y Deportistas | Comparação de Altura',
+  'cat.sports.title': 'Comparación de Altura de Atletas y Deportistas | Height Calculator',
   'cat.sports.description': 'Compara la estatura de jugadores de baloncesto, estrellas de fútbol, velocistas y atletas de combate frente a promedios mundiales.',
   'cat.sports.badge': 'Estatura Atlética',
 
   'cat.fictional.name': 'Personajes Ficticios',
-  'cat.fictional.title': 'Comparación de Altura de Personajes Ficticios – Dimensiones Legendarias | Comparação de Altura',
+  'cat.fictional.title': 'Comparación de Altura de Personajes Ficticios – Dimensiones Legendarias | Height Calculator',
   'cat.fictional.description': 'Compara leyendas míticas, héroes de cómics, monstruos y personajes de fantasía en un espacio matemático unificado.',
   'cat.fictional.badge': 'Fantasía y Mitología',
 
   'cat.apparel.name': 'Ropa y Calzado',
-  'cat.apparel.title': 'Comparación de Altura de Ropa y Calzado | Comparação de Altura',
+  'cat.apparel.title': 'Comparación de Altura de Ropa y Calzado | Height Calculator',
   'cat.apparel.description': 'Compara estándares de prendas, calzado, maniquíes y equipo en relación con las proporciones del cuerpo humano de pie.',
   'cat.apparel.badge': 'Referencia de Prendas y Tallas',
 

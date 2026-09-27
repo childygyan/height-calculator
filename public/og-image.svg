@@ -39,7 +39,7 @@
     How<tspan fill="#3b82f6">Height</tspan>
   </text>
   <text x="165" y="152" font-family="'Inter', sans-serif" font-size="16" font-weight="600" fill="#94a3b8" letter-spacing="1.5">
-    COMPARACAODEALTURA.ORG
+    HEIGHT_CALCULATOR.ORG
   </text>
 
   <!-- Headline & Tagline -->
@@ -104,7 +104,7 @@
 
   <!-- URL Bottom Bar -->
   <text x="80" y="550" font-family="'Inter', sans-serif" font-size="18" font-weight="700" fill="#3b82f6" letter-spacing="1">
-    comparacaodealtura.com
+    height-calculator.net
   </text>
   <text x="240" y="550" font-family="'Inter', sans-serif" font-size="16" font-weight="400" fill="#64748b">
     | Free, fast, static-first visual measurement platform

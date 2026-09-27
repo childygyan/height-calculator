@@ -1,29 +1,29 @@
 export default {
   // Global Meta
-  'meta.defaultTitle': 'Height Comparison Tool – Compare Anything by Height | Comparação de Altura',
-  'meta.defaultDesc': 'Compare people, celebrities, anime characters, animals, objects, film characters and more with Comparação de Altura interactive visual height comparison tool.',
+  'meta.defaultTitle': 'Height Comparison Tool – Compare Anything by Height | Height Calculator',
+  'meta.defaultDesc': 'Compare people, celebrities, anime characters, animals, objects, film characters and more with Height Calculator interactive visual height comparison tool.',
   'meta.keywords': 'height comparison, height difference calculator, celebrity heights, compare heights visual, anime height comparison',
 
   // Compare Tool SEO
   'compare.h1': 'Height Comparison Tool',
-  'compare.title': 'Height Comparison Tool – Interactive Side-by-Side Visualizer | Comparação de Altura',
+  'compare.title': 'Height Comparison Tool – Interactive Side-by-Side Visualizer | Height Calculator',
   'compare.desc': 'Add any figure or custom measurement to compare heights visually in real time. Features proportional SVG and PNG models on a shared 0 cm baseline.',
 
   // Calculator SEO
-  'calculator.title': 'Height Difference Calculator – Calculate Differences in cm & ft/in | Comparação de Altura',
+  'calculator.title': 'Height Difference Calculator – Calculate Differences in cm & ft/in | Height Calculator',
   'calculator.desc': 'Calculate the exact numerical and percentage height difference between two or more people. Instant conversion between feet/inches and centimeters.',
 
   // Chart SEO
-  'chart.title': 'Height Comparison Chart – Visual Height Reference Standards | Comparação de Altura',
+  'chart.title': 'Height Comparison Chart – Visual Height Reference Standards | Height Calculator',
   'chart.desc': 'Comprehensive height comparison charts comparing human percentiles, celebrities, animals, and everyday items on a unified visual ruler.',
 
   // About SEO
-  'about.title': 'About Comparação de Altura – Purpose, Methodology & Technical Standards | Comparação de Altura',
-  'about.desc': 'Learn about Comparação de Altura mission to help people visually understand the height of anything through strict mathematical scaling and verified records.',
+  'about.title': 'About Height Calculator – Purpose, Methodology & Technical Standards | Height Calculator',
+  'about.desc': 'Learn about Height Calculator mission to help people visually understand the height of anything through strict mathematical scaling and verified records.',
 
   // How-To Guide SEO
-  'howto.title': 'How to Use the Height Comparison Tool | Comparação de Altura',
-  'howto.desc': 'Learn how to use Comparação de Altura\'s height comparison tool to compare people, animals, objects and characters, understand height differences, adjust comparisons and share results.',
+  'howto.title': 'How to Use the Height Comparison Tool | Height Calculator',
+  'howto.desc': 'Learn how to use Height Calculator\'s height comparison tool to compare people, animals, objects and characters, understand height differences, adjust comparisons and share results.',
 
   // FAQ default questions & answers
   'faq.badge': 'Got Questions?',

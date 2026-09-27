@@ -1,5 +1,5 @@
 /**
- * Comparação de Altura SaaS Architecture Master Exports
+ * Height Calculator SaaS Architecture Master Exports
  * Central entry point for all SaaS abstractions, services, and entitlements.
  */
 

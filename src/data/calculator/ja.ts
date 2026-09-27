@@ -2,8 +2,8 @@ import type { CalculatorTranslationData } from './types';
 
 export const jaCalculator: CalculatorTranslationData = {
   seo: {
-    title: '身長差計算ツール | 身長と割合を比較 | Comparação de Altura',
-    description: '2人の人物、カップル、または物体の正確な身長差をセンチメートル、フィート、インチで瞬時に計算します。Comparação de Alturaで身長差の割合や視覚的な差を確認できます。',
+    title: '身長差計算ツール | 身長と割合を比較 | Height Calculator',
+    description: '2人の人物、カップル、または物体の正確な身長差をセンチメートル、フィート、インチで瞬時に計算します。Height Calculatorで身長差の割合や視覚的な差を確認できます。',
   },
   badge: '高精度身長測定ツール',
   h1: '身長差計算ツール',
@@ -69,7 +69,7 @@ export const jaCalculator: CalculatorTranslationData = {
     },
     {
       question: 'この身長差を比較キャンバスで確認できますか？',
-      answer: 'はい！計算後に「比較キャンバスで視覚的に比較する」ボタンをクリックすると、両方の身長がComparação de Alturaのインタラクティブな比較キャンバスに即座に読み込まれます。',
+      answer: 'はい！計算後に「比較キャンバスで視覚的に比較する」ボタンをクリックすると、両方の身長がHeight Calculatorのインタラクティブな比較キャンバスに即座に読み込まれます。',
     },
     {
       question: 'センチメートルとフィート/インチの換算方法は？',

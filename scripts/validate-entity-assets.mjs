@@ -11,7 +11,7 @@ import { ASSET_REGISTRY, getAssetById, resolveAsset } from '../src/data/assetReg
 import { renderEntitySvg } from '../src/lib/renderModel.ts';
 
 console.log('====================================================');
-console.log('COMPARACAODEALTURA.ORG — SMART ENTITY COMPARISON AUDIT SUITE');
+console.log('HEIGHT_CALCULATOR.ORG — SMART ENTITY COMPARISON AUDIT SUITE');
 console.log('====================================================\n');
 
 let totalTests = 0;

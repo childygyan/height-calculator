@@ -2,7 +2,7 @@
 // Submits all canonical URLs to Bing / Yandex / IndexNow API
 
 const INDEXNOW_KEY = 'e98fbeb26cb6473d96898f8e9ba3eaf8';
-const HOST = 'comparacaodealtura.com';
+const HOST = 'height-calculator.net';
 const KEY_LOCATION = `https://${HOST}/${INDEXNOW_KEY}.txt`;
 
 async function submitIndexNow() {

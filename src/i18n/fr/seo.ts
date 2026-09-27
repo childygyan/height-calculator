@@ -1,29 +1,29 @@
 export default {
   // Global Meta
-  'meta.defaultTitle': 'Comparateur de Taille – Comparez N\'importe Quelle Taille | Comparação de Altura',
-  'meta.defaultDesc': 'Comparez la taille de personnes, célébrités, personnages d\'anime, animaux, objets et héros de cinéma grâce à l\'outil visuel interactif Comparação de Altura.',
+  'meta.defaultTitle': 'Comparateur de Taille – Comparez N\'importe Quelle Taille | Height Calculator',
+  'meta.defaultDesc': 'Comparez la taille de personnes, célébrités, personnages d\'anime, animaux, objets et héros de cinéma grâce à l\'outil visuel interactif Height Calculator.',
   'meta.keywords': 'comparateur de taille, calcul différence de taille, taille des célébrités, comparaison visuelle taille, taille anime',
 
   // Compare Tool SEO
   'compare.h1': 'Comparateur de Taille',
-  'compare.title': 'Comparateur de Taille – Visualiseur Vis-à-Vis Interactif | Comparação de Altura',
+  'compare.title': 'Comparateur de Taille – Visualiseur Vis-à-Vis Interactif | Height Calculator',
   'compare.desc': 'Ajoutez n\'importe quel modèle ou mesure sur mesure pour comparer les tailles visuellement en temps réel. Modèles SVG et PNG proportionnels alignés sur un sol à 0 cm.',
 
   // Calculator SEO
-  'calculator.title': 'Calculateur de Différence de Taille – Calculez en cm & pieds/pouces | Comparação de Altura',
+  'calculator.title': 'Calculateur de Différence de Taille – Calculez en cm & pieds/pouces | Height Calculator',
   'calculator.desc': 'Calculez l\'écart exact et le pourcentage de différence de taille entre deux ou plusieurs personnes. Conversion instantanée entre pieds/pouces et centimètres.',
 
   // Chart SEO
-  'chart.title': 'Tableau Comparatif de Taille – Normes et Références Visuelles | Comparação de Altura',
+  'chart.title': 'Tableau Comparatif de Taille – Normes et Références Visuelles | Height Calculator',
   'chart.desc': 'Tableaux comparatifs complets confrontant percentiles humains, célébrités, animaux et objets du quotidien sur une règle verticale unifiée.',
 
   // About SEO
-  'about.title': 'À propos de Comparação de Altura – Objectifs, Méthodologie & Normes Techniques | Comparação de Altura',
-  'about.desc': 'Découvrez la mission de Comparação de Altura : permettre à chacun de visualiser concrètement la hauteur réelle de toute chose grâce à une mise à l\'échelle mathématique rigoureuse.',
+  'about.title': 'À propos de Height Calculator – Objectifs, Méthodologie & Normes Techniques | Height Calculator',
+  'about.desc': 'Découvrez la mission de Height Calculator : permettre à chacun de visualiser concrètement la hauteur réelle de toute chose grâce à une mise à l\'échelle mathématique rigoureuse.',
 
   // How-To Guide SEO
-  'howto.title': 'Comment utiliser le comparateur de taille | Comparação de Altura',
-  'howto.desc': 'Découvrez comment utiliser le comparateur de taille Comparação de Altura pour comparer des personnes, animaux, objets et personnages, mesurer les écarts et partager vos résultats.',
+  'howto.title': 'Comment utiliser le comparateur de taille | Height Calculator',
+  'howto.desc': 'Découvrez comment utiliser le comparateur de taille Height Calculator pour comparer des personnes, animaux, objets et personnages, mesurer les écarts et partager vos résultats.',
 
   // FAQ default questions & answers
   'faq.badge': 'Des questions ?',

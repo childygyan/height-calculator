@@ -1,7 +1,7 @@
-# comparacaodealtura.com Complete Post-Fix SEO Audit
+# height-calculator.net Complete Post-Fix SEO Audit
 ## Master SEO Audit Report — Production Website
 
-**Project:** Comparação de Altura (comparacaodealtura.com)  
+**Project:** Height Calculator (height-calculator.net)  
 **Tech Stack:** Astro.js 5, Tailwind CSS, TypeScript, Static-First SSG  
 **Deployment Target:** Cloudflare Pages  
 **Audit Date:** September 19, 2026  
@@ -14,7 +14,7 @@
 
 ### Overall Technical Status: **NEEDS WORK (Strong Architecture with Critical Performance & Programmatic Gaps)**
 
-comparacaodealtura.com demonstrates an exceptionally clean core technical foundation:
+height-calculator.net demonstrates an exceptionally clean core technical foundation:
 - **Routing & Canonicals:** 100% self-referencing absolute HTTPS canonical URLs, zero duplicate routes, zero canonical chains.
 - **Development Separation:** Clean isolation of development tools (`tools/`) with zero dev/test pages compiled into production artifacts (`dist/`).
 - **International Architecture:** Multi-locale routing across 9 languages (`en`, `hi`, `es`, `fr`, `de`, `pt`, `ja`, `ko`, `ar`) with route-aware hreflang validation eliminating 404 traps on single-language entity pages.
@@ -86,10 +86,10 @@ However, the website is currently **NOT ready for aggressive commercial search s
 - **Recommendation:** Map entity routes directly to their semantic slugs (`sunflower`, `pine-tree`, `basketball-hoop`) in static path generators.
 
 ### Issue 2.4: 404 Page Emits Canonical URL and Lacks `noindex` Meta Tag
-- **Problem:** `src/pages/404.astro` emits a self-referencing canonical tag (`https://comparacaodealtura.com/404/`) and omits `<meta name="robots" content="noindex, nofollow">`.
+- **Problem:** `src/pages/404.astro` emits a self-referencing canonical tag (`https://height-calculator.net/404/`) and omits `<meta name="robots" content="noindex, nofollow">`.
 - **Evidence:**
   - `src/pages/404.astro` line 6: `const canonical = `${SITE.siteUrl}/404/`;`
-  - `dist/404.html`: `<link rel="canonical" href="https://comparacaodealtura.com/404/">` and no robots meta tag.
+  - `dist/404.html`: `<link rel="canonical" href="https://height-calculator.net/404/">` and no robots meta tag.
 - **Impact:** If external sites link to broken URLs, search engine crawlers may index the 404 page as a canonical document.
 - **Severity:** **HIGH**
 - **Recommendation:** Pass `noindex={true}` to `<Layout>` in `404.astro` and omit the canonical link tag entirely.
@@ -131,7 +131,7 @@ However, the website is currently **NOT ready for aggressive commercial search s
 ### Issue 4.1: Meta Title Length Exceeds SERP Pixel Width on Some Localized Pages
 - **Problem:** Certain Spanish and French category titles reach 88–89 characters, causing trailing truncation in Google desktop SERPs (~600px limit).
 - **Evidence:**
-  - `/es/celebrity-height-comparison/`: 89 chars (`Comparación de Altura de Celebridades – Actores, Cantantes y Figuras Públicas | Comparação de Altura`)
+  - `/es/celebrity-height-comparison/`: 89 chars (`Comparación de Altura de Celebridades – Actores, Cantantes y Figuras Públicas | Height Calculator`)
   - `/fr/celebrity-height-comparison/`: 89 chars
 - **Impact:** Minor cosmetic truncation in search result snippets.
 - **Severity:** **LOW**
@@ -151,17 +151,17 @@ However, the website is currently **NOT ready for aggressive commercial search s
 | Technical Dimension | Configuration / Implementation | Evaluation | Status |
 |---|---|---|:---:|
 | **Output Mode** | `output: 'static'` in `astro.config.mjs` | 100% pre-rendered static HTML | **PASS** |
-| **Site Origin** | `site: 'https://comparacaodealtura.com'` | Standard Astro site configuration | **PASS** |
+| **Site Origin** | `site: 'https://height-calculator.net'` | Standard Astro site configuration | **PASS** |
 | **Trailing Slash** | `trailingSlash: 'always'` | Enforces directory-style trailing slashes | **PASS** |
 | **HTTPS Security** | Enforced via Cloudflare `_redirects` | 0 insecure HTTP URLs in source | **PASS** |
-| **Canonical Domain** | `https://comparacaodealtura.com` | Zero `www` or `http` occurrences in codebase | **PASS** |
+| **Canonical Domain** | `https://height-calculator.net` | Zero `www` or `http` occurrences in codebase | **PASS** |
 | **Build Artifacts** | `dist/` format: directory | Clean static directory hierarchy | **PASS** |
 
 ---
 
 ## 6. Crawlability
 
-- **Robots.txt Location:** `https://comparacaodealtura.com/robots.txt`
+- **Robots.txt Location:** `https://height-calculator.net/robots.txt`
 - **Crawl Directives:**
   ```txt
   User-agent: *
@@ -170,7 +170,7 @@ However, the website is currently **NOT ready for aggressive commercial search s
   Disallow: /api/
   Disallow: /compare/share/
 
-  Sitemap: https://comparacaodealtura.com/sitemap.xml
+  Sitemap: https://height-calculator.net/sitemap.xml
   ```
 - **Evaluation:**
   - CSS, JS, SVG, and PNG assets are completely crawlable.
@@ -199,11 +199,11 @@ However, the website is currently **NOT ready for aggressive commercial search s
 
 - **Format:** Lowercase, hyphen-separated, trailing-slash normalized.
 - **Examples:**
-  - Static tools: `https://comparacaodealtura.com/compare/`
-  - Category hubs: `https://comparacaodealtura.com/celebrity-height-comparison/`
-  - Localized hubs: `https://comparacaodealtura.com/hi/celebrity-height-comparison/`
-  - Entity profiles: `https://comparacaodealtura.com/celebrity-height/brad-pitt/`
-  - Comparison hubs: `https://comparacaodealtura.com/compare/tom-cruise-vs-dwayne-johnson/`
+  - Static tools: `https://height-calculator.net/compare/`
+  - Category hubs: `https://height-calculator.net/celebrity-height-comparison/`
+  - Localized hubs: `https://height-calculator.net/hi/celebrity-height-comparison/`
+  - Entity profiles: `https://height-calculator.net/celebrity-height/brad-pitt/`
+  - Comparison hubs: `https://height-calculator.net/compare/tom-cruise-vs-dwayne-johnson/`
 - **Anomalies Identified:**
   - Category naming divergence: Some categories use `[category]-height-comparison/` while entity routes use `[category]-height/[slug]/` (e.g. `celebrity-height-comparison` vs `celebrity-height/brad-pitt/`). This is supported via direct 301 category redirects in `_redirects`.
   - Raw ID slugs: `plant-004`, `sports-004`, `fictional-004` (Documented in Issue 2.3).
@@ -221,8 +221,8 @@ However, the website is currently **NOT ready for aggressive commercial search s
   - `www` canonicals: **0**.
   - Mismatched canonicals vs current URL: **0** (except `404.html` emitting `/404/`).
 - **Cross-Locale Canonical Isolation:**
-  - English page: `https://comparacaodealtura.com/compare/`
-  - Hindi page: `https://comparacaodealtura.com/hi/compare/` (Self-referencing, no cross-domain canonicalization to English).
+  - English page: `https://height-calculator.net/compare/`
+  - Hindi page: `https://height-calculator.net/hi/compare/` (Self-referencing, no cross-domain canonicalization to English).
 - **Status:** **PASS**
 
 ---
@@ -231,9 +231,9 @@ However, the website is currently **NOT ready for aggressive commercial search s
 
 - **Configuration File:** [`public/_redirects`](file:///g:/NEw%20website/Hight/public/_redirects) (compiled to `dist/_redirects`).
 - **Implemented Rules:**
-  1. `https://www.comparacaodealtura.com/*` → `https://comparacaodealtura.com/:splat` (301!)
-  2. `http://www.comparacaodealtura.com/*` → `https://comparacaodealtura.com/:splat` (301!)
-  3. `http://comparacaodealtura.com/*` → `https://comparacaodealtura.com/:splat` (301!)
+  1. `https://www.height-calculator.net/*` → `https://height-calculator.net/:splat` (301!)
+  2. `http://www.height-calculator.net/*` → `https://height-calculator.net/:splat` (301!)
+  3. `http://height-calculator.net/*` → `https://height-calculator.net/:splat` (301!)
   4. `/celebrity-height/` → `/celebrity-height-comparison/` (301)
   5. `/celebrity-height` → `/celebrity-height-comparison/` (301)
   6. `/fictional-character-height/` → `/fictional-character-height-comparison/` (301)
@@ -245,7 +245,7 @@ However, the website is currently **NOT ready for aggressive commercial search s
 
 ## 11. Sitemap
 
-- **Endpoint:** `https://comparacaodealtura.com/sitemap.xml`
+- **Endpoint:** `https://height-calculator.net/sitemap.xml`
 - **Total Entries:** **406 URLs**.
 - **Composition:**
   - Multilingual Core & Tool Hubs (6 pages × 9 locales): **54 URLs**.
@@ -265,7 +265,7 @@ However, the website is currently **NOT ready for aggressive commercial search s
 
 - **Directives Verified:**
   - Valid syntax conforming to RFC 9309.
-  - Declares authoritative sitemap location `https://comparacaodealtura.com/sitemap.xml`.
+  - Declares authoritative sitemap location `https://height-calculator.net/sitemap.xml`.
   - Disallows internal application routes `/dashboard/`, `/api/`, `/compare/share/`.
   - Allows full crawling of all public localized paths and entity routes.
 - **Status:** **PASS**
@@ -305,14 +305,14 @@ However, the website is currently **NOT ready for aggressive commercial search s
 - **Missing `<title>`:** **0** (100% coverage)
 - **Missing `<meta name="description">`:** **0** (100% coverage)
 - **Title Length Analysis:**
-  - Shortest: 19 characters (`人間の身長比較 | Comparação de Altura`)
+  - Shortest: 19 characters (`人間の身長比較 | Height Calculator`)
   - Longest: 89 characters (`Comparación de Altura de Celebridades...`)
   - Median: 58 characters (Ideal for search engine SERP snippets)
 - **Description Length Analysis:**
   - Shortest: 112 characters
   - Longest: 189 characters
   - Median: 148 characters (Fits within standard 160-character SERP limit)
-- **Brand Suffix:** Consistently incorporates `| Comparação de Altura` across all pages.
+- **Brand Suffix:** Consistently incorporates `| Height Calculator` across all pages.
 - **Status:** **PASS**
 
 ---
@@ -337,7 +337,7 @@ However, the website is currently **NOT ready for aggressive commercial search s
 ## 17. Internal Linking & Graph Connectivity
 
 ```
-COMPARACAODEALTURA INTERNAL LINK GRAPH (Production Build)
+HEIGHT_CALCULATOR INTERNAL LINK GRAPH (Production Build)
 ────────────────────────────────────────────────────────
 Total Valid Routes Analyzed:    407
 Total Internal Links Scanned:   14,861
@@ -517,7 +517,7 @@ Font Loading:                  Google Fonts preconnected (PASS)
 
 ## 30. Search Intent Audit
 
-| Page Type | Targeted Search Query Pattern | Intent Type | Comparação de Altura Satisfaction |
+| Page Type | Targeted Search Query Pattern | Intent Type | Height Calculator Satisfaction |
 |---|---|:---:|:---:|
 | Homepage (`/`) | "height comparison", "compare heights online" | Commercial / Tool | **100% (Instant interactive canvas)** |
 | Difference Calculator | "height difference calculator", "couple height difference" | Utility / Calculation | **100% (Interactive numerical gap)** |
@@ -568,7 +568,7 @@ Font Loading:                  Google Fonts preconnected (PASS)
   - Missing `og:image`: **0**
   - `og:url` vs Canonical Mismatch: **0**
   - `og:locale` reflects active language (`en_US`, `hi_IN`, `es_ES`, `fr_FR`, etc.).
-  - Default social share asset: `https://comparacaodealtura.com/og-image.svg`.
+  - Default social share asset: `https://height-calculator.net/og-image.svg`.
 - **Status:** **PASS**
 
 ---
@@ -597,11 +597,11 @@ Font Loading:                  Google Fonts preconnected (PASS)
 ## 37. Domain Consistency
 
 - **Codebase Search Results:**
-  - `http://comparacaodealtura.com`: 1 instance (solely in `public/_redirects` as the permanent 301 rule).
-  - `https://www.comparacaodealtura.com`: 1 instance (in `_redirects` as the permanent 301 rule).
+  - `http://height-calculator.net`: 1 instance (solely in `public/_redirects` as the permanent 301 rule).
+  - `https://www.height-calculator.net`: 1 instance (in `_redirects` as the permanent 301 rule).
   - `localhost`: 0 instances.
   - `127.0.0.1`: 0 instances.
-- **Verdict:** The authoritative canonical domain `https://comparacaodealtura.com` is 100% consistent across all components, schemas, sitemaps, and internal links.
+- **Verdict:** The authoritative canonical domain `https://height-calculator.net` is 100% consistent across all components, schemas, sitemaps, and internal links.
 - **Status:** **PASS**
 
 ---

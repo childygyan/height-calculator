@@ -1,7 +1,7 @@
-# comparacaodealtura.com — Domain SEO & Canonical Architecture Report
+# height-calculator.net — Domain SEO & Canonical Architecture Report
 
-**Authoritative Production Domain:** `https://comparacaodealtura.com`  
-**Cloudflare Pages Preview Subdomain:** `https://comparacaodealtura.pages.dev`  
+**Authoritative Production Domain:** `https://height-calculator.net`  
+**Cloudflare Pages Preview Subdomain:** `https://height-calculator.pages.dev`  
 **Date of Audit & Deployment:** September 19, 2026  
 **Status:** FULLY HARDENED & PRODUCTION-VERIFIED (24/24 Automated Checks Passed)
 
@@ -9,13 +9,13 @@
 
 ## 1. Executive Summary
 
-Comparação de Altura is an interactive visual height comparison application deployed on Cloudflare Pages. It is accessible via two distinct web environments:
-1. **Production Custom Domain:** `https://comparacaodealtura.com` (and `https://www.comparacaodealtura.com`) — The **ONLY** authoritative, public, and indexable domain for all search engines (Google, Bing, Yandex, etc.).
-2. **Cloudflare Pages Preview Domain:** `https://comparacaodealtura.pages.dev` (and ephemeral hash subdomains `https://*.pages.dev`) — Non-canonical staging and deployment targets that must **NEVER** compete with or duplicate production search engine rankings.
+Height Calculator is an interactive visual height comparison application deployed on Cloudflare Pages. It is accessible via two distinct web environments:
+1. **Production Custom Domain:** `https://height-calculator.net` (and `https://www.height-calculator.net`) — The **ONLY** authoritative, public, and indexable domain for all search engines (Google, Bing, Yandex, etc.).
+2. **Cloudflare Pages Preview Domain:** `https://height-calculator.pages.dev` (and ephemeral hash subdomains `https://*.pages.dev`) — Non-canonical staging and deployment targets that must **NEVER** compete with or duplicate production search engine rankings.
 
 ### Core Achievements
 - **100% Production Indexability:** Production HTML pages emit clean, self-referential canonical tags, return HTTP `200 OK`, emit `X-Robots-Tag: all`, and have **zero** static `noindex` directives.
-- **Preview Domain Indexing Blockade:** The preview domain dynamically appends `<meta name="robots" content="noindex, nofollow" />` in client DOM upon detecting `*.pages.dev` hostname, and always emits cross-domain canonical links pointing directly to `https://comparacaodealtura.com/`.
+- **Preview Domain Indexing Blockade:** The preview domain dynamically appends `<meta name="robots" content="noindex, nofollow" />` in client DOM upon detecting `*.pages.dev` hostname, and always emits cross-domain canonical links pointing directly to `https://height-calculator.net/`.
 - **Zero Asset Breakages:** CSS stylesheets and JavaScript client bundles are cached with `Cache-Control: public, max-age=31536000, immutable` and serve with HTTP `200 OK` across all devices.
 - **404 Page SEO Hardening:** `src/pages/404.astro` emits `<meta name="robots" content="noindex, nofollow" />`, omits canonical tags, and omits alternate `hreflang` tags.
 - **Automated 24-Test Matrix:** An automated test runner (`npm run test:seo`) continuously validates canonical URL generation, edge routing rules, header configs, and build output integrity.
@@ -29,23 +29,23 @@ Comparação de Altura is an interactive visual height comparison application de
                                            │
                     ┌──────────────────────┴──────────────────────┐
                     ▼                                             ▼
-          Host: comparacaodealtura.com                         Host: *.pages.dev
+          Host: height-calculator.net                         Host: *.pages.dev
          (Authoritative Apex)                         (Preview / Staging)
                     │                                             │
          ┌──────────┴──────────┐                      ┌───────────┴───────────┐
          │  HTTP 200 OK        │                      │  HTTP 200 OK          │
          │  X-Robots-Tag: all  │                      │  X-Robots-Tag: all    │
          │  Self-Canonical     │                      │  Cross-Domain Can.    │
-         │  (comparacaodealtura.com)    │                      │  (comparacaodealtura.com)      │
+         │  (height-calculator.net)    │                      │  (height-calculator.net)      │
          │  No static noindex  │                      │  Client JS Injects    │
          │  Sitemap + Hreflang │                      │  <meta robots noindex>│
          └─────────────────────┘                      └───────────────────────┘
 ```
 
-| Dimension | Production (`https://comparacaodealtura.com/`) | Preview (`https://comparacaodealtura.pages.dev/`) |
+| Dimension | Production (`https://height-calculator.net/`) | Preview (`https://height-calculator.pages.dev/`) |
 | :--- | :--- | :--- |
 | **Search Engine Status** | **INDEX, FOLLOW** | **NOINDEX, NOFOLLOW** |
-| **Canonical Target** | Self-referential (`https://comparacaodealtura.com/...`) | Cross-domain (`https://comparacaodealtura.com/...`) |
+| **Canonical Target** | Self-referential (`https://height-calculator.net/...`) | Cross-domain (`https://height-calculator.net/...`) |
 | **Robots Header** | `X-Robots-Tag: all` | `X-Robots-Tag: all` (DOM noindex applied) |
 | **Robots Meta Tag** | None on public pages (`noindex` on 404/dashboard) | Dynamically injected `noindex, nofollow` |
 | **Sitemap Presence** | Present (`/sitemap.xml`) | Completely excluded |
@@ -57,41 +57,41 @@ Comparação de Altura is an interactive visual height comparison application de
 
 The canonical resolution system is centralized in [`src/lib/seo/site.ts`](file:///g:/NEw%20website/Hight/src/lib/seo/site.ts) with strict algorithmic guarantees:
 
-1. **Origin Enforcement:** Always uses authoritative `https://comparacaodealtura.com`.
+1. **Origin Enforcement:** Always uses authoritative `https://height-calculator.net`.
 2. **Trailing-Slash Integrity:** Every canonical URL strictly terminates with a `/`, matching Astro's `trailingSlash: 'always'` routing structure.
 3. **Query Parameter Stripping:** Any query strings (`?utm_source=...`, `?ref=...`, `?gclid=...`, `?v=...`) are stripped before constructing the canonical tag.
 4. **Anchor Fragment Stripping:** Any URL fragments (`#canvas`, `#details`) are stripped.
 5. **Internationalization Formatting:**
-   - Default language (`en`): `https://comparacaodealtura.com/compare/`
-   - Localized language (`hi`): `https://comparacaodealtura.com/hi/compare/`
-   - Duplicate prefix prevention: `getCanonicalUrl('/hi/compare/', 'hi')` cleanly resolves to `https://comparacaodealtura.com/hi/compare/`.
+   - Default language (`en`): `https://height-calculator.net/compare/`
+   - Localized language (`hi`): `https://height-calculator.net/hi/compare/`
+   - Duplicate prefix prevention: `getCanonicalUrl('/hi/compare/', 'hi')` cleanly resolves to `https://height-calculator.net/hi/compare/`.
 
 ```typescript
 // Sample Usage:
 getCanonicalUrl('/celebrity-height-comparison')
-// -> "https://comparacaodealtura.com/celebrity-height-comparison/"
+// -> "https://height-calculator.net/celebrity-height-comparison/"
 
 getCanonicalUrl('/compare/?utm_source=twitter#canvas')
-// -> "https://comparacaodealtura.com/compare/"
+// -> "https://height-calculator.net/compare/"
 
 getCanonicalUrl('/about/', 'hi')
-// -> "https://comparacaodealtura.com/hi/about/"
+// -> "https://height-calculator.net/hi/about/"
 ```
 
 ---
 
 ## 4. Hostname Detection Mechanism
 
-In Astro's static site generation (`output: "static"`), HTML files are compiled ahead of time at build time. During SSG compilation, `Astro.url.hostname` evaluates to the build configuration host (`comparacaodealtura.com`). Statically compiling `noindex` into the HTML would mistakenly mark production as non-indexable.
+In Astro's static site generation (`output: "static"`), HTML files are compiled ahead of time at build time. During SSG compilation, `Astro.url.hostname` evaluates to the build configuration host (`height-calculator.net`). Statically compiling `noindex` into the HTML would mistakenly mark production as non-indexable.
 
-To solve this while guaranteeing that `comparacaodealtura.pages.dev` is never indexed:
-1. **Static HTML Output:** Remains clean and indexable for `comparacaodealtura.com`.
+To solve this while guaranteeing that `height-calculator.pages.dev` is never indexed:
+1. **Static HTML Output:** Remains clean and indexable for `height-calculator.net`.
 2. **Client-Side Hostname Guard (`Layout.astro`):** Executes synchronously in the `<head>` before rendering:
    ```html
    <script is:inline>
      (function () {
        var h = window.location.hostname;
-       if (h && (h === 'comparacaodealtura.pages.dev' || h.endsWith('.pages.dev'))) {
+       if (h && (h === 'height-calculator.pages.dev' || h.endsWith('.pages.dev'))) {
          var m = document.createElement('meta');
          m.name = 'robots';
          m.content = 'noindex, nofollow';
@@ -100,7 +100,7 @@ To solve this while guaranteeing that `comparacaodealtura.pages.dev` is never in
      })();
    </script>
    ```
-3. **Cross-Domain Canonical:** Modern search crawlers (Googlebot, Bingbot) execute JavaScript. When rendering `comparacaodealtura.pages.dev`, the crawler discovers `<meta name="robots" content="noindex, nofollow" />` AND reads the canonical tag pointing back to `https://comparacaodealtura.com/`, completely neutralizing duplicate content risk.
+3. **Cross-Domain Canonical:** Modern search crawlers (Googlebot, Bingbot) execute JavaScript. When rendering `height-calculator.pages.dev`, the crawler discovers `<meta name="robots" content="noindex, nofollow" />` AND reads the canonical tag pointing back to `https://height-calculator.net/`, completely neutralizing duplicate content risk.
 
 ---
 
@@ -114,9 +114,9 @@ Disallow: /dashboard/
 Disallow: /api/
 Disallow: /compare/share/
 
-Sitemap: https://comparacaodealtura.com/sitemap.xml
+Sitemap: https://height-calculator.net/sitemap.xml
 ```
-- **Strict Single Sitemap:** Only points to `https://comparacaodealtura.com/sitemap.xml`. Zero mentions of `pages.dev`.
+- **Strict Single Sitemap:** Only points to `https://height-calculator.net/sitemap.xml`. Zero mentions of `pages.dev`.
 - **Private Route Protection:** Disallows application routes (`/dashboard/`, `/api/`, `/compare/share/`).
 
 ### HTTP Response Headers (`public/_headers`)
@@ -140,9 +140,9 @@ Sitemap: https://comparacaodealtura.com/sitemap.xml
 
 In [`public/_redirects`](file:///g:/NEw%20website/Hight/public/_redirects), single-hop canonicalization ensures all non-canonical hostnames and aliases resolve directly:
 ```redirects
-https://www.comparacaodealtura.com/*   https://comparacaodealtura.com/:splat  301!
-http://www.comparacaodealtura.com/*    https://comparacaodealtura.com/:splat  301!
-http://comparacaodealtura.com/*        https://comparacaodealtura.com/:splat  301!
+https://www.height-calculator.net/*   https://height-calculator.net/:splat  301!
+http://www.height-calculator.net/*    https://height-calculator.net/:splat  301!
+http://height-calculator.net/*        https://height-calculator.net/:splat  301!
 
 /celebrity-height/            /celebrity-height-comparison/  301
 /celebrity-height             /celebrity-height-comparison/  301
@@ -155,7 +155,7 @@ http://comparacaodealtura.com/*        https://comparacaodealtura.com/:splat  30
 ## 7. XML Sitemap Strategy
 
 Generated dynamically by [`src/pages/sitemap.xml.ts`](file:///g:/NEw%20website/Hight/src/pages/sitemap.xml.ts):
-- Every `<loc>` entry uses `SITE.siteUrl` (`https://comparacaodealtura.com`).
+- Every `<loc>` entry uses `SITE.siteUrl` (`https://height-calculator.net`).
 - Includes canonical category hubs, comparison pages, and internationalized routes for verified active locales (`en`, `hi`).
 - Excludes private pages (`404`, `dashboard`, `share`).
 - Tested across build artifacts: **0 references to `pages.dev`**.
@@ -166,7 +166,7 @@ Generated dynamically by [`src/pages/sitemap.xml.ts`](file:///g:/NEw%20website/H
 
 Implemented in [`src/layouts/Layout.astro`](file:///g:/NEw%20website/Hight/src/layouts/Layout.astro) using [`src/i18n/utils.ts`](file:///g:/NEw%20website/Hight/src/i18n/utils.ts):
 - Emits `<link rel="alternate" hreflang="..." href="..." />` tags for supported locales and `x-default`.
-- Every `href` target strictly begins with `https://comparacaodealtura.com/`.
+- Every `href` target strictly begins with `https://height-calculator.net/`.
 - **Suppressed on Noindex Pages:** When `noindex: true` is passed (e.g. `404.astro`), `alternateLinks` evaluates to an empty array `[]` so search engines never index alternative language versions of error or private routes.
 
 ---
@@ -204,11 +204,11 @@ The automated validation suite is located at [`scripts/test-domain-seo.mjs`](fil
 
 | Test ID | Test Description | Result |
 | :--- | :--- | :--- |
-| **01** | `isProductionHost` returns true for `comparacaodealtura.com` | **PASS** |
-| **02** | `isProductionHost` returns true for `www.comparacaodealtura.com` | **PASS** |
-| **03** | `isProductionHost` returns false for `comparacaodealtura.pages.dev` | **PASS** |
-| **04** | `isPreviewHost` returns true for `comparacaodealtura.pages.dev` and `*.pages.dev` | **PASS** |
-| **05** | `isPreviewHost` returns false for `comparacaodealtura.com` and `www.comparacaodealtura.com` | **PASS** |
+| **01** | `isProductionHost` returns true for `height-calculator.net` | **PASS** |
+| **02** | `isProductionHost` returns true for `www.height-calculator.net` | **PASS** |
+| **03** | `isProductionHost` returns false for `height-calculator.pages.dev` | **PASS** |
+| **04** | `isPreviewHost` returns true for `height-calculator.pages.dev` and `*.pages.dev` | **PASS** |
+| **05** | `isPreviewHost` returns false for `height-calculator.net` and `www.height-calculator.net` | **PASS** |
 | **06** | `isIndexableHost` returns true for production and false for preview | **PASS** |
 | **07** | `getCanonicalUrl` produces absolute canonical with trailing slash | **PASS** |
 | **08** | `getCanonicalUrl` strips query parameters (`?utm_source=...`, etc.) | **PASS** |
@@ -216,7 +216,7 @@ The automated validation suite is located at [`scripts/test-domain-seo.mjs`](fil
 | **10** | `getCanonicalUrl` formats localized paths correctly with trailing slashes | **PASS** |
 | **11** | `public/_redirects` contains canonical enforcement rules | **PASS** |
 | **12** | `public/_headers` enforces `X-Robots-Tag: all` and asset caching | **PASS** |
-| **13** | `public/robots.txt` points to `https://comparacaodealtura.com/sitemap.xml` and 0 `pages.dev` | **PASS** |
+| **13** | `public/robots.txt` points to `https://height-calculator.net/sitemap.xml` and 0 `pages.dev` | **PASS** |
 | **14** | `src/layouts/Layout.astro` includes hostname-aware client script | **PASS** |
 | **15** | `src/layouts/Layout.astro` conditionally suppresses canonicalUrl when `noindex: true` | **PASS** |
 | **16** | `src/layouts/Layout.astro` conditionally suppresses hreflang when `noindex: true` | **PASS** |
@@ -224,8 +224,8 @@ The automated validation suite is located at [`scripts/test-domain-seo.mjs`](fil
 | **18** | `dist/index.html` does NOT contain static `<meta name="robots" content="noindex` | **PASS** |
 | **19** | `dist/404.html` DOES contain static noindex and DOES NOT contain canonical/hreflang | **PASS** |
 | **20** | `dist/compare/index.html` has production self-canonical and no static noindex | **PASS** |
-| **21** | Canonical tags across built sample pages use `https://comparacaodealtura.com/` with `/` | **PASS** |
-| **22** | Hreflang tags across built sample pages only reference `https://comparacaodealtura.com` | **PASS** |
+| **21** | Canonical tags across built sample pages use `https://height-calculator.net/` with `/` | **PASS** |
+| **22** | Hreflang tags across built sample pages only reference `https://height-calculator.net` | **PASS** |
 | **23** | Built sitemap files contain zero references to `pages.dev` | **PASS** |
 | **24** | No public content HTML file in `dist/` contains static noindex | **PASS** |
 
@@ -233,11 +233,11 @@ The automated validation suite is located at [`scripts/test-domain-seo.mjs`](fil
 
 ## 13. Live Production Validation Results
 
-Verified against active production deployment `https://comparacaodealtura.com/`:
+Verified against active production deployment `https://height-calculator.net/`:
 
 ```
 ====================================================
-1. Checking Production Domain: https://comparacaodealtura.com/
+1. Checking Production Domain: https://height-calculator.net/
 ====================================================
 Status: 200 OK
 X-Robots-Tag: all
@@ -245,7 +245,7 @@ Cache-Control: public, max-age=0, must-revalidate
 cf-cache-status: DYNAMIC
 HTML Length: 155,044 bytes
 Has static noindex? false
-Canonical: https://comparacaodealtura.com/
+Canonical: https://height-calculator.net/
 
 ====================================================
 2. Checking Production as Googlebot:
@@ -253,24 +253,24 @@ Canonical: https://comparacaodealtura.com/
 Status: 200 OK
 X-Robots-Tag: all
 Has static noindex for Googlebot? false
-Canonical for Googlebot: https://comparacaodealtura.com/
+Canonical for Googlebot: https://height-calculator.net/
 
 ====================================================
 3. Checking Sample Subpages:
 ====================================================
-/compare/ -> status: 200, x-robots-tag: all, canonical: https://comparacaodealtura.com/compare/
-/celebrity-height-comparison/ -> status: 200, x-robots-tag: all, canonical: https://comparacaodealtura.com/celebrity-height-comparison/
+/compare/ -> status: 200, x-robots-tag: all, canonical: https://height-calculator.net/compare/
+/celebrity-height-comparison/ -> status: 200, x-robots-tag: all, canonical: https://height-calculator.net/celebrity-height-comparison/
 
 ====================================================
-4. Checking Preview Domain: https://comparacaodealtura.pages.dev/
+4. Checking Preview Domain: https://height-calculator.pages.dev/
 ====================================================
 Status: 200 OK
 X-Robots-Tag: all
 Has client-side preview noindex script? true
-Canonical points to: https://comparacaodealtura.com/
+Canonical points to: https://height-calculator.net/
 
 ====================================================
-5. Checking 404 Behavior: https://comparacaodealtura.com/404/
+5. Checking 404 Behavior: https://height-calculator.net/404/
 ====================================================
 404 Status: 200 OK
 404 has noindex tag? true (<meta name="robots" content="noindex, nofollow">)
@@ -291,9 +291,9 @@ To resolve any past "Excluded by 'noindex' tag" notices in Google Search Console
 
 1. **Submit URL Inspection in GSC:**
    - Go to [Google Search Console](https://search.google.com/search-console).
-   - In the top search bar, enter `https://comparacaodealtura.com/`.
+   - In the top search bar, enter `https://height-calculator.net/`.
    - Click **Test Live URL**.
-   - Confirm **"URL is available to Google"** with **"Indexing allowed: Yes"** and **"User-declared canonical: https://comparacaodealtura.com/"**.
+   - Confirm **"URL is available to Google"** with **"Indexing allowed: Yes"** and **"User-declared canonical: https://height-calculator.net/"**.
    - Click **Request Indexing**.
 2. **Re-submit Sitemap:**
    - In GSC, navigate to **Sitemaps** > Enter `sitemap.xml` > Click **Submit**.
@@ -318,7 +318,7 @@ git commit -m "feat(seo): your commit description"
 git push origin main
 
 # 4. Deploy directly to Cloudflare Pages production branch
-npx wrangler pages deploy dist --project-name=comparacaodealtura --branch=main
+npx wrangler pages deploy dist --project-name=height-calculator --branch=main
 
 # 5. Run live HTTP verification
 node scripts/verify-live.mjs

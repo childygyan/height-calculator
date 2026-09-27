@@ -63,8 +63,8 @@ export class StorageServicePlaceholder implements IStorageService {
     return {
       assetId,
       r2Key,
-      uploadUrl: `https://storage.comparacaodealtura.com/${r2Key}?upload=placeholder`,
-      publicUrl: `https://assets.comparacaodealtura.com/${r2Key}`,
+      uploadUrl: `https://storage.height-calculator.net/${r2Key}?upload=placeholder`,
+      publicUrl: `https://assets.height-calculator.net/${r2Key}`,
     };
   }
 

@@ -1,6 +1,6 @@
 /**
  * Automated Domain SEO & Canonical Audit Test Matrix
- * Verifies all 24 SEO criteria for comparacaodealtura.com vs Cloudflare Pages preview domain.
+ * Verifies all 24 SEO criteria for height-calculator.net vs Cloudflare Pages preview domain.
  */
 
 import fs from 'node:fs';
@@ -29,7 +29,7 @@ function runTest(testName, fn) {
 }
 
 console.log('\n===============================================================');
-console.log('🧪 RUNNING COMPARACAODEALTURA.ORG DOMAIN SEO & CANONICAL AUDIT MATRIX');
+console.log('🧪 RUNNING HEIGHT_CALCULATOR.ORG DOMAIN SEO & CANONICAL AUDIT MATRIX');
 console.log('===============================================================\n');
 
 // -----------------------------------------------------------------
@@ -39,54 +39,54 @@ console.log('--- Test Group 1: SEO Hostname & Canonical Utilities ---');
 
 import { isProductionHost, isPreviewHost, isIndexableHost, getCanonicalUrl } from '../src/lib/seo/site.ts';
 
-runTest('1. isProductionHost returns true for comparacaodealtura.com', () => {
-  assert.strictEqual(isProductionHost('comparacaodealtura.com'), true);
+runTest('1. isProductionHost returns true for height-calculator.net', () => {
+  assert.strictEqual(isProductionHost('height-calculator.net'), true);
 });
 
-runTest('2. isProductionHost returns true for www.comparacaodealtura.com', () => {
-  assert.strictEqual(isProductionHost('www.comparacaodealtura.com'), true);
+runTest('2. isProductionHost returns true for www.height-calculator.net', () => {
+  assert.strictEqual(isProductionHost('www.height-calculator.net'), true);
 });
 
-runTest('3. isProductionHost returns false for comparacaodealtura.pages.dev', () => {
-  assert.strictEqual(isProductionHost('comparacaodealtura.pages.dev'), false);
+runTest('3. isProductionHost returns false for height-calculator.pages.dev', () => {
+  assert.strictEqual(isProductionHost('height-calculator.pages.dev'), false);
 });
 
-runTest('4. isPreviewHost returns true for comparacaodealtura.pages.dev and hash.pages.dev', () => {
-  assert.strictEqual(isPreviewHost('comparacaodealtura.pages.dev'), true);
+runTest('4. isPreviewHost returns true for height-calculator.pages.dev and hash.pages.dev', () => {
+  assert.strictEqual(isPreviewHost('height-calculator.pages.dev'), true);
   assert.strictEqual(isPreviewHost('abc123-branch.pages.dev'), true);
 });
 
-runTest('5. isPreviewHost returns false for comparacaodealtura.com', () => {
-  assert.strictEqual(isPreviewHost('comparacaodealtura.com'), false);
-  assert.strictEqual(isPreviewHost('www.comparacaodealtura.com'), false);
+runTest('5. isPreviewHost returns false for height-calculator.net', () => {
+  assert.strictEqual(isPreviewHost('height-calculator.net'), false);
+  assert.strictEqual(isPreviewHost('www.height-calculator.net'), false);
 });
 
 runTest('6. isIndexableHost returns true for production and false for preview', () => {
-  assert.strictEqual(isIndexableHost('comparacaodealtura.com'), true);
-  assert.strictEqual(isIndexableHost('comparacaodealtura.pages.dev'), false);
+  assert.strictEqual(isIndexableHost('height-calculator.net'), true);
+  assert.strictEqual(isIndexableHost('height-calculator.pages.dev'), false);
   assert.strictEqual(isIndexableHost('deploy-preview-1.pages.dev'), false);
 });
 
 runTest('7. getCanonicalUrl produces absolute canonical with trailing slash', () => {
   const url = getCanonicalUrl('/celebrity-height-comparison');
-  assert.strictEqual(url, 'https://comparacaodealtura.com/celebrity-height-comparison/');
+  assert.strictEqual(url, 'https://height-calculator.net/celebrity-height-comparison/');
 });
 
 runTest('8. getCanonicalUrl strips query parameters (?utm_source=..., etc.)', () => {
   const url = getCanonicalUrl('/compare/?utm_source=twitter&utm_medium=social');
-  assert.strictEqual(url, 'https://comparacaodealtura.com/compare/');
+  assert.strictEqual(url, 'https://height-calculator.net/compare/');
 });
 
 runTest('9. getCanonicalUrl strips hash fragments (#canvas, etc.)', () => {
   const url = getCanonicalUrl('/compare/#canvas');
-  assert.strictEqual(url, 'https://comparacaodealtura.com/compare/');
+  assert.strictEqual(url, 'https://height-calculator.net/compare/');
 });
 
 runTest('10. getCanonicalUrl formats localized paths correctly with trailing slashes', () => {
   const url = getCanonicalUrl('/compare/', 'hi');
-  assert.strictEqual(url, 'https://comparacaodealtura.com/hi/compare/');
+  assert.strictEqual(url, 'https://height-calculator.net/hi/compare/');
   const defaultLangUrl = getCanonicalUrl('/compare/', 'en');
-  assert.strictEqual(defaultLangUrl, 'https://comparacaodealtura.com/compare/');
+  assert.strictEqual(defaultLangUrl, 'https://height-calculator.net/compare/');
 });
 
 // -----------------------------------------------------------------
@@ -94,20 +94,20 @@ runTest('10. getCanonicalUrl formats localized paths correctly with trailing sla
 // -----------------------------------------------------------------
 console.log('\n--- Test Group 2: Edge Routing & CDN Headers ---');
 
-runTest('11. public/_redirects routes comparacaodealtura.pages.dev to comparacaodealtura.com', () => {
+runTest('11. public/_redirects routes height-calculator.pages.dev to height-calculator.net', () => {
   const redirectsPath = path.resolve(rootDir, 'public/_redirects');
   assert(fs.existsSync(redirectsPath), '_redirects file must exist');
   const content = fs.readFileSync(redirectsPath, 'utf-8');
-  assert(content.includes('https://comparacaodealtura.pages.dev/*  https://comparacaodealtura.com/:splat  301'), 'Must have https://comparacaodealtura.pages.dev/* 301 rule');
-  assert(content.includes('http://comparacaodealtura.pages.dev/*   https://comparacaodealtura.com/:splat  301'), 'Must have http://comparacaodealtura.pages.dev/* 301 rule');
+  assert(content.includes('https://height-calculator.pages.dev/*  https://height-calculator.net/:splat  301'), 'Must have https://height-calculator.pages.dev/* 301 rule');
+  assert(content.includes('http://height-calculator.pages.dev/*   https://height-calculator.net/:splat  301'), 'Must have http://height-calculator.pages.dev/* 301 rule');
 });
 
 runTest('12. public/_headers enforces domain-specific rules (all for prod, noindex for pages.dev)', () => {
   const headersPath = path.resolve(rootDir, 'public/_headers');
   assert(fs.existsSync(headersPath), '_headers file must exist');
   const content = fs.readFileSync(headersPath, 'utf-8');
-  assert(content.includes('https://comparacaodealtura.com/*'), 'Must have specific rule for comparacaodealtura.com');
-  assert(content.includes('https://comparacaodealtura.pages.dev/*'), 'Must have specific rule for comparacaodealtura.pages.dev');
+  assert(content.includes('https://height-calculator.net/*'), 'Must have specific rule for height-calculator.net');
+  assert(content.includes('https://height-calculator.pages.dev/*'), 'Must have specific rule for height-calculator.pages.dev');
   assert(content.includes('X-Robots-Tag: all'), 'Must allow indexing on production headers');
   assert(content.includes('X-Robots-Tag: noindex, nofollow'), 'Must block indexing on pages.dev headers');
   assert(!content.match(/^\/\*\s*\r?\n\s*X-Robots-Tag:\s*noindex/m), 'Must NOT have global /* noindex rule');
@@ -116,11 +116,11 @@ runTest('12. public/_headers enforces domain-specific rules (all for prod, noind
   assert(content.includes('/assets/*'), 'Must include /assets/* cache rule');
 });
 
-runTest('13. public/robots.txt points to https://comparacaodealtura.com/sitemap.xml and no pages.dev', () => {
+runTest('13. public/robots.txt points to https://height-calculator.net/sitemap.xml and no pages.dev', () => {
   const robotsPath = path.resolve(rootDir, 'public/robots.txt');
   assert(fs.existsSync(robotsPath), 'robots.txt must exist');
   const content = fs.readFileSync(robotsPath, 'utf-8');
-  assert(content.includes('Sitemap: https://comparacaodealtura.com/sitemap.xml'), 'Sitemap must be comparacaodealtura.com');
+  assert(content.includes('Sitemap: https://height-calculator.net/sitemap.xml'), 'Sitemap must be height-calculator.net');
   assert(!content.includes('pages.dev'), 'robots.txt must not contain pages.dev');
 });
 
@@ -132,7 +132,7 @@ console.log('\n--- Test Group 3: Layout & Template Safeguards ---');
 runTest('14. src/layouts/Layout.astro includes hostname-aware client script', () => {
   const layoutPath = path.resolve(rootDir, 'src/layouts/Layout.astro');
   const content = fs.readFileSync(layoutPath, 'utf-8');
-  assert(content.includes('comparacaodealtura.pages.dev'), 'Must detect comparacaodealtura.pages.dev');
+  assert(content.includes('height-calculator.pages.dev'), 'Must detect height-calculator.pages.dev');
   assert(content.includes('document.createElement(\'meta\')'), 'Must create meta tag dynamically on pages.dev');
   assert(content.includes('m.content = \'noindex, nofollow\''), 'Must set noindex, nofollow on preview domain');
 });
@@ -166,7 +166,7 @@ if (fs.existsSync(distDir)) {
     const indexPath = path.resolve(distDir, 'index.html');
     const content = fs.readFileSync(indexPath, 'utf-8');
     assert(!content.includes('<meta name="robots" content="noindex'), 'Production homepage must NOT have static noindex');
-    assert(content.includes('<link rel="canonical" href="https://comparacaodealtura.com/"'), 'Production homepage must have self-canonical');
+    assert(content.includes('<link rel="canonical" href="https://height-calculator.net/"'), 'Production homepage must have self-canonical');
   });
 
   runTest('19. dist/404.html DOES contain static noindex and DOES NOT contain canonical tag', () => {
@@ -182,14 +182,14 @@ if (fs.existsSync(distDir)) {
     if (fs.existsSync(comparePath)) {
       const content = fs.readFileSync(comparePath, 'utf-8');
       assert(!content.includes('<meta name="robots" content="noindex'), 'Compare page must NOT have static noindex');
-      assert(content.includes('<link rel="canonical" href="https://comparacaodealtura.com/compare/"'), 'Compare page must have self-canonical');
+      assert(content.includes('<link rel="canonical" href="https://height-calculator.net/compare/"'), 'Compare page must have self-canonical');
       assert(content.includes('<h1') && content.includes('Height Comparison Tool'), 'Compare page must contain <h1> tag with Height Comparison Tool');
     } else {
       console.log('       (Notice: dist/compare/index.html not found, will verify after rebuild)');
     }
   });
 
-  runTest('21. Canonical tags across sample built pages all use https://comparacaodealtura.com and end with /', () => {
+  runTest('21. Canonical tags across sample built pages all use https://height-calculator.net and end with /', () => {
     const sampleFiles = [
       'index.html',
       'about/index.html',
@@ -202,19 +202,19 @@ if (fs.existsSync(distDir)) {
         const content = fs.readFileSync(p, 'utf-8');
         const match = content.match(/<link rel="canonical" href="([^"]+)"/);
         assert(match, `Canonical tag must exist in ${rel}`);
-        assert(match[1].startsWith('https://comparacaodealtura.com/'), `Canonical URL must start with https://comparacaodealtura.com/ in ${rel}`);
+        assert(match[1].startsWith('https://height-calculator.net/'), `Canonical URL must start with https://height-calculator.net/ in ${rel}`);
         assert(match[1].endsWith('/'), `Canonical URL must end with trailing slash in ${rel}`);
       }
     }
   });
 
-  runTest('22. Hreflang tags across sample built pages only reference https://comparacaodealtura.com', () => {
+  runTest('22. Hreflang tags across sample built pages only reference https://height-calculator.net', () => {
     const indexPath = path.resolve(distDir, 'index.html');
     const content = fs.readFileSync(indexPath, 'utf-8');
     const hreflangMatches = [...content.matchAll(/<link rel="alternate" hreflang="[^"]+" href="([^"]+)"/g)];
     assert(hreflangMatches.length > 0, 'Homepage must have hreflang tags');
     for (const m of hreflangMatches) {
-      assert(m[1].startsWith('https://comparacaodealtura.com/'), `Hreflang href must start with https://comparacaodealtura.com/, got: ${m[1]}`);
+      assert(m[1].startsWith('https://height-calculator.net/'), `Hreflang href must start with https://height-calculator.net/, got: ${m[1]}`);
       assert(!m[1].includes('pages.dev'), `Hreflang href must not contain pages.dev: ${m[1]}`);
     }
   });
@@ -225,7 +225,7 @@ if (fs.existsSync(distDir)) {
     for (const sf of sitemapFiles) {
       const content = fs.readFileSync(path.resolve(distDir, sf), 'utf-8');
       assert(!content.includes('pages.dev'), `${sf} must not contain pages.dev`);
-      assert(content.includes('https://comparacaodealtura.com'), `${sf} must contain https://comparacaodealtura.com`);
+      assert(content.includes('https://height-calculator.net'), `${sf} must contain https://height-calculator.net`);
     }
   });
 

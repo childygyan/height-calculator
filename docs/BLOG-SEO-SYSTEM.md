@@ -1,8 +1,8 @@
-# comparacaodealtura.com — Master SEO Blog & Content System Documentation
+# height-calculator.net — Master SEO Blog & Content System Documentation
 
 ## 1. Overview & Objectives
 
-The **Comparação de Altura Master SEO Blog Content System** is an intent-focused topical authority engine engineered to capture high-intent organic search queries around height comparisons, anthropometric science, athletic biomechanics, celebrity profiles, everyday scale benchmarks, and animal dimensions.
+The **Height Calculator Master SEO Blog Content System** is an intent-focused topical authority engine engineered to capture high-intent organic search queries around height comparisons, anthropometric science, athletic biomechanics, celebrity profiles, everyday scale benchmarks, and animal dimensions.
 
 ### Core Principles
 1. **Search Intent Focused**: Every article directly answers the primary query in an above-the-fold Quick Answer card.
@@ -10,7 +10,7 @@ The **Comparação de Altura Master SEO Blog Content System** is an intent-focus
 3. **P0 Performance Guarantee**: Static page HTML payloads remain strictly under 140 KB (averaging ~120 KB), completely avoiding importing the full 1,400+ asset manifest into the static page bundle.
 4. **Authoritative Structured Data**: Every article generates schema.org `BlogPosting`, `BreadcrumbList`, and `FAQPage` JSON-LD.
 5. **Full Multilingual Parity**: Published across all 9 supported locales (`en`, `hi`, `es`, `fr`, `de`, `pt`, `ja`, `ko`, `ar`) with reciprocal `hreflang` tags and `x-default`.
-6. **Zero pages.dev Leaks & Canonical Integrity**: Every canonical URL points strictly to `https://comparacaodealtura.com/`, with zero static `noindex` directives.
+6. **Zero pages.dev Leaks & Canonical Integrity**: Every canonical URL points strictly to `https://height-calculator.net/`, with zero static `noindex` directives.
 
 ---
 
@@ -87,8 +87,8 @@ Every article renders three JSON-LD objects:
 3. **FAQPage**: Generated automatically via `<FAQSection />` mapping the article's question-answer pairs.
 
 ### C. Multilingual Support & Canonical Rules
-- Root URL: `https://comparacaodealtura.com/blog/[slug]/`
-- Localized URLs: `https://comparacaodealtura.com/[locale]/blog/[slug]/`
+- Root URL: `https://height-calculator.net/blog/[slug]/`
+- Localized URLs: `https://height-calculator.net/[locale]/blog/[slug]/`
 - Reciprocal `hreflang` tags generated for all 9 supported languages plus `x-default`.
 - Included dynamically in `sitemap.xml` with proper change frequencies and priorities.
 

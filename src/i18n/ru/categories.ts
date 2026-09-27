@@ -1,52 +1,52 @@
 export default {
   // Category Titles & Badges
   'cat.people.name': 'Люди',
-  'cat.people.title': 'Сравнение роста людей | Comparação de Altura',
+  'cat.people.title': 'Сравнение роста людей | Height Calculator',
   'cat.people.description': 'Сравнивайте рост мужчин и женщин наглядно с помощью анатомически точных силуэтов, выровненных по единой линии пола.',
   'cat.people.badge': 'Антропометрический эталон',
 
   'cat.celebrities.name': 'Знаменитости',
-  'cat.celebrities.title': 'Сравнение роста знаменитостей – Актёры, музыканты и известные личности | Comparação de Altura',
+  'cat.celebrities.title': 'Сравнение роста знаменитостей – Актёры, музыканты и известные личности | Height Calculator',
   'cat.celebrities.description': 'Сравнивайте рост знаменитостей бок о бок. Узнайте реальный рост актеров, музыкантов, спортсменов и исторических личностей.',
   'cat.celebrities.badge': 'Проверенные персоны',
 
   'cat.anime.name': 'Аниме',
-  'cat.anime.title': 'Сравнение роста персонажей аниме – Визуальный масштаб | Comparação de Altura',
+  'cat.anime.title': 'Сравнение роста персонажей аниме – Визуальный масштаб | Height Calculator',
   'cat.anime.description': 'Сравнивайте официальный канонический рост персонажей аниме и манги. Оцените разницу в росте героев любимых сериалов.',
   'cat.anime.badge': 'Канонические размеры',
 
   'cat.films.name': 'Фильмы',
-  'cat.films.title': 'Сравнение роста персонажей фильмов и кино | Comparação de Altura',
+  'cat.films.title': 'Сравнение роста персонажей фильмов и кино | Height Calculator',
   'cat.films.description': 'Сравнивайте рост культовых киногероев, злодеев, титанов фантастики и кинематографических персонажей с ростом обычного человека.',
   'cat.films.badge': 'Кинематографический масштаб',
 
   'cat.animals.name': 'Животные',
-  'cat.animals.title': 'Сравнение размеров животных – Дикая природа и питомцы | Comparação de Altura',
+  'cat.animals.title': 'Сравнение размеров животных – Дикая природа и питомцы | Height Calculator',
   'cat.animals.description': 'Сравнивайте высоту в холке и рост диких животных, собак, больших кошек и гигантов фауны по отношению к человеку.',
   'cat.animals.badge': 'Масштаб фауны',
 
   'cat.objects.name': 'Предметы',
-  'cat.objects.title': 'Сравнение размеров предметов – Бытовые вещи и архитектура | Comparação de Altura',
+  'cat.objects.title': 'Сравнение размеров предметов – Бытовые вещи и архитектура | Height Calculator',
   'cat.objects.description': 'Сравнивайте повседневные предметы, автомобили, мебель, спортивный инвентарь и здания, чтобы понять их реальный физический масштаб.',
   'cat.objects.badge': 'Масштаб реального мира',
 
   'cat.plants.name': 'Растения',
-  'cat.plants.title': 'Сравнение высоты растений и деревьев | Comparação de Altura',
+  'cat.plants.title': 'Сравнение высоты растений и деревьев | Height Calculator',
   'cat.plants.description': 'Сравнивайте высоту деревьев, цветов, ботанических экспонатов и гигантских секвой с человеком и зданиями.',
   'cat.plants.badge': 'Ботанический масштаб',
 
   'cat.sports.name': 'Спорт',
-  'cat.sports.title': 'Сравнение роста спортсменов | Comparação de Altura',
+  'cat.sports.title': 'Сравнение роста спортсменов | Height Calculator',
   'cat.sports.description': 'Сравнивайте рост баскетболистов, футболистов, легкоатлетов и бойцов со средними мировыми показателями.',
   'cat.sports.badge': 'Спортивное телосложение',
 
   'cat.fictional.name': 'Вымышленные персонажи',
-  'cat.fictional.title': 'Сравнение роста вымышленных персонажей | Comparação de Altura',
+  'cat.fictional.title': 'Сравнение роста вымышленных персонажей | Height Calculator',
   'cat.fictional.description': 'Сравнивайте мифических существ, героев комиксов, монстров и фэнтезийных персонажей в едином масштабном пространстве.',
   'cat.fictional.badge': 'Фэнтези и мифология',
 
   'cat.apparel.name': 'Одежда и обувь',
-  'cat.apparel.title': 'Сравнение размеров одежды и обуви | Comparação de Altura',
+  'cat.apparel.title': 'Сравнение размеров одежды и обуви | Height Calculator',
   'cat.apparel.description': 'Сравнивайте стандарты одежды, обуви, манекенов и экипировки относительно пропорций человеческого тела.',
   'cat.apparel.badge': 'Эталоны посадки и одежды',
 
