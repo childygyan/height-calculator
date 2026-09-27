@@ -64,6 +64,7 @@ export default {
 
   // Footer
   'footer.about': 'حول الموقع',
+  'footer.methodology': 'المنهجية',
   'footer.contact': 'اتصل بنا',
   'footer.privacy': 'سياسة الخصوصية',
   'footer.terms': 'شروط الاستخدام',

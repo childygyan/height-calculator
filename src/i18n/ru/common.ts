@@ -64,6 +64,7 @@ export default {
 
   // Footer
   'footer.about': 'О проекте',
+  'footer.methodology': 'Методология',
   'footer.contact': 'Контакты',
   'footer.privacy': 'Политика конфиденциальности',
   'footer.terms': 'Условия использования',

@@ -64,6 +64,7 @@ export default {
 
   // Footer
   'footer.about': 'À propos',
+  'footer.methodology': 'Méthodologie',
   'footer.contact': 'Contact',
   'footer.privacy': 'Politique de Confidentialité',
   'footer.terms': 'Conditions d\'Utilisation',

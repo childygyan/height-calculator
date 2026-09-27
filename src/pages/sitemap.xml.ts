@@ -56,6 +56,7 @@ export const GET: APIRoute = async () => {
     { path: '/privacy/', priority: '0.5', changefreq: 'yearly' },
     { path: '/terms/', priority: '0.5', changefreq: 'yearly' },
     { path: '/contact/', priority: '0.6', changefreq: 'monthly' },
+    { path: '/methodology/', priority: '0.6', changefreq: 'monthly' },
     // Phase 3b: EN-only /height-calculator/ tool section (calculator hub + 9 tools)
     { path: '/compare/', priority: '0.9', changefreq: 'weekly' },
     { path: '/height-calculator/', priority: '0.9', changefreq: 'weekly' },

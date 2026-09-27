@@ -1,0 +1,97 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/seo/Breadcrumbs.astro";
+import { SITE } from "../../config/site";
+
+const title = "Methodology — How Height Calculator Computes Results | Height Calculator";
+const description =
+  "How our calculators work: the LMS percentile method, the Tanner mid-parental height formula, exact unit conversions, published data sources (CDC, WHO), rounding rules, and limitations.";
+const canonicalUrl = `${SITE.siteUrl}/methodology/`;
+---
+
+<Layout title={title} description={description} canonicalUrl={canonicalUrl} locale="en">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+    <Breadcrumbs
+      locale="en"
+      items={[
+        { name: "Home", url: "/" },
+        { name: "Methodology", url: "/methodology/" },
+      ]}
+    />
+
+    <header class="mt-6 sm:mt-8 text-center">
+      <h1 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+        Methodology
+      </h1>
+      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed max-w-2xl mx-auto">
+        Exactly how every calculator on this site works — the formulas, the data, the
+        rounding, and the limits. No black boxes.
+      </p>
+    </header>
+
+    <article class="max-w-3xl mx-auto mt-10 space-y-8 text-sm sm:text-base leading-relaxed text-slate-700 dark:text-slate-300">
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-4">Height percentiles</h2>
+        <p><strong>What it calculates:</strong> where a child's height falls within a published growth reference for their exact age and sex.</p>
+        <p class="mt-3"><strong>Inputs:</strong> sex, age (months or years + months), measured height, and the growth reference (CDC, WHO, or UK-WHO).</p>
+        <p class="mt-3"><strong>Formula</strong> — the LMS method, exactly as published by CDC/WHO:</p>
+        <ul class="mt-3 space-y-2 list-disc pl-5">
+          <li>z = ((height ÷ M)<sup>L</sup> − 1) ÷ (L × S), where L, M, S are the reference parameters for that age and sex</li>
+          <li>percentile = standard normal CDF(z) × 100</li>
+        </ul>
+        <p class="mt-3"><strong>Between tabulated ages</strong>, L, M and S are linearly interpolated — the approach CDC documents. Interpolation is never applied across the WHO length/height measurement boundary at 24 months (there is a real ~0.7 cm step there, preserved as published).</p>
+        <p class="mt-3"><strong>Rounding:</strong> percentile to 1 decimal, z-score to 3 decimals, reference median to 2 decimals. Percentiles are reported within 0.1–99.9: beyond that the normal model implies more precision than a growth reference can support.</p>
+        <p class="mt-3"><strong>No extrapolation:</strong> ages outside a reference's published range return no result — for example, CDC covers 2–20 years and UK-WHO covers 2 weeks–4 years. The calculator says so honestly instead of inventing a number.</p>
+      </section>
+
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-4">Child height prediction</h2>
+        <p><strong>What it calculates:</strong> an estimate of a child's likely adult height from both parents' adult heights.</p>
+        <p class="mt-3"><strong>Formula</strong> — the classic Tanner mid-parental height formula:</p>
+        <ul class="mt-3 space-y-2 list-disc pl-5">
+          <li><strong>Boy:</strong> (father's height + mother's height + 13 cm) ÷ 2</li>
+          <li><strong>Girl:</strong> (father's height + mother's height − 13 cm) ÷ 2</li>
+        </ul>
+        <p class="mt-3">The ±13 cm adjustment reflects the average adult height difference between men and women. The result is always shown with a <strong>±8.5 cm likely range</strong> (roughly ±2 standard deviations of prediction error) — the range is part of the answer, not a footnote. No method predicts adult height exactly.</p>
+        <p class="mt-3"><strong>Rounding:</strong> prediction and range bounds to 1 decimal.</p>
+      </section>
+
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-4">Unit conversions</h2>
+        <p>All conversions use the exact international definition: <strong>1 inch = 2.54 cm</strong>.</p>
+        <ul class="mt-3 space-y-2 list-disc pl-5">
+          <li><strong>cm → feet + inches:</strong> inches rounded to 1 decimal (e.g. 180 cm → 5 ft 10.9 in)</li>
+          <li><strong>feet + inches → cm:</strong> rounded to 2 decimals</li>
+        </ul>
+        <p class="mt-3">Heights are stored in centimetres internally and converted on the fly, so switching units never loses precision.</p>
+      </section>
+
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-4">Height differences</h2>
+        <p>On the comparison tool, the height difference between two figures is the <strong>absolute difference</strong> of their heights. If they are within 0.1 cm, they are reported as the same height; otherwise the tool states how much taller or shorter one is than the other.</p>
+      </section>
+
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-4">Data sources</h2>
+        <ul class="mt-3 space-y-3 list-disc pl-5">
+          <li><strong>CDC 2000 Growth Charts</strong>, stature-for-age (National Center for Health Statistics), ages 2–20 — <a href="https://www.cdc.gov/growthcharts/cdc-data-files.htm" target="_blank" rel="noopener noreferrer" class="font-bold text-brand-600 dark:text-emerald-400 hover:underline">official data files</a></li>
+          <li><strong>WHO Child Growth Standards</strong>, length/height-for-age (WHO Multicentre Growth Reference Study, 2006), birth–5 years — <a href="https://www.who.int/tools/child-growth-standards/standards/length-height-for-age" target="_blank" rel="noopener noreferrer" class="font-bold text-brand-600 dark:text-emerald-400 hover:underline">official standards</a></li>
+          <li><strong>UK-WHO charts (RCPCH)</strong>, 2 weeks–4 years — computed from the WHO tables above (identical values in that window). Known gap: from age 4 the UK charts use the British 1990 reference, whose tables are under an MRC licence and not open data, so no UK result is given above 4 years.</li>
+        </ul>
+      </section>
+
+      <section class="p-6 sm:p-8 rounded-3xl bg-amber-50/60 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800/50 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-4">Limitations</h2>
+        <ul class="space-y-2 list-disc pl-5">
+          <li>All results are <strong>educational estimates, not medical advice</strong>. Percentiles describe where a measurement falls in a reference population; they cannot diagnose anything.</li>
+          <li>A single measurement is a snapshot — pediatricians care most about the pattern over time.</li>
+          <li>Predictions estimate genetic target height; nutrition, health, puberty timing and genetic variation all shift the outcome.</li>
+          <li>Every calculation runs in your browser — nothing you enter is sent to a server or stored.</li>
+        </ul>
+        <p class="mt-4">
+          Learn more about who we are on the <a href="/about/" class="font-bold text-brand-600 dark:text-emerald-400 hover:underline">about page</a>.
+        </p>
+      </section>
+    </article>
+  </div>
+</Layout>

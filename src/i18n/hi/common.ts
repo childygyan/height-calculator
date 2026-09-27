@@ -64,6 +64,7 @@ export default {
 
   // Footer
   'footer.about': 'हमारे बारे में',
+  'footer.methodology': 'कार्यप्रणाली',
   'footer.contact': 'संपर्क करें',
   'footer.privacy': 'गोपनीयता नीति',
   'footer.terms': 'सेवा की शर्तें',

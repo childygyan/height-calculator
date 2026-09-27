@@ -64,6 +64,7 @@ export default {
 
   // Footer
   'footer.about': 'サイトについて',
+  'footer.methodology': '計算方法',
   'footer.contact': 'お問い合わせ',
   'footer.privacy': 'プライバシーポリシー',
   'footer.terms': '利用規約',

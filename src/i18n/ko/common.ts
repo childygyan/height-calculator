@@ -64,6 +64,7 @@ export default {
 
   // Footer
   'footer.about': '소개',
+  'footer.methodology': '계산 방법',
   'footer.contact': '문의하기',
   'footer.privacy': '개인정보처리방침',
   'footer.terms': '이용약관',
