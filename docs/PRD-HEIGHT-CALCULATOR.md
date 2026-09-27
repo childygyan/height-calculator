@@ -270,7 +270,7 @@ Nav order (v3): **Height Calculator → Charts → About → How to Use → Cont
 ## 17. Decisions — v3 status (2026-09-27)
 
 1. ✅ Direction: **Option B confirmed** (calculator-first).
-2. ⏳ Tagline: **T1 / T2 / T3** — Firoz pick karega (§5).
+2. ✅ Tagline: **"Height Calculator — Compare, Convert & Understand Any Height"** (Firoz's pick, 2026-09-27).
 3. ✅ Language: **EN-first** — naya section sirf English me launch.
 4. ✅ Purana comparison: **HATAO** — routes delete + 301 (§13.0).
 5. ✅ Hub layout: **naya calculator-focused** (§13.3).
