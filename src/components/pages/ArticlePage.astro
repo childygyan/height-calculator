@@ -1,0 +1,299 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import type { ArticleData } from '../../data/articles/types';
+import { SITE } from '../../config/site';
+import { LOCALES } from '../../i18n/locales';
+
+interface Props {
+  article: ArticleData;
+}
+
+const { article } = Astro.props;
+const locale = 'pt' as const;
+const currentPath = `/pt/artigos/${article.slug}/`;
+const canonicalUrl = `${SITE.siteUrl}${currentPath}`;
+
+// Structured Data: BreadcrumbList + Article + FAQPage
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Início',
+      item: `${SITE.siteUrl}/pt/`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Artigos',
+      item: `${SITE.siteUrl}/pt/artigos/`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: article.title,
+      item: canonicalUrl,
+    },
+  ],
+};
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: article.title,
+  description: article.metaDescription,
+  image: SITE.defaultOgImage,
+  datePublished: article.datePublished,
+  dateModified: article.dateModified,
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': canonicalUrl,
+  },
+  author: {
+    '@type': 'Person',
+    name: 'Firoz Khan',
+    jobTitle: 'Full Stack Developer',
+    url: `${SITE.siteUrl}/about/`,
+    sameAs: [
+      'https://www.linkedin.com/in/firoz-khan-1153358a/',
+      'https://github.com/fkdigitalmedia',
+    ],
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: SITE.name,
+    url: SITE.siteUrl,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SITE.siteUrl}/favicon.svg`,
+    },
+  },
+  inLanguage: LOCALES.pt.hreflang,
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: article.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
+---
+
+<Layout
+  title={article.title}
+  description={article.metaDescription}
+  canonicalUrl={canonicalUrl}
+  locale={locale}
+  type="article"
+  suppressDefaultSchema={true}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 text-left">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-xs font-semibold text-slate-500 dark:text-slate-400 mb-6" aria-label="Breadcrumb">
+      <a href="/pt/" class="hover:text-brand-600 dark:hover:text-emerald-400 transition-colors">Início</a>
+      <span class="text-slate-300 dark:text-slate-700">/</span>
+      <a href="/pt/artigos/" class="hover:text-brand-600 dark:hover:text-emerald-400 transition-colors">Artigos</a>
+      <span class="text-slate-300 dark:text-slate-700">/</span>
+      <span class="text-slate-900 dark:text-white truncate" aria-current="page">{article.title}</span>
+    </nav>
+
+    <!-- Header -->
+    <header class="mb-10 pb-8 border-b border-slate-200 dark:border-slate-800">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-brand-50 dark:bg-emerald-950/50 text-brand-600 dark:text-emerald-400 mb-4">
+        <span>{article.badge}</span>
+        <span class="text-slate-300 dark:text-slate-700">•</span>
+        <span>{article.readTime}</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight mb-4">
+        {article.title}
+      </h1>
+      <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+        {article.subtitle}
+      </p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mt-4">
+        Publicado em {article.datePublished.split('-').reverse().join('/')}
+        {article.dateModified !== article.datePublished && ` • Atualizado em ${article.dateModified.split('-').reverse().join('/')}`}
+      </p>
+    </header>
+
+    <!-- Medical disclaimer (when present) -->
+    {article.medicalDisclaimer && (
+      <div class="mb-10 rounded-2xl border border-amber-300/70 bg-amber-50 dark:bg-amber-950/30 dark:border-amber-800/60 px-4 py-3.5 sm:px-5 flex gap-3 items-start" role="note" aria-label="Aviso médico">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mt-0.5 shrink-0 text-amber-600 dark:text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+          <path d="M12 9v4"></path>
+          <path d="M12 17h.01"></path>
+        </svg>
+        <p class="text-xs sm:text-sm leading-relaxed text-amber-900 dark:text-amber-200">
+          <strong class="font-bold">Aviso:</strong> {article.medicalDisclaimer}
+        </p>
+      </div>
+    )}
+
+    <!-- Lead -->
+    <section class="mb-12">
+      <p class="text-lg sm:text-xl font-medium text-slate-800 dark:text-slate-200 leading-relaxed mb-4">
+        {article.intro.lead}
+      </p>
+      {article.intro.paragraphs.map((p) => (
+        <p class="text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-4">{p}</p>
+      ))}
+    </section>
+
+    <!-- Table of Contents -->
+    <nav class="mb-14 p-6 sm:p-7 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 shadow-xs" aria-label="Índice">
+      <h2 class="text-base font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-4">{article.tocTitle}</h2>
+      <ol class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+        {article.sections.map((section) => (
+          <li>
+            <a href={`#${section.id}`} class="hover:text-brand-600 dark:hover:text-emerald-400 hover:underline transition-colors block py-0.5">
+              {section.heading}
+            </a>
+          </li>
+        ))}
+        <li>
+          <a href="#perguntas-frequentes" class="hover:text-brand-600 dark:hover:text-emerald-400 hover:underline transition-colors block py-0.5">
+            Perguntas frequentes
+          </a>
+        </li>
+      </ol>
+    </nav>
+
+    <!-- Sections -->
+    <div class="space-y-12 sm:space-y-14">
+      {article.sections.map((section) => (
+        <section id={section.id} class="scroll-mt-24 pt-4 border-t border-slate-100 dark:border-slate-800/80">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
+            {section.heading}
+          </h2>
+          <div class="space-y-3.5 text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
+            {section.paragraphs.map((p) => <p>{p}</p>)}
+          </div>
+
+          {section.bulletPoints && (
+            <ul class="my-5 space-y-2.5 text-sm sm:text-base text-slate-600 dark:text-slate-300">
+              {section.bulletPoints.map((bp) => (
+                <li class="flex items-start gap-2.5">
+                  <span class="text-brand-600 dark:text-emerald-400 font-black mt-0.5">•</span>
+                  <span class="leading-relaxed">{bp}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {section.steps && (
+            <div class="grid grid-cols-1 gap-3.5 my-6">
+              {section.steps.map((s) => (
+                <div class="p-4 sm:p-5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xs flex items-start gap-4">
+                  <span class="w-8 h-8 rounded-lg bg-brand-600 dark:bg-emerald-500 text-white font-black text-sm flex items-center justify-center shrink-0">
+                    {s.number}
+                  </span>
+                  <div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base">{s.title}</h3>
+                    <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">{s.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {section.table && (
+            <div class="my-6 overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700">
+              <table class="w-full text-xs sm:text-sm">
+                <thead>
+                  <tr class="bg-slate-50 dark:bg-slate-800/80">
+                    {section.table.headers.map((h) => (
+                      <th class="px-3 sm:px-4 py-2.5 text-left font-bold text-slate-900 dark:text-white">{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {section.table.rows.map((row, i) => (
+                    <tr class={i % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-slate-50/60 dark:bg-slate-800/40'}>
+                      {row.map((cell, j) => (
+                        <td class={`px-3 sm:px-4 py-2.5 ${j === 0 ? 'font-semibold text-slate-900 dark:text-white' : 'text-slate-600 dark:text-slate-300'}`}>{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+          {section.table?.caption && (
+            <p class="text-xs text-slate-400 dark:text-slate-500 -mt-3 mb-2">{section.table.caption}</p>
+          )}
+          {section.table?.footnote && (
+            <p class="text-xs text-slate-400 dark:text-slate-500 mb-2 italic">{section.table.footnote}</p>
+          )}
+
+          {section.callout && (
+            <div class={`my-5 p-4 rounded-xl border text-xs sm:text-sm flex items-start gap-3 ${
+              section.callout.type === 'tip'
+                ? 'bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800/60 text-emerald-900 dark:text-emerald-300'
+                : section.callout.type === 'warning'
+                ? 'bg-red-50 dark:bg-red-950/30 border-red-200 dark:border-red-800/60 text-red-900 dark:text-red-300'
+                : 'bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800/60 text-amber-900 dark:text-amber-300'
+            }`}>
+              <span class="leading-relaxed">{section.callout.text}</span>
+            </div>
+          )}
+
+          {section.link && (
+            <div class="mt-4 pt-2">
+              <a href={section.link.href} class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-600 dark:text-emerald-400 hover:underline">
+                <span>{section.link.text}</span>
+              </a>
+            </div>
+          )}
+        </section>
+      ))}
+    </div>
+
+    <!-- FAQ -->
+    <section id="perguntas-frequentes" class="mt-16 scroll-mt-24 pt-4 border-t border-slate-100 dark:border-slate-800/80">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6">
+        Perguntas frequentes
+      </h2>
+      <div class="space-y-4">
+        {article.faqs.map((faq) => (
+          <details class="p-4 sm:p-5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+            <summary class="font-bold text-sm sm:text-base text-slate-900 dark:text-white cursor-pointer">
+              {faq.question}
+            </summary>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+              {faq.answer}
+            </p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- Related links -->
+    <div class="mt-14 p-8 rounded-2xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
+      <h3 class="text-lg font-black text-slate-900 dark:text-white mb-4">Leia também</h3>
+      <ul class="space-y-2.5">
+        {article.relatedLinks.map((rl) => (
+          <li>
+            <a href={rl.href} class="text-sm font-semibold text-brand-600 dark:text-emerald-400 hover:underline">
+              → {rl.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </article>
+</Layout>

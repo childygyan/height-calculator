@@ -81,6 +81,27 @@ export const GET: APIRoute = async () => {
   }
 
   // ============================================================================
+  // 2b. PT-ONLY ARTICLE ROUTES (Portuguese articles hub, added 2026-10-06)
+  //     No hreflang alternates: these pages exist only in pt (prevents 404 traps)
+  // ============================================================================
+  const ptArticleRoutes: Array<{ path: string; priority: string; changefreq: string }> = [
+    { path: '/pt/artigos/', priority: '0.7', changefreq: 'weekly' },
+    { path: '/pt/artigos/altura-media-por-pais/', priority: '0.8', changefreq: 'monthly' },
+    { path: '/pt/artigos/como-medir-altura-corretamente/', priority: '0.8', changefreq: 'monthly' },
+    { path: '/pt/artigos/prever-altura-adulta-filho/', priority: '0.8', changefreq: 'monthly' },
+    { path: '/pt/artigos/percentil-de-altura-explicado/', priority: '0.8', changefreq: 'monthly' },
+  ];
+
+  for (const route of ptArticleRoutes) {
+    allEntries.push({
+      loc: `${baseUrl}${route.path}`,
+      priority: route.priority,
+      changefreq: route.changefreq,
+      alternates: [],
+    });
+  }
+
+  // ============================================================================
   // 3. XML SITEMAP RENDER
   // ============================================================================
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

@@ -1,0 +1,19 @@
+---
+import ArticlePage from '../../../components/pages/ArticlePage.astro';
+import { getPtArticles, getPtArticle } from '../../../data/articles';
+
+export function getStaticPaths() {
+  return getPtArticles().map((article) => ({
+    params: { slug: article.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const article = getPtArticle(slug as string);
+
+if (!article) {
+  throw new Error(`Article not found: ${slug}`);
+}
+---
+
+<ArticlePage article={article} />

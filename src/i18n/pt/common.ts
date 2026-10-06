@@ -21,6 +21,7 @@ export default {
   'nav.people': 'Percentis Humanos',
   'nav.calculator': 'Height Calculator',
   'nav.howToUse': 'Como usar',
+  'nav.articles': 'Artigos',
   'nav.more': 'Mais',
   'nav.categoriesHeader': 'Categorias',
   'nav.utilitiesHeader': 'Ferramentas',
