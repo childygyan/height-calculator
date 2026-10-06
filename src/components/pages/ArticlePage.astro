@@ -1,17 +1,26 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import type { ArticleData } from '../../data/articles/types';
+import type { ArticleData, ArticleUiStrings } from '../../data/articles/types';
+import { getArticleAlternates, getArticlePath, getArticlesHubPath } from '../../data/articles';
 import { SITE } from '../../config/site';
-import { LOCALES } from '../../i18n/locales';
+import { LOCALES, type Locale } from '../../i18n/locales';
+import { isRTL } from '../../i18n';
 
 interface Props {
   article: ArticleData;
+  ui: ArticleUiStrings;
+  locale: Locale;
 }
 
-const { article } = Astro.props;
-const locale = 'pt' as const;
-const currentPath = `/pt/artigos/${article.slug}/`;
+const { article, ui, locale } = Astro.props;
+const hubPath = getArticlesHubPath(locale);
+const currentPath = getArticlePath(locale, article);
 const canonicalUrl = `${SITE.siteUrl}${currentPath}`;
+const isArabic = isRTL(locale);
+
+// Manual hreflang: Layout's auto hreflang returns [] for these PT-only-style
+// paths, so we emit the correct cross-locale alternates here.
+const hreflangLinks = getArticleAlternates(article.id);
 
 // Structured Data: BreadcrumbList + Article + FAQPage
 const breadcrumbSchema = {
@@ -21,14 +30,14 @@ const breadcrumbSchema = {
     {
       '@type': 'ListItem',
       position: 1,
-      name: 'Início',
-      item: `${SITE.siteUrl}/pt/`,
+      name: ui.homeLabel,
+      item: `${SITE.siteUrl}${locale === 'en' ? '/' : `/${locale}/`}`,
     },
     {
       '@type': 'ListItem',
       position: 2,
-      name: 'Artigos',
-      item: `${SITE.siteUrl}/pt/artigos/`,
+      name: ui.navLabel,
+      item: `${SITE.siteUrl}${hubPath}`,
     },
     {
       '@type': 'ListItem',
@@ -70,7 +79,7 @@ const articleSchema = {
       url: `${SITE.siteUrl}/favicon.svg`,
     },
   },
-  inLanguage: LOCALES.pt.hreflang,
+  inLanguage: LOCALES[locale].hreflang,
 };
 
 const faqSchema = {
@@ -96,17 +105,20 @@ const faqSchema = {
   suppressDefaultSchema={true}
 >
   <Fragment slot="head">
+    {hreflangLinks.map((alt) => (
+      <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+    ))}
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   </Fragment>
 
-  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 text-left">
+  <article class={`max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 ${isArabic ? 'text-right' : 'text-left'}`} dir={isArabic ? 'rtl' : 'ltr'}>
     <!-- Breadcrumb -->
     <nav class="flex items-center gap-2 text-xs font-semibold text-slate-500 dark:text-slate-400 mb-6" aria-label="Breadcrumb">
-      <a href="/pt/" class="hover:text-brand-600 dark:hover:text-emerald-400 transition-colors">Início</a>
+      <a href={locale === 'en' ? '/' : `/${locale}/`} class="hover:text-brand-600 dark:hover:text-emerald-400 transition-colors">{ui.homeLabel}</a>
       <span class="text-slate-300 dark:text-slate-700">/</span>
-      <a href="/pt/artigos/" class="hover:text-brand-600 dark:hover:text-emerald-400 transition-colors">Artigos</a>
+      <a href={hubPath} class="hover:text-brand-600 dark:hover:text-emerald-400 transition-colors">{ui.navLabel}</a>
       <span class="text-slate-300 dark:text-slate-700">/</span>
       <span class="text-slate-900 dark:text-white truncate" aria-current="page">{article.title}</span>
     </nav>
@@ -124,22 +136,18 @@ const faqSchema = {
       <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
         {article.subtitle}
       </p>
-      <p class="text-xs text-slate-400 dark:text-slate-500 mt-4">
-        Publicado em {article.datePublished.split('-').reverse().join('/')}
-        {article.dateModified !== article.datePublished && ` • Atualizado em ${article.dateModified.split('-').reverse().join('/')}`}
-      </p>
     </header>
 
     <!-- Medical disclaimer (when present) -->
     {article.medicalDisclaimer && (
-      <div class="mb-10 rounded-2xl border border-amber-300/70 bg-amber-50 dark:bg-amber-950/30 dark:border-amber-800/60 px-4 py-3.5 sm:px-5 flex gap-3 items-start" role="note" aria-label="Aviso médico">
+      <div class="mb-10 rounded-2xl border border-amber-300/70 bg-amber-50 dark:bg-amber-950/30 dark:border-amber-800/60 px-4 py-3.5 sm:px-5 flex gap-3 items-start" role="note" aria-label="Medical disclaimer">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mt-0.5 shrink-0 text-amber-600 dark:text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
           <path d="M12 9v4"></path>
           <path d="M12 17h.01"></path>
         </svg>
         <p class="text-xs sm:text-sm leading-relaxed text-amber-900 dark:text-amber-200">
-          <strong class="font-bold">Aviso:</strong> {article.medicalDisclaimer}
+          {article.medicalDisclaimer}
         </p>
       </div>
     )}
@@ -155,8 +163,8 @@ const faqSchema = {
     </section>
 
     <!-- Table of Contents -->
-    <nav class="mb-14 p-6 sm:p-7 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 shadow-xs" aria-label="Índice">
-      <h2 class="text-base font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-4">{article.tocTitle}</h2>
+    <nav class="mb-14 p-6 sm:p-7 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 shadow-xs" aria-label={ui.tocLabel}>
+      <h2 class="text-base font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-4">{ui.tocLabel}</h2>
       <ol class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400">
         {article.sections.map((section) => (
           <li>
@@ -166,8 +174,8 @@ const faqSchema = {
           </li>
         ))}
         <li>
-          <a href="#perguntas-frequentes" class="hover:text-brand-600 dark:hover:text-emerald-400 hover:underline transition-colors block py-0.5">
-            Perguntas frequentes
+          <a href="#faq" class="hover:text-brand-600 dark:hover:text-emerald-400 hover:underline transition-colors block py-0.5">
+            {ui.faqHeading}
           </a>
         </li>
       </ol>
@@ -233,9 +241,6 @@ const faqSchema = {
               </table>
             </div>
           )}
-          {section.table?.caption && (
-            <p class="text-xs text-slate-400 dark:text-slate-500 -mt-3 mb-2">{section.table.caption}</p>
-          )}
           {section.table?.footnote && (
             <p class="text-xs text-slate-400 dark:text-slate-500 mb-2 italic">{section.table.footnote}</p>
           )}
@@ -264,9 +269,9 @@ const faqSchema = {
     </div>
 
     <!-- FAQ -->
-    <section id="perguntas-frequentes" class="mt-16 scroll-mt-24 pt-4 border-t border-slate-100 dark:border-slate-800/80">
+    <section id="faq" class="mt-16 scroll-mt-24 pt-4 border-t border-slate-100 dark:border-slate-800/80">
       <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6">
-        Perguntas frequentes
+        {ui.faqHeading}
       </h2>
       <div class="space-y-4">
         {article.faqs.map((faq) => (
@@ -284,7 +289,7 @@ const faqSchema = {
 
     <!-- Related links -->
     <div class="mt-14 p-8 rounded-2xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
-      <h3 class="text-lg font-black text-slate-900 dark:text-white mb-4">Leia também</h3>
+      <h3 class="text-lg font-black text-slate-900 dark:text-white mb-4">{ui.readAlsoHeading}</h3>
       <ul class="space-y-2.5">
         {article.relatedLinks.map((rl) => (
           <li>

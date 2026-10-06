@@ -81,24 +81,45 @@ export const GET: APIRoute = async () => {
   }
 
   // ============================================================================
-  // 2b. PT-ONLY ARTICLE ROUTES (Portuguese articles hub, added 2026-10-06)
-  //     No hreflang alternates: these pages exist only in pt (prevents 404 traps)
+  // 2b. MULTILINGUAL ARTICLE ROUTES (added 2026-10-06, 10 locales × 4 articles)
+  //     Full hreflang alternates: every article exists in every locale.
   // ============================================================================
-  const ptArticleRoutes: Array<{ path: string; priority: string; changefreq: string }> = [
-    { path: '/pt/artigos/', priority: '0.7', changefreq: 'weekly' },
-    { path: '/pt/artigos/altura-media-por-pais/', priority: '0.8', changefreq: 'monthly' },
-    { path: '/pt/artigos/como-medir-altura-corretamente/', priority: '0.8', changefreq: 'monthly' },
-    { path: '/pt/artigos/prever-altura-adulta-filho/', priority: '0.8', changefreq: 'monthly' },
-    { path: '/pt/artigos/percentil-de-altura-explicado/', priority: '0.8', changefreq: 'monthly' },
-  ];
+  {
+    const { ARTICLE_SETS, getArticlesHubPath, getArticlePath, getArticleAlternates, getHubAlternates } =
+      await import('../data/articles');
+    const { SUPPORTED_LOCALES: ARTICLE_LOCALES } = await import('../i18n/locales');
 
-  for (const route of ptArticleRoutes) {
-    allEntries.push({
-      loc: `${baseUrl}${route.path}`,
-      priority: route.priority,
-      changefreq: route.changefreq,
-      alternates: [],
-    });
+    // Hub pages (one per locale)
+    const hubAlternates = getHubAlternates();
+    for (const loc of ARTICLE_LOCALES) {
+      allEntries.push({
+        loc: `${baseUrl}${getArticlesHubPath(loc)}`,
+        priority: '0.7',
+        changefreq: 'weekly',
+        alternates: hubAlternates.map((a) => ({ hreflang: a.hreflang, href: a.href })),
+      });
+    }
+
+    // Article pages (one per locale per article id)
+    const seenIds = new Set<string>();
+    for (const loc of ARTICLE_LOCALES) {
+      for (const article of ARTICLE_SETS[loc].articles) {
+        seenIds.add(article.id);
+      }
+    }
+    for (const id of seenIds) {
+      const alternates = getArticleAlternates(id);
+      for (const loc of ARTICLE_LOCALES) {
+        const article = ARTICLE_SETS[loc].articles.find((a) => a.id === id);
+        if (!article) continue;
+        allEntries.push({
+          loc: `${baseUrl}${getArticlePath(loc, article)}`,
+          priority: '0.8',
+          changefreq: 'monthly',
+          alternates: alternates.map((a) => ({ hreflang: a.hreflang, href: a.href })),
+        });
+      }
+    }
   }
 
   // ============================================================================

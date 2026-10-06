@@ -1,7 +1,8 @@
-import type { ArticleData } from './types';
+import type { ArticleData, ArticleUiStrings, LocaleArticleSet } from './types';
 
 export const ptArticles: ArticleData[] = [
   {
+    id: 'avg-height-by-country',
     slug: 'altura-media-por-pais',
     title: 'Altura Média por País: Tabela Completa 2026',
     subtitle:
@@ -119,6 +120,7 @@ export const ptArticles: ArticleData[] = [
     ],
   },
   {
+    id: 'measure-height-correctly',
     slug: 'como-medir-altura-corretamente',
     title: 'Como Medir Sua Altura Corretamente em Casa',
     subtitle:
@@ -236,6 +238,7 @@ export const ptArticles: ArticleData[] = [
     ],
   },
   {
+    id: 'predict-child-height',
     slug: 'prever-altura-adulta-filho',
     title: 'Como Prever a Altura Adulta do Seu Filho',
     subtitle:
@@ -337,6 +340,7 @@ export const ptArticles: ArticleData[] = [
     ],
   },
   {
+    id: 'height-percentile-explained',
     slug: 'percentil-de-altura-explicado',
     title: 'Percentil de Altura: O Que Significa e Quando Se Preocupar',
     subtitle:
@@ -441,3 +445,20 @@ export const ptArticles: ArticleData[] = [
     ],
   },
 ];
+
+export const ptArticleUi: ArticleUiStrings = {
+  hubSegment: 'artigos',
+  navLabel: 'Artigos',
+  homeLabel: 'Início',
+  hubTitle: 'Artigos sobre Altura',
+  hubSubtitle: 'Guias práticos escritos para responder exatamente o que você pesquisou — sem enrolação.',
+  hubDescription: 'Guias práticos em português sobre altura: altura média por país, como medir sua altura, previsão de altura infantil e percentis de crescimento.',
+  faqHeading: 'Perguntas frequentes',
+  readAlsoHeading: 'Leia também',
+  tocLabel: 'Neste artigo',
+};
+
+export const ptArticleSet: LocaleArticleSet = {
+  ui: ptArticleUi,
+  articles: ptArticles,
+};

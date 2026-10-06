@@ -28,6 +28,9 @@ export interface ArticleSection {
 }
 
 export interface ArticleData {
+  /** Stable cross-locale identifier, e.g. 'avg-height-by-country' */
+  id: string;
+  /** Localized URL slug for this locale */
   slug: string;
   title: string;
   subtitle: string;
@@ -45,4 +48,31 @@ export interface ArticleData {
   faqs: ArticleFaq[];
   medicalDisclaimer?: string;
   relatedLinks: { text: string; href: string }[];
+}
+
+/** Per-locale UI strings for the articles hub and article chrome */
+export interface ArticleUiStrings {
+  /** URL path segment for the hub, e.g. 'artigos', 'articles', 'articulos' */
+  hubSegment: string;
+  /** Nav + breadcrumb label, e.g. 'Artigos' */
+  navLabel: string;
+  /** 'Início' etc. */
+  homeLabel: string;
+  /** Hub page H1 */
+  hubTitle: string;
+  /** Hub page subtitle */
+  hubSubtitle: string;
+  /** Hub page meta description */
+  hubDescription: string;
+  /** 'Perguntas frequentes' */
+  faqHeading: string;
+  /** 'Leia também' */
+  readAlsoHeading: string;
+  /** 'Neste artigo' (table of contents) */
+  tocLabel: string;
+}
+
+export interface LocaleArticleSet {
+  ui: ArticleUiStrings;
+  articles: ArticleData[];
 }

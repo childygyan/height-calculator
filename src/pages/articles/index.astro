@@ -1,0 +1,10 @@
+---
+import ArticlesHubPage from '../../components/pages/ArticlesHubPage.astro';
+import { getArticleSet } from '../../data/articles';
+import type { Locale } from '../../i18n/locales';
+
+const locale = 'en' as Locale;
+const set = getArticleSet(locale);
+---
+
+<ArticlesHubPage ui={set.ui} articles={set.articles} locale={locale} />

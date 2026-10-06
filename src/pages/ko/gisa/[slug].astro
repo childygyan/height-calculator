@@ -3,10 +3,10 @@ import ArticlePage from '../../../components/pages/ArticlePage.astro';
 import { getArticleSet, getArticleBySlug } from '../../../data/articles';
 import type { Locale } from '../../../i18n/locales';
 
-const locale = 'pt' as Locale;
+const locale = 'ko' as Locale;
 
 export function getStaticPaths() {
-  return getArticleSet('pt' as Locale).articles.map((article) => ({
+  return getArticleSet('ko' as Locale).articles.map((article) => ({
     params: { slug: article.slug },
   }));
 }
