@@ -76,3 +76,10 @@ export interface LocaleArticleSet {
   ui: ArticleUiStrings;
   articles: ArticleData[];
 }
+
+/** A scheduled article for the daily program: one publish date, all 10 locales */
+export interface ScheduledArticle {
+  /** YYYY-MM-DD */
+  publishDate: string;
+  articles: Record<string, ArticleData>;
+}

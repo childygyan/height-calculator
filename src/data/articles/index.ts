@@ -1,4 +1,4 @@
-import type { ArticleData, LocaleArticleSet } from './types';
+import type { ArticleData, LocaleArticleSet, ScheduledArticle } from './types';
 import { LOCALES, type Locale } from '../../i18n/locales';
 import { SITE } from '../../config/site';
 import { ptArticleSet } from './pt';
@@ -14,7 +14,7 @@ import { ruArticleSet } from './ru';
 
 export * from './types';
 
-export const ARTICLE_SETS: Record<Locale, LocaleArticleSet> = {
+const BASE_SETS: Record<Locale, LocaleArticleSet> = {
   en: enArticleSet,
   hi: hiArticleSet,
   es: esArticleSet,
@@ -26,6 +26,38 @@ export const ARTICLE_SETS: Record<Locale, LocaleArticleSet> = {
   ar: arArticleSet,
   ru: ruArticleSet,
 };
+
+// Scheduled daily-program articles are auto-imported from ./scheduled/*.ts
+// Each file exports `scheduled: ScheduledArticle`
+const scheduledModules = import.meta.glob<{ scheduled: ScheduledArticle }>('./scheduled/*.ts', { eager: true });
+const SCHEDULED: ScheduledArticle[] = Object.values(scheduledModules).map((m) => m.scheduled);
+
+/** YYYY-MM-DD for today (build time) */
+function todayStr(): string {
+  return new Date().toISOString().split('T')[0];
+}
+
+/**
+ * Article sets with date-gated scheduled articles merged in.
+ * Scheduled articles with publishDate <= today are included; future ones are hidden
+ * from listings, routes, sitemap, and hreflang.
+ */
+export const ARTICLE_SETS: Record<Locale, LocaleArticleSet> = (() => {
+  const today = todayStr();
+  const merged: Record<Locale, LocaleArticleSet> = {} as Record<Locale, LocaleArticleSet>;
+  (Object.keys(BASE_SETS) as Locale[]).forEach((locale) => {
+    const base = BASE_SETS[locale];
+    const extra: ArticleData[] = [];
+    for (const s of SCHEDULED) {
+      if (s.publishDate <= today) {
+        const a = s.articles[locale];
+        if (a) extra.push(a);
+      }
+    }
+    merged[locale] = { ui: base.ui, articles: [...base.articles, ...extra] };
+  });
+  return merged;
+})();
 
 export function getArticleSet(locale: Locale): LocaleArticleSet {
   return ARTICLE_SETS[locale] || ARTICLE_SETS.en;
