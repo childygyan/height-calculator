@@ -24,3 +24,7 @@ yarn-error.log*
 
 # Cloudflare / Wrangler
 .wrangler/
+
+# python bytecode
+__pycache__/
+*.pyc
